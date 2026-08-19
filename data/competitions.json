@@ -1,0 +1,525 @@
+[
+  {
+    "id": "cmp-001",
+    "name": "SQL Sprint Challenge",
+    "summary": "Solve a set of increasingly difficult SQL problems against the clock.",
+    "description": "Solve a set of increasingly difficult SQL problems against the clock.\n\nPLACEHOLDER - replace with the full competition brief: background, judging criteria, and what participants should prepare.",
+    "category": "Technical",
+    "startDate": "2026-07-08",
+    "endDate": "2026-09-13",
+    "status": "Active",
+    "rules": [
+      "Open to all members of the Data Warehouse Department.",
+      "Individual entries unless the brief states otherwise.",
+      "Submissions must use approved, non-production data only.",
+      "The judging panel's decision is final.",
+      "PLACEHOLDER - add any department-specific rule here."
+    ],
+    "eligibility": "All permanent and contract colleagues within the Data Warehouse Department.",
+    "howToParticipate": [
+      "Read the competition brief and the rules in full.",
+      "Register your entry using the Participate Now button on this page.",
+      "Prepare and submit your work before the closing date.",
+      "Attend the results session to see the leaderboard and winners."
+    ],
+    "prizes": [
+      {
+        "rank": 1,
+        "title": "PLACEHOLDER - first prize",
+        "description": "PLACEHOLDER - describe the first place prize."
+      },
+      {
+        "rank": 2,
+        "title": "PLACEHOLDER - second prize",
+        "description": "PLACEHOLDER - describe the second place prize."
+      },
+      {
+        "rank": 3,
+        "title": "PLACEHOLDER - third prize",
+        "description": "PLACEHOLDER - describe the third place prize."
+      }
+    ],
+    "participantIds": [
+      "emp-039",
+      "emp-008",
+      "emp-022",
+      "emp-001",
+      "emp-002",
+      "emp-038",
+      "emp-014",
+      "emp-005",
+      "emp-023",
+      "emp-017",
+      "emp-035",
+      "emp-019",
+      "emp-013",
+      "emp-003",
+      "emp-027",
+      "emp-007",
+      "emp-031"
+    ],
+    "winnerIds": [],
+    "image": null,
+    "featured": true,
+    "attachment": null
+  },
+  {
+    "id": "cmp-002",
+    "name": "Dashboard Design Cup",
+    "summary": "Redesign a real departmental dashboard and pitch it to a judging panel.",
+    "description": "Redesign a real departmental dashboard and pitch it to a judging panel.\n\nPLACEHOLDER - replace with the full competition brief: background, judging criteria, and what participants should prepare.",
+    "category": "Design",
+    "startDate": "2026-07-05",
+    "endDate": "2026-09-25",
+    "status": "Active",
+    "rules": [
+      "Open to all members of the Data Warehouse Department.",
+      "Individual entries unless the brief states otherwise.",
+      "Submissions must use approved, non-production data only.",
+      "The judging panel's decision is final.",
+      "PLACEHOLDER - add any department-specific rule here."
+    ],
+    "eligibility": "All permanent and contract colleagues within the Data Warehouse Department.",
+    "howToParticipate": [
+      "Read the competition brief and the rules in full.",
+      "Register your entry using the Participate Now button on this page.",
+      "Prepare and submit your work before the closing date.",
+      "Attend the results session to see the leaderboard and winners."
+    ],
+    "prizes": [
+      {
+        "rank": 1,
+        "title": "PLACEHOLDER - first prize",
+        "description": "PLACEHOLDER - describe the first place prize."
+      },
+      {
+        "rank": 2,
+        "title": "PLACEHOLDER - second prize",
+        "description": "PLACEHOLDER - describe the second place prize."
+      },
+      {
+        "rank": 3,
+        "title": "PLACEHOLDER - third prize",
+        "description": "PLACEHOLDER - describe the third place prize."
+      }
+    ],
+    "participantIds": [
+      "emp-016",
+      "emp-026",
+      "emp-025",
+      "emp-003",
+      "emp-015",
+      "emp-029",
+      "emp-032",
+      "emp-018",
+      "emp-006",
+      "emp-007"
+    ],
+    "winnerIds": [],
+    "image": null,
+    "featured": false,
+    "attachment": null
+  },
+  {
+    "id": "cmp-003",
+    "name": "Data Quality Bug Hunt",
+    "summary": "Find and document the highest-impact data quality issues across the estate.",
+    "description": "Find and document the highest-impact data quality issues across the estate.\n\nPLACEHOLDER - replace with the full competition brief: background, judging criteria, and what participants should prepare.",
+    "category": "Quality",
+    "startDate": "2026-07-05",
+    "endDate": "2026-09-09",
+    "status": "Active",
+    "rules": [
+      "Open to all members of the Data Warehouse Department.",
+      "Individual entries unless the brief states otherwise.",
+      "Submissions must use approved, non-production data only.",
+      "The judging panel's decision is final.",
+      "PLACEHOLDER - add any department-specific rule here."
+    ],
+    "eligibility": "All permanent and contract colleagues within the Data Warehouse Department.",
+    "howToParticipate": [
+      "Read the competition brief and the rules in full.",
+      "Register your entry using the Participate Now button on this page.",
+      "Prepare and submit your work before the closing date.",
+      "Attend the results session to see the leaderboard and winners."
+    ],
+    "prizes": [
+      {
+        "rank": 1,
+        "title": "PLACEHOLDER - first prize",
+        "description": "PLACEHOLDER - describe the first place prize."
+      },
+      {
+        "rank": 2,
+        "title": "PLACEHOLDER - second prize",
+        "description": "PLACEHOLDER - describe the second place prize."
+      },
+      {
+        "rank": 3,
+        "title": "PLACEHOLDER - third prize",
+        "description": "PLACEHOLDER - describe the third place prize."
+      }
+    ],
+    "participantIds": [
+      "emp-016",
+      "emp-030",
+      "emp-027",
+      "emp-002",
+      "emp-021",
+      "emp-036",
+      "emp-039",
+      "emp-008",
+      "emp-040",
+      "emp-006",
+      "emp-020",
+      "emp-005",
+      "emp-003",
+      "emp-007",
+      "emp-013",
+      "emp-012",
+      "emp-032",
+      "emp-026",
+      "emp-033",
+      "emp-001"
+    ],
+    "winnerIds": [],
+    "image": null,
+    "featured": false,
+    "attachment": null
+  },
+  {
+    "id": "cmp-004",
+    "name": "Automation Idea Marathon",
+    "summary": "Pitch an idea that removes manual work from a recurring process.",
+    "description": "Pitch an idea that removes manual work from a recurring process.\n\nPLACEHOLDER - replace with the full competition brief: background, judging criteria, and what participants should prepare.",
+    "category": "Innovation",
+    "startDate": "2026-10-09",
+    "endDate": "2026-12-21",
+    "status": "Upcoming",
+    "rules": [
+      "Open to all members of the Data Warehouse Department.",
+      "Individual entries unless the brief states otherwise.",
+      "Submissions must use approved, non-production data only.",
+      "The judging panel's decision is final.",
+      "PLACEHOLDER - add any department-specific rule here."
+    ],
+    "eligibility": "All permanent and contract colleagues within the Data Warehouse Department.",
+    "howToParticipate": [
+      "Read the competition brief and the rules in full.",
+      "Register your entry using the Participate Now button on this page.",
+      "Prepare and submit your work before the closing date.",
+      "Attend the results session to see the leaderboard and winners."
+    ],
+    "prizes": [
+      {
+        "rank": 1,
+        "title": "PLACEHOLDER - first prize",
+        "description": "PLACEHOLDER - describe the first place prize."
+      },
+      {
+        "rank": 2,
+        "title": "PLACEHOLDER - second prize",
+        "description": "PLACEHOLDER - describe the second place prize."
+      },
+      {
+        "rank": 3,
+        "title": "PLACEHOLDER - third prize",
+        "description": "PLACEHOLDER - describe the third place prize."
+      }
+    ],
+    "participantIds": [
+      "emp-017",
+      "emp-007",
+      "emp-028",
+      "emp-026",
+      "emp-040",
+      "emp-022",
+      "emp-010",
+      "emp-019",
+      "emp-020",
+      "emp-008",
+      "emp-021",
+      "emp-031",
+      "emp-035",
+      "emp-036",
+      "emp-039",
+      "emp-011"
+    ],
+    "winnerIds": [],
+    "image": null,
+    "featured": false,
+    "attachment": null
+  },
+  {
+    "id": "cmp-005",
+    "name": "Warehouse Trivia Night",
+    "summary": "A light-hearted quiz on data, the department and general knowledge.",
+    "description": "A light-hearted quiz on data, the department and general knowledge.\n\nPLACEHOLDER - replace with the full competition brief: background, judging criteria, and what participants should prepare.",
+    "category": "Social",
+    "startDate": "2026-10-08",
+    "endDate": "2026-12-14",
+    "status": "Upcoming",
+    "rules": [
+      "Open to all members of the Data Warehouse Department.",
+      "Individual entries unless the brief states otherwise.",
+      "Submissions must use approved, non-production data only.",
+      "The judging panel's decision is final.",
+      "PLACEHOLDER - add any department-specific rule here."
+    ],
+    "eligibility": "All permanent and contract colleagues within the Data Warehouse Department.",
+    "howToParticipate": [
+      "Read the competition brief and the rules in full.",
+      "Register your entry using the Participate Now button on this page.",
+      "Prepare and submit your work before the closing date.",
+      "Attend the results session to see the leaderboard and winners."
+    ],
+    "prizes": [
+      {
+        "rank": 1,
+        "title": "PLACEHOLDER - first prize",
+        "description": "PLACEHOLDER - describe the first place prize."
+      },
+      {
+        "rank": 2,
+        "title": "PLACEHOLDER - second prize",
+        "description": "PLACEHOLDER - describe the second place prize."
+      },
+      {
+        "rank": 3,
+        "title": "PLACEHOLDER - third prize",
+        "description": "PLACEHOLDER - describe the third place prize."
+      }
+    ],
+    "participantIds": [
+      "emp-034",
+      "emp-023",
+      "emp-008",
+      "emp-016",
+      "emp-014",
+      "emp-020",
+      "emp-030",
+      "emp-006",
+      "emp-026",
+      "emp-017",
+      "emp-029",
+      "emp-021",
+      "emp-018",
+      "emp-035",
+      "emp-039",
+      "emp-037",
+      "emp-024",
+      "emp-031",
+      "emp-003",
+      "emp-038",
+      "emp-004"
+    ],
+    "winnerIds": [],
+    "image": null,
+    "featured": false,
+    "attachment": null
+  },
+  {
+    "id": "cmp-006",
+    "name": "Hack the Batch",
+    "summary": "A two-day hackathon to shorten the nightly batch window.",
+    "description": "A two-day hackathon to shorten the nightly batch window.\n\nPLACEHOLDER - replace with the full competition brief: background, judging criteria, and what participants should prepare.",
+    "category": "Technical",
+    "startDate": "2026-02-09",
+    "endDate": "2026-04-19",
+    "status": "Completed",
+    "rules": [
+      "Open to all members of the Data Warehouse Department.",
+      "Individual entries unless the brief states otherwise.",
+      "Submissions must use approved, non-production data only.",
+      "The judging panel's decision is final.",
+      "PLACEHOLDER - add any department-specific rule here."
+    ],
+    "eligibility": "All permanent and contract colleagues within the Data Warehouse Department.",
+    "howToParticipate": [
+      "Read the competition brief and the rules in full.",
+      "Register your entry using the Participate Now button on this page.",
+      "Prepare and submit your work before the closing date.",
+      "Attend the results session to see the leaderboard and winners."
+    ],
+    "prizes": [
+      {
+        "rank": 1,
+        "title": "PLACEHOLDER - first prize",
+        "description": "PLACEHOLDER - describe the first place prize."
+      },
+      {
+        "rank": 2,
+        "title": "PLACEHOLDER - second prize",
+        "description": "PLACEHOLDER - describe the second place prize."
+      },
+      {
+        "rank": 3,
+        "title": "PLACEHOLDER - third prize",
+        "description": "PLACEHOLDER - describe the third place prize."
+      }
+    ],
+    "participantIds": [
+      "emp-021",
+      "emp-028",
+      "emp-003",
+      "emp-012",
+      "emp-036",
+      "emp-002",
+      "emp-001",
+      "emp-006",
+      "emp-037",
+      "emp-005",
+      "emp-033",
+      "emp-008"
+    ],
+    "winnerIds": [
+      "emp-036",
+      "emp-005",
+      "emp-003"
+    ],
+    "image": null,
+    "featured": false,
+    "attachment": null
+  },
+  {
+    "id": "cmp-007",
+    "name": "Best Runbook Award",
+    "summary": "Write the clearest, most useful production support runbook.",
+    "description": "Write the clearest, most useful production support runbook.\n\nPLACEHOLDER - replace with the full competition brief: background, judging criteria, and what participants should prepare.",
+    "category": "Quality",
+    "startDate": "2026-02-20",
+    "endDate": "2026-04-05",
+    "status": "Completed",
+    "rules": [
+      "Open to all members of the Data Warehouse Department.",
+      "Individual entries unless the brief states otherwise.",
+      "Submissions must use approved, non-production data only.",
+      "The judging panel's decision is final.",
+      "PLACEHOLDER - add any department-specific rule here."
+    ],
+    "eligibility": "All permanent and contract colleagues within the Data Warehouse Department.",
+    "howToParticipate": [
+      "Read the competition brief and the rules in full.",
+      "Register your entry using the Participate Now button on this page.",
+      "Prepare and submit your work before the closing date.",
+      "Attend the results session to see the leaderboard and winners."
+    ],
+    "prizes": [
+      {
+        "rank": 1,
+        "title": "PLACEHOLDER - first prize",
+        "description": "PLACEHOLDER - describe the first place prize."
+      },
+      {
+        "rank": 2,
+        "title": "PLACEHOLDER - second prize",
+        "description": "PLACEHOLDER - describe the second place prize."
+      },
+      {
+        "rank": 3,
+        "title": "PLACEHOLDER - third prize",
+        "description": "PLACEHOLDER - describe the third place prize."
+      }
+    ],
+    "participantIds": [
+      "emp-013",
+      "emp-017",
+      "emp-012",
+      "emp-036",
+      "emp-016",
+      "emp-006",
+      "emp-038",
+      "emp-008",
+      "emp-025",
+      "emp-023",
+      "emp-015",
+      "emp-002",
+      "emp-033",
+      "emp-011",
+      "emp-022",
+      "emp-028",
+      "emp-035",
+      "emp-024",
+      "emp-007",
+      "emp-005"
+    ],
+    "winnerIds": [
+      "emp-025",
+      "emp-023",
+      "emp-036"
+    ],
+    "image": null,
+    "featured": false,
+    "attachment": null
+  },
+  {
+    "id": "cmp-008",
+    "name": "Storytelling With Data",
+    "summary": "Turn one dataset into the most compelling five-minute story.",
+    "description": "Turn one dataset into the most compelling five-minute story.\n\nPLACEHOLDER - replace with the full competition brief: background, judging criteria, and what participants should prepare.",
+    "category": "Design",
+    "startDate": "2026-02-11",
+    "endDate": "2026-04-24",
+    "status": "Completed",
+    "rules": [
+      "Open to all members of the Data Warehouse Department.",
+      "Individual entries unless the brief states otherwise.",
+      "Submissions must use approved, non-production data only.",
+      "The judging panel's decision is final.",
+      "PLACEHOLDER - add any department-specific rule here."
+    ],
+    "eligibility": "All permanent and contract colleagues within the Data Warehouse Department.",
+    "howToParticipate": [
+      "Read the competition brief and the rules in full.",
+      "Register your entry using the Participate Now button on this page.",
+      "Prepare and submit your work before the closing date.",
+      "Attend the results session to see the leaderboard and winners."
+    ],
+    "prizes": [
+      {
+        "rank": 1,
+        "title": "PLACEHOLDER - first prize",
+        "description": "PLACEHOLDER - describe the first place prize."
+      },
+      {
+        "rank": 2,
+        "title": "PLACEHOLDER - second prize",
+        "description": "PLACEHOLDER - describe the second place prize."
+      },
+      {
+        "rank": 3,
+        "title": "PLACEHOLDER - third prize",
+        "description": "PLACEHOLDER - describe the third place prize."
+      }
+    ],
+    "participantIds": [
+      "emp-007",
+      "emp-036",
+      "emp-037",
+      "emp-025",
+      "emp-027",
+      "emp-031",
+      "emp-024",
+      "emp-029",
+      "emp-005",
+      "emp-014",
+      "emp-004",
+      "emp-009",
+      "emp-016",
+      "emp-017",
+      "emp-018",
+      "emp-021",
+      "emp-032",
+      "emp-006",
+      "emp-001"
+    ],
+    "winnerIds": [
+      "emp-025",
+      "emp-005",
+      "emp-027"
+    ],
+    "image": null,
+    "featured": false,
+    "attachment": null
+  }
+]

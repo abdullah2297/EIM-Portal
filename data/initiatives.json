@@ -1,0 +1,669 @@
+[
+  {
+    "id": "ini-001",
+    "title": "Pipeline Automation Programme",
+    "summary": "Replace manual load scheduling with fully orchestrated, self-healing pipelines. PLACEHOLDER - replace with the department's own initiative summary.",
+    "description": "This initiative was raised by the Data Engineering & Integration team to address a recurring pain point in day-to-day delivery. The team ran a short discovery, agreed the target outcome with stakeholders, then delivered in increments so value landed early.\n\nPLACEHOLDER - replace this description with the real background, approach and lessons learned.",
+    "category": "Automation",
+    "teamIds": [
+      "team-engineering"
+    ],
+    "subTeamIds": [],
+    "contributorIds": [
+      "emp-007",
+      "emp-008",
+      "emp-006",
+      "emp-009",
+      "emp-004"
+    ],
+    "startDate": "2024-06-07",
+    "endDate": "2025-02-25",
+    "objective": "Replace manual load scheduling with fully orchestrated, self-healing pipelines.",
+    "impact": [
+      {
+        "label": "Data quality score",
+        "value": "413 %"
+      },
+      {
+        "label": "Runtime saved",
+        "value": "479 hours / month"
+      },
+      {
+        "label": "Reports migrated",
+        "value": "353 reports"
+      }
+    ],
+    "status": "Completed",
+    "image": null,
+    "tags": [
+      "quality",
+      "automation",
+      "governance"
+    ],
+    "relatedAchievementIds": [],
+    "attachment": null,
+    "featured": false
+  },
+  {
+    "id": "ini-002",
+    "title": "Real-Time Customer Events Platform",
+    "summary": "Stand up an event-streaming backbone for near real-time customer data. PLACEHOLDER - replace with the department's own initiative summary.",
+    "description": "This initiative was raised by the Data Engineering & Integration team to address a recurring pain point in day-to-day delivery. The team ran a short discovery, agreed the target outcome with stakeholders, then delivered in increments so value landed early.\n\nPLACEHOLDER - replace this description with the real background, approach and lessons learned.",
+    "category": "Automation",
+    "teamIds": [
+      "team-00f09sblhf",
+      "team-q034fdpi93"
+    ],
+    "subTeamIds": [
+      "sub-r1fmp0h3q1"
+    ],
+    "contributorIds": [
+      "emp-y2p84owtc4",
+      "emp-0rwtcdyxxv"
+    ],
+    "startDate": "2025-08-24",
+    "endDate": "2026-05-01",
+    "objective": "Stand up an event-streaming backbone for near real-time customer data.",
+    "impact": [
+      {
+        "label": "Reports migrated",
+        "value": "281 reports"
+      },
+      {
+        "label": "Data quality score",
+        "value": "290 %"
+      },
+      {
+        "label": "Runtime saved",
+        "value": "375 hours / month"
+      }
+    ],
+    "status": "In Progress",
+    "image": "/api/uploads/upl-uvhz0vobgo.jpg",
+    "tags": [
+      "quality",
+      "self-service",
+      "governance"
+    ],
+    "relatedAchievementIds": [],
+    "attachment": {
+      "name": "MSP-Website-master.zip",
+      "url": "/api/uploads/upl-jni00f2po6.zip",
+      "size": "184129"
+    },
+    "featured": true,
+    "updatedAt": "2026-08-19T20:12:36.008Z"
+  },
+  {
+    "id": "ini-003",
+    "title": "Warehouse Model Refresh",
+    "summary": "Modernise the core warehouse model to a data-vault foundation. PLACEHOLDER - replace with the department's own initiative summary.",
+    "description": "This initiative was raised by the Data Engineering & Integration team to address a recurring pain point in day-to-day delivery. The team ran a short discovery, agreed the target outcome with stakeholders, then delivered in increments so value landed early.\n\nPLACEHOLDER - replace this description with the real background, approach and lessons learned.",
+    "category": "Governance",
+    "teamIds": [
+      "team-engineering"
+    ],
+    "subTeamIds": [],
+    "contributorIds": [
+      "emp-001",
+      "emp-006",
+      "emp-004"
+    ],
+    "startDate": "2024-06-10",
+    "endDate": "2025-10-05",
+    "objective": "Modernise the core warehouse model to a data-vault foundation.",
+    "impact": [
+      {
+        "label": "Manual effort removed",
+        "value": "298 hours / week"
+      },
+      {
+        "label": "Reports migrated",
+        "value": "444 reports"
+      },
+      {
+        "label": "Data quality score",
+        "value": "86 %"
+      }
+    ],
+    "status": "In Progress",
+    "image": null,
+    "tags": [
+      "performance",
+      "ml",
+      "governance"
+    ],
+    "relatedAchievementIds": [],
+    "attachment": null,
+    "featured": false
+  },
+  {
+    "id": "ini-004",
+    "title": "Executive Dashboard Redesign",
+    "summary": "Rebuild the executive scorecard around a certified metric layer. PLACEHOLDER - replace with the department's own initiative summary.",
+    "description": "This initiative was raised by the Business Intelligence & Reporting team to address a recurring pain point in day-to-day delivery. The team ran a short discovery, agreed the target outcome with stakeholders, then delivered in increments so value landed early.\n\nPLACEHOLDER - replace this description with the real background, approach and lessons learned.",
+    "category": "Analytics",
+    "teamIds": [
+      "team-bi"
+    ],
+    "subTeamIds": [],
+    "contributorIds": [
+      "emp-018",
+      "emp-013",
+      "emp-014",
+      "emp-010"
+    ],
+    "startDate": "2025-02-06",
+    "endDate": "2026-02-17",
+    "objective": "Rebuild the executive scorecard around a certified metric layer.",
+    "impact": [
+      {
+        "label": "Data quality score",
+        "value": "383 %"
+      },
+      {
+        "label": "Reports migrated",
+        "value": "119 reports"
+      },
+      {
+        "label": "Incidents avoided",
+        "value": "371 per quarter"
+      }
+    ],
+    "status": "Completed",
+    "image": null,
+    "tags": [
+      "performance",
+      "quality",
+      "self-service"
+    ],
+    "relatedAchievementIds": [],
+    "attachment": null,
+    "featured": false
+  },
+  {
+    "id": "ini-005",
+    "title": "Regulatory Reporting Acceleration",
+    "summary": "Cut the regulatory submission cycle time by automating reconciliation. PLACEHOLDER - replace with the department's own initiative summary.",
+    "description": "This initiative was raised by the Business Intelligence & Reporting team to address a recurring pain point in day-to-day delivery. The team ran a short discovery, agreed the target outcome with stakeholders, then delivered in increments so value landed early.\n\nPLACEHOLDER - replace this description with the real background, approach and lessons learned.",
+    "category": "Performance",
+    "teamIds": [
+      "team-bi"
+    ],
+    "subTeamIds": [],
+    "contributorIds": [
+      "emp-016",
+      "emp-013",
+      "emp-010",
+      "emp-015",
+      "emp-014"
+    ],
+    "startDate": "2024-06-14",
+    "endDate": "2025-07-05",
+    "objective": "Cut the regulatory submission cycle time by automating reconciliation.",
+    "impact": [
+      {
+        "label": "Incidents avoided",
+        "value": "449 per quarter"
+      },
+      {
+        "label": "Users enabled",
+        "value": "293 colleagues"
+      },
+      {
+        "label": "Reports migrated",
+        "value": "329 reports"
+      }
+    ],
+    "status": "In Progress",
+    "image": null,
+    "tags": [
+      "quality",
+      "ml",
+      "governance"
+    ],
+    "relatedAchievementIds": [],
+    "attachment": null,
+    "featured": false
+  },
+  {
+    "id": "ini-006",
+    "title": "Self-Service BI Academy",
+    "summary": "Train business users to build their own certified reports safely. PLACEHOLDER - replace with the department's own initiative summary.",
+    "description": "This initiative was raised by the Business Intelligence & Reporting team to address a recurring pain point in day-to-day delivery. The team ran a short discovery, agreed the target outcome with stakeholders, then delivered in increments so value landed early.\n\nPLACEHOLDER - replace this description with the real background, approach and lessons learned.",
+    "category": "Culture",
+    "teamIds": [
+      "team-bi"
+    ],
+    "subTeamIds": [],
+    "contributorIds": [
+      "emp-011",
+      "emp-014",
+      "emp-010",
+      "emp-015"
+    ],
+    "startDate": "2025-03-23",
+    "endDate": "2026-04-19",
+    "objective": "Train business users to build their own certified reports safely.",
+    "impact": [
+      {
+        "label": "Runtime saved",
+        "value": "147 hours / month"
+      },
+      {
+        "label": "Incidents avoided",
+        "value": "292 per quarter"
+      },
+      {
+        "label": "Reports migrated",
+        "value": "220 reports"
+      }
+    ],
+    "status": "In Progress",
+    "image": null,
+    "tags": [
+      "performance",
+      "automation",
+      "self-service"
+    ],
+    "relatedAchievementIds": [],
+    "attachment": null,
+    "featured": false
+  },
+  {
+    "id": "ini-007",
+    "title": "Enterprise Data Quality Framework",
+    "summary": "Introduce a single rules engine and scorecard for data quality. PLACEHOLDER - replace with the department's own initiative summary.",
+    "description": "This initiative was raised by the Data Governance & Quality team to address a recurring pain point in day-to-day delivery. The team ran a short discovery, agreed the target outcome with stakeholders, then delivered in increments so value landed early.\n\nPLACEHOLDER - replace this description with the real background, approach and lessons learned.",
+    "category": "Data Quality",
+    "teamIds": [
+      "team-governance"
+    ],
+    "subTeamIds": [],
+    "contributorIds": [
+      "emp-021",
+      "emp-023",
+      "emp-025",
+      "emp-026"
+    ],
+    "startDate": "2024-04-05",
+    "endDate": "2025-05-26",
+    "objective": "Introduce a single rules engine and scorecard for data quality.",
+    "impact": [
+      {
+        "label": "Users enabled",
+        "value": "338 colleagues"
+      },
+      {
+        "label": "Runtime saved",
+        "value": "20 hours / month"
+      },
+      {
+        "label": "Reports migrated",
+        "value": "302 reports"
+      }
+    ],
+    "status": "Completed",
+    "image": null,
+    "tags": [
+      "automation",
+      "performance",
+      "ml"
+    ],
+    "relatedAchievementIds": [],
+    "attachment": null,
+    "featured": true
+  },
+  {
+    "id": "ini-008",
+    "title": "Data Catalogue Adoption Drive",
+    "summary": "Get every critical data element documented and discoverable. PLACEHOLDER - replace with the department's own initiative summary.",
+    "description": "This initiative was raised by the Data Governance & Quality team to address a recurring pain point in day-to-day delivery. The team ran a short discovery, agreed the target outcome with stakeholders, then delivered in increments so value landed early.\n\nPLACEHOLDER - replace this description with the real background, approach and lessons learned.",
+    "category": "Governance",
+    "teamIds": [
+      "team-governance"
+    ],
+    "subTeamIds": [],
+    "contributorIds": [
+      "emp-024",
+      "emp-026",
+      "emp-020",
+      "emp-027"
+    ],
+    "startDate": "2025-05-14",
+    "endDate": "2026-10-12",
+    "objective": "Get every critical data element documented and discoverable.",
+    "impact": [
+      {
+        "label": "Incidents avoided",
+        "value": "115 per quarter"
+      },
+      {
+        "label": "Data quality score",
+        "value": "35 %"
+      },
+      {
+        "label": "Runtime saved",
+        "value": "133 hours / month"
+      }
+    ],
+    "status": "In Progress",
+    "image": null,
+    "tags": [
+      "self-service",
+      "quality",
+      "performance"
+    ],
+    "relatedAchievementIds": [],
+    "attachment": null,
+    "featured": false
+  },
+  {
+    "id": "ini-009",
+    "title": "Privacy by Design Rollout",
+    "summary": "Embed classification and masking into every new data product. PLACEHOLDER - replace with the department's own initiative summary.",
+    "description": "This initiative was raised by the Data Governance & Quality team to address a recurring pain point in day-to-day delivery. The team ran a short discovery, agreed the target outcome with stakeholders, then delivered in increments so value landed early.\n\nPLACEHOLDER - replace this description with the real background, approach and lessons learned.",
+    "category": "Governance",
+    "teamIds": [
+      "team-governance"
+    ],
+    "subTeamIds": [],
+    "contributorIds": [
+      "emp-021",
+      "emp-024",
+      "emp-023",
+      "emp-026"
+    ],
+    "startDate": "2024-05-12",
+    "endDate": "2025-09-18",
+    "objective": "Embed classification and masking into every new data product.",
+    "impact": [
+      {
+        "label": "Reports migrated",
+        "value": "247 reports"
+      },
+      {
+        "label": "Manual effort removed",
+        "value": "144 hours / week"
+      },
+      {
+        "label": "Incidents avoided",
+        "value": "414 per quarter"
+      }
+    ],
+    "status": "Planned",
+    "image": null,
+    "tags": [
+      "quality",
+      "performance",
+      "governance"
+    ],
+    "relatedAchievementIds": [],
+    "attachment": null,
+    "featured": false
+  },
+  {
+    "id": "ini-010",
+    "title": "Customer Churn Early Warning",
+    "summary": "Predict at-risk customers early enough for retention teams to act. PLACEHOLDER - replace with the department's own initiative summary.",
+    "description": "This initiative was raised by the Advanced Analytics & Data Science team to address a recurring pain point in day-to-day delivery. The team ran a short discovery, agreed the target outcome with stakeholders, then delivered in increments so value landed early.\n\nPLACEHOLDER - replace this description with the real background, approach and lessons learned.",
+    "category": "Analytics",
+    "teamIds": [
+      "team-analytics"
+    ],
+    "subTeamIds": [],
+    "contributorIds": [
+      "emp-028",
+      "emp-034",
+      "emp-031"
+    ],
+    "startDate": "2025-02-25",
+    "endDate": "2026-03-07",
+    "objective": "Predict at-risk customers early enough for retention teams to act.",
+    "impact": [
+      {
+        "label": "Incidents avoided",
+        "value": "144 per quarter"
+      },
+      {
+        "label": "Runtime saved",
+        "value": "199 hours / month"
+      },
+      {
+        "label": "Users enabled",
+        "value": "100 colleagues"
+      }
+    ],
+    "status": "Completed",
+    "image": null,
+    "tags": [
+      "performance",
+      "ml",
+      "automation"
+    ],
+    "relatedAchievementIds": [],
+    "attachment": null,
+    "featured": false
+  },
+  {
+    "id": "ini-011",
+    "title": "Fraud Anomaly Detection Uplift",
+    "summary": "Improve detection rates while reducing false positives. PLACEHOLDER - replace with the department's own initiative summary.",
+    "description": "This initiative was raised by the Advanced Analytics & Data Science team to address a recurring pain point in day-to-day delivery. The team ran a short discovery, agreed the target outcome with stakeholders, then delivered in increments so value landed early.\n\nPLACEHOLDER - replace this description with the real background, approach and lessons learned.",
+    "category": "Analytics",
+    "teamIds": [
+      "team-analytics"
+    ],
+    "subTeamIds": [],
+    "contributorIds": [
+      "emp-034",
+      "emp-028",
+      "emp-033",
+      "emp-031"
+    ],
+    "startDate": "2024-07-02",
+    "endDate": "2025-07-14",
+    "objective": "Improve detection rates while reducing false positives.",
+    "impact": [
+      {
+        "label": "Runtime saved",
+        "value": "364 hours / month"
+      },
+      {
+        "label": "Manual effort removed",
+        "value": "207 hours / week"
+      },
+      {
+        "label": "Data quality score",
+        "value": "123 %"
+      }
+    ],
+    "status": "In Progress",
+    "image": null,
+    "tags": [
+      "self-service",
+      "quality",
+      "automation"
+    ],
+    "relatedAchievementIds": [],
+    "attachment": null,
+    "featured": false
+  },
+  {
+    "id": "ini-012",
+    "title": "Feature Store Foundation",
+    "summary": "Give data scientists a shared, governed feature store. PLACEHOLDER - replace with the department's own initiative summary.",
+    "description": "This initiative was raised by the Advanced Analytics & Data Science team to address a recurring pain point in day-to-day delivery. The team ran a short discovery, agreed the target outcome with stakeholders, then delivered in increments so value landed early.\n\nPLACEHOLDER - replace this description with the real background, approach and lessons learned.",
+    "category": "Automation",
+    "teamIds": [
+      "team-analytics"
+    ],
+    "subTeamIds": [],
+    "contributorIds": [
+      "emp-033",
+      "emp-030",
+      "emp-028",
+      "emp-029",
+      "emp-034"
+    ],
+    "startDate": "2025-01-27",
+    "endDate": "2026-10-28",
+    "objective": "Give data scientists a shared, governed feature store.",
+    "impact": [
+      {
+        "label": "Data quality score",
+        "value": "310 %"
+      },
+      {
+        "label": "Users enabled",
+        "value": "59 colleagues"
+      },
+      {
+        "label": "Reports migrated",
+        "value": "132 reports"
+      }
+    ],
+    "status": "Planned",
+    "image": null,
+    "tags": [
+      "performance",
+      "ml",
+      "quality"
+    ],
+    "relatedAchievementIds": [],
+    "attachment": null,
+    "featured": false
+  },
+  {
+    "id": "ini-013",
+    "title": "Platform Performance Tuning",
+    "summary": "Reduce nightly batch runtime and stabilise the load window. PLACEHOLDER - replace with the department's own initiative summary.",
+    "description": "This initiative was raised by the Platform, Architecture & Support team to address a recurring pain point in day-to-day delivery. The team ran a short discovery, agreed the target outcome with stakeholders, then delivered in increments so value landed early.\n\nPLACEHOLDER - replace this description with the real background, approach and lessons learned.",
+    "category": "Performance",
+    "teamIds": [
+      "team-platform"
+    ],
+    "subTeamIds": [],
+    "contributorIds": [
+      "emp-037",
+      "emp-036",
+      "emp-039"
+    ],
+    "startDate": "2024-07-24",
+    "endDate": "2025-09-24",
+    "objective": "Reduce nightly batch runtime and stabilise the load window.",
+    "impact": [
+      {
+        "label": "Runtime saved",
+        "value": "468 hours / month"
+      },
+      {
+        "label": "Incidents avoided",
+        "value": "163 per quarter"
+      },
+      {
+        "label": "Users enabled",
+        "value": "478 colleagues"
+      }
+    ],
+    "status": "Completed",
+    "image": null,
+    "tags": [
+      "ml",
+      "automation",
+      "self-service"
+    ],
+    "relatedAchievementIds": [],
+    "attachment": null,
+    "featured": false
+  },
+  {
+    "id": "ini-014",
+    "title": "Zero-Downtime Release Pipeline",
+    "summary": "Ship data changes without taking reporting offline. PLACEHOLDER - replace with the department's own initiative summary.",
+    "description": "This initiative was raised by the Platform, Architecture & Support team to address a recurring pain point in day-to-day delivery. The team ran a short discovery, agreed the target outcome with stakeholders, then delivered in increments so value landed early.\n\nPLACEHOLDER - replace this description with the real background, approach and lessons learned.",
+    "category": "Automation",
+    "teamIds": [
+      "team-platform"
+    ],
+    "subTeamIds": [],
+    "contributorIds": [
+      "emp-037",
+      "emp-038",
+      "emp-040",
+      "emp-039"
+    ],
+    "startDate": "2025-04-22",
+    "endDate": "2026-07-20",
+    "objective": "Ship data changes without taking reporting offline.",
+    "impact": [
+      {
+        "label": "Users enabled",
+        "value": "371 colleagues"
+      },
+      {
+        "label": "Reports migrated",
+        "value": "434 reports"
+      },
+      {
+        "label": "Runtime saved",
+        "value": "409 hours / month"
+      }
+    ],
+    "status": "In Progress",
+    "image": null,
+    "tags": [
+      "quality",
+      "automation",
+      "performance"
+    ],
+    "relatedAchievementIds": [],
+    "attachment": null,
+    "featured": false
+  },
+  {
+    "id": "ini-015",
+    "title": "Production Support Playbooks",
+    "summary": "Document every recurring incident with a tested runbook. PLACEHOLDER - replace with the department's own initiative summary.",
+    "description": "This initiative was raised by the Platform, Architecture & Support team to address a recurring pain point in day-to-day delivery. The team ran a short discovery, agreed the target outcome with stakeholders, then delivered in increments so value landed early.\n\nPLACEHOLDER - replace this description with the real background, approach and lessons learned.",
+    "category": "Culture",
+    "teamIds": [
+      "team-platform"
+    ],
+    "subTeamIds": [],
+    "contributorIds": [
+      "emp-037",
+      "emp-040",
+      "emp-036",
+      "emp-035",
+      "emp-039"
+    ],
+    "startDate": "2024-07-19",
+    "endDate": "2025-11-14",
+    "objective": "Document every recurring incident with a tested runbook.",
+    "impact": [
+      {
+        "label": "Reports migrated",
+        "value": "148 reports"
+      },
+      {
+        "label": "Incidents avoided",
+        "value": "456 per quarter"
+      },
+      {
+        "label": "Runtime saved",
+        "value": "179 hours / month"
+      }
+    ],
+    "status": "Completed",
+    "image": null,
+    "tags": [
+      "quality",
+      "performance",
+      "governance"
+    ],
+    "relatedAchievementIds": [],
+    "attachment": null,
+    "featured": false
+  }
+]

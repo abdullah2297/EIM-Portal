@@ -1,0 +1,208 @@
+@import '../mixins';
+
+// ---------------------------------------------------------------------------
+// Hero banners: the home hero and the compact page header used on inner pages.
+// ---------------------------------------------------------------------------
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  background-image: var(--gradient-brand);
+  color: #fff;
+  padding-block: clamp(3rem, 2rem + 6vw, 6.5rem);
+
+  h1, h2, h3 { color: #fff; }
+}
+
+.hero__decor {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.55;
+  background-image:
+    radial-gradient(circle at 18% 20%, rgb(255 255 255 / 0.16), transparent 42%),
+    radial-gradient(circle at 82% 78%, rgb(var(--rgb-accent) / 0.32), transparent 48%);
+}
+
+.hero__grid-lines {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.14;
+  background-image:
+    linear-gradient(rgb(255 255 255 / 0.5) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(255 255 255 / 0.5) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse at 50% 0%, #000 20%, transparent 72%);
+}
+
+.hero__inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 2.5rem;
+  align-items: center;
+  grid-template-columns: 1fr;
+
+  @include respond-above(lg) {
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+    gap: 3rem;
+  }
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  max-width: 62ch;
+}
+
+.hero__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  align-self: flex-start;
+  padding: 0.35rem 0.85rem;
+  border: 1px solid rgb(255 255 255 / 0.3);
+  border-radius: var(--radius-pill);
+  background-color: rgb(255 255 255 / 0.12);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--letter-spacing-wide);
+  text-transform: uppercase;
+}
+
+.hero__title {
+  font-size: var(--font-size-display);
+  font-weight: var(--font-weight-bold);
+}
+
+.hero__highlight {
+  background-image: linear-gradient(
+    120deg,
+    rgb(var(--rgb-gold-light)),
+    rgb(var(--rgb-accent-light))
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero__lead {
+  font-size: clamp(1rem, 0.95rem + 0.3vw, 1.15rem);
+  color: rgb(255 255 255 / 0.82);
+  line-height: 1.7;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.hero__panel {
+  display: grid;
+  gap: 0.85rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+// -- Compact page header (inner pages) --------------------------------------
+.page-header {
+  position: relative;
+  overflow: hidden;
+  background-image: var(--gradient-brand);
+  color: #fff;
+  padding-block: clamp(2.25rem, 1.6rem + 3vw, 3.75rem);
+
+  h1 { color: #fff; }
+}
+
+.page-header__inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  @include respond-above(md) {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+}
+
+.page-header__text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  max-width: 68ch;
+}
+
+.page-header__title { font-size: var(--font-size-h1); }
+
+.page-header__lead {
+  color: rgb(255 255 255 / 0.8);
+  font-size: var(--font-size-body);
+}
+
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: var(--font-size-xs);
+  color: rgb(255 255 255 / 0.7);
+
+  a:hover { color: #fff; text-decoration: underline; }
+}
+
+.breadcrumbs__sep { opacity: 0.55; }
+
+// -- CTA band ----------------------------------------------------------------
+.cta-band {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: clamp(2rem, 1.5rem + 3vw, 3.5rem);
+  border-radius: var(--radius-2xl);
+  background-image: var(--gradient-brand);
+  color: #fff;
+  text-align: center;
+  align-items: center;
+
+  h2 { color: #fff; }
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(
+      circle at 50% 120%,
+      rgb(var(--rgb-accent) / 0.4),
+      transparent 60%
+    );
+  }
+}
+
+.cta-band__content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  max-width: 62ch;
+}
+
+.cta-band__actions {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+}

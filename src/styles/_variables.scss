@@ -1,0 +1,27 @@
+// ---------------------------------------------------------------------------
+// Sass-level variables. These never emit CSS on their own; they exist so that
+// partials can share breakpoints, z-index layers and the spacing scale.
+// Runtime-themeable values (colour, font, radius, shadow) live in _tokens.scss
+// as CSS custom properties so dark mode is a pure variable swap.
+// ---------------------------------------------------------------------------
+
+// Breakpoints -- kept in sync with Tailwind's defaults.
+$bp-sm: 640px;
+$bp-md: 768px;
+$bp-lg: 1024px;
+$bp-xl: 1280px;
+$bp-2xl: 1536px;
+
+// Layout
+$container-max: 1280px;
+$header-height: 72px;
+$header-height-compact: 64px;
+$admin-sidebar-width: 260px;
+
+// Z-index layers
+$z-base: 1;
+$z-sticky: 100;
+$z-header: 200;
+$z-drawer: 300;
+$z-modal: 400;
+$z-toast: 500;

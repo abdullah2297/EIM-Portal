@@ -1,0 +1,137 @@
+{
+  "id": "dept-dwh",
+  "name": "Enterprise Information Management",
+  "shortName": "EIM",
+  "portalName": "EIM Portal",
+  "tagline": "Enterprise Information Management, powered by our people.",
+  "establishedYear": "2012",
+  "overview": "EIM enables organizations to manage structured and unstructured data across business operations, extract valuable business insights and secure that information while meeting compliance requirements, all on a single platform at enterprise level.\n\nThe goal of information management solutions is to improve efficiency, promote transparency and enable business insights by leveraging software solutions and technologies that are designed to help organizations extract value from their information.",
+  "mission": "To deliver trusted, timely and well-governed data that helps every part of the organisation make better decisions faster.",
+  "vision": "To be recognised as the most reliable, innovative and people-focused data organisation in the group - a place where engineers, analysts and specialists do their best work together.",
+  "values": [
+    {
+      "title": "Trust in Data",
+      "description": "Accuracy and transparency are non-negotiable in everything we publish."
+    },
+    {
+      "title": "One Team",
+      "description": "Five teams, fifteen sub-teams, one shared backlog of outcomes."
+    },
+    {
+      "title": "Curiosity",
+      "description": "We keep learning, experimenting and improving the way we work."
+    },
+    {
+      "title": "Ownership",
+      "description": "We take responsibility end to end, from source system to dashboard."
+    },
+    {
+      "title": "Celebrate People",
+      "description": "Recognition is part of the job, not an afterthought."
+    }
+  ],
+  "responsibilities": [
+    "Design and operate the enterprise data warehouse and its ingestion pipelines.",
+    "Deliver regulatory, management and operational reporting across all portfolios.",
+    "Own data governance, data quality, metadata and the enterprise data catalogue.",
+    "Build advanced analytics and machine-learning products for business teams.",
+    "Run the data platform, its performance, availability and production support.",
+    "Enable self-service analytics through training, standards and reusable data models."
+  ],
+  "portfolios": [
+    {
+      "name": "Retail Banking",
+      "description": "PLACEHOLDER - short description of the Retail Banking portfolio and the data products delivered for it.",
+      "teamCount": 2
+    },
+    {
+      "name": "Corporate & Institutional Banking",
+      "description": "PLACEHOLDER - short description of the Corporate & Institutional Banking portfolio and the data products delivered for it.",
+      "teamCount": 3
+    },
+    {
+      "name": "Risk & Compliance",
+      "description": "PLACEHOLDER - short description of the Risk & Compliance portfolio and the data products delivered for it.",
+      "teamCount": 4
+    },
+    {
+      "name": "Finance & Treasury",
+      "description": "PLACEHOLDER - short description of the Finance & Treasury portfolio and the data products delivered for it.",
+      "teamCount": 2
+    },
+    {
+      "name": "Operations",
+      "description": "PLACEHOLDER - short description of the Operations portfolio and the data products delivered for it.",
+      "teamCount": 3
+    },
+    {
+      "name": "Digital Channels",
+      "description": "PLACEHOLDER - short description of the Digital Channels portfolio and the data products delivered for it.",
+      "teamCount": 4
+    },
+    {
+      "name": "Human Resources",
+      "description": "PLACEHOLDER - short description of the Human Resources portfolio and the data products delivered for it.",
+      "teamCount": 2
+    },
+    {
+      "name": "Marketing & Customer Experience",
+      "description": "PLACEHOLDER - short description of the Marketing & Customer Experience portfolio and the data products delivered for it.",
+      "teamCount": 3
+    }
+  ],
+  "contact": {
+    "email": "placeholder.dwh@example.com",
+    "phone": "+00 000 000 0000",
+    "location": "Smart Village, SV3, 2nd Floor ",
+    "officeHours": "Sunday to Thursday, 08:00 - 16:00",
+    "supportChannel": ""
+  },
+  "stats": [
+    {
+      "label": "Team Members",
+      "value": 40,
+      "suffix": "+",
+      "icon": "Groups"
+    },
+    {
+      "label": "Main Teams",
+      "value": 5,
+      "suffix": "",
+      "icon": "AccountTree"
+    },
+    {
+      "label": "Sub-Teams",
+      "value": 15,
+      "suffix": "",
+      "icon": "Hub"
+    },
+    {
+      "label": "Business Portfolios",
+      "value": 8,
+      "suffix": "",
+      "icon": "BusinessCenter"
+    },
+    {
+      "label": "Active Initiatives",
+      "value": 12,
+      "suffix": "",
+      "icon": "Lightbulb"
+    },
+    {
+      "label": "Awards Won",
+      "value": 18,
+      "suffix": "",
+      "icon": "EmojiEvents"
+    }
+  ],
+  "leadershipIds": [
+    "emp-002",
+    "emp-010",
+    "emp-019",
+    "emp-028",
+    "emp-035"
+  ],
+  "headId": "emp-in8awx37n1",
+  "updatedAt": "2026-08-19T13:53:37.964Z"
+}

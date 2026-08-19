@@ -1,0 +1,215 @@
+@import '../mixins';
+
+// ---------------------------------------------------------------------------
+// Badges, chips, pills and avatars.
+// ---------------------------------------------------------------------------
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.25rem 0.65rem;
+  border: 1px solid transparent;
+  border-radius: var(--radius-pill);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+.badge--neutral {
+  background-color: var(--color-surface-muted);
+  color: var(--color-text-muted);
+  border-color: var(--color-border);
+}
+
+.badge--primary {
+  background-color: rgb(var(--rgb-primary) / 0.12);
+  color: var(--color-primary);
+}
+
+.badge--secondary {
+  background-color: rgb(var(--rgb-secondary) / 0.12);
+  color: var(--color-secondary);
+}
+
+.badge--accent {
+  background-color: rgb(var(--rgb-accent) / 0.14);
+  color: var(--color-accent);
+}
+
+.badge--gold {
+  background-color: rgb(var(--rgb-gold) / 0.16);
+  color: var(--color-gold-dark);
+}
+
+.dark .badge--gold { color: var(--color-gold-light); }
+
+.badge--success {
+  background-color: rgb(var(--rgb-success) / 0.14);
+  color: var(--color-success);
+}
+
+.badge--warning {
+  background-color: rgb(var(--rgb-warning) / 0.16);
+  color: var(--color-warning);
+}
+
+.badge--danger {
+  background-color: rgb(var(--rgb-danger) / 0.14);
+  color: var(--color-danger);
+}
+
+.badge--info {
+  background-color: rgb(var(--rgb-info) / 0.14);
+  color: var(--color-info);
+}
+
+.badge--on-dark {
+  background-color: rgb(255 255 255 / 0.16);
+  color: #fff;
+  border-color: rgb(255 255 255 / 0.25);
+}
+
+.badge--outline {
+  background-color: transparent;
+  border-color: var(--color-border);
+  color: var(--color-text-muted);
+}
+
+.badge--dot::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: currentColor;
+}
+
+.badge--pulse::before {
+  animation: badge-pulse 1.6s ease-in-out infinite;
+}
+
+@keyframes badge-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.35; transform: scale(1.35); }
+}
+
+// -- Tag list ----------------------------------------------------------------
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface-muted);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+}
+
+// -- Avatar ------------------------------------------------------------------
+.avatar {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 50%;
+  overflow: hidden;
+  background-image: var(--gradient-accent);
+  color: #fff;
+  font-family: var(--font-family-display);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.02em;
+  user-select: none;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.avatar--xs { width: 28px; height: 28px; font-size: 0.65rem; }
+.avatar--sm { width: 40px; height: 40px; font-size: 0.8rem; }
+.avatar--md { width: 56px; height: 56px; font-size: 1rem; }
+.avatar--lg { width: 84px; height: 84px; font-size: 1.5rem; }
+.avatar--xl { width: 120px; height: 120px; font-size: 2.1rem; }
+.avatar--2xl {
+  width: clamp(120px, 12vw, 160px);
+  height: clamp(120px, 12vw, 160px);
+  font-size: 2.6rem;
+}
+
+.avatar--ring {
+  box-shadow: 0 0 0 4px var(--color-surface), 0 0 0 6px rgb(var(--rgb-primary) / 0.3);
+}
+
+.avatar--ring-gold {
+  box-shadow: 0 0 0 4px var(--color-surface), 0 0 0 6px rgb(var(--rgb-gold) / 0.6);
+}
+
+.avatar-stack {
+  display: flex;
+  align-items: center;
+
+  .avatar {
+    border: 2px solid var(--color-surface);
+
+    & + .avatar { margin-inline-start: -12px; }
+  }
+}
+
+.avatar-stack__more {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin-inline-start: -12px;
+  border: 2px solid var(--color-surface);
+  border-radius: 50%;
+  background-color: var(--color-surface-muted);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+}
+
+// -- Rank medal (leaderboards / winners) -------------------------------------
+.rank-medal {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  background-color: var(--color-surface-muted);
+  color: var(--color-text-muted);
+  border: 1px solid var(--color-border);
+}
+
+.rank-medal--1 {
+  background-image: var(--gradient-gold);
+  color: #1c1405;
+  border-color: transparent;
+}
+.rank-medal--2 {
+  background-image: linear-gradient(135deg, #8f9aa6, #d3dae2);
+  color: #1b2430;
+  border-color: transparent;
+}
+.rank-medal--3 {
+  background-image: linear-gradient(135deg, #a5642f, #dfa26a);
+  color: #2b1707;
+  border-color: transparent;
+}

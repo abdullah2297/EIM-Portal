@@ -1,0 +1,43 @@
+[
+  {
+    "name": " Data Delivery & Engineering ",
+    "shortName": "Delivery & Engineering",
+    "icon": "Engineering",
+    "order": "2",
+    "description": "The Data Delivery & Engineering Team is responsible for designing, building, and delivering reliable data solutions that serve business and engineering needs end-to-end. The team transforms business and technical requirements into scalable data platforms, pipelines, models, and data products that provide trusted and accessible data for reporting, analytics, applications, and decision-making.",
+    "mission": "The team owns the delivery lifecycle from requirements gathering and solution design through development, testing, deployment, and operational support, ensuring that data solutions are efficient, scalable, maintainable, and aligned with the organization's data architecture and standards.",
+    "responsibilities": [
+      "Design and develop end-to-end ETL/ELT data pipelines.",
+      "Develop conceptual, logical, and physical data models.",
+      "Integrate data from databases, applications, APIs, files, and other enterprise sources.",
+      "Continuously improve data pipelines, platforms, and engineering practices."
+    ],
+    "portfolios": [
+      "Risk",
+      "Finance"
+    ],
+    "leadId": "emp-0vpzacilxj",
+    "id": "team-q034fdpi93",
+    "createdAt": "2026-08-19T13:30:29.488Z",
+    "updatedAt": "2026-08-19T13:39:11.710Z"
+  },
+  {
+    "name": "Data Strategy",
+    "shortName": "Strategy",
+    "icon": "Engineering",
+    "order": "1",
+    "description": "The Data Strategy Team is a strategic function responsible for defining, guiding, and enabling the organization's overall data direction. The team ensures that data initiatives are aligned with business objectives, supported by the right technology and architecture, governed effectively, and delivered with the required capabilities and investment.",
+    "mission": "To ensure that the organization's data strategy is well-defined, governed, technically supported, financially sustainable, and effectively adopted across the business.",
+    "responsibilities": [
+      "Technology Architecture",
+      "Data Architecture",
+      "Data Governance",
+      "Enablement"
+    ],
+    "portfolios": [],
+    "leadId": "emp-f5s7nwwauj",
+    "id": "team-00f09sblhf",
+    "createdAt": "2026-08-19T12:14:17.628Z",
+    "updatedAt": "2026-08-19T12:26:20.302Z"
+  }
+]

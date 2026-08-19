@@ -1,0 +1,256 @@
+[
+  {
+    "id": "ach-001",
+    "title": "Group Data Excellence Award",
+    "description": "Recognised group-wide for the enterprise data quality framework. PLACEHOLDER - add the department's own supporting detail.",
+    "category": "Award",
+    "scope": "Team",
+    "date": "2025-04-16",
+    "teamIds": [
+      "team-governance"
+    ],
+    "subTeamIds": [],
+    "employeeIds": [
+      "emp-023",
+      "emp-024",
+      "emp-020"
+    ],
+    "images": [],
+    "issuer": "Data Warehouse Department",
+    "level": "Group",
+    "icon": "EmojiEvents",
+    "featured": true
+  },
+  {
+    "id": "ach-002",
+    "title": "Best Internal Innovation",
+    "description": "Voted best internal innovation of the year by the technology community. PLACEHOLDER - add the department's own supporting detail.",
+    "category": "Award",
+    "scope": "Team",
+    "date": "2026-06-04",
+    "teamIds": [
+      "team-engineering"
+    ],
+    "subTeamIds": [],
+    "employeeIds": [
+      "emp-004",
+      "emp-005"
+    ],
+    "images": [],
+    "issuer": "Data Warehouse Department",
+    "level": "Group",
+    "icon": "MilitaryTech",
+    "featured": true
+  },
+  {
+    "id": "ach-003",
+    "title": "Zero Regulatory Findings",
+    "description": "A full reporting cycle closed with no regulatory findings raised. PLACEHOLDER - add the department's own supporting detail.",
+    "category": "Milestone",
+    "scope": "Department",
+    "date": "2025-06-10",
+    "teamIds": [
+      "team-bi"
+    ],
+    "subTeamIds": [],
+    "employeeIds": [
+      "emp-016",
+      "emp-011"
+    ],
+    "images": [],
+    "issuer": "Data Warehouse Department",
+    "level": "Department",
+    "icon": "WorkspacePremium",
+    "featured": true
+  },
+  {
+    "id": "ach-004",
+    "title": "99.9% Batch Availability",
+    "description": "Twelve consecutive months above the batch availability target. PLACEHOLDER - add the department's own supporting detail.",
+    "category": "Milestone",
+    "scope": "Department",
+    "date": "2026-02-19",
+    "teamIds": [
+      "team-platform"
+    ],
+    "subTeamIds": [],
+    "employeeIds": [
+      "emp-037"
+    ],
+    "images": [],
+    "issuer": "Data Warehouse Department",
+    "level": "Department",
+    "icon": "Verified",
+    "featured": false
+  },
+  {
+    "id": "ach-005",
+    "title": "Data Catalogue 1000 Assets",
+    "description": "One thousand critical data assets fully documented and certified. PLACEHOLDER - add the department's own supporting detail.",
+    "category": "Milestone",
+    "scope": "Department",
+    "date": "2025-06-12",
+    "teamIds": [
+      "team-governance"
+    ],
+    "subTeamIds": [],
+    "employeeIds": [
+      "emp-022",
+      "emp-027",
+      "emp-020"
+    ],
+    "images": [],
+    "issuer": "Data Warehouse Department",
+    "level": "Department",
+    "icon": "Star",
+    "featured": false
+  },
+  {
+    "id": "ach-006",
+    "title": "Analytics Model of the Year",
+    "description": "Churn early-warning model recognised for measurable business impact. PLACEHOLDER - add the department's own supporting detail.",
+    "category": "Award",
+    "scope": "Team",
+    "date": "2026-08-17",
+    "teamIds": [
+      "team-analytics"
+    ],
+    "subTeamIds": [],
+    "employeeIds": [
+      "emp-030"
+    ],
+    "images": [],
+    "issuer": "Data Warehouse Department",
+    "level": "Group",
+    "icon": "Diamond",
+    "featured": false
+  },
+  {
+    "id": "ach-007",
+    "title": "Cloud Platform Certification",
+    "description": "Eight engineers certified on the enterprise cloud data platform. PLACEHOLDER - add the department's own supporting detail.",
+    "category": "Certification",
+    "scope": "Employee",
+    "date": "2025-06-05",
+    "teamIds": [
+      "team-platform"
+    ],
+    "subTeamIds": [],
+    "employeeIds": [
+      "emp-040"
+    ],
+    "images": [],
+    "issuer": "PLACEHOLDER - external body",
+    "level": "External",
+    "icon": "EmojiEvents",
+    "featured": false
+  },
+  {
+    "id": "ach-008",
+    "title": "Team Collaboration Award",
+    "description": "Cross-team delivery of the executive dashboard redesign. PLACEHOLDER - add the department's own supporting detail.",
+    "category": "Team Achievement",
+    "scope": "Team",
+    "date": "2026-02-07",
+    "teamIds": [
+      "team-bi"
+    ],
+    "subTeamIds": [],
+    "employeeIds": [
+      "emp-016",
+      "emp-013",
+      "emp-012"
+    ],
+    "images": [],
+    "issuer": "Data Warehouse Department",
+    "level": "Department",
+    "icon": "MilitaryTech",
+    "featured": false
+  },
+  {
+    "id": "ach-009",
+    "title": "Employee Recognition - Q1",
+    "description": "Quarterly recognition for outstanding individual contribution. PLACEHOLDER - add the department's own supporting detail.",
+    "category": "Employee Recognition",
+    "scope": "Employee",
+    "date": "2025-03-13",
+    "teamIds": [
+      "team-engineering"
+    ],
+    "subTeamIds": [],
+    "employeeIds": [
+      "emp-004",
+      "emp-003",
+      "emp-005"
+    ],
+    "images": [],
+    "issuer": "Data Warehouse Department",
+    "level": "Department",
+    "icon": "WorkspacePremium",
+    "featured": false
+  },
+  {
+    "id": "ach-010",
+    "title": "Employee Recognition - Q2",
+    "description": "Quarterly recognition for outstanding individual contribution. PLACEHOLDER - add the department's own supporting detail.",
+    "category": "Employee Recognition",
+    "scope": "Employee",
+    "date": "2026-05-06",
+    "teamIds": [
+      "team-analytics"
+    ],
+    "subTeamIds": [],
+    "employeeIds": [
+      "emp-033",
+      "emp-028",
+      "emp-034"
+    ],
+    "images": [],
+    "issuer": "Data Warehouse Department",
+    "level": "Department",
+    "icon": "Verified",
+    "featured": false
+  },
+  {
+    "id": "ach-011",
+    "title": "Service Desk Satisfaction 4.8/5",
+    "description": "Highest ever internal satisfaction score for data support. PLACEHOLDER - add the department's own supporting detail.",
+    "category": "Milestone",
+    "scope": "Department",
+    "date": "2025-05-28",
+    "teamIds": [
+      "team-platform"
+    ],
+    "subTeamIds": [],
+    "employeeIds": [
+      "emp-039"
+    ],
+    "images": [],
+    "issuer": "Data Warehouse Department",
+    "level": "Department",
+    "icon": "Star",
+    "featured": false
+  },
+  {
+    "id": "ach-012",
+    "title": "Green Data Initiative",
+    "description": "Recognised for reducing compute footprint across the warehouse. PLACEHOLDER - add the department's own supporting detail.",
+    "category": "Award",
+    "scope": "Team",
+    "date": "2026-03-23",
+    "teamIds": [
+      "team-engineering"
+    ],
+    "subTeamIds": [],
+    "employeeIds": [
+      "emp-004",
+      "emp-003",
+      "emp-006"
+    ],
+    "images": [],
+    "issuer": "PLACEHOLDER - external body",
+    "level": "External",
+    "icon": "Diamond",
+    "featured": false
+  }
+]

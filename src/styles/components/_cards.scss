@@ -1,0 +1,556 @@
+@import '../mixins';
+
+// ---------------------------------------------------------------------------
+// Card system -- the workhorse surface of the portal.
+// ---------------------------------------------------------------------------
+
+.card {
+  @include card-surface;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.card--interactive {
+  @include hover-lift;
+  cursor: pointer;
+}
+
+.card--flat {
+  box-shadow: none;
+  background-color: var(--color-surface-muted);
+}
+
+.card--raised { box-shadow: var(--shadow-sm); }
+
+.card--accent-bar::before {
+  content: '';
+  position: absolute;
+  inset-inline: 0;
+  top: 0;
+  height: 4px;
+  background-image: var(--gradient-accent);
+}
+
+.card--gold-bar::before {
+  content: '';
+  position: absolute;
+  inset-inline: 0;
+  top: 0;
+  height: 4px;
+  background-image: var(--gradient-gold);
+}
+
+.card__media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background-color: var(--color-surface-muted);
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--duration-slow) var(--ease-smooth);
+  }
+
+  .card--interactive:hover & img { transform: scale(1.05); }
+}
+
+.card__media--tall { aspect-ratio: 4 / 5; }
+.card__media--square { aspect-ratio: 1; }
+
+.card__body {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.25rem;
+  min-width: 0;
+}
+
+.card__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.card__title {
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-semibold);
+  @include line-clamp(2);
+}
+
+.card__subtitle {
+  font-size: var(--font-size-sm);
+  color: var(--color-primary);
+  font-weight: var(--font-weight-medium);
+}
+
+.card__text {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  @include line-clamp(3);
+}
+
+.card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1rem;
+  font-size: var(--font-size-xs);
+  color: var(--color-text-subtle);
+}
+
+.card__meta-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.card__footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-top: auto;
+  padding: 1rem 1.25rem;
+  border-top: 1px solid var(--color-border);
+  background-color: rgb(var(--rgb-surface-muted) / 0.45);
+}
+
+// -- Employee card -----------------------------------------------------------
+.employee-card {
+  @include card-surface;
+  @include hover-lift;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  text-align: center;
+}
+
+.employee-card__banner {
+  height: 76px;
+  background-image: var(--gradient-brand);
+  position: relative;
+}
+
+.employee-card__avatar-wrap {
+  margin-top: -42px;
+  display: flex;
+  justify-content: center;
+}
+
+.employee-card__body {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.75rem 1.25rem 1.25rem;
+}
+
+.employee-card__name {
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-semibold);
+}
+
+.employee-card__role {
+  font-size: var(--font-size-sm);
+  color: var(--color-primary);
+  font-weight: var(--font-weight-medium);
+}
+
+.employee-card__team {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-subtle);
+}
+
+.employee-card__bio {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  @include line-clamp(2);
+}
+
+.employee-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.35rem;
+  margin-top: 0.35rem;
+}
+
+.employee-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-top: auto;
+  padding: 0.85rem 1rem;
+  border-top: 1px solid var(--color-border);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-subtle);
+}
+
+// -- Team card ---------------------------------------------------------------
+.team-card {
+  @include card-surface;
+  @include hover-lift;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem;
+  overflow: hidden;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset-inline-end: -40px;
+    top: -40px;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background-color: rgb(var(--rgb-primary) / 0.06);
+    transition: transform var(--duration-slow) var(--ease-smooth);
+  }
+
+  &:hover::after { transform: scale(1.25); }
+}
+
+.team-card__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-lg);
+  background-color: rgb(var(--rgb-primary) / 0.1);
+  color: var(--color-primary);
+  position: relative;
+  z-index: 1;
+}
+
+.team-card__title {
+  font-size: var(--font-size-h4);
+  position: relative;
+  z-index: 1;
+}
+
+.team-card__text {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  position: relative;
+  z-index: 1;
+  @include line-clamp(3);
+}
+
+.team-card__stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin-top: auto;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--color-border);
+  position: relative;
+  z-index: 1;
+}
+
+.team-card__stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+
+  strong {
+    font-family: var(--font-family-display);
+    font-size: var(--font-size-h4);
+    color: var(--color-primary);
+  }
+
+  span {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-subtle);
+  }
+}
+
+// -- Stat tile ---------------------------------------------------------------
+.stat-tile {
+  @include card-surface;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem;
+  transition: transform var(--duration-normal) var(--ease-smooth);
+
+  @media (hover: hover) {
+    &:hover { transform: translateY(-3px); }
+  }
+}
+
+.stat-tile__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: var(--radius-md);
+  background-color: rgb(var(--rgb-primary) / 0.1);
+  color: var(--color-primary);
+}
+
+.stat-tile__value {
+  font-family: var(--font-family-display);
+  font-size: clamp(1.5rem, 1.2rem + 1vw, 2rem);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.1;
+  color: var(--color-text);
+  font-variant-numeric: tabular-nums;
+}
+
+.stat-tile__label {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+.stat-tile--on-dark {
+  background-color: rgb(255 255 255 / 0.08);
+  border-color: rgb(255 255 255 / 0.16);
+  backdrop-filter: blur(10px);
+  box-shadow: none;
+
+  .stat-tile__icon {
+    background-color: rgb(255 255 255 / 0.14);
+    color: #fff;
+  }
+  .stat-tile__value { color: #fff; }
+  .stat-tile__label { color: rgb(255 255 255 / 0.75); }
+}
+
+// -- Announcement card -------------------------------------------------------
+.announcement-card {
+  @include card-surface;
+  @include hover-lift(-3px);
+  display: flex;
+  gap: 1rem;
+  padding: 1.25rem;
+  align-items: flex-start;
+}
+
+.announcement-card__date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 60px;
+  padding: 0.5rem 0;
+  border-radius: var(--radius-md);
+  background-image: var(--gradient-brand);
+  color: #fff;
+  line-height: 1.1;
+
+  strong {
+    font-family: var(--font-family-display);
+    font-size: 1.35rem;
+  }
+  span {
+    font-size: var(--font-size-xs);
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing-wide);
+  }
+}
+
+.announcement-card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  min-width: 0;
+}
+
+// -- Achievement / award card ------------------------------------------------
+.achievement-card {
+  @include card-surface;
+  @include hover-lift;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  padding: 1.5rem;
+  text-align: center;
+  align-items: center;
+  overflow: hidden;
+  background-image: linear-gradient(
+    180deg,
+    rgb(var(--rgb-gold) / 0.08) 0%,
+    rgb(var(--rgb-surface) / 0) 55%
+  );
+}
+
+.achievement-card__badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  background-image: var(--gradient-gold);
+  color: #1c1405;
+  box-shadow: 0 6px 18px rgb(var(--rgb-gold) / 0.4);
+}
+
+.achievement-card__title { font-size: var(--font-size-h4); }
+
+.achievement-card__text {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  @include line-clamp(3);
+}
+
+.achievement-gallery__img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-md);
+  object-fit: cover;
+}
+
+// -- Competition card --------------------------------------------------------
+.competition-card {
+  @include card-surface;
+  @include hover-lift;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.competition-card__head {
+  position: relative;
+  padding: 1.5rem 1.25rem 1.25rem;
+  background-image: var(--gradient-brand);
+  color: #fff;
+}
+
+.competition-card__title {
+  color: #fff;
+  font-size: var(--font-size-h4);
+  @include line-clamp(2);
+}
+
+.competition-card__prize {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+  padding: 0.6rem 0.85rem;
+  border-radius: var(--radius-md);
+  background-color: rgb(255 255 255 / 0.14);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+}
+
+.competition-card__body {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 0.85rem;
+  padding: 1.25rem;
+}
+
+// -- Success story card ------------------------------------------------------
+.story-card {
+  @include card-surface;
+  @include hover-lift;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.story-card--featured {
+  @include respond-above(lg) {
+    flex-direction: row;
+
+    .card__media {
+      width: 46%;
+      aspect-ratio: auto;
+      min-height: 340px;
+    }
+  }
+}
+
+// -- Recognition card --------------------------------------------------------
+.recognition-card {
+  @include card-surface;
+  @include hover-lift(-3px);
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  padding: 1.35rem;
+  border-inline-start: 4px solid var(--color-gold);
+}
+
+.recognition-card__quote {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  font-style: italic;
+  line-height: 1.6;
+}
+
+.recognition-card__people {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px dashed var(--color-border);
+}
+
+// -- Spotlight (employee/team of the quarter) --------------------------------
+.spotlight {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: clamp(1.5rem, 1rem + 2vw, 2.5rem);
+  border-radius: var(--radius-xl);
+  background-image: var(--gradient-brand);
+  color: #fff;
+  overflow: hidden;
+
+  @include respond-above(md) {
+    flex-direction: row;
+    align-items: center;
+    gap: 2.5rem;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset-inline-end: -60px;
+    bottom: -80px;
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    background-color: rgb(255 255 255 / 0.06);
+  }
+
+  h3, h2 { color: #fff; }
+}
+
+.spotlight__content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  min-width: 0;
+}
+
+.spotlight__media {
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+}

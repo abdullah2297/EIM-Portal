@@ -1,0 +1,37 @@
+/* ==========================================================================
+   EIM Portal -- global stylesheet entry point.
+
+   Load order matters:
+     1. Tailwind base (normalise)
+     2. Design tokens (CSS custom properties, light + dark)
+     3. Element base styles
+     4. Tailwind components layer
+     5. Project component classes
+     6. Layout + project utilities
+     7. Tailwind utilities LAST so `class="..."` overrides always win.
+
+   No inline styles are used anywhere in the app: every visual decision lives
+   in a class defined here or in `src/styles/**`.
+   ========================================================================== */
+
+@tailwind base;
+
+@import '../styles/tokens';
+@import '../styles/base';
+
+@tailwind components;
+
+@import '../styles/components/buttons';
+@import '../styles/components/badges';
+@import '../styles/components/cards';
+@import '../styles/components/header';
+@import '../styles/components/forms';
+@import '../styles/components/states';
+@import '../styles/components/hero';
+@import '../styles/components/content';
+@import '../styles/components/admin';
+
+@import '../styles/layout';
+@import '../styles/utilities';
+
+@tailwind utilities;

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { PRIMARY_NAV, ROUTES } from '@/lib/constants';
+import { flattenNav, PRIMARY_NAV, ROUTES } from '@/lib/constants';
 import { Button } from '@/components/ui/Button';
 import { Icon } from '@/components/ui/Icon';
 
@@ -31,7 +31,7 @@ export default function NotFound() {
 
         <section className="section">
           <div className="container-page grid-auto grid-auto--4">
-            {PRIMARY_NAV.map((item) => (
+            {flattenNav(PRIMARY_NAV).map((item) => (
               <Link key={item.href} href={item.href} className="card card--interactive">
                 <div className="card__body">
                   <span className="team-card__icon">

@@ -1,19 +1,23 @@
 import Link from 'next/link';
-import { PRIMARY_NAV, ROUTES, SECONDARY_NAV, SITE, PLACEHOLDER } from '@/lib/constants';
+import { flattenNav, PRIMARY_NAV, ROUTES, SECONDARY_NAV, SITE, PLACEHOLDER } from '@/lib/constants';
 import { Icon } from '@/components/ui/Icon';
 import { Brand } from './Brand';
 
-/** Site footer: brand blurb, navigation columns and contact details. */
-export function Footer() {
+/**
+ * Site footer: brand blurb, navigation columns and contact details.
+ * @param {{ logo?: string|null }} props
+ */
+export function Footer({ logo }) {
   const year = new Date().getFullYear();
-  const [mainLinks, moreLinks] = [PRIMARY_NAV.slice(0, 5), PRIMARY_NAV.slice(5)];
+  const flatPrimaryNav = flattenNav(PRIMARY_NAV);
+  const [mainLinks, moreLinks] = [flatPrimaryNav.slice(0, 5), flatPrimaryNav.slice(5)];
 
   return (
     <footer className="site-footer">
       <div className="container-page">
         <div className="site-footer__grid">
           <div className="u-stack u-stack--sm">
-            <Brand />
+            <Brand logo={logo} />
             <p className="u-text-sm">{SITE.description}</p>
           </div>
 

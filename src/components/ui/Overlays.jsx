@@ -73,19 +73,35 @@ export function ConfirmDialog({
 }
 
 /**
- * Dropdown menu triggered by an icon button.
+ * Dropdown menu. Defaults to an icon-only trigger (e.g. the header's "More
+ * sections" overflow); pass `variant="nav"` for a labelled trigger styled
+ * like the other primary nav links, used for grouped nav entries.
  * @param {{
- *  label: string, icon?: string,
+ *  label: string, icon?: string, variant?: 'icon'|'nav', active?: boolean,
  *  items: Array<{ key: string, label: string, icon?: string, href?: string, onClick?: () => void }>,
  * }} props
  */
-export function DropdownMenu({ label, icon = 'MoreHoriz', items = [] }) {
+export function DropdownMenu({ label, icon = 'MoreHoriz', variant = 'icon', active = false, items = [] }) {
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
 
   return (
     <>
-      <IconButton icon={icon} label={label} onClick={(event) => setAnchorEl(event.currentTarget)} />
+      {variant === 'nav' ? (
+        <button
+          type="button"
+          className={`nav-link nav-link--dropdown ${active ? 'nav-link--active' : ''}`.trim()}
+          onClick={(event) => setAnchorEl(event.currentTarget)}
+          aria-haspopup="true"
+          aria-expanded={open}
+        >
+          {icon ? <Icon name={icon} fontSize="inherit" /> : null}
+          {label}
+          <Icon name="ExpandMore" fontSize="inherit" />
+        </button>
+      ) : (
+        <IconButton icon={icon} label={label} onClick={(event) => setAnchorEl(event.currentTarget)} />
+      )}
       <Menu
         anchorEl={anchorEl}
         open={open}

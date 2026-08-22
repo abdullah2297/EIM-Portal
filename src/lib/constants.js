@@ -35,16 +35,33 @@ export const ROUTES = {
   adminResourceEdit: (resource, id) => `/admin/${resource}/${id}`,
 };
 
-/** Primary navigation shown in the desktop header. */
+/**
+ * Primary navigation shown in the desktop header.
+ * An entry is either a direct link (`href`) or a dropdown group (`children`,
+ * itself a list of direct links) - see `flattenNav` for consumers (footer,
+ * mobile drawer, 404 page) that only want the flat list of actual pages.
+ */
 export const PRIMARY_NAV = [
   { label: 'Home', href: ROUTES.home, icon: 'Home' },
   { label: 'Department', href: ROUTES.department, icon: 'AccountBalance' },
-  { label: 'Teams', href: ROUTES.teams, icon: 'Groups' },
-  { label: 'People', href: ROUTES.employees, icon: 'Badge' },
+  {
+    label: 'Our People',
+    icon: 'Groups',
+    children: [
+      { label: 'Teams', href: ROUTES.teams, icon: 'AccountTree' },
+      { label: 'People', href: ROUTES.employees, icon: 'Badge' },
+    ],
+  },
   { label: 'Initiatives', href: ROUTES.initiatives, icon: 'Lightbulb' },
-  { label: 'Achievements', href: ROUTES.achievements, icon: 'EmojiEvents' },
-  { label: 'News', href: ROUTES.announcements, icon: 'Campaign' },
-  { label: 'Success Stories', href: ROUTES.successStories, icon: 'AutoStories' },
+  {
+    label: 'Achievements',
+    icon: 'EmojiEvents',
+    children: [
+      { label: 'Achievements', href: ROUTES.achievements, icon: 'EmojiEvents' },
+      { label: 'Success Stories', href: ROUTES.successStories, icon: 'AutoStories' },
+    ],
+  },
+  { label: 'Announcements', href: ROUTES.announcements, icon: 'Campaign' },
   { label: 'Competitions', href: ROUTES.competitions, icon: 'SportsEsports' },
 ];
 
@@ -54,6 +71,11 @@ export const SECONDARY_NAV = [
   { label: 'Recognition Wall', href: ROUTES.recognition, icon: 'Celebration' },
   { label: 'Contact / Get Involved', href: ROUTES.contact, icon: 'ContactSupport' },
 ];
+
+/** Expands any dropdown groups in a nav list into their flat list of links. */
+export function flattenNav(items) {
+  return items.flatMap((item) => (item.children ? item.children : [item]));
+}
 
 /** Every collection exposed through the generic REST layer and admin panel. */
 export const RESOURCES = {

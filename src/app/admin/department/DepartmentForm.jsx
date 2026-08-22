@@ -10,6 +10,7 @@ import { Button } from '@/components/ui/Button';
 import { Icon } from '@/components/ui/Icon';
 import { RelationMultiSelect, RelationSelect } from '@/components/admin/RelationFields';
 import { Repeater } from '@/components/admin/Repeater';
+import { ImageField } from '@/components/admin/ImageField';
 import { isValid, rules, validate } from '@/lib/validation';
 import { RESOURCES } from '@/lib/constants';
 
@@ -77,6 +78,15 @@ export function DepartmentForm() {
               <TextInput label="Portal name" name="portalName" value={values.portalName} onChange={setValue} />
               <TextInput label="Established" name="establishedYear" value={values.establishedYear} onChange={setValue} />
               <TextInput label="Tagline" name="tagline" value={values.tagline} onChange={setValue} className="form-grid__full" />
+              <div className="form-grid__full">
+                <ImageField
+                  label="Logo"
+                  name="logo"
+                  value={values.logo}
+                  onChange={setValue}
+                  hint="Shown in the site header and footer in place of the initials mark. Leave empty to use the initials."
+                />
+              </div>
             </div>
           </section>
 

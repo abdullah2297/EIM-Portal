@@ -18,6 +18,14 @@
 
 .site-header--scrolled { box-shadow: var(--shadow-sm); }
 
+// The header carries more content than a content column needs to (full nav
+// with icons/dropdowns, search, theme toggle) - let it use the full viewport
+// width instead of the site's 1280px content cap, which left no room at all
+// for the search box once the nav had icons and grouped dropdowns.
+.site-header .container-page {
+  max-width: none;
+}
+
 .site-header__inner {
   display: flex;
   align-items: center;
@@ -33,6 +41,9 @@
   align-items: center;
   gap: 0.65rem;
   min-width: 0;
+  // Identity should never be sacrificed for space - let the search box (see
+  // .header-actions below) shrink first instead.
+  flex-shrink: 0;
 }
 
 .brand__mark {
@@ -51,6 +62,18 @@
   flex-shrink: 0;
 }
 
+.brand__mark--logo {
+  background-image: none;
+  background-color: var(--color-surface-muted);
+  padding: 3px;
+}
+
+.brand__logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 .brand__text {
   display: flex;
   flex-direction: column;
@@ -60,10 +83,12 @@
 
 .brand__name {
   font-family: var(--font-family-display);
-  font-size: 1.05rem;
+  font-size: 0.8rem;
   font-weight: var(--font-weight-bold);
   color: var(--color-text);
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .brand__tagline {
@@ -88,8 +113,12 @@
   align-items: center;
   gap: 0.15rem;
   margin-inline-start: 0.5rem;
-  flex: 1 1 auto;
-  min-width: 0;
+  // grow to fill leftover space, but never shrink: its links can't compress
+  // (no ellipsis), so under pressure it must be the search box that gives
+  // way, not the nav - flex-shrink is proportional to base size, and the
+  // nav is by far the largest item, so leaving it shrinkable meant it (not
+  // the search box) absorbed almost all the squeeze and overflowed itself.
+  flex: 1 0 auto;
 
   @include respond-above(xl) { display: flex; }
 }
@@ -135,12 +164,21 @@
   &::after { transform: scaleX(1); }
 }
 
+// A dropdown trigger is a <button>, so it needs the usual UA-style reset on
+// top of the shared .nav-link look.
+.nav-link--dropdown {
+  background: none;
+  border: none;
+  font-family: inherit;
+  cursor: pointer;
+}
+
 .header-actions {
   display: flex;
   align-items: center;
   gap: 0.15rem;
   margin-inline-start: auto;
-  flex-shrink: 0;
+  min-width: 0;
 
   @include respond-above(sm) { gap: 0.35rem; }
 }
@@ -149,9 +187,14 @@
 .header-search {
   position: relative;
   display: none;
+  min-width: 0;
 
-  @include respond-above(md) { display: block; width: 210px; }
-  @include respond-above(2xl) { width: 260px; }
+  @include respond-above(md) {
+    display: block;
+    flex: 1 1 160px;
+    max-width: 210px;
+  }
+  @include respond-above(2xl) { max-width: 260px; }
 }
 
 .header-search__input {

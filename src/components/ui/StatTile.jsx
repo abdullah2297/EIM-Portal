@@ -18,7 +18,6 @@ import { formatNumber } from '@/lib/format';
 export function StatTile({ value, label, icon = 'Insights', suffix = '', onDark = false, duration = 1100, className = '' }) {
   const [display, setDisplay] = useState(0);
   const ref = useRef(null);
-  const hasRun = useRef(false);
 
   useEffect(() => {
     const target = Number(value) || 0;
@@ -34,10 +33,17 @@ export function StatTile({ value, label, icon = 'Insights', suffix = '', onDark 
       return undefined;
     }
 
+    // Scoped to this effect run, so it resets whenever `value` changes -
+    // e.g. when data that loaded after mount replaces an initial 0. A ref
+    // here would persist across value changes and could permanently lock
+    // the tile at whatever value was on screen the first time it became
+    // visible, ignoring every value after that.
+    let animated = false;
+
     const observer = new IntersectionObserver(
       (entries) => {
-        if (!entries[0].isIntersecting || hasRun.current) return;
-        hasRun.current = true;
+        if (!entries[0].isIntersecting || animated) return;
+        animated = true;
 
         const start = performance.now();
         const step = (now) => {

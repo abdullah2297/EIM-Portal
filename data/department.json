@@ -3,6 +3,7 @@
   "name": "Enterprise Information Management",
   "shortName": "EIM",
   "portalName": "EIM Portal",
+  "logo": "/api/uploads/upl-nh88dg1sz9.png",
   "tagline": "Enterprise Information Management, powered by our people.",
   "establishedYear": "2012",
   "overview": "EIM enables organizations to manage structured and unstructured data across business operations, extract valuable business insights and secure that information while meeting compliance requirements, all on a single platform at enterprise level.\n\nThe goal of information management solutions is to improve efficiency, promote transparency and enable business insights by leveraging software solutions and technologies that are designed to help organizations extract value from their information.",
@@ -133,5 +134,5 @@
     "emp-035"
   ],
   "headId": "emp-in8awx37n1",
-  "updatedAt": "2026-08-19T13:53:37.964Z"
+  "updatedAt": "2026-08-22T19:23:33.987Z"
 }

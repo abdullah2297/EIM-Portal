@@ -15,7 +15,7 @@ export default function AnnouncementsPage() {
       <PageHeader
         title="Announcements & News"
         lead="Everything happening across the department - updates, events, releases and celebrations."
-        breadcrumbs={[{ label: 'News' }]}
+        breadcrumbs={[{ label: 'Announcements' }]}
       />
       <Suspense fallback={<LoadingState label="Loading announcements..." />}>
         <AnnouncementsBoard />

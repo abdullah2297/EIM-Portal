@@ -120,13 +120,12 @@ export const STORY_TYPES = ['Project', 'Team', 'Employee'];
 
 /** Seniority bands used by the employee role filter and the admin form. */
 export const ROLE_BANDS = [
-  'Head',
-  'Manager',
-  'Team Lead',
-  'Senior Specialist',
-  'Specialist',
-  'Analyst',
-  'Associate',
+  'Director',
+  'Head Manager',
+  'Engineering Manager',
+  'Principal Engineer',
+  'Senior Engineer',
+  'Engineer',
 ];
 
 export const GALLERY_CATEGORIES = [

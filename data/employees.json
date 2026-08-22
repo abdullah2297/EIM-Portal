@@ -2,7 +2,7 @@
   {
     "fullName": "Abdullah Elsayed",
     "jobTitle": "Senior Data Engineer",
-    "role": "Senior Specialist",
+    "role": "Senior Engineer",
     "teamId": "team-00f09sblhf",
     "subTeamId": "sub-r1fmp0h3q1",
     "email": "abdullah.elzak@cibeg.com",
@@ -53,12 +53,12 @@
     "featured": true,
     "id": "emp-jio0af8pzp",
     "createdAt": "2026-08-19T15:17:25.440Z",
-    "updatedAt": "2026-08-19T15:17:25.440Z"
+    "updatedAt": "2026-08-22T18:56:32.140Z"
   },
   {
     "fullName": "Diaa ElBagouri",
     "jobTitle": "Senior Director of EIM ",
-    "role": "Head",
+    "role": "Director",
     "teamId": "team-00f09sblhf",
     "subTeamId": "",
     "email": "Diaa.ElBagouri@cibeg.com",
@@ -80,12 +80,12 @@
     "featured": true,
     "id": "emp-in8awx37n1",
     "createdAt": "2026-08-19T13:52:45.850Z",
-    "updatedAt": "2026-08-19T13:52:58.669Z"
+    "updatedAt": "2026-08-22T18:56:45.359Z"
   },
   {
     "fullName": "Sherif Anwer",
     "jobTitle": "Data Engineering Manager",
-    "role": "Head",
+    "role": "Head Manager",
     "teamId": "team-q034fdpi93",
     "subTeamId": "",
     "email": "Sherif.Anwer@cibeg.com",
@@ -132,12 +132,12 @@
     "featured": false,
     "id": "emp-0vpzacilxj",
     "createdAt": "2026-08-19T13:38:57.047Z",
-    "updatedAt": "2026-08-19T13:38:57.047Z"
+    "updatedAt": "2026-08-22T18:57:27.464Z"
   },
   {
     "fullName": "Khalil Grais",
     "jobTitle": "Technology Architecture Manager",
-    "role": "Manager",
+    "role": "Engineering Manager",
     "teamId": "team-00f09sblhf",
     "subTeamId": "sub-engvbjyn65",
     "email": "Khalil.Grais@cibeg.com",
@@ -176,12 +176,12 @@
     "featured": true,
     "id": "emp-y2p84owtc4",
     "createdAt": "2026-08-19T13:08:46.508Z",
-    "updatedAt": "2026-08-19T13:08:46.508Z"
+    "updatedAt": "2026-08-22T18:57:00.598Z"
   },
   {
     "fullName": "Shaimaa Elgammal",
     "jobTitle": "Data Trust & Enablement Manager",
-    "role": "Manager",
+    "role": "Engineering Manager",
     "teamId": "team-00f09sblhf",
     "subTeamId": "sub-r1fmp0h3q1",
     "email": "Shaimaa.Elgammal@cibeg.com",
@@ -230,12 +230,12 @@
     "featured": true,
     "id": "emp-0rwtcdyxxv",
     "createdAt": "2026-08-19T12:42:52.877Z",
-    "updatedAt": "2026-08-19T12:43:26.260Z"
+    "updatedAt": "2026-08-22T18:57:11.201Z"
   },
   {
     "fullName": "Tamer Elhossiny",
     "jobTitle": "Data Strategy Head",
-    "role": "Head",
+    "role": "Head Manager",
     "teamId": "team-00f09sblhf",
     "subTeamId": "",
     "email": "Tamer.Elhossiny@cibeg.com",
@@ -293,6 +293,6 @@
     "featured": true,
     "id": "emp-f5s7nwwauj",
     "createdAt": "2026-08-19T12:26:04.423Z",
-    "updatedAt": "2026-08-19T12:26:04.423Z"
+    "updatedAt": "2026-08-22T18:57:49.877Z"
   }
 ]

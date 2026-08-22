@@ -1,29 +1,20 @@
 [
   {
     "type": "Competition Entry",
-    "name": "Abdullah",
+    "name": "Abdullah Elsayed",
     "email": "abdullah.elzak@cibeg.com",
-    "subject": "Entry: Dashboard Design Cup",
+    "subject": "Entry: Data Quality Bug Hunt",
     "message": "PLACEHOLDER - no additional message provided.",
-    "competitionId": "cmp-002",
+    "competitionId": "cmp-003",
+    "employeeId": "emp-jio0af8pzp",
+    "attachment": {
+      "name": "eimportal.zip",
+      "url": "/api/uploads/upl-wv7mryrf0q.zip",
+      "size": "310720"
+    },
     "status": "New",
-    "createdAt": "2026-08-19T15:18:45.187Z",
-    "id": "sub-l87d6wmpvm",
-    "updatedAt": "2026-08-19T15:18:45.193Z",
-    "employeeId": null,
-    "attachment": null
-  },
-  {
-    "id": "sub-001",
-    "type": "Idea",
-    "name": "PLACEHOLDER - sample submission",
-    "email": "placeholder@example.com",
-    "subject": "Example idea submitted through the Get Involved form",
-    "message": "This is a sample record so the admin inbox is not empty. Delete it once real submissions start arriving.",
-    "competitionId": null,
-    "createdAt": "2026-08-10T09:30:00.000Z",
-    "status": "New",
-    "employeeId": null,
-    "attachment": null
+    "createdAt": "2026-08-22T19:02:19.015Z",
+    "id": "sub-wadlctdc8n",
+    "updatedAt": "2026-08-22T19:02:46.028Z"
   }
 ]

@@ -1,16 +1,20 @@
-import fs from 'node:fs/promises';
 import path from 'node:path';
+import { put } from '@vercel/blob';
 import { generateId } from './db';
 
 /**
- * Shared rules for `/api/uploads` (server only): which extensions are
- * accepted, their size limit and how the download route should serve them
- * back (inline for images so `<img>` tags work, as an attachment otherwise).
+ * Shared rules for file uploads (server only): which extensions are
+ * accepted, their size limit and how they should be served back (inline for
+ * images so `<img>` tags work, as a forced download otherwise).
  *
- * `saveUpload` does the actual validation + disk write, so any route that
- * needs to accept a file - the admin-only `/api/uploads`, or a public route
- * gated by its own business rule (e.g. a competition entry) - shares the
- * exact same rules instead of re-implementing them.
+ * `saveUpload` does the actual validation + upload to Vercel Blob, so any
+ * route that needs to accept a file - the admin-only `/api/uploads`, or a
+ * public route gated by its own business rule (e.g. a competition entry) -
+ * shares the exact same rules instead of re-implementing them.
+ *
+ * Files live in Vercel Blob storage rather than the local filesystem because
+ * Vercel Functions have a read-only, ephemeral filesystem - anything written
+ * to local disk would vanish (or fail to write at all) between requests.
  */
 
 export const UPLOAD_KINDS = {
@@ -51,8 +55,6 @@ export function resolveUploadRule(extension) {
   return Object.values(UPLOAD_KINDS).find((kind) => kind.extensions.includes(extension)) ?? null;
 }
 
-const UPLOAD_DIR = path.join(process.cwd(), 'data', 'uploads');
-
 export class UploadError extends Error {
   constructor(message, details) {
     super(message);
@@ -64,7 +66,7 @@ export class UploadError extends Error {
 }
 
 /**
- * Validates and writes an uploaded `File` to `data/uploads`, restricted to
+ * Validates an uploaded `File` and stores it in Vercel Blob, restricted to
  * the kinds allowed by `UPLOAD_KINDS`.
  *
  * @param {File} file
@@ -92,14 +94,23 @@ export async function saveUpload(file, options = {}) {
     });
   }
 
-  await fs.mkdir(UPLOAD_DIR, { recursive: true });
   const storedName = `${generateId('upl')}${extension}`;
-  const buffer = Buffer.from(await file.arrayBuffer());
-  await fs.writeFile(path.join(UPLOAD_DIR, storedName), buffer);
+  let blob;
+  try {
+    blob = await put(storedName, file, {
+      access: 'public',
+      contentType: rule.contentTypes[extension],
+      addRandomSuffix: true,
+    });
+  } catch (error) {
+    throw new UploadError('The file could not be uploaded. Please try again.', { file: error?.message ?? 'Upload failed.' });
+  }
 
   return {
     name: file.name,
-    url: `/api/uploads/${storedName}`,
+    // Images render inline (plain `.url`); zips force a save-as dialog
+    // (`.downloadUrl`, which sets Content-Disposition: attachment).
+    url: rule.disposition === 'attachment' ? blob.downloadUrl : blob.url,
     size: String(file.size),
   };
 }

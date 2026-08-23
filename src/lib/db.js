@@ -1,21 +1,57 @@
-import fs from 'node:fs/promises';
-import path from 'node:path';
+import { neon } from '@neondatabase/serverless';
 
 /**
- * JSON-file data layer (server only).
+ * Postgres-backed data layer (server only).
  *
- * Every collection is a single JSON file under `/data`. Writes are serialised
- * per file through an in-process promise chain so two concurrent admin saves
- * can never interleave and corrupt a file, and are written atomically via a
- * temp file + rename.
+ * Every collection is stored as one JSONB blob in a single `collections`
+ * table (`name` -> `data`), keeping the exact same array/object shape the
+ * rest of the app already expects - this used to be one JSON file per
+ * collection under `/data`, which cannot work on Vercel (its Functions have
+ * a read-only, ephemeral filesystem). Postgres gives every function
+ * invocation, in any region, a consistent view of the same data.
  *
- * Swapping this module for a real database later only requires keeping the
- * exported function signatures.
+ * Every other function in this file (`listAll`, `createRecord`, etc.) only
+ * calls `readCollection`/`writeCollection`, so nothing outside this module
+ * needed to change.
  */
 
-const DATA_DIR = path.join(process.cwd(), 'data');
+let sqlClient = null;
+let schemaReady = null;
 
-/** Maps a public resource name -> file name on disk. */
+/** Lazily creates the Neon query function - avoids requiring DATABASE_URL at import time. */
+function getSql() {
+  if (!sqlClient) {
+    if (!process.env.DATABASE_URL) {
+      throw new DbError(
+        'DATABASE_URL is not set. Add your Neon connection string to .env.local (or the Vercel project env vars).',
+        'MISSING_DATABASE_URL',
+        500,
+      );
+    }
+    sqlClient = neon(process.env.DATABASE_URL);
+  }
+  return sqlClient;
+}
+
+/** Creates the `collections` table on first use; safe to call repeatedly. */
+async function ensureSchema() {
+  if (!schemaReady) {
+    const sql = getSql();
+    schemaReady = sql`
+      CREATE TABLE IF NOT EXISTS collections (
+        name TEXT PRIMARY KEY,
+        data JSONB NOT NULL,
+        updated_at TIMESTAMPTZ NOT NULL DEFAULT now()
+      )
+    `.catch((error) => {
+      schemaReady = null; // let the next call retry instead of caching a failure
+      throw error;
+    });
+  }
+  return schemaReady;
+}
+
+/** Maps a public resource name -> the row it lives in. Also the set of known collections. */
 export const COLLECTION_FILES = {
   teams: 'teams.json',
   'sub-teams': 'sub-teams.json',
@@ -34,9 +70,6 @@ export const COLLECTION_FILES = {
 /** Collections stored as a single object rather than an array. */
 export const SINGLETONS = new Set(['department']);
 
-/** Per-file write queue: fileName -> tail promise. */
-const writeQueues = new Map();
-
 export class DbError extends Error {
   constructor(message, code = 'DB_ERROR', status = 500) {
     super(message);
@@ -47,60 +80,50 @@ export class DbError extends Error {
 }
 
 /** @param {string} collection */
-function resolveFile(collection) {
-  const fileName = COLLECTION_FILES[collection];
-  if (!fileName) {
+function assertKnownCollection(collection) {
+  if (!COLLECTION_FILES[collection]) {
     throw new DbError(`Unknown collection "${collection}".`, 'UNKNOWN_COLLECTION', 404);
   }
-  return path.join(DATA_DIR, fileName);
 }
 
 /**
- * Reads and parses a collection file.
+ * Reads a collection's JSONB blob.
  * @param {string} collection
  * @returns {Promise<any>}
  */
 export async function readCollection(collection) {
-  const file = resolveFile(collection);
+  assertKnownCollection(collection);
   try {
-    const raw = await fs.readFile(file, 'utf8');
-    return JSON.parse(raw);
+    await ensureSchema();
+    const sql = getSql();
+    const rows = await sql`SELECT data FROM collections WHERE name = ${collection}`;
+    if (!rows.length) return SINGLETONS.has(collection) ? {} : [];
+    const { data } = rows[0];
+    return typeof data === 'string' ? JSON.parse(data) : data;
   } catch (error) {
-    if (error.code === 'ENOENT') {
-      return SINGLETONS.has(collection) ? {} : [];
-    }
-    if (error instanceof SyntaxError) {
-      throw new DbError(`Data file for "${collection}" is not valid JSON.`, 'INVALID_JSON', 500);
-    }
+    if (error instanceof DbError) throw error;
     throw new DbError(`Could not read "${collection}".`, 'READ_FAILED', 500);
   }
 }
 
 /**
- * Atomically writes a collection, serialised behind any in-flight write.
+ * Upserts a collection's JSONB blob.
  * @param {string} collection
  * @param {any} payload
  */
 export async function writeCollection(collection, payload) {
-  const file = resolveFile(collection);
-  const previous = writeQueues.get(file) ?? Promise.resolve();
-
-  const next = previous
-    .catch(() => {}) // A failed earlier write must not block later ones.
-    .then(async () => {
-      const tmp = `${file}.${process.pid}.tmp`;
-      await fs.mkdir(DATA_DIR, { recursive: true });
-      await fs.writeFile(tmp, `${JSON.stringify(payload, null, 2)}\n`, 'utf8');
-      await fs.rename(tmp, file);
-    });
-
-  writeQueues.set(file, next);
+  assertKnownCollection(collection);
   try {
-    await next;
-  } catch {
+    await ensureSchema();
+    const sql = getSql();
+    await sql`
+      INSERT INTO collections (name, data, updated_at)
+      VALUES (${collection}, ${JSON.stringify(payload)}::jsonb, now())
+      ON CONFLICT (name) DO UPDATE SET data = EXCLUDED.data, updated_at = EXCLUDED.updated_at
+    `;
+  } catch (error) {
+    if (error instanceof DbError) throw error;
     throw new DbError(`Could not save "${collection}".`, 'WRITE_FAILED', 500);
-  } finally {
-    if (writeQueues.get(file) === next) writeQueues.delete(file);
   }
   return payload;
 }

@@ -36,5 +36,32 @@
     "id": "sub-r1fmp0h3q1",
     "createdAt": "2026-08-19T12:35:18.658Z",
     "updatedAt": "2026-08-19T12:44:08.108Z"
+  },
+  {
+    "name": "Data Delivery ( IT )",
+    "teamId": "team-00f09sblhf",
+    "description": "Supports IT requests by building, maintaining, and optimizing data pipelines, integrations, and engineering workflows to ensure reliable, secure, and timely delivery of data across the enterprise.",
+    "focusAreas": [
+      "Data Engineering Excellence",
+      "Request Management",
+      "Platform Reliability",
+      "Innovation & Modernization",
+      "Cross-Team Collaboration"
+    ],
+    "responsibilities": [
+      "Handle IT requests related to data extraction, transformation, and delivery.",
+      "Design, build, and maintain scalable data pipelines.",
+      "Integrate enterprise applications with data platforms.",
+      "Implement validation, monitoring, and reconciliation processes.",
+      "Optimize Spark jobs, ETL workflows, and data pipelines.",
+      "Ensure compliance with organizational security and regulatory standards.",
+      "Develop reusable scripts, APIs, and automation frameworks."
+    ],
+    "portfolios": ["IT"],
+    "leadId": "emp-9xkq3lmz7a",
+    "id": "sub-4h2kq9m8d1",
+    "createdAt": "2026-08-23T08:57:00.000Z",
+    "updatedAt": "2026-08-23T08:57:00.000Z"
   }
 ]
+

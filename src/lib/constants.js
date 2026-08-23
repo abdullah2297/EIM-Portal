@@ -15,7 +15,11 @@ export const SITE = {
 export const ROUTES = {
   home: '/',
   department: '/department',
+  ourSquads: '/our-squads',
   teams: '/teams',
+  team: (id) => `/teams/${id}`,
+  subTeams: '/sub-teams',
+  subTeam: (id) => `/sub-teams/${id}`,
   employees: '/employees',
   employee: (id) => `/employees/${id}`,
   initiatives: '/initiatives',
@@ -45,11 +49,13 @@ export const PRIMARY_NAV = [
   { label: 'Home', href: ROUTES.home, icon: 'Home' },
   { label: 'Department', href: ROUTES.department, icon: 'AccountBalance' },
   {
-    label: 'Our People',
+    label: 'Our Squads',
     icon: 'Groups',
     children: [
+      { label: 'Overview', href: ROUTES.ourSquads, icon: 'Insights' },
       { label: 'Teams', href: ROUTES.teams, icon: 'AccountTree' },
-      { label: 'People', href: ROUTES.employees, icon: 'Badge' },
+      { label: 'Sub-Teams', href: ROUTES.subTeams, icon: 'Hub' },
+      { label: 'Champions', href: ROUTES.employees, icon: 'Badge' },
     ],
   },
   { label: 'Initiatives', href: ROUTES.initiatives, icon: 'Lightbulb' },

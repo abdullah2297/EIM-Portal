@@ -15,7 +15,8 @@
     "leadId": "emp-y2p84owtc4",
     "id": "sub-engvbjyn65",
     "createdAt": "2026-08-19T12:53:40.303Z",
-    "updatedAt": "2026-08-19T13:09:00.265Z"
+    "updatedAt": "2026-08-19T13:09:00.265Z",
+    "featured": false
   },
   {
     "name": "Data Trust & Enablment",
@@ -35,7 +36,8 @@
     "leadId": "emp-0rwtcdyxxv",
     "id": "sub-r1fmp0h3q1",
     "createdAt": "2026-08-19T12:35:18.658Z",
-    "updatedAt": "2026-08-19T12:44:08.108Z"
+    "updatedAt": "2026-08-19T12:44:08.108Z",
+    "featured": false
   },
   {
     "name": "Data Delivery ( IT )",
@@ -57,11 +59,13 @@
       "Ensure compliance with organizational security and regulatory standards.",
       "Develop reusable scripts, APIs, and automation frameworks."
     ],
-    "portfolios": ["IT"],
+    "portfolios": [
+      "IT"
+    ],
     "leadId": "emp-9xkq3lmz7a",
     "id": "sub-4h2kq9m8d1",
     "createdAt": "2026-08-23T08:57:00.000Z",
-    "updatedAt": "2026-08-23T08:57:00.000Z"
+    "updatedAt": "2026-08-23T08:57:00.000Z",
+    "featured": false
   }
 ]
-

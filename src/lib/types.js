@@ -46,6 +46,7 @@
  * @property {string[]} portfolios
  * @property {string|null} leadId
  * @property {number} order
+ * @property {boolean} featured
  */
 
 /**
@@ -58,6 +59,7 @@
  * @property {string[]} portfolios
  * @property {string[]} focusAreas
  * @property {string|null} leadId
+ * @property {boolean} featured
  */
 
 /**

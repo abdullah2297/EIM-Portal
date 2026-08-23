@@ -275,6 +275,13 @@
   dd { margin: 0; font-weight: var(--font-weight-medium); text-align: right; }
 }
 
+.detail-list__stat-link {
+  color: var(--color-primary);
+  text-underline-offset: 0.15em;
+
+  &:hover { text-decoration: underline; }
+}
+
 .icon-list {
   display: flex;
   flex-direction: column;

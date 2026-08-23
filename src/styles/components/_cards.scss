@@ -17,6 +17,43 @@
   cursor: pointer;
 }
 
+// Covers the whole card as its main click target, letting a specific nested
+// element (e.g. a lead's link to their own profile) sit above it and stay
+// independently clickable, rather than nesting a second <a> inside the card's
+// own link (which is invalid HTML and breaks click behaviour).
+.card__stretched-link {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.card__lead-link {
+  position: relative;
+  z-index: 1;
+  border-radius: var(--radius-sm);
+
+  &:hover { color: var(--color-primary); }
+}
+
+// Corner medal marking a featured team / sub-team card. Decorative only, so
+// it never intercepts the click meant for the card (or the lead link) below it.
+.card__featured-badge {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-image: var(--gradient-gold);
+  color: #1c1405;
+  box-shadow: 0 4px 10px rgb(var(--rgb-gold) / 0.4);
+  pointer-events: none;
+}
+
 .card--flat {
   box-shadow: none;
   background-color: var(--color-surface-muted);

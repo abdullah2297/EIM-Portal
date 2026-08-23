@@ -19,7 +19,8 @@
     "leadId": "emp-0vpzacilxj",
     "id": "team-q034fdpi93",
     "createdAt": "2026-08-19T13:30:29.488Z",
-    "updatedAt": "2026-08-19T13:39:11.710Z"
+    "updatedAt": "2026-08-19T13:39:11.710Z",
+    "featured": false
   },
   {
     "name": "Data Strategy",
@@ -38,6 +39,7 @@
     "leadId": "emp-f5s7nwwauj",
     "id": "team-00f09sblhf",
     "createdAt": "2026-08-19T12:14:17.628Z",
-    "updatedAt": "2026-08-19T12:26:20.302Z"
+    "updatedAt": "2026-08-19T12:26:20.302Z",
+    "featured": false
   }
 ]

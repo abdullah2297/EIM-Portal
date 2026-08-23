@@ -45,6 +45,7 @@ export const ADMIN_SCHEMAS = {
       { key: 'name', label: 'Team', primary: true },
       { key: 'shortName', label: 'Short name' },
       { key: 'order', label: 'Order' },
+      { key: 'featured', label: 'Featured', boolean: true },
     ],
     fields: [
       { name: 'name', label: 'Team name', type: 'text', required: true, section: 'Basics' },
@@ -56,6 +57,7 @@ export const ADMIN_SCHEMAS = {
       { name: 'responsibilities', label: 'Responsibilities', type: 'tags', full: true, section: 'Content' },
       { name: 'portfolios', label: 'Supported portfolios', type: 'tags', full: true, section: 'Content' },
       { name: 'leadId', label: 'Team manager', type: 'relation', resource: RESOURCES.employees, labelField: 'fullName', section: 'People' },
+      { name: 'featured', label: 'Feature this team', type: 'checkbox', section: 'People' },
     ],
   },
 
@@ -67,6 +69,7 @@ export const ADMIN_SCHEMAS = {
     columns: [
       { key: 'name', label: 'Sub-team', primary: true },
       { key: 'teamId', label: 'Team', relation: RESOURCES.teams, labelField: 'shortName' },
+      { key: 'featured', label: 'Featured', boolean: true },
     ],
     fields: [
       { name: 'name', label: 'Sub-team name', type: 'text', required: true, section: 'Basics' },
@@ -76,6 +79,7 @@ export const ADMIN_SCHEMAS = {
       { name: 'responsibilities', label: 'Responsibilities', type: 'tags', full: true, section: 'Content' },
       { name: 'portfolios', label: 'Supported portfolios', type: 'tags', full: true, section: 'Content' },
       { name: 'leadId', label: 'Sub-team lead', type: 'relation', resource: RESOURCES.employees, labelField: 'fullName', section: 'People' },
+      { name: 'featured', label: 'Feature this sub-team', type: 'checkbox', section: 'People' },
     ],
   },
 

@@ -1,5 +1,5 @@
 import { listAll } from '@/lib/db';
-import { RESOURCES, SEARCH_GROUPS } from '@/lib/constants';
+import { RESOURCES, ROUTES, SEARCH_GROUPS } from '@/lib/constants';
 import { RESOURCE_CONFIG } from '@/lib/resourceConfig';
 import { searchItems } from '@/lib/query';
 import { handleError, ok } from '@/lib/apiResponse';
@@ -19,19 +19,19 @@ export const dynamic = 'force-dynamic';
 const GROUP_SOURCES = {
   employees: {
     resource: RESOURCES.employees,
-    href: (item) => `/employees/${item.id}`,
+    href: (item) => ROUTES.employee(item.id),
     title: (item) => item.fullName,
     subtitle: (item) => item.jobTitle,
   },
   teams: {
     resource: RESOURCES.teams,
-    href: (item) => `/teams?team=${item.id}`,
+    href: (item) => ROUTES.team(item.id),
     title: (item) => item.name,
     subtitle: (item) => item.shortName,
   },
   subTeams: {
     resource: RESOURCES.subTeams,
-    href: (item) => `/teams?team=${item.teamId}&subTeam=${item.id}`,
+    href: (item) => ROUTES.subTeam(item.id),
     title: (item) => item.name,
     subtitle: (item) => 'Sub-team',
   },

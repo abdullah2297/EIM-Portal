@@ -25,7 +25,7 @@ export function OrgChart({ departmentName, head, teams = [] }) {
       <div className="org-branch">
         {teams.map((team) => (
           <div className="org-branch__item" key={team.id}>
-            <Link href={`${ROUTES.teams}?team=${team.id}`} className="org-node">
+            <Link href={ROUTES.team(team.id)} className="org-node">
               <strong>{team.shortName}</strong>
               <span>
                 {team.lead ? team.lead.fullName : 'PLACEHOLDER - lead'} - {team.memberCount ?? 0} people
@@ -36,11 +36,7 @@ export function OrgChart({ departmentName, head, teams = [] }) {
 
             <div className="org-children">
               {team.subTeams.map((sub) => (
-                <Link
-                  key={sub.id}
-                  href={`${ROUTES.teams}?team=${team.id}&subTeam=${sub.id}`}
-                  className="org-leaf"
-                >
+                <Link key={sub.id} href={ROUTES.subTeam(sub.id)} className="org-leaf">
                   {sub.name}
                 </Link>
               ))}

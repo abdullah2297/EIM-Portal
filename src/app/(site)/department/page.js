@@ -10,6 +10,7 @@ import { Button } from '@/components/ui/Button';
 import { OrgChart } from '@/components/department/OrgChart';
 import { TeamCard } from '@/components/cards/TeamCard';
 import { SubTeamCard } from '@/components/cards/SubTeamCard';
+import { EmployeeCard } from '@/components/cards/EmployeeCard';
 import { ROUTES } from '@/lib/constants';
 
 // Content is read from the JSON data store on every request so edits made in
@@ -24,7 +25,7 @@ export const metadata = {
 
 /** `/department` - overview, mission, structure, portfolios, teams, sub-teams. */
 export default async function DepartmentPage() {
-  const { department, stats, head, leadership, teams } = await getDepartmentPageData();
+  const { department, stats, head, leadership, teams, champions } = await getDepartmentPageData();
   const allSubTeams = teams.flatMap((team) => team.subTeams.map((sub) => ({ ...sub, team })));
 
   return (
@@ -205,7 +206,66 @@ export default async function DepartmentPage() {
         </div>
       </section>
 
-      {/* 6. Portfolios ------------------------------------------------------ */}
+      {/* 6. Main teams ------------------------------------------------------ */}
+      <section className="section section--fade">
+        <div className="container-page">
+          <SectionHeading
+            eyebrow="Data Pillars"
+            eyebrowIcon="Groups"
+            title="Main teams overview"
+            subtitle="Each team owns a distinct stage of the data lifecycle."
+            action={<Button href={ROUTES.teams} variant="outline" iconAfter="ArrowForward">Team explorer</Button>}
+          />
+          <div className="grid-auto">
+            {teams.map((team) => (
+              <TeamCard
+                key={team.id}
+                team={{ ...team, subTeamCount: team.subTeams.length }}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 7. Sub-teams ------------------------------------------------------- */}
+      <section className="section">
+        <div className="container-page">
+          <SectionHeading
+            eyebrow="Capability Hubs"
+            eyebrowIcon="Hub"
+            title="Sub-teams overview"
+            subtitle="Specialist groups inside each main team, with their own focus areas."
+          />
+          <div className="grid-auto">
+            {allSubTeams.map((sub) => (
+              <div className="u-stack u-stack--sm" key={sub.id}>
+                <TagList items={[sub.team.shortName]} />
+                <SubTeamCard subTeam={sub} href={ROUTES.subTeam(sub.id)} />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 8. Champions -------------------------------------------------------- */}
+      <section className="section section--muted">
+        <div className="container-page">
+          <SectionHeading
+            eyebrow="Talents"
+            eyebrowIcon="Star"
+            title="Our champions"
+            subtitle="Featured colleagues carrying the department's work forward."
+            action={<Button href={ROUTES.employees} variant="outline" iconAfter="ArrowForward">All champions</Button>}
+          />
+          <div className="grid-auto grid-auto--4">
+            {champions.map((employee) => (
+              <EmployeeCard key={employee.id} employee={employee} teamName={employee.teamName} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 9. Portfolios ------------------------------------------------------ */}
       <section className="section">
         <div className="container-page">
           <SectionHeading
@@ -223,47 +283,6 @@ export default async function DepartmentPage() {
                   <p className="card__text">{portfolio.description}</p>
                 </div>
               </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 7. Main teams ------------------------------------------------------ */}
-      <section className="section section--fade">
-        <div className="container-page">
-          <SectionHeading
-            eyebrow="The five"
-            eyebrowIcon="Groups"
-            title="Main teams overview"
-            subtitle="Each team owns a distinct stage of the data lifecycle."
-            action={<Button href={ROUTES.teams} variant="outline" iconAfter="ArrowForward">Team explorer</Button>}
-          />
-          <div className="grid-auto">
-            {teams.map((team) => (
-              <TeamCard
-                key={team.id}
-                team={{ ...team, subTeamCount: team.subTeams.length }}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 8. Sub-teams ------------------------------------------------------- */}
-      <section className="section">
-        <div className="container-page">
-          <SectionHeading
-            eyebrow="The fifteen"
-            eyebrowIcon="Hub"
-            title="Sub-teams overview"
-            subtitle="Specialist groups inside each main team, with their own focus areas."
-          />
-          <div className="grid-auto">
-            {allSubTeams.map((sub) => (
-              <div className="u-stack u-stack--sm" key={sub.id}>
-                <TagList items={[sub.team.shortName]} />
-                <SubTeamCard subTeam={sub} />
-              </div>
             ))}
           </div>
         </div>

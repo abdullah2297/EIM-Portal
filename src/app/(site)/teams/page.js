@@ -4,17 +4,17 @@ import { LoadingState } from '@/components/ui/StateViews';
 import { TeamsExplorer } from './TeamsExplorer';
 
 export const metadata = {
-  title: 'Teams & Sub-Teams',
-  description: 'Explore the five main teams and fifteen sub-teams of the Data Warehouse Department.',
+  title: 'Teams',
+  description: 'Explore the department by team - each team page covers its sub-teams, members, initiatives and achievements.',
 };
 
-/** `/teams` - interactive explorer for teams, sub-teams and their members. */
+/** `/teams` - searchable team directory; each card opens that team's own page. */
 export default function TeamsPage() {
   return (
     <>
       <PageHeader
-        title="Teams & Sub-Teams"
-        lead="Five main teams, fifteen sub-teams and the colleagues who make them work. Select a team to drill into it."
+        title="Teams"
+        lead="Search or browse every team. Open a team to see its sub-teams, members, initiatives and achievements."
         breadcrumbs={[{ label: 'Teams' }]}
       />
       <Suspense fallback={<LoadingState label="Loading teams..." />}>

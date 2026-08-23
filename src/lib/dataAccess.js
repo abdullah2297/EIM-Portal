@@ -158,7 +158,7 @@ export async function getDepartmentPageData() {
     getAchievements(),
   ]);
 
-  const { teams, subTeams, employees, employeesById } = lookups;
+  const { teams, subTeams, employees, employeesById, teamsById } = lookups;
 
   return {
     department,
@@ -172,6 +172,10 @@ export async function getDepartmentPageData() {
     },
     head: toPersonSummary(employeesById[department?.headId]),
     leadership: resolvePeople(department?.leadershipIds, employeesById),
+    champions: employees
+      .filter((employee) => employee.featured)
+      .slice(0, 4)
+      .map((employee) => ({ ...employee, teamName: teamsById[employee.teamId]?.shortName })),
     teams: sortItems(teams, 'order', 'asc').map((team) => ({
       ...team,
       lead: toPersonSummary(employeesById[team.leadId]),
@@ -223,6 +227,65 @@ export async function getEmployeeProfile(employeeId) {
       .map((r) => ({ ...r, from: toPersonSummary(employeesById[r.fromEmployeeId]) })),
     competitionsWon: competitions.filter((c) => (c.winnerIds ?? []).includes(employee.id)),
   };
+}
+
+/** Full detail model for `/teams/[teamId]`. */
+export async function getTeamDetail(teamId) {
+  const [lookups, initiatives, achievements] = await Promise.all([
+    getLookups(),
+    getInitiatives(),
+    getAchievements(),
+  ]);
+  const { teamsById, subTeamsById, employeesById, subTeams, employees } = lookups;
+  const team = teamsById[teamId];
+  if (!team) return null;
+
+  return {
+    team,
+    lead: toPersonSummary(employeesById[team.leadId]),
+    subTeams: subTeams
+      .filter((s) => s.teamId === team.id)
+      .map((sub) => ({
+        ...sub,
+        lead: toPersonSummary(employeesById[sub.leadId]),
+        memberCount: employees.filter((e) => e.subTeamId === sub.id).length,
+      })),
+    members: employees.filter((e) => e.teamId === team.id),
+    initiatives: initiatives.filter((i) => (i.teamIds ?? []).includes(team.id)),
+    achievements: achievements.filter((a) => (a.teamIds ?? []).includes(team.id)),
+  };
+}
+
+/** Full detail model for `/sub-teams/[subTeamId]`. */
+export async function getSubTeamDetail(subTeamId) {
+  const [lookups, initiatives, achievements] = await Promise.all([
+    getLookups(),
+    getInitiatives(),
+    getAchievements(),
+  ]);
+  const { subTeamsById, teamsById, employeesById, employees } = lookups;
+  const subTeam = subTeamsById[subTeamId];
+  if (!subTeam) return null;
+
+  return {
+    subTeam,
+    team: teamsById[subTeam.teamId] ?? null,
+    lead: toPersonSummary(employeesById[subTeam.leadId]),
+    members: employees.filter((e) => e.subTeamId === subTeam.id),
+    initiatives: initiatives.filter((i) => (i.subTeamIds ?? []).includes(subTeam.id)),
+    achievements: achievements.filter((a) => (a.subTeamIds ?? []).includes(subTeam.id)),
+  };
+}
+
+/** Ids of every team / sub-team, used by generateStaticParams-style helpers. */
+export async function getAllTeamIds() {
+  const teams = await getTeams();
+  return teams.map((t) => t.id);
+}
+
+export async function getAllSubTeamIds() {
+  const subTeams = await getSubTeams();
+  return subTeams.map((s) => s.id);
 }
 
 /** Full detail model for `/competitions/[competitionId]`. */

@@ -304,7 +304,7 @@ export default async function EmployeeProfilePage({ params }) {
                   <dt>Team</dt>
                   <dd>
                     {team ? (
-                      <Link href={`${ROUTES.teams}?team=${team.id}`}>{team.name}</Link>
+                      <Link href={ROUTES.team(team.id)}>{team.name}</Link>
                     ) : (
                       'PLACEHOLDER'
                     )}
@@ -313,8 +313,8 @@ export default async function EmployeeProfilePage({ params }) {
                 <div className="detail-list__row">
                   <dt>Sub-team</dt>
                   <dd>
-                    {subTeam && team ? (
-                      <Link href={`${ROUTES.teams}?team=${team.id}&subTeam=${subTeam.id}`}>{subTeam.name}</Link>
+                    {subTeam ? (
+                      <Link href={ROUTES.subTeam(subTeam.id)}>{subTeam.name}</Link>
                     ) : (
                       'PLACEHOLDER'
                     )}

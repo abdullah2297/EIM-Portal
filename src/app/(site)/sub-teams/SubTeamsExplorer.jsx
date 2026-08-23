@@ -7,88 +7,90 @@ import { useDebouncedValue } from '@/hooks/useDebouncedValue';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { SearchInput } from '@/components/ui/Fields';
 import { DataState } from '@/components/ui/StateViews';
+import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
-import { TeamCard } from '@/components/cards/TeamCard';
+import { SubTeamCard } from '@/components/cards/SubTeamCard';
+import { ROUTES } from '@/lib/constants';
 
 /**
- * Teams directory: a featured strip, then every team, searchable. Each card
- * links straight to that team's own page (sub-teams, members, initiatives
- * and achievements all live there) - there is no in-place drill-down here.
+ * Sub-teams directory: a featured strip, then every sub-team, searchable.
+ * Each card links straight to that sub-team's own page.
  */
-export function TeamsExplorer() {
+export function SubTeamsExplorer() {
   const [term, setTerm] = useState('');
   const debouncedTerm = useDebouncedValue(term, 300);
 
   const { data, error, isLoading, refetch } = useAsyncData(async () => {
-    const [teams, subTeams, employees] = await Promise.all([
-      teamsService.list({ q: debouncedTerm, sort: 'order', order: 'asc' }),
-      subTeamsService.list(),
+    const [subTeams, teams, employees] = await Promise.all([
+      subTeamsService.list({ q: debouncedTerm, sort: 'name', order: 'asc' }),
+      teamsService.list({ sort: 'order', order: 'asc' }),
       employeesService.list(),
     ]);
-    return { teams: teams.items, subTeams: subTeams.items, employees: employees.items };
+    return { subTeams: subTeams.items, teams: teams.items, employees: employees.items };
   }, [debouncedTerm]);
 
   const { data: featuredData } = useAsyncData(
-    () => teamsService.list({ featured: 'true', sort: 'order', order: 'asc' }),
+    () => subTeamsService.list({ featured: 'true', sort: 'name', order: 'asc' }),
     [],
   );
 
-  const teams = useMemo(() => data?.teams ?? [], [data]);
   const subTeams = useMemo(() => data?.subTeams ?? [], [data]);
+  const teams = useMemo(() => data?.teams ?? [], [data]);
   const employees = useMemo(() => data?.employees ?? [], [data]);
   const featured = featuredData?.items ?? [];
 
+  const teamsById = useMemo(() => Object.fromEntries(teams.map((t) => [t.id, t])), [teams]);
   const employeesById = useMemo(() => Object.fromEntries(employees.map((e) => [e.id, e])), [employees]);
 
-  const withCounts = (team) => ({
-    ...team,
-    memberCount: employees.filter((e) => e.teamId === team.id).length,
-    subTeamCount: subTeams.filter((s) => s.teamId === team.id).length,
-    lead: employeesById[team.leadId] ?? null,
+  const withCounts = (sub) => ({
+    ...sub,
+    memberCount: employees.filter((e) => e.subTeamId === sub.id).length,
+    lead: employeesById[sub.leadId] ?? null,
   });
+
+  const renderCard = (sub) => (
+    <div className="u-stack u-stack--sm" key={sub.id}>
+      <Badge tone="primary">{teamsById[sub.teamId]?.shortName ?? 'PLACEHOLDER - team'}</Badge>
+      <SubTeamCard subTeam={withCounts(sub)} href={ROUTES.subTeam(sub.id)} />
+    </div>
+  );
 
   return (
     <>
-      {/* 1. Featured teams --------------------------------------------------- */}
+      {/* 1. Featured sub-teams -------------------------------------------------- */}
       {featured.length ? (
         <section className="section section--tight">
           <div className="container-page">
             <SectionHeading
               eyebrow="Spotlight"
               eyebrowIcon="Star"
-              title="Featured teams"
-              subtitle="Teams the department is putting in the spotlight right now."
+              title="Featured sub-teams"
+              subtitle="Sub-teams the department is putting in the spotlight right now."
             />
-            <div className="grid-auto">
-              {featured.map((team, index) => (
-                <div key={team.id} className={`u-anim-in u-delay-${index + 1}`}>
-                  <TeamCard team={withCounts(team)} />
-                </div>
-              ))}
-            </div>
+            <div className="grid-auto">{featured.map(renderCard)}</div>
           </div>
         </section>
       ) : null}
 
-      {/* 2. All teams ---------------------------------------------------------- */}
+      {/* 2. All sub-teams ---------------------------------------------------------- */}
       <section className="section section--tight">
         <div className="container-page u-stack u-stack--lg">
           <SectionHeading
             eyebrow="Directory"
-            eyebrowIcon="AccountTree"
-            title="All teams"
-            subtitle="Search by name, description or supported portfolio."
+            eyebrowIcon="Hub"
+            title="All sub-teams"
+            subtitle="Search by name, description or focus area."
           />
 
           <div className="filter-bar">
             <SearchInput
               value={term}
               onChange={setTerm}
-              placeholder="Search teams..."
+              placeholder="Search sub-teams..."
               className="form-grid__full"
             />
             <div className="filter-bar__footer">
-              <span>{teams.length} team(s) found</span>
+              <span>{subTeams.length} sub-team(s) found</span>
               {term ? (
                 <Button variant="ghost" size="sm" icon="Cancel" onClick={() => setTerm('')}>
                   Clear
@@ -100,24 +102,18 @@ export function TeamsExplorer() {
           <DataState
             isLoading={isLoading}
             error={error}
-            isEmpty={teams.length === 0}
+            isEmpty={subTeams.length === 0}
             onRetry={refetch}
             skeletonCount={3}
             emptyProps={{
               icon: 'SearchOff',
-              title: 'No teams match your search',
-              message: 'Try a different word, or clear the search to see every team.',
+              title: 'No sub-teams match your search',
+              message: 'Try a different word, or clear the search to see every sub-team.',
               actionLabel: 'Clear search',
               onAction: () => setTerm(''),
             }}
           >
-            <div className="grid-auto">
-              {teams.map((team, index) => (
-                <div key={team.id} className={`u-anim-in u-delay-${(index % 9) + 1}`}>
-                  <TeamCard team={withCounts(team)} />
-                </div>
-              ))}
-            </div>
+            <div className="grid-auto">{subTeams.map(renderCard)}</div>
           </DataState>
         </div>
       </section>
@@ -125,4 +121,4 @@ export function TeamsExplorer() {
   );
 }
 
-export default TeamsExplorer;
+export default SubTeamsExplorer;

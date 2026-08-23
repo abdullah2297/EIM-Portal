@@ -13,10 +13,16 @@ import { ROUTES } from '@/lib/constants';
  * }} props
  */
 export function TeamCard({ team, href }) {
-  const target = href ?? `${ROUTES.teams}?team=${team.id}`;
+  const target = href ?? ROUTES.team(team.id);
 
   return (
     <article className="team-card">
+      {team.featured ? (
+        <span className="card__featured-badge" title="Featured team">
+          <Icon name="WorkspacePremium" fontSize="small" />
+        </span>
+      ) : null}
+
       <span className="team-card__icon">
         <Icon name={team.icon} fontSize="medium" />
       </span>
@@ -38,10 +44,10 @@ export function TeamCard({ team, href }) {
           <span>Sub-teams</span>
         </span>
         {team.lead ? (
-          <span className="u-cluster u-cluster--sm ml-auto">
+          <Link href={ROUTES.employee(team.lead.id)} className="u-cluster u-cluster--sm ml-auto">
             <Avatar name={team.lead.fullName} src={team.lead.photo} size="sm" />
             <span className="u-text-xs u-subtle">{team.lead.fullName}</span>
-          </span>
+          </Link>
         ) : null}
       </div>
     </article>

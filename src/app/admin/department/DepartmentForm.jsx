@@ -156,6 +156,46 @@ export function DepartmentForm() {
           </section>
 
           <section className="admin-form__section">
+            <h2 className="admin-form__section-title">Our Squads spotlight</h2>
+            <p className="u-text-sm u-subtle">
+              Controls the "Our Squads" overview page. Pick up to 4 in each list - if a list is left
+              empty, featured teams/sub-teams/employees are shown instead, then whatever comes first.
+            </p>
+            <div className="form-grid">
+              <div className="form-grid__full">
+                <RelationMultiSelect
+                  label="Spotlighted teams"
+                  name="overviewTeamIds"
+                  value={values.overviewTeamIds}
+                  onChange={setValue}
+                  resource={RESOURCES.teams}
+                  labelField="name"
+                />
+              </div>
+              <div className="form-grid__full">
+                <RelationMultiSelect
+                  label="Spotlighted sub-teams"
+                  name="overviewSubTeamIds"
+                  value={values.overviewSubTeamIds}
+                  onChange={setValue}
+                  resource={RESOURCES.subTeams}
+                  labelField="name"
+                />
+              </div>
+              <div className="form-grid__full">
+                <RelationMultiSelect
+                  label="Spotlighted champions"
+                  name="overviewChampionIds"
+                  value={values.overviewChampionIds}
+                  onChange={setValue}
+                  resource={RESOURCES.employees}
+                  labelField="fullName"
+                />
+              </div>
+            </div>
+          </section>
+
+          <section className="admin-form__section">
             <h2 className="admin-form__section-title">Contact</h2>
             <div className="form-grid">
               <TextInput label="Email" name="email" value={values.contact?.email} onChange={setContactValue} />

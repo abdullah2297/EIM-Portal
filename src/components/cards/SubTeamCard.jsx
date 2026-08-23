@@ -1,19 +1,32 @@
+import Link from 'next/link';
 import { Avatar } from '@/components/ui/Avatar';
 import { Icon } from '@/components/ui/Icon';
 import { TagList } from '@/components/ui/Badge';
+import { ROUTES } from '@/lib/constants';
 
 /**
- * Sub-team card. Selectable when `onSelect` is supplied, so the teams page can
- * drill from a main team into one of its sub-teams.
+ * Sub-team card. Selectable when `onSelect` is supplied (the teams page drills
+ * from a main team into one of its sub-teams in place); links to `href` when
+ * that's supplied instead (its own dedicated sub-team page) - in that mode the
+ * card uses a "stretched link" overlay rather than wrapping everything in an
+ * `<a>`, so the lead's own link to their profile stays independently
+ * clickable instead of being invalidly nested inside it.
  *
  * @param {{
  *  subTeam: import('@/lib/types').SubTeam & { memberCount?: number, lead?: any },
  *  selected?: boolean,
  *  onSelect?: (id: string) => void,
+ *  href?: string,
  * }} props
  */
-export function SubTeamCard({ subTeam, selected = false, onSelect }) {
+export function SubTeamCard({ subTeam, selected = false, onSelect, href }) {
   const interactive = typeof onSelect === 'function';
+
+  const featuredBadge = subTeam.featured ? (
+    <span className="card__featured-badge" title="Featured sub-team">
+      <Icon name="WorkspacePremium" fontSize="small" />
+    </span>
+  ) : null;
 
   const body = (
     <>
@@ -25,10 +38,10 @@ export function SubTeamCard({ subTeam, selected = false, onSelect }) {
       <TagList items={subTeam.focusAreas} max={3} />
       <div className="card__meta">
         {subTeam.lead ? (
-          <span className="u-cluster u-cluster--sm">
+          <Link href={ROUTES.employee(subTeam.lead.id)} className="u-cluster u-cluster--sm card__lead-link">
             <Avatar name={subTeam.lead.fullName} src={subTeam.lead.photo} size="xs" />
             {subTeam.lead.fullName}
-          </span>
+          </Link>
         ) : (
           <span className="card__meta-item">
             <Icon name="Person" fontSize="inherit" />
@@ -39,6 +52,16 @@ export function SubTeamCard({ subTeam, selected = false, onSelect }) {
     </>
   );
 
+  if (href) {
+    return (
+      <div className="card card--interactive">
+        <Link href={href} className="card__stretched-link" aria-label={subTeam.name} />
+        {featuredBadge}
+        <div className="card__body">{body}</div>
+      </div>
+    );
+  }
+
   if (interactive) {
     return (
       <button
@@ -47,6 +70,7 @@ export function SubTeamCard({ subTeam, selected = false, onSelect }) {
         onClick={() => onSelect(subTeam.id)}
         aria-pressed={selected}
       >
+        {featuredBadge}
         <div className="card__body">{body}</div>
       </button>
     );
@@ -54,6 +78,7 @@ export function SubTeamCard({ subTeam, selected = false, onSelect }) {
 
   return (
     <article className="card">
+      {featuredBadge}
       <div className="card__body">{body}</div>
     </article>
   );

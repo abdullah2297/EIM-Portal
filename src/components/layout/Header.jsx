@@ -41,6 +41,10 @@ export function Header({ logo }) {
   const isActive = (href) =>
     href === ROUTES.home ? pathname === href : pathname.startsWith(href);
   const isGroupActive = (children) => children.some((child) => isActive(child.href));
+  // Once you're on one of a dropdown's pages, the trigger shows that page's
+  // own name/icon instead of the group label - e.g. "Our People" becomes
+  // "Teams" while on /teams.
+  const activeChild = (children) => children.find((child) => isActive(child.href));
   const flatPrimaryNav = flattenNav(PRIMARY_NAV);
 
   return (
@@ -53,8 +57,8 @@ export function Header({ logo }) {
             item.children ? (
               <DropdownMenu
                 key={item.label}
-                label={item.label}
-                icon={item.icon}
+                label={activeChild(item.children)?.label ?? item.label}
+                icon={activeChild(item.children)?.icon ?? item.icon}
                 variant="nav"
                 active={isGroupActive(item.children)}
                 items={item.children.map((child) => ({
@@ -77,8 +81,10 @@ export function Header({ logo }) {
             ),
           )}
           <DropdownMenu
-            label="More sections"
-            icon="MoreHoriz"
+            label={activeChild(SECONDARY_NAV)?.label ?? 'More sections'}
+            icon={activeChild(SECONDARY_NAV)?.icon ?? 'MoreHoriz'}
+            variant={activeChild(SECONDARY_NAV) ? 'nav' : 'icon'}
+            active={isGroupActive(SECONDARY_NAV)}
             items={SECONDARY_NAV.map((item) => ({
               key: item.href,
               label: item.label,

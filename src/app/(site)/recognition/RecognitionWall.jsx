@@ -130,7 +130,7 @@ export function RecognitionWall() {
               <h2>{winningTeam ? winningTeam.name : 'PLACEHOLDER - to be announced'}</h2>
               <p className="hero__lead">{teamOfQuarter?.message}</p>
               {winningTeam ? (
-                <Button href={`${ROUTES.teams}?team=${winningTeam.id}`} variant="on-dark" icon="AccountTree">
+                <Button href={ROUTES.team(winningTeam.id)} variant="on-dark" icon="AccountTree">
                   View team
                 </Button>
               ) : null}

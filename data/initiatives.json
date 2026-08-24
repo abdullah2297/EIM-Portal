@@ -1,669 +1,138 @@
 [
   {
-    "id": "ini-001",
-    "title": "Pipeline Automation Programme",
-    "summary": "Replace manual load scheduling with fully orchestrated, self-healing pipelines. PLACEHOLDER - replace with the department's own initiative summary.",
-    "description": "This initiative was raised by the Data Engineering & Integration team to address a recurring pain point in day-to-day delivery. The team ran a short discovery, agreed the target outcome with stakeholders, then delivered in increments so value landed early.\n\nPLACEHOLDER - replace this description with the real background, approach and lessons learned.",
-    "category": "Automation",
-    "teamIds": [
-      "team-engineering"
+    "id": "ini-etbwmq3tsq",
+    "tags": [
+      "Automation",
+      "Modeling",
+      "T24"
     ],
-    "subTeamIds": [],
-    "contributorIds": [
-      "emp-007",
-      "emp-008",
-      "emp-006",
-      "emp-009",
-      "emp-004"
-    ],
-    "startDate": "2024-06-07",
-    "endDate": "2025-02-25",
-    "objective": "Replace manual load scheduling with fully orchestrated, self-healing pipelines.",
+    "image": "https://media.licdn.com/dms/image/v2/D4D12AQF4agLhshdo6w/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1702627765947?e=2147483647&v=beta&t=Ko9wj4zStkJen5p2L-9QgmNgBblZi7cPKoB927I5naY",
+    "title": "T24 Modeling Automation",
     "impact": [
       {
-        "label": "Data quality score",
-        "value": "413 %"
+        "label": "Reduce manual effort",
+        "value": "90%"
       },
       {
-        "label": "Runtime saved",
-        "value": "479 hours / month"
+        "label": "Improve accuracy",
+        "value": "95%"
       },
       {
-        "label": "Reports migrated",
-        "value": "353 reports"
+        "label": "Accelerate delivery",
+        "value": "90%"
       }
     ],
     "status": "Completed",
-    "image": null,
-    "tags": [
-      "quality",
-      "automation",
-      "governance"
-    ],
-    "relatedAchievementIds": [],
-    "attachment": null,
-    "featured": false
-  },
-  {
-    "id": "ini-002",
-    "title": "Real-Time Customer Events Platform",
-    "summary": "Stand up an event-streaming backbone for near real-time customer data. PLACEHOLDER - replace with the department's own initiative summary.",
-    "description": "This initiative was raised by the Data Engineering & Integration team to address a recurring pain point in day-to-day delivery. The team ran a short discovery, agreed the target outcome with stakeholders, then delivered in increments so value landed early.\n\nPLACEHOLDER - replace this description with the real background, approach and lessons learned.",
-    "category": "Automation",
+    "endDate": "2026-05-30",
+    "summary": "We are building an automation framework for T24 modeling tasks using Python scripts. This initiative streamlines repetitive and complex processes such as XSD conversions, SMX generation, and DDL creation, reducing manual effort and ensuring consistency across deliverables.",
     "teamIds": [
-      "team-00f09sblhf",
       "team-q034fdpi93"
     ],
+    "category": "Automation",
+    "featured": true,
+    "createdAt": "2026-08-24T07:40:13.436Z",
+    "objective": "- Reduce manual effort → Eliminate repetitive schema conversion and validation tasks.\n\n- Improve accuracy → Minimize human error in schema transformations and comparisons.\n\n- Enhance scalability → Support large-scale schema and metadata management across multiple systems.\n\n- Accelerate delivery → Shorten turnaround time for modeling tasks.\n\n- Ensure consistency → Standardize outputs across ETL, SMX, and DDL artifacts.",
+    "startDate": "2026-03-01",
+    "updatedAt": "2026-08-24T07:40:13.436Z",
+    "attachment": null,
     "subTeamIds": [
+      "sub-4h2kq9m8d1"
+    ],
+    "description": "The initiative focuses on automating T24 modeling workflows that traditionally require significant manual intervention. These tasks include converting schema definitions, generating metadata, and validating consistency across multiple artifacts. Manual execution of these processes is time-consuming, error-prone, and difficult to scale.\n\nBy leveraging Python-based automation, we aim to simplify and accelerate the following processes:\n\n- XSD to ETL conversion → Transform schema definitions into ETL-ready formats.\n\n- XSD to Data Dictionary conversion → Generate structured data dictionaries directly from XSD files.\n\n- XSD comparison → Identify differences between schema versions for impact analysis.\n\n- SMX generation → Automate creation of SMX files for metadata management.\n\n- DDL generation → Produce database DDL scripts from schema definitions.\n\nThis automation ensures efficiency, accuracy, and scalability, enabling teams to focus on higher-value tasks such as design validation and optimization rather than repetitive conversions.",
+    "contributorIds": [
+      "emp-txpw4qfhuu"
+    ],
+    "relatedAchievementIds": []
+  },
+  {
+    "id": "ini-18wd2o7i23",
+    "tags": [
+      "SQL",
+      "Performance Optimization"
+    ],
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbOChd4hPwaS2Fr1Ye01NtBB1KuOjOL39_bJKK_L-6n0U2VaKQdvxbRgU&s=10",
+    "title": "Query Performance Optimization",
+    "impact": [
+      {
+        "label": "Reduce query latency",
+        "value": "95%"
+      },
+      {
+        "label": "Minimize CPU",
+        "value": "80%"
+      },
+      {
+        "label": "Minimize I/O overhead",
+        "value": "98%"
+      }
+    ],
+    "status": "Completed",
+    "endDate": "2025-12-30",
+    "summary": "The initiative focuses on enhancing query performance across data platforms by identifying inefficiencies, optimizing execution plans, and automating tuning processes. It aims to reduce latency, improve scalability, and ensure consistent response times for critical workloads.",
+    "teamIds": [
+      "team-q034fdpi93"
+    ],
+    "category": "Performance",
+    "featured": true,
+    "createdAt": "2026-08-24T07:29:40.429Z",
+    "objective": "- Reduce query latency: Achieve faster response times for critical queries.\n\n- Improve resource utilization: Minimize CPU, memory, and I/O overhead caused by inefficient queries.\n\n- Automate tuning: Deploy scripts and tools to continuously monitor and optimize queries without manual intervention.\n\n- Enhance scalability: Ensure queries remain efficient as data volumes and workloads grow.\n\n- Establish best practices: Create standards for query design, indexing, and optimization across teams.\n\n- Boost reliability: Reduce query failures and improve consistency in performance.",
+    "startDate": "2025-10-01",
+    "updatedAt": "2026-08-24T07:53:29.054Z",
+    "attachment": null,
+    "subTeamIds": [
+      "sub-4h2kq9m8d1",
       "sub-r1fmp0h3q1"
     ],
+    "description": "The Query Performance Optimization Initiative is designed to address challenges related to slow or resource‑intensive queries that impact system efficiency and user experience. Queries often become bottlenecks due to poor indexing, inefficient joins, unoptimized execution plans, or lack of automation in monitoring and tuning.\n\nThis initiative introduces a systematic approach to optimization by combining analysis, automation, and governance:\n\n- Performance analysis: Profiling queries to detect bottlenecks, hotspots, and inefficient patterns.\n\n- Execution plan optimization: Reviewing query plans to identify costly operations and restructuring queries for efficiency.\n\n- Indexing strategy: Designing and maintaining indexes to accelerate data retrieval.\n\n- Automation scripts: Leveraging Python and SQL automation to monitor queries, detect anomalies, and apply fixes proactively.\n\n- Scalability improvements: Ensuring queries perform consistently across large datasets and distributed environments.\n",
     "contributorIds": [
-      "emp-y2p84owtc4",
-      "emp-0rwtcdyxxv"
+      "emp-jio0af8pzp",
+      "emp-txpw4qfhuu",
+      "emp-pnbd09xpgp"
     ],
-    "startDate": "2025-08-24",
-    "endDate": "2026-05-01",
-    "objective": "Stand up an event-streaming backbone for near real-time customer data.",
+    "relatedAchievementIds": []
+  },
+  {
+    "id": "ini-qvj61wq402",
+    "tags": [
+      "Impact Analysis",
+      "Automation"
+    ],
+    "image": "https://monday.com/blog/wp-content/uploads/2026/01/impact-analysis.png",
+    "title": "Impact Analysis Automation",
     "impact": [
       {
-        "label": "Reports migrated",
-        "value": "281 reports"
+        "label": "Reduce Manual Efforts",
+        "value": "92%"
       },
       {
-        "label": "Data quality score",
-        "value": "290 %"
+        "label": "Accuracy improvement",
+        "value": "90%"
       },
       {
-        "label": "Runtime saved",
-        "value": "375 hours / month"
+        "label": "Delivery time",
+        "value": "80%"
       }
     ],
-    "status": "In Progress",
-    "image": "/api/uploads/upl-uvhz0vobgo.jpg",
-    "tags": [
-      "quality",
-      "self-service",
-      "governance"
+    "status": "Completed",
+    "endDate": "2026-03-30",
+    "summary": "We are developing an impact analysis automation initiative to eliminate the need for time-consuming and error-prone manual work. By leveraging Python scripts, we automate the search and mapping of columns and tables across SMX systems and impact analysis files, significantly improving efficiency and accuracy.",
+    "teamIds": [
+      "team-q034fdpi93"
     ],
-    "relatedAchievementIds": [],
-    "attachment": {
-      "name": "MSP-Website-master.zip",
-      "url": "/api/uploads/upl-jni00f2po6.zip",
-      "size": "184129"
-    },
+    "category": "Automation",
     "featured": true,
-    "updatedAt": "2026-08-19T20:12:36.008Z"
-  },
-  {
-    "id": "ini-003",
-    "title": "Warehouse Model Refresh",
-    "summary": "Modernise the core warehouse model to a data-vault foundation. PLACEHOLDER - replace with the department's own initiative summary.",
-    "description": "This initiative was raised by the Data Engineering & Integration team to address a recurring pain point in day-to-day delivery. The team ran a short discovery, agreed the target outcome with stakeholders, then delivered in increments so value landed early.\n\nPLACEHOLDER - replace this description with the real background, approach and lessons learned.",
-    "category": "Governance",
-    "teamIds": [
-      "team-engineering"
-    ],
-    "subTeamIds": [],
-    "contributorIds": [
-      "emp-001",
-      "emp-006",
-      "emp-004"
-    ],
-    "startDate": "2024-06-10",
-    "endDate": "2025-10-05",
-    "objective": "Modernise the core warehouse model to a data-vault foundation.",
-    "impact": [
-      {
-        "label": "Manual effort removed",
-        "value": "298 hours / week"
-      },
-      {
-        "label": "Reports migrated",
-        "value": "444 reports"
-      },
-      {
-        "label": "Data quality score",
-        "value": "86 %"
-      }
-    ],
-    "status": "In Progress",
-    "image": null,
-    "tags": [
-      "performance",
-      "ml",
-      "governance"
-    ],
-    "relatedAchievementIds": [],
+    "createdAt": "2026-08-24T07:21:36.546Z",
+    "objective": "- Eliminate manual effort  \nReduce the time and frustration caused by manual impact analysis by replacing repetitive tasks with automated workflows.\n\n- Accelerate dependency discovery  \nQuickly identify relationships between columns and tables across SMX systems and impact analysis files.\n\n- Enhance accuracy  \nMinimize human error by using Python scripts to consistently trace dependencies and generate reliable results.\n\n- Improve scalability  \nEnable analysis across large datasets and multiple systems without performance bottlenecks.\n\n- Standardize processes  \nEstablish a repeatable, automated approach that ensures consistency across teams and projects.\n\n- Free up resources  \nAllow analysts and engineers to focus on higher-value activities such as interpreting results and designing solutions, rather than manual searching.",
+    "startDate": "2026-01-01",
+    "updatedAt": "2026-08-24T07:21:36.546Z",
     "attachment": null,
-    "featured": false
-  },
-  {
-    "id": "ini-004",
-    "title": "Executive Dashboard Redesign",
-    "summary": "Rebuild the executive scorecard around a certified metric layer. PLACEHOLDER - replace with the department's own initiative summary.",
-    "description": "This initiative was raised by the Business Intelligence & Reporting team to address a recurring pain point in day-to-day delivery. The team ran a short discovery, agreed the target outcome with stakeholders, then delivered in increments so value landed early.\n\nPLACEHOLDER - replace this description with the real background, approach and lessons learned.",
-    "category": "Analytics",
-    "teamIds": [
-      "team-bi"
+    "subTeamIds": [
+      "sub-4h2kq9m8d1"
     ],
-    "subTeamIds": [],
+    "description": "Our initiative focuses on automating impact analysis to reduce the challenges associated with manual processes, which often consume excessive time and cause operational headaches. Traditionally, impact analysis requires manually tracing dependencies between columns and tables across multiple SMX systems and files, a task prone to human error and inefficiency.\n\nTo address this, we have implemented Python-based automation scripts that streamline the process. These scripts are designed to:\n\nAutomate column search: Quickly identify and locate relevant columns across SMX systems.\n\nAutomate table mapping: Detect and connect table relationships without manual intervention.\n\nProcess impact analysis files: Parse and analyze files to generate accurate dependency insights.\n\nReduce manual effort: Minimize repetitive work, saving time and reducing errors.\n\nImprove scalability: Enable faster and more reliable analysis across large datasets and multiple systems.\n\nThis automation not only enhances productivity but also ensures consistency and reliability in impact analysis results. By removing manual bottlenecks, teams can focus on higher-value tasks such as interpreting results and making informed decisions.",
     "contributorIds": [
-      "emp-018",
-      "emp-013",
-      "emp-014",
-      "emp-010"
+      "emp-txpw4qfhuu"
     ],
-    "startDate": "2025-02-06",
-    "endDate": "2026-02-17",
-    "objective": "Rebuild the executive scorecard around a certified metric layer.",
-    "impact": [
-      {
-        "label": "Data quality score",
-        "value": "383 %"
-      },
-      {
-        "label": "Reports migrated",
-        "value": "119 reports"
-      },
-      {
-        "label": "Incidents avoided",
-        "value": "371 per quarter"
-      }
-    ],
-    "status": "Completed",
-    "image": null,
-    "tags": [
-      "performance",
-      "quality",
-      "self-service"
-    ],
-    "relatedAchievementIds": [],
-    "attachment": null,
-    "featured": false
-  },
-  {
-    "id": "ini-005",
-    "title": "Regulatory Reporting Acceleration",
-    "summary": "Cut the regulatory submission cycle time by automating reconciliation. PLACEHOLDER - replace with the department's own initiative summary.",
-    "description": "This initiative was raised by the Business Intelligence & Reporting team to address a recurring pain point in day-to-day delivery. The team ran a short discovery, agreed the target outcome with stakeholders, then delivered in increments so value landed early.\n\nPLACEHOLDER - replace this description with the real background, approach and lessons learned.",
-    "category": "Performance",
-    "teamIds": [
-      "team-bi"
-    ],
-    "subTeamIds": [],
-    "contributorIds": [
-      "emp-016",
-      "emp-013",
-      "emp-010",
-      "emp-015",
-      "emp-014"
-    ],
-    "startDate": "2024-06-14",
-    "endDate": "2025-07-05",
-    "objective": "Cut the regulatory submission cycle time by automating reconciliation.",
-    "impact": [
-      {
-        "label": "Incidents avoided",
-        "value": "449 per quarter"
-      },
-      {
-        "label": "Users enabled",
-        "value": "293 colleagues"
-      },
-      {
-        "label": "Reports migrated",
-        "value": "329 reports"
-      }
-    ],
-    "status": "In Progress",
-    "image": null,
-    "tags": [
-      "quality",
-      "ml",
-      "governance"
-    ],
-    "relatedAchievementIds": [],
-    "attachment": null,
-    "featured": false
-  },
-  {
-    "id": "ini-006",
-    "title": "Self-Service BI Academy",
-    "summary": "Train business users to build their own certified reports safely. PLACEHOLDER - replace with the department's own initiative summary.",
-    "description": "This initiative was raised by the Business Intelligence & Reporting team to address a recurring pain point in day-to-day delivery. The team ran a short discovery, agreed the target outcome with stakeholders, then delivered in increments so value landed early.\n\nPLACEHOLDER - replace this description with the real background, approach and lessons learned.",
-    "category": "Culture",
-    "teamIds": [
-      "team-bi"
-    ],
-    "subTeamIds": [],
-    "contributorIds": [
-      "emp-011",
-      "emp-014",
-      "emp-010",
-      "emp-015"
-    ],
-    "startDate": "2025-03-23",
-    "endDate": "2026-04-19",
-    "objective": "Train business users to build their own certified reports safely.",
-    "impact": [
-      {
-        "label": "Runtime saved",
-        "value": "147 hours / month"
-      },
-      {
-        "label": "Incidents avoided",
-        "value": "292 per quarter"
-      },
-      {
-        "label": "Reports migrated",
-        "value": "220 reports"
-      }
-    ],
-    "status": "In Progress",
-    "image": null,
-    "tags": [
-      "performance",
-      "automation",
-      "self-service"
-    ],
-    "relatedAchievementIds": [],
-    "attachment": null,
-    "featured": false
-  },
-  {
-    "id": "ini-007",
-    "title": "Enterprise Data Quality Framework",
-    "summary": "Introduce a single rules engine and scorecard for data quality. PLACEHOLDER - replace with the department's own initiative summary.",
-    "description": "This initiative was raised by the Data Governance & Quality team to address a recurring pain point in day-to-day delivery. The team ran a short discovery, agreed the target outcome with stakeholders, then delivered in increments so value landed early.\n\nPLACEHOLDER - replace this description with the real background, approach and lessons learned.",
-    "category": "Data Quality",
-    "teamIds": [
-      "team-governance"
-    ],
-    "subTeamIds": [],
-    "contributorIds": [
-      "emp-021",
-      "emp-023",
-      "emp-025",
-      "emp-026"
-    ],
-    "startDate": "2024-04-05",
-    "endDate": "2025-05-26",
-    "objective": "Introduce a single rules engine and scorecard for data quality.",
-    "impact": [
-      {
-        "label": "Users enabled",
-        "value": "338 colleagues"
-      },
-      {
-        "label": "Runtime saved",
-        "value": "20 hours / month"
-      },
-      {
-        "label": "Reports migrated",
-        "value": "302 reports"
-      }
-    ],
-    "status": "Completed",
-    "image": null,
-    "tags": [
-      "automation",
-      "performance",
-      "ml"
-    ],
-    "relatedAchievementIds": [],
-    "attachment": null,
-    "featured": true
-  },
-  {
-    "id": "ini-008",
-    "title": "Data Catalogue Adoption Drive",
-    "summary": "Get every critical data element documented and discoverable. PLACEHOLDER - replace with the department's own initiative summary.",
-    "description": "This initiative was raised by the Data Governance & Quality team to address a recurring pain point in day-to-day delivery. The team ran a short discovery, agreed the target outcome with stakeholders, then delivered in increments so value landed early.\n\nPLACEHOLDER - replace this description with the real background, approach and lessons learned.",
-    "category": "Governance",
-    "teamIds": [
-      "team-governance"
-    ],
-    "subTeamIds": [],
-    "contributorIds": [
-      "emp-024",
-      "emp-026",
-      "emp-020",
-      "emp-027"
-    ],
-    "startDate": "2025-05-14",
-    "endDate": "2026-10-12",
-    "objective": "Get every critical data element documented and discoverable.",
-    "impact": [
-      {
-        "label": "Incidents avoided",
-        "value": "115 per quarter"
-      },
-      {
-        "label": "Data quality score",
-        "value": "35 %"
-      },
-      {
-        "label": "Runtime saved",
-        "value": "133 hours / month"
-      }
-    ],
-    "status": "In Progress",
-    "image": null,
-    "tags": [
-      "self-service",
-      "quality",
-      "performance"
-    ],
-    "relatedAchievementIds": [],
-    "attachment": null,
-    "featured": false
-  },
-  {
-    "id": "ini-009",
-    "title": "Privacy by Design Rollout",
-    "summary": "Embed classification and masking into every new data product. PLACEHOLDER - replace with the department's own initiative summary.",
-    "description": "This initiative was raised by the Data Governance & Quality team to address a recurring pain point in day-to-day delivery. The team ran a short discovery, agreed the target outcome with stakeholders, then delivered in increments so value landed early.\n\nPLACEHOLDER - replace this description with the real background, approach and lessons learned.",
-    "category": "Governance",
-    "teamIds": [
-      "team-governance"
-    ],
-    "subTeamIds": [],
-    "contributorIds": [
-      "emp-021",
-      "emp-024",
-      "emp-023",
-      "emp-026"
-    ],
-    "startDate": "2024-05-12",
-    "endDate": "2025-09-18",
-    "objective": "Embed classification and masking into every new data product.",
-    "impact": [
-      {
-        "label": "Reports migrated",
-        "value": "247 reports"
-      },
-      {
-        "label": "Manual effort removed",
-        "value": "144 hours / week"
-      },
-      {
-        "label": "Incidents avoided",
-        "value": "414 per quarter"
-      }
-    ],
-    "status": "Planned",
-    "image": null,
-    "tags": [
-      "quality",
-      "performance",
-      "governance"
-    ],
-    "relatedAchievementIds": [],
-    "attachment": null,
-    "featured": false
-  },
-  {
-    "id": "ini-010",
-    "title": "Customer Churn Early Warning",
-    "summary": "Predict at-risk customers early enough for retention teams to act. PLACEHOLDER - replace with the department's own initiative summary.",
-    "description": "This initiative was raised by the Advanced Analytics & Data Science team to address a recurring pain point in day-to-day delivery. The team ran a short discovery, agreed the target outcome with stakeholders, then delivered in increments so value landed early.\n\nPLACEHOLDER - replace this description with the real background, approach and lessons learned.",
-    "category": "Analytics",
-    "teamIds": [
-      "team-analytics"
-    ],
-    "subTeamIds": [],
-    "contributorIds": [
-      "emp-028",
-      "emp-034",
-      "emp-031"
-    ],
-    "startDate": "2025-02-25",
-    "endDate": "2026-03-07",
-    "objective": "Predict at-risk customers early enough for retention teams to act.",
-    "impact": [
-      {
-        "label": "Incidents avoided",
-        "value": "144 per quarter"
-      },
-      {
-        "label": "Runtime saved",
-        "value": "199 hours / month"
-      },
-      {
-        "label": "Users enabled",
-        "value": "100 colleagues"
-      }
-    ],
-    "status": "Completed",
-    "image": null,
-    "tags": [
-      "performance",
-      "ml",
-      "automation"
-    ],
-    "relatedAchievementIds": [],
-    "attachment": null,
-    "featured": false
-  },
-  {
-    "id": "ini-011",
-    "title": "Fraud Anomaly Detection Uplift",
-    "summary": "Improve detection rates while reducing false positives. PLACEHOLDER - replace with the department's own initiative summary.",
-    "description": "This initiative was raised by the Advanced Analytics & Data Science team to address a recurring pain point in day-to-day delivery. The team ran a short discovery, agreed the target outcome with stakeholders, then delivered in increments so value landed early.\n\nPLACEHOLDER - replace this description with the real background, approach and lessons learned.",
-    "category": "Analytics",
-    "teamIds": [
-      "team-analytics"
-    ],
-    "subTeamIds": [],
-    "contributorIds": [
-      "emp-034",
-      "emp-028",
-      "emp-033",
-      "emp-031"
-    ],
-    "startDate": "2024-07-02",
-    "endDate": "2025-07-14",
-    "objective": "Improve detection rates while reducing false positives.",
-    "impact": [
-      {
-        "label": "Runtime saved",
-        "value": "364 hours / month"
-      },
-      {
-        "label": "Manual effort removed",
-        "value": "207 hours / week"
-      },
-      {
-        "label": "Data quality score",
-        "value": "123 %"
-      }
-    ],
-    "status": "In Progress",
-    "image": null,
-    "tags": [
-      "self-service",
-      "quality",
-      "automation"
-    ],
-    "relatedAchievementIds": [],
-    "attachment": null,
-    "featured": false
-  },
-  {
-    "id": "ini-012",
-    "title": "Feature Store Foundation",
-    "summary": "Give data scientists a shared, governed feature store. PLACEHOLDER - replace with the department's own initiative summary.",
-    "description": "This initiative was raised by the Advanced Analytics & Data Science team to address a recurring pain point in day-to-day delivery. The team ran a short discovery, agreed the target outcome with stakeholders, then delivered in increments so value landed early.\n\nPLACEHOLDER - replace this description with the real background, approach and lessons learned.",
-    "category": "Automation",
-    "teamIds": [
-      "team-analytics"
-    ],
-    "subTeamIds": [],
-    "contributorIds": [
-      "emp-033",
-      "emp-030",
-      "emp-028",
-      "emp-029",
-      "emp-034"
-    ],
-    "startDate": "2025-01-27",
-    "endDate": "2026-10-28",
-    "objective": "Give data scientists a shared, governed feature store.",
-    "impact": [
-      {
-        "label": "Data quality score",
-        "value": "310 %"
-      },
-      {
-        "label": "Users enabled",
-        "value": "59 colleagues"
-      },
-      {
-        "label": "Reports migrated",
-        "value": "132 reports"
-      }
-    ],
-    "status": "Planned",
-    "image": null,
-    "tags": [
-      "performance",
-      "ml",
-      "quality"
-    ],
-    "relatedAchievementIds": [],
-    "attachment": null,
-    "featured": false
-  },
-  {
-    "id": "ini-013",
-    "title": "Platform Performance Tuning",
-    "summary": "Reduce nightly batch runtime and stabilise the load window. PLACEHOLDER - replace with the department's own initiative summary.",
-    "description": "This initiative was raised by the Platform, Architecture & Support team to address a recurring pain point in day-to-day delivery. The team ran a short discovery, agreed the target outcome with stakeholders, then delivered in increments so value landed early.\n\nPLACEHOLDER - replace this description with the real background, approach and lessons learned.",
-    "category": "Performance",
-    "teamIds": [
-      "team-platform"
-    ],
-    "subTeamIds": [],
-    "contributorIds": [
-      "emp-037",
-      "emp-036",
-      "emp-039"
-    ],
-    "startDate": "2024-07-24",
-    "endDate": "2025-09-24",
-    "objective": "Reduce nightly batch runtime and stabilise the load window.",
-    "impact": [
-      {
-        "label": "Runtime saved",
-        "value": "468 hours / month"
-      },
-      {
-        "label": "Incidents avoided",
-        "value": "163 per quarter"
-      },
-      {
-        "label": "Users enabled",
-        "value": "478 colleagues"
-      }
-    ],
-    "status": "Completed",
-    "image": null,
-    "tags": [
-      "ml",
-      "automation",
-      "self-service"
-    ],
-    "relatedAchievementIds": [],
-    "attachment": null,
-    "featured": false
-  },
-  {
-    "id": "ini-014",
-    "title": "Zero-Downtime Release Pipeline",
-    "summary": "Ship data changes without taking reporting offline. PLACEHOLDER - replace with the department's own initiative summary.",
-    "description": "This initiative was raised by the Platform, Architecture & Support team to address a recurring pain point in day-to-day delivery. The team ran a short discovery, agreed the target outcome with stakeholders, then delivered in increments so value landed early.\n\nPLACEHOLDER - replace this description with the real background, approach and lessons learned.",
-    "category": "Automation",
-    "teamIds": [
-      "team-platform"
-    ],
-    "subTeamIds": [],
-    "contributorIds": [
-      "emp-037",
-      "emp-038",
-      "emp-040",
-      "emp-039"
-    ],
-    "startDate": "2025-04-22",
-    "endDate": "2026-07-20",
-    "objective": "Ship data changes without taking reporting offline.",
-    "impact": [
-      {
-        "label": "Users enabled",
-        "value": "371 colleagues"
-      },
-      {
-        "label": "Reports migrated",
-        "value": "434 reports"
-      },
-      {
-        "label": "Runtime saved",
-        "value": "409 hours / month"
-      }
-    ],
-    "status": "In Progress",
-    "image": null,
-    "tags": [
-      "quality",
-      "automation",
-      "performance"
-    ],
-    "relatedAchievementIds": [],
-    "attachment": null,
-    "featured": false
-  },
-  {
-    "id": "ini-015",
-    "title": "Production Support Playbooks",
-    "summary": "Document every recurring incident with a tested runbook. PLACEHOLDER - replace with the department's own initiative summary.",
-    "description": "This initiative was raised by the Platform, Architecture & Support team to address a recurring pain point in day-to-day delivery. The team ran a short discovery, agreed the target outcome with stakeholders, then delivered in increments so value landed early.\n\nPLACEHOLDER - replace this description with the real background, approach and lessons learned.",
-    "category": "Culture",
-    "teamIds": [
-      "team-platform"
-    ],
-    "subTeamIds": [],
-    "contributorIds": [
-      "emp-037",
-      "emp-040",
-      "emp-036",
-      "emp-035",
-      "emp-039"
-    ],
-    "startDate": "2024-07-19",
-    "endDate": "2025-11-14",
-    "objective": "Document every recurring incident with a tested runbook.",
-    "impact": [
-      {
-        "label": "Reports migrated",
-        "value": "148 reports"
-      },
-      {
-        "label": "Incidents avoided",
-        "value": "456 per quarter"
-      },
-      {
-        "label": "Runtime saved",
-        "value": "179 hours / month"
-      }
-    ],
-    "status": "Completed",
-    "image": null,
-    "tags": [
-      "quality",
-      "performance",
-      "governance"
-    ],
-    "relatedAchievementIds": [],
-    "attachment": null,
-    "featured": false
+    "relatedAchievementIds": []
   }
 ]

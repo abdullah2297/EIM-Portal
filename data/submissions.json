@@ -1,20 +1,20 @@
 [
   {
-    "type": "Competition Entry",
+    "id": "sub-wadlctdc8n",
     "name": "Abdullah Elsayed",
+    "type": "Competition Entry",
     "email": "abdullah.elzak@cibeg.com",
-    "subject": "Entry: Data Quality Bug Hunt",
+    "status": "New",
     "message": "PLACEHOLDER - no additional message provided.",
-    "competitionId": "cmp-003",
-    "employeeId": "emp-jio0af8pzp",
+    "subject": "Entry: Data Quality Bug Hunt",
+    "createdAt": "2026-08-22T19:02:19.015Z",
+    "updatedAt": "2026-08-22T19:02:46.028Z",
     "attachment": {
+      "url": "https://zwho5ilhzixnerqw.public.blob.vercel-storage.com/upl-wv7mryrf0q-2WwzTijlKtIhnfoqYfixwlYUBvp76q.zip?download=1",
       "name": "eimportal.zip",
-      "url": "/api/uploads/upl-wv7mryrf0q.zip",
       "size": "310720"
     },
-    "status": "New",
-    "createdAt": "2026-08-22T19:02:19.015Z",
-    "id": "sub-wadlctdc8n",
-    "updatedAt": "2026-08-22T19:02:46.028Z"
+    "employeeId": "emp-jio0af8pzp",
+    "competitionId": "cmp-003"
   }
 ]

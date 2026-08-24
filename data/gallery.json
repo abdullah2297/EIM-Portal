@@ -1,242 +1,242 @@
 [
   {
     "id": "gal-001",
-    "title": "Department Away Day - photo 1",
-    "category": "Team Activities",
-    "event": "Department Away Day",
     "date": "2025-10-05",
+    "event": "Department Away Day",
     "image": null,
+    "title": "Department Away Day - photo 1",
+    "teamId": "team-governance",
     "caption": "PLACEHOLDER - upload the real photo and caption through the admin panel.",
-    "teamId": "team-governance"
+    "category": "Team Activities"
   },
   {
     "id": "gal-002",
-    "title": "Department Away Day - photo 2",
-    "category": "Team Activities",
-    "event": "Department Away Day",
     "date": "2025-11-26",
+    "event": "Department Away Day",
     "image": null,
+    "title": "Department Away Day - photo 2",
+    "teamId": "team-engineering",
     "caption": "PLACEHOLDER - upload the real photo and caption through the admin panel.",
-    "teamId": "team-engineering"
+    "category": "Team Activities"
   },
   {
     "id": "gal-003",
-    "title": "Department Away Day - photo 3",
-    "category": "Team Activities",
-    "event": "Department Away Day",
     "date": "2025-12-25",
+    "event": "Department Away Day",
     "image": null,
+    "title": "Department Away Day - photo 3",
+    "teamId": "team-engineering",
     "caption": "PLACEHOLDER - upload the real photo and caption through the admin panel.",
-    "teamId": "team-engineering"
+    "category": "Team Activities"
   },
   {
     "id": "gal-004",
-    "title": "Annual Awards Night - photo 1",
-    "category": "Awards",
-    "event": "Annual Awards Night",
     "date": "2026-07-17",
+    "event": "Annual Awards Night",
     "image": null,
+    "title": "Annual Awards Night - photo 1",
+    "teamId": null,
     "caption": "PLACEHOLDER - upload the real photo and caption through the admin panel.",
-    "teamId": null
+    "category": "Awards"
   },
   {
     "id": "gal-005",
-    "title": "Annual Awards Night - photo 2",
-    "category": "Awards",
-    "event": "Annual Awards Night",
     "date": "2026-10-18",
+    "event": "Annual Awards Night",
     "image": null,
+    "title": "Annual Awards Night - photo 2",
+    "teamId": null,
     "caption": "PLACEHOLDER - upload the real photo and caption through the admin panel.",
-    "teamId": null
+    "category": "Awards"
   },
   {
     "id": "gal-006",
-    "title": "Annual Awards Night - photo 3",
-    "category": "Awards",
-    "event": "Annual Awards Night",
     "date": "2026-10-12",
+    "event": "Annual Awards Night",
     "image": null,
+    "title": "Annual Awards Night - photo 3",
+    "teamId": null,
     "caption": "PLACEHOLDER - upload the real photo and caption through the admin panel.",
-    "teamId": null
+    "category": "Awards"
   },
   {
     "id": "gal-007",
-    "title": "Innovation Day - photo 1",
-    "category": "Events",
-    "event": "Innovation Day",
     "date": "2025-01-10",
+    "event": "Innovation Day",
     "image": null,
+    "title": "Innovation Day - photo 1",
+    "teamId": "team-engineering",
     "caption": "PLACEHOLDER - upload the real photo and caption through the admin panel.",
-    "teamId": "team-engineering"
+    "category": "Events"
   },
   {
     "id": "gal-008",
-    "title": "Innovation Day - photo 2",
-    "category": "Events",
-    "event": "Innovation Day",
     "date": "2025-09-07",
+    "event": "Innovation Day",
     "image": null,
+    "title": "Innovation Day - photo 2",
+    "teamId": "team-governance",
     "caption": "PLACEHOLDER - upload the real photo and caption through the admin panel.",
-    "teamId": "team-governance"
+    "category": "Events"
   },
   {
     "id": "gal-009",
-    "title": "Innovation Day - photo 3",
-    "category": "Events",
-    "event": "Innovation Day",
     "date": "2025-01-26",
+    "event": "Innovation Day",
     "image": null,
+    "title": "Innovation Day - photo 3",
+    "teamId": "team-platform",
     "caption": "PLACEHOLDER - upload the real photo and caption through the admin panel.",
-    "teamId": "team-platform"
+    "category": "Events"
   },
   {
     "id": "gal-010",
-    "title": "Ramadan Iftar - photo 1",
-    "category": "Celebrations",
-    "event": "Ramadan Iftar",
     "date": "2026-10-06",
+    "event": "Ramadan Iftar",
     "image": null,
+    "title": "Ramadan Iftar - photo 1",
+    "teamId": null,
     "caption": "PLACEHOLDER - upload the real photo and caption through the admin panel.",
-    "teamId": null
+    "category": "Celebrations"
   },
   {
     "id": "gal-011",
-    "title": "Ramadan Iftar - photo 2",
-    "category": "Celebrations",
-    "event": "Ramadan Iftar",
     "date": "2026-12-20",
+    "event": "Ramadan Iftar",
     "image": null,
+    "title": "Ramadan Iftar - photo 2",
+    "teamId": null,
     "caption": "PLACEHOLDER - upload the real photo and caption through the admin panel.",
-    "teamId": null
+    "category": "Celebrations"
   },
   {
     "id": "gal-012",
-    "title": "Ramadan Iftar - photo 3",
-    "category": "Celebrations",
-    "event": "Ramadan Iftar",
     "date": "2026-04-10",
+    "event": "Ramadan Iftar",
     "image": null,
+    "title": "Ramadan Iftar - photo 3",
+    "teamId": null,
     "caption": "PLACEHOLDER - upload the real photo and caption through the admin panel.",
-    "teamId": null
+    "category": "Celebrations"
   },
   {
     "id": "gal-013",
-    "title": "Hack the Batch - photo 1",
-    "category": "Competitions",
-    "event": "Hack the Batch",
     "date": "2025-06-12",
+    "event": "Hack the Batch",
     "image": null,
+    "title": "Hack the Batch - photo 1",
+    "teamId": "team-governance",
     "caption": "PLACEHOLDER - upload the real photo and caption through the admin panel.",
-    "teamId": "team-governance"
+    "category": "Competitions"
   },
   {
     "id": "gal-014",
-    "title": "Hack the Batch - photo 2",
-    "category": "Competitions",
-    "event": "Hack the Batch",
     "date": "2025-11-02",
+    "event": "Hack the Batch",
     "image": null,
+    "title": "Hack the Batch - photo 2",
+    "teamId": "team-bi",
     "caption": "PLACEHOLDER - upload the real photo and caption through the admin panel.",
-    "teamId": "team-bi"
+    "category": "Competitions"
   },
   {
     "id": "gal-015",
-    "title": "Hack the Batch - photo 3",
-    "category": "Competitions",
-    "event": "Hack the Batch",
     "date": "2025-01-04",
+    "event": "Hack the Batch",
     "image": null,
+    "title": "Hack the Batch - photo 3",
+    "teamId": "team-platform",
     "caption": "PLACEHOLDER - upload the real photo and caption through the admin panel.",
-    "teamId": "team-platform"
+    "category": "Competitions"
   },
   {
     "id": "gal-016",
-    "title": "New Joiner Welcome - photo 1",
-    "category": "Celebrations",
-    "event": "New Joiner Welcome",
     "date": "2026-07-05",
+    "event": "New Joiner Welcome",
     "image": null,
+    "title": "New Joiner Welcome - photo 1",
+    "teamId": null,
     "caption": "PLACEHOLDER - upload the real photo and caption through the admin panel.",
-    "teamId": null
+    "category": "Celebrations"
   },
   {
     "id": "gal-017",
-    "title": "New Joiner Welcome - photo 2",
-    "category": "Celebrations",
-    "event": "New Joiner Welcome",
     "date": "2026-10-16",
+    "event": "New Joiner Welcome",
     "image": null,
+    "title": "New Joiner Welcome - photo 2",
+    "teamId": null,
     "caption": "PLACEHOLDER - upload the real photo and caption through the admin panel.",
-    "teamId": null
+    "category": "Celebrations"
   },
   {
     "id": "gal-018",
-    "title": "New Joiner Welcome - photo 3",
-    "category": "Celebrations",
-    "event": "New Joiner Welcome",
     "date": "2026-09-28",
+    "event": "New Joiner Welcome",
     "image": null,
+    "title": "New Joiner Welcome - photo 3",
+    "teamId": null,
     "caption": "PLACEHOLDER - upload the real photo and caption through the admin panel.",
-    "teamId": null
+    "category": "Celebrations"
   },
   {
     "id": "gal-019",
-    "title": "Town Hall - photo 1",
-    "category": "Events",
-    "event": "Town Hall",
     "date": "2025-06-24",
+    "event": "Town Hall",
     "image": null,
+    "title": "Town Hall - photo 1",
+    "teamId": "team-governance",
     "caption": "PLACEHOLDER - upload the real photo and caption through the admin panel.",
-    "teamId": "team-governance"
+    "category": "Events"
   },
   {
     "id": "gal-020",
-    "title": "Town Hall - photo 2",
-    "category": "Events",
-    "event": "Town Hall",
     "date": "2025-07-12",
+    "event": "Town Hall",
     "image": null,
+    "title": "Town Hall - photo 2",
+    "teamId": "team-analytics",
     "caption": "PLACEHOLDER - upload the real photo and caption through the admin panel.",
-    "teamId": "team-analytics"
+    "category": "Events"
   },
   {
     "id": "gal-021",
-    "title": "Town Hall - photo 3",
-    "category": "Events",
-    "event": "Town Hall",
     "date": "2025-10-11",
+    "event": "Town Hall",
     "image": null,
+    "title": "Town Hall - photo 3",
+    "teamId": "team-platform",
     "caption": "PLACEHOLDER - upload the real photo and caption through the admin panel.",
-    "teamId": "team-platform"
+    "category": "Events"
   },
   {
     "id": "gal-022",
-    "title": "Volunteering Day - photo 1",
-    "category": "Team Activities",
-    "event": "Volunteering Day",
     "date": "2026-12-25",
+    "event": "Volunteering Day",
     "image": null,
+    "title": "Volunteering Day - photo 1",
+    "teamId": null,
     "caption": "PLACEHOLDER - upload the real photo and caption through the admin panel.",
-    "teamId": null
+    "category": "Team Activities"
   },
   {
     "id": "gal-023",
-    "title": "Volunteering Day - photo 2",
-    "category": "Team Activities",
-    "event": "Volunteering Day",
     "date": "2026-05-18",
+    "event": "Volunteering Day",
     "image": null,
+    "title": "Volunteering Day - photo 2",
+    "teamId": null,
     "caption": "PLACEHOLDER - upload the real photo and caption through the admin panel.",
-    "teamId": null
+    "category": "Team Activities"
   },
   {
     "id": "gal-024",
-    "title": "Volunteering Day - photo 3",
-    "category": "Team Activities",
-    "event": "Volunteering Day",
     "date": "2026-03-21",
+    "event": "Volunteering Day",
     "image": null,
+    "title": "Volunteering Day - photo 3",
+    "teamId": null,
     "caption": "PLACEHOLDER - upload the real photo and caption through the admin panel.",
-    "teamId": null
+    "category": "Team Activities"
   }
 ]

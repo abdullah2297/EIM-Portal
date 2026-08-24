@@ -1,62 +1,62 @@
 [
   {
     "id": "ann-001",
-    "title": "Q3 Department Town Hall",
     "date": "2026-08-17",
-    "category": "Event",
-    "authorId": "emp-001",
-    "summary": "Join the whole department for the quarterly update, roadmap review and recognition awards.",
-    "content": "Join the whole department for the quarterly update, roadmap review and recognition awards.\n\nPLACEHOLDER - replace this body text with the full announcement, including any actions colleagues need to take and who to contact with questions.",
     "image": null,
+    "title": "Q3 Department Town Hall",
+    "pinned": true,
     "teamId": "team-bi",
+    "content": "Join the whole department for the quarterly update, roadmap review and recognition awards.\n\nPLACEHOLDER - replace this body text with the full announcement, including any actions colleagues need to take and who to contact with questions.",
+    "summary": "Join the whole department for the quarterly update, roadmap review and recognition awards.",
+    "authorId": "emp-001",
+    "category": "Event",
+    "featured": true,
+    "eventDate": "2026-09-02",
     "attachments": [
       {
-        "name": "PLACEHOLDER-attachment.pdf",
         "url": "#",
+        "name": "PLACEHOLDER-attachment.pdf",
         "size": "—"
       }
     ],
-    "pinned": true,
-    "featured": true,
-    "eventDate": "2026-09-02",
     "eventLocation": "PLACEHOLDER - room / link"
   },
   {
     "id": "ann-004",
-    "title": "Welcome to Our New Joiners",
     "date": "2026-07-22",
-    "category": "Celebration",
-    "authorId": "emp-033",
-    "summary": "Five colleagues joined the department this quarter across three teams.",
-    "content": "Five colleagues joined the department this quarter across three teams.\n\nPLACEHOLDER - replace this body text with the full announcement, including any actions colleagues need to take and who to contact with questions.",
     "image": null,
-    "teamId": "team-platform",
-    "attachments": [],
+    "title": "Welcome to Our New Joiners",
     "pinned": false,
+    "teamId": "team-platform",
+    "content": "Five colleagues joined the department this quarter across three teams.\n\nPLACEHOLDER - replace this body text with the full announcement, including any actions colleagues need to take and who to contact with questions.",
+    "summary": "Five colleagues joined the department this quarter across three teams.",
+    "authorId": "emp-033",
+    "category": "Celebration",
     "featured": false,
     "eventDate": null,
+    "attachments": [],
     "eventLocation": null
   },
   {
     "id": "ann-005",
-    "title": "Advanced SQL Training Series",
     "date": "2026-06-08",
-    "category": "Training",
-    "authorId": "emp-025",
-    "summary": "A six-week internal training series open to every member of the department.",
-    "content": "A six-week internal training series open to every member of the department.\n\nPLACEHOLDER - replace this body text with the full announcement, including any actions colleagues need to take and who to contact with questions.",
     "image": null,
+    "title": "Advanced SQL Training Series",
+    "pinned": false,
     "teamId": "team-engineering",
+    "content": "A six-week internal training series open to every member of the department.\n\nPLACEHOLDER - replace this body text with the full announcement, including any actions colleagues need to take and who to contact with questions.",
+    "summary": "A six-week internal training series open to every member of the department.",
+    "authorId": "emp-025",
+    "category": "Training",
+    "featured": false,
+    "eventDate": "2026-10-28",
     "attachments": [
       {
-        "name": "PLACEHOLDER-attachment.pdf",
         "url": "#",
+        "name": "PLACEHOLDER-attachment.pdf",
         "size": "—"
       }
     ],
-    "pinned": false,
-    "featured": false,
-    "eventDate": "2026-10-28",
     "eventLocation": "PLACEHOLDER - room / link"
   }
 ]

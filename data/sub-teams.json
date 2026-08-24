@@ -1,48 +1,70 @@
 [
   {
-    "name": "Technology Architecture ",
+    "id": "sub-3l50sjpaai",
+    "name": "Data Architecture ",
+    "leadId": "emp-0h9mct7i05",
     "teamId": "team-00f09sblhf",
-    "description": "Defines the technology architecture, platforms, tools, and technical standards required to support the organization's data strategy.",
+    "featured": false,
+    "createdAt": "2026-08-24T06:07:30.756Z",
+    "updatedAt": "2026-08-24T06:07:30.756Z",
+    "focusAreas": [
+      "Modern Data Architecture"
+    ],
+    "portfolios": [],
+    "description": "The Data Architecture Team is the backbone of a modern lakehouse, ensuring that raw data, structured analytics, and advanced AI/ML workloads coexist seamlessly. Their mission is to design, govern, and evolve the data ecosystem so that it is scalable, secure, and business-aligned.",
+    "responsibilities": [
+      "Platform Architecture: Define and maintain the lakehouse architecture, integrating data lake storage with warehouse-style query engines.",
+      "Data Modeling: Establish canonical models, schemas, and metadata structures to support analytics and machine learning."
+    ]
+  },
+  {
+    "id": "sub-engvbjyn65",
+    "name": "Technology Architecture ",
+    "leadId": "emp-y2p84owtc4",
+    "teamId": "team-00f09sblhf",
+    "featured": false,
+    "createdAt": "2026-08-19T12:53:40.303Z",
+    "updatedAt": "2026-08-23T19:45:53.087Z",
     "focusAreas": [
       "Define the technology foundation required to support the organization's data strategy and future data needs."
     ],
+    "portfolios": [],
+    "description": "Defines the technology architecture, platforms, tools, and technical standards required to support the organization's data strategy.",
     "responsibilities": [
       "Evaluate and recommend data platforms, tools, and technologies.",
       "Ensure scalability, availability, performance, and interoperability of data platforms",
       "Identify technology gaps and define improvement roadmaps."
-    ],
-    "portfolios": [],
-    "leadId": "emp-y2p84owtc4",
-    "id": "sub-engvbjyn65",
-    "createdAt": "2026-08-19T12:53:40.303Z",
-    "updatedAt": "2026-08-19T13:09:00.265Z",
-    "featured": false
+    ]
   },
   {
+    "id": "sub-r1fmp0h3q1",
     "name": "Data Trust & Enablment",
+    "leadId": "emp-0rwtcdyxxv",
     "teamId": "team-00f09sblhf",
-    "description": "Establishes data policies, standards, ownership, quality, security, lineage, and controls to ensure data is trusted, managed, and used responsibly. Also drives data adoption across the organization by providing capabilities, standards, guidance, training, and support that enable teams to use data effectively.",
+    "featured": false,
+    "createdAt": "2026-08-19T12:35:18.658Z",
+    "updatedAt": "2026-08-23T20:19:12.977Z",
     "focusAreas": [
       "Data Governance",
       "Enablement"
     ],
+    "portfolios": [],
+    "description": "Establishes data policies, standards, ownership, quality, security, lineage, and controls to ensure data is trusted, managed, and used responsibly. Also drives data adoption across the organization by providing capabilities, standards, guidance, training, and support that enable teams to use data effectively.",
     "responsibilities": [
       "Data Lineage",
       "Quality",
       "Privacy",
       "Trainig"
-    ],
-    "portfolios": [],
-    "leadId": "emp-0rwtcdyxxv",
-    "id": "sub-r1fmp0h3q1",
-    "createdAt": "2026-08-19T12:35:18.658Z",
-    "updatedAt": "2026-08-19T12:44:08.108Z",
-    "featured": false
+    ]
   },
   {
+    "id": "sub-4h2kq9m8d1",
     "name": "Data Delivery ( IT )",
+    "leadId": "emp-k7wu2cqzts",
     "teamId": "team-q034fdpi93",
-    "description": "Supports IT requests by building, maintaining, and optimizing data pipelines, integrations, and engineering workflows to ensure reliable, secure, and timely delivery of data across the enterprise.",
+    "featured": true,
+    "createdAt": "2026-08-23T08:57:00.000Z",
+    "updatedAt": "2026-08-24T05:52:45.714Z",
     "focusAreas": [
       "Data Engineering Excellence",
       "Request Management",
@@ -50,6 +72,10 @@
       "Innovation & Modernization",
       "Cross-Team Collaboration"
     ],
+    "portfolios": [
+      "IT"
+    ],
+    "description": "Supports IT requests by building, maintaining, and optimizing data pipelines, integrations, and engineering workflows to ensure reliable, secure, and timely delivery of data across the enterprise.",
     "responsibilities": [
       "Handle IT requests related to data extraction, transformation, and delivery.",
       "Design, build, and maintain scalable data pipelines.",
@@ -58,14 +84,6 @@
       "Optimize Spark jobs, ETL workflows, and data pipelines.",
       "Ensure compliance with organizational security and regulatory standards.",
       "Develop reusable scripts, APIs, and automation frameworks."
-    ],
-    "portfolios": [
-      "IT"
-    ],
-    "leadId": "emp-9xkq3lmz7a",
-    "id": "sub-4h2kq9m8d1",
-    "createdAt": "2026-08-23T08:57:00.000Z",
-    "updatedAt": "2026-08-23T08:57:00.000Z",
-    "featured": false
+    ]
   }
 ]

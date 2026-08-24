@@ -1,45 +1,109 @@
 [
   {
-    "name": " Data Delivery & Engineering ",
-    "shortName": "Delivery & Engineering",
+    "id": "team-aqmq9b1mp4",
     "icon": "Engineering",
+    "name": "Data Production",
+    "order": "5",
+    "leadId": "emp-invxjl5t3s",
+    "mission": "To design, operate, and optimize enterprise data production workflows that transform raw data into trusted insights, enabling business units to make informed decisions. The team’s mission is to ensure data availability, accuracy, and performance across platforms, while continuously modernizing processes to support evolving business and regulatory requirements.",
+    "featured": false,
+    "createdAt": "2026-08-24T08:33:02.546Z",
+    "shortName": "Data Production",
+    "updatedAt": "2026-08-24T08:39:32.581Z",
+    "portfolios": [],
+    "description": "The Data Production Team is responsible for managing, orchestrating, and delivering enterprise data across critical platforms such as PowerCenter, Teradata, and SAP BO. They ensure that data pipelines, transformations, and reporting solutions are reliable, scalable, and aligned with business and IT needs. Acting as the backbone of operational data delivery, the team guarantees that stakeholders have access to trusted, timely, and actionable information.",
+    "responsibilities": [
+      "ETL Development & Maintenance: Build and manage ETL workflows in PowerCenter to extract, transform, and load data efficiently.",
+      "Data Warehouse Management: Maintain and optimize Teradata environments for scalability, performance, and reliability.",
+      "Performance Optimization: Tune ETL jobs, queries, and reporting layers for efficiency and cost-effectiveness.",
+      "Operational Support: Provide ongoing support for production jobs, troubleshoot failures, and ensure SLA adherence."
+    ]
+  },
+  {
+    "id": "team-og68gm0gsf",
+    "icon": "Engineering",
+    "name": "Data Modernization",
+    "order": "4",
+    "leadId": "emp-xolq4jd4yg",
+    "mission": "To be enabler of transformation, ensuring that the move from warehouse to lakehouse is not just a technical upgrade, but a strategic leap toward a unified, intelligent, and future-ready data ecosystem.",
+    "featured": false,
+    "createdAt": "2026-08-24T08:15:42.560Z",
+    "shortName": "Data Modernization",
+    "updatedAt": "2026-08-24T08:23:12.167Z",
+    "portfolios": [],
+    "description": "The Data Modernization Team is the strategic force behind the organization’s evolution from legacy data warehouse systems to a modern lakehouse architecture. Their mission is to design, implement, and optimize scalable, cloud-native solutions that unify structured and unstructured data, enabling advanced analytics, AI, and real-time decision-making. With specialized expertise in the Cloudera platform, they ensure that modernization efforts are both technically robust and business-aligned.",
+    "responsibilities": [
+      "Architecture Modernization: Redesign legacy warehouse structures into lakehouse-native models, leveraging Cloudera Data Platform (CDP) capabilities.",
+      "Platform Expertise: Deploy, configure, and optimize Cloudera components (HDFS, Hive, Impala, Kafka, Spark, Iceberg/Delta) for modern workloads.",
+      "Pipeline Engineering: Build ingestion, transformation, and streaming pipelines using Spark, Kafka, and Cloudera Flow Management."
+    ]
+  },
+  {
+    "id": "team-rmevczw80s",
+    "icon": "Engineering",
+    "name": "Data Delivery & Engineering 2",
+    "order": "3",
+    "leadId": "emp-d5jzl0fyny",
+    "mission": "The Data Delivery & Engineering Team owns the full delivery lifecycle — from requirements gathering and solution design through development, testing, deployment, and operational support — to ensure that data solutions are efficient, scalable, and maintainable. Their mission is to enable incentive programs, strengthen business banking capabilities, and advance financial inclusion by building trusted, accessible, and compliant data platforms, pipelines, and products that align with the organization’s financial architecture and standards.",
+    "featured": false,
+    "createdAt": "2026-08-24T05:30:12.919Z",
+    "shortName": "Data Delivery 2",
+    "updatedAt": "2026-08-24T05:47:15.344Z",
+    "portfolios": [
+      "Business Banking",
+      "Financial inclusion",
+      "Customer Care",
+      "Incentive"
+    ],
+    "description": "The Data Delivery & Engineering Team is dedicated to designing, building, and delivering reliable data solutions that empower incentive programs, business banking operations, and financial inclusion initiatives. They transform complex business and technical requirements into scalable data platforms, pipelines, models, and products that ensure trusted, accessible, and actionable data for reporting, analytics, applications, and strategic decision-making in the financial sector.",
+    "responsibilities": [
+      "Incentive Program Enablement   Design and deliver data solutions that support customer rewards, loyalty programs, and incentive tracking, ensuring transparency and scalability.",
+      "Business Banking Data Solutions   Build and maintain pipelines and platforms that streamline SME banking, corporate lending, and treasury operations with reliable, accessible data.",
+      "Financial Inclusion Insights   Develop analytics and models to identify underserved populations, enabling inclusive product offerings and equitable access to financial services.",
+      "Trusted Data Products   Deliver high-quality, secure, and standardized datasets for reporting, regulatory compliance, risk management, and customer engagement."
+    ]
+  },
+  {
+    "id": "team-q034fdpi93",
+    "icon": "Engineering",
+    "name": " Data Delivery & Engineering ",
     "order": "2",
-    "description": "The Data Delivery & Engineering Team is responsible for designing, building, and delivering reliable data solutions that serve business and engineering needs end-to-end. The team transforms business and technical requirements into scalable data platforms, pipelines, models, and data products that provide trusted and accessible data for reporting, analytics, applications, and decision-making.",
+    "leadId": "emp-0vpzacilxj",
     "mission": "The team owns the delivery lifecycle from requirements gathering and solution design through development, testing, deployment, and operational support, ensuring that data solutions are efficient, scalable, maintainable, and aligned with the organization's data architecture and standards.",
+    "featured": false,
+    "createdAt": "2026-08-19T13:30:29.488Z",
+    "shortName": "Delivery & Engineering",
+    "updatedAt": "2026-08-23T19:45:51.351Z",
+    "portfolios": [
+      "Risk",
+      "Finance"
+    ],
+    "description": "The Data Delivery & Engineering Team is responsible for designing, building, and delivering reliable data solutions that serve business and engineering needs end-to-end. The team transforms business and technical requirements into scalable data platforms, pipelines, models, and data products that provide trusted and accessible data for reporting, analytics, applications, and decision-making.",
     "responsibilities": [
       "Design and develop end-to-end ETL/ELT data pipelines.",
       "Develop conceptual, logical, and physical data models.",
       "Integrate data from databases, applications, APIs, files, and other enterprise sources.",
       "Continuously improve data pipelines, platforms, and engineering practices."
-    ],
-    "portfolios": [
-      "Risk",
-      "Finance"
-    ],
-    "leadId": "emp-0vpzacilxj",
-    "id": "team-q034fdpi93",
-    "createdAt": "2026-08-19T13:30:29.488Z",
-    "updatedAt": "2026-08-19T13:39:11.710Z",
-    "featured": false
+    ]
   },
   {
-    "name": "Data Strategy",
-    "shortName": "Strategy",
+    "id": "team-00f09sblhf",
     "icon": "Engineering",
+    "name": "Data Strategy",
     "order": "1",
-    "description": "The Data Strategy Team is a strategic function responsible for defining, guiding, and enabling the organization's overall data direction. The team ensures that data initiatives are aligned with business objectives, supported by the right technology and architecture, governed effectively, and delivered with the required capabilities and investment.",
+    "leadId": "emp-f5s7nwwauj",
     "mission": "To ensure that the organization's data strategy is well-defined, governed, technically supported, financially sustainable, and effectively adopted across the business.",
+    "featured": true,
+    "createdAt": "2026-08-19T12:14:17.628Z",
+    "shortName": "Strategy",
+    "updatedAt": "2026-08-23T20:25:38.719Z",
+    "portfolios": [],
+    "description": "The Data Strategy Team is a strategic function responsible for defining, guiding, and enabling the organization's overall data direction. The team ensures that data initiatives are aligned with business objectives, supported by the right technology and architecture, governed effectively, and delivered with the required capabilities and investment.",
     "responsibilities": [
       "Technology Architecture",
       "Data Architecture",
       "Data Governance",
       "Enablement"
-    ],
-    "portfolios": [],
-    "leadId": "emp-f5s7nwwauj",
-    "id": "team-00f09sblhf",
-    "createdAt": "2026-08-19T12:14:17.628Z",
-    "updatedAt": "2026-08-19T12:26:20.302Z",
-    "featured": false
+    ]
   }
 ]

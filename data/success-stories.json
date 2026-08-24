@@ -1,12 +1,9 @@
 [
   {
     "id": "sto-001",
+    "date": "2025-06-08",
+    "type": "Project",
     "title": "From Three Days to Three Hours",
-    "coverImage": null,
-    "summary": "PLACEHOLDER - a one paragraph summary of \"From Three Days to Three Hours\", written for colleagues outside the team.",
-    "challenge": "PLACEHOLDER - describe the problem as it was experienced by the business: what was slow, unreliable or unclear, and what it cost the organisation.",
-    "solution": "PLACEHOLDER - describe what the team actually built or changed, the approach taken and the decisions that mattered most.",
-    "result": "PLACEHOLDER - describe the measurable outcome and how the business area responded to it.",
     "impact": [
       {
         "label": "Incidents avoided",
@@ -21,20 +18,23 @@
         "value": "248 hours / month"
       }
     ],
-    "keyAchievements": [
-      "PLACEHOLDER - key achievement one.",
-      "PLACEHOLDER - key achievement two.",
-      "PLACEHOLDER - key achievement three."
-    ],
+    "result": "PLACEHOLDER - describe the measurable outcome and how the business area responded to it.",
+    "teamId": "team-engineering",
+    "summary": "PLACEHOLDER - a one paragraph summary of \"From Three Days to Three Hours\", written for colleagues outside the team.",
+    "featured": true,
+    "solution": "PLACEHOLDER - describe what the team actually built or changed, the approach taken and the decisions that mattered most.",
+    "challenge": "PLACEHOLDER - describe the problem as it was experienced by the business: what was slow, unreliable or unclear, and what it cost the organisation.",
+    "updatedAt": "2026-08-19T20:10:51.437Z",
+    "coverImage": null,
     "contributorIds": [
       "emp-002",
       "emp-001",
       "emp-008"
     ],
-    "teamId": "team-engineering",
-    "type": "Project",
-    "date": "2025-06-08",
-    "featured": true,
-    "updatedAt": "2026-08-19T20:10:51.437Z"
+    "keyAchievements": [
+      "PLACEHOLDER - key achievement one.",
+      "PLACEHOLDER - key achievement two.",
+      "PLACEHOLDER - key achievement three."
+    ]
   }
 ]

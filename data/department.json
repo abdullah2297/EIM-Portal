@@ -1,17 +1,46 @@
 {
   "id": "dept-dwh",
+  "logo": "https://zwho5ilhzixnerqw.public.blob.vercel-storage.com/upl-nh88dg1sz9-zxzD6qQkVq1ULlys0ggATMtLmSoNqk.png",
   "name": "Enterprise Information Management",
-  "shortName": "EIM",
-  "portalName": "EIM Portal",
-  "logo": "/api/uploads/upl-nh88dg1sz9.png",
-  "overviewTeamIds": [],
-  "overviewSubTeamIds": [],
-  "overviewChampionIds": [],
-  "tagline": "Enterprise Information Management, powered by our people.",
-  "establishedYear": "2012",
-  "overview": "EIM enables organizations to manage structured and unstructured data across business operations, extract valuable business insights and secure that information while meeting compliance requirements, all on a single platform at enterprise level.\n\nThe goal of information management solutions is to improve efficiency, promote transparency and enable business insights by leveraging software solutions and technologies that are designed to help organizations extract value from their information.",
-  "mission": "To deliver trusted, timely and well-governed data that helps every part of the organisation make better decisions faster.",
-  "vision": "To be recognised as the most reliable, innovative and people-focused data organisation in the group - a place where engineers, analysts and specialists do their best work together.",
+  "stats": [
+    {
+      "icon": "Groups",
+      "label": "Team Members",
+      "value": 40,
+      "suffix": "+"
+    },
+    {
+      "icon": "AccountTree",
+      "label": "Main Teams",
+      "value": 5,
+      "suffix": ""
+    },
+    {
+      "icon": "Hub",
+      "label": "Sub-Teams",
+      "value": 15,
+      "suffix": ""
+    },
+    {
+      "icon": "BusinessCenter",
+      "label": "Business Portfolios",
+      "value": 8,
+      "suffix": ""
+    },
+    {
+      "icon": "Lightbulb",
+      "label": "Active Initiatives",
+      "value": 12,
+      "suffix": ""
+    },
+    {
+      "icon": "EmojiEvents",
+      "label": "Awards Won",
+      "value": 18,
+      "suffix": ""
+    }
+  ],
+  "headId": "emp-in8awx37n1",
   "values": [
     {
       "title": "Trust in Data",
@@ -34,6 +63,66 @@
       "description": "Recognition is part of the job, not an afterthought."
     }
   ],
+  "vision": "To be recognised as the most reliable, innovative and people-focused data organisation in the group - a place where engineers, analysts and specialists do their best work together.",
+  "contact": {
+    "email": "EIMDataEngineering@cibeg.com",
+    "phone": "+00 000 000 0000",
+    "location": "Smart Village, SV3, 2nd Floor ",
+    "officeHours": "Sunday to Thursday, 08:00 - 16:00",
+    "supportChannel": "Email"
+  },
+  "mission": "To deliver trusted, timely and well-governed data that helps every part of the organisation make better decisions faster.",
+  "tagline": "Enterprise Information Management, powered by our people.",
+  "overview": "EIM enables organizations to manage structured and unstructured data across business operations, extract valuable business insights and secure that information while meeting compliance requirements, all on a single platform at enterprise level.\n\nThe goal of information management solutions is to improve efficiency, promote transparency and enable business insights by leveraging software solutions and technologies that are designed to help organizations extract value from their information.",
+  "shortName": "EIM",
+  "updatedAt": "2026-08-24T05:35:53.040Z",
+  "portalName": "EIM Portal",
+  "portfolios": [
+    {
+      "name": "Retail Banking",
+      "teamCount": 2,
+      "description": "Retail Banking delivers financial services directly to individual customers, helping them manage personal finances, access credit, and achieve financial security. It includes everyday products such as savings and checking accounts, personal loans, mortgages, credit cards, and digital banking platforms."
+    },
+    {
+      "name": "Business Banking",
+      "teamCount": 3,
+      "description": "Business Banking provides tailored financial services and solutions to small, medium, and large enterprises, enabling them to manage operations, access credit, and grow sustainably. It encompasses products such as business accounts, loans, treasury services, and digital platforms designed to support entrepreneurs and corporations alike."
+    },
+    {
+      "name": "Risk & Compliance",
+      "teamCount": 4,
+      "description": "Risk & Compliance ensures that financial services and data solutions are delivered securely, ethically, and in alignment with regulatory standards. It involves identifying, assessing, and mitigating risks across business banking, retail banking, and incentive programs, while maintaining trust and transparency with customers and regulators."
+    },
+    {
+      "name": "Finance & Treasury",
+      "teamCount": 2,
+      "description": "Finance & Treasury is responsible for managing the organization’s financial resources, liquidity, and capital structure to ensure stability, growth, and compliance. It oversees budgeting, forecasting, investment strategies, and cash flow management, while safeguarding against financial risks."
+    },
+    {
+      "name": "Operations",
+      "teamCount": 3,
+      "description": "PLACEHOLDER - short description of the Operations portfolio and the data products delivered for it."
+    },
+    {
+      "name": "Digital Channels",
+      "teamCount": 4,
+      "description": "PLACEHOLDER - short description of the Digital Channels portfolio and the data products delivered for it."
+    },
+    {
+      "name": "Marketing & Customer Experience",
+      "teamCount": 3,
+      "description": "PLACEHOLDER - short description of the Marketing & Customer Experience portfolio and the data products delivered for it."
+    }
+  ],
+  "leadershipIds": [
+    "emp-0vpzacilxj",
+    "emp-f5s7nwwauj"
+  ],
+  "establishedYear": "2012",
+  "overviewTeamIds": [
+    "team-00f09sblhf",
+    "team-q034fdpi93"
+  ],
   "responsibilities": [
     "Design and operate the enterprise data warehouse and its ingestion pipelines.",
     "Deliver regulatory, management and operational reporting across all portfolios.",
@@ -42,100 +131,14 @@
     "Run the data platform, its performance, availability and production support.",
     "Enable self-service analytics through training, standards and reusable data models."
   ],
-  "portfolios": [
-    {
-      "name": "Retail Banking",
-      "description": "PLACEHOLDER - short description of the Retail Banking portfolio and the data products delivered for it.",
-      "teamCount": 2
-    },
-    {
-      "name": "Corporate & Institutional Banking",
-      "description": "PLACEHOLDER - short description of the Corporate & Institutional Banking portfolio and the data products delivered for it.",
-      "teamCount": 3
-    },
-    {
-      "name": "Risk & Compliance",
-      "description": "PLACEHOLDER - short description of the Risk & Compliance portfolio and the data products delivered for it.",
-      "teamCount": 4
-    },
-    {
-      "name": "Finance & Treasury",
-      "description": "PLACEHOLDER - short description of the Finance & Treasury portfolio and the data products delivered for it.",
-      "teamCount": 2
-    },
-    {
-      "name": "Operations",
-      "description": "PLACEHOLDER - short description of the Operations portfolio and the data products delivered for it.",
-      "teamCount": 3
-    },
-    {
-      "name": "Digital Channels",
-      "description": "PLACEHOLDER - short description of the Digital Channels portfolio and the data products delivered for it.",
-      "teamCount": 4
-    },
-    {
-      "name": "Human Resources",
-      "description": "PLACEHOLDER - short description of the Human Resources portfolio and the data products delivered for it.",
-      "teamCount": 2
-    },
-    {
-      "name": "Marketing & Customer Experience",
-      "description": "PLACEHOLDER - short description of the Marketing & Customer Experience portfolio and the data products delivered for it.",
-      "teamCount": 3
-    }
+  "overviewSubTeamIds": [
+    "sub-r1fmp0h3q1",
+    "sub-4h2kq9m8d1"
   ],
-  "contact": {
-    "email": "placeholder.dwh@example.com",
-    "phone": "+00 000 000 0000",
-    "location": "Smart Village, SV3, 2nd Floor ",
-    "officeHours": "Sunday to Thursday, 08:00 - 16:00",
-    "supportChannel": ""
-  },
-  "stats": [
-    {
-      "label": "Team Members",
-      "value": 40,
-      "suffix": "+",
-      "icon": "Groups"
-    },
-    {
-      "label": "Main Teams",
-      "value": 5,
-      "suffix": "",
-      "icon": "AccountTree"
-    },
-    {
-      "label": "Sub-Teams",
-      "value": 15,
-      "suffix": "",
-      "icon": "Hub"
-    },
-    {
-      "label": "Business Portfolios",
-      "value": 8,
-      "suffix": "",
-      "icon": "BusinessCenter"
-    },
-    {
-      "label": "Active Initiatives",
-      "value": 12,
-      "suffix": "",
-      "icon": "Lightbulb"
-    },
-    {
-      "label": "Awards Won",
-      "value": 18,
-      "suffix": "",
-      "icon": "EmojiEvents"
-    }
-  ],
-  "leadershipIds": [
-    "emp-002",
-    "emp-010",
-    "emp-019",
-    "emp-028",
-    "emp-035"
-  ],
-  "headId": "emp-in8awx37n1",
-  "updatedAt": "2026-08-22T19:23:33.987Z"
+  "overviewChampionIds": [
+    "emp-jio0af8pzp",
+    "emp-f5s7nwwauj",
+    "emp-0rwtcdyxxv",
+    "emp-y2p84owtc4"
+  ]
 }

@@ -1,25 +1,543 @@
 [
   {
-    "fullName": "Abdullah Elsayed",
-    "jobTitle": "Senior Data Engineer",
-    "role": "Senior Engineer",
-    "teamId": "team-00f09sblhf",
-    "subTeamId": "sub-r1fmp0h3q1",
-    "email": "abdullah.elzak@cibeg.com",
-    "extension": "3422",
+    "id": "emp-invxjl5t3s",
+    "bio": "e Data Production Team Manager is both a strategic leader and technical authority, ensuring that enterprise data pipelines and reporting solutions are trusted, performant, and aligned with business priorities.",
+    "role": "Head Manager",
+    "email": "Ayman.Sherif@cibeg.com",
+    "photo": "https://media.licdn.com/dms/image/v2/C4D03AQETUa6FgxTTGQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516974040743?e=1788998400&v=beta&t=bcwle4GdQ_j3L5FjvPDBZZnhwlc6EhKwYokE7I9ZeFE",
+    "quote": "",
+    "awards": [],
+    "skills": [],
+    "teamId": "team-aqmq9b1mp4",
+    "hobbies": [],
+    "featured": false,
+    "fullName": "Ayman Cherif",
+    "funFacts": [],
+    "jobTitle": "Enterprise Business Intelligence Head",
     "location": "",
-    "joinedDate": "2025-07-09",
-    "photo": "https://media.licdn.com/dms/image/v2/D4D03AQHEleNqI8zolw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1687914151886?e=1788998400&v=beta&t=Al42DPEoZY_oznDVWpDjBSkX39r3fC8i46YrPV3-tSM",
-    "bio": "A highly analytical individual with a strong apt for learning, Having a Data science minor which I have utilized at large company in positions that required me to implement projects from A to Z, understanding the business need, building required data models, Extract insights from high volume of data, creating and deploy machine learning models, communicating the results to stakeholders, Offering exceptional technics to extract, clean, analyze and visualize the data using variety of tools and technologies in order to help the top management making dicisions for investigating and solving the problems, increasing sales, maximizing profit.. Etc. ",
-    "quote": "Preparation can only take you so far, After that you have to take a few leaps of faith. ",
-    "responsibilities": [
-      "Data governance"
+    "createdAt": "2026-08-24T08:39:12.237Z",
+    "expertise": [
+      "Data Warehousing",
+      "Data Quality Management",
+      "Leadership"
     ],
+    "extension": "2512",
+    "interests": [],
+    "languages": [
+      "English"
+    ],
+    "subTeamId": "",
+    "updatedAt": "2026-08-24T08:39:12.237Z",
+    "joinedDate": "2015-04-01",
+    "achievements": [],
+    "responsibilities": [
+      "Data Warehousing → Expertise in Teradata performance tuning, partitioning, and workload management.",
+      "Leadership & Mentoring → Experience in building and guiding technical teams toward operational excellence.",
+      "Stakeholder Collaboration   Partner with business units, IT, and governance teams to deliver trusted data for decision-making.",
+      "Strategic Oversight   Define and oversee the data production strategy, ensuring alignment with enterprise data architecture and business needs"
+    ]
+  },
+  {
+    "id": "emp-xolq4jd4yg",
+    "bio": "Big Data Architect with extensive experience in designing strategies and methods for developed data based modules and verifying functional requirements of applications using different technologies for Enterprises and Functional entities. Areas of expertise include planning, architecting and designing for the developed modules, implementing proof-of-concepts and the complex parts of the proposed solution, determining security and performance requirements of systems and finding solutions for the key design issues. I hold a B.Sc. in Computer Science from Ain-Shams University, 2003.",
+    "role": "Head Manager",
+    "email": "Sherif.Isaac@cibeg.com",
+    "photo": "https://media.licdn.com/dms/image/v2/C4E03AQEMCMDS2KS4Bg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1516901979892?e=1788998400&v=beta&t=MYwpfdftg6JEQLSIOKjlnamtMgAon5mzVPUV1WIR4kw",
+    "quote": "",
+    "awards": [],
+    "skills": [
+      {
+        "name": "Cloudera",
+        "level": 99
+      },
+      {
+        "name": "Lakehouse",
+        "level": 95
+      },
+      {
+        "name": "Modern Architecture",
+        "level": 95
+      }
+    ],
+    "teamId": "team-og68gm0gsf",
+    "hobbies": [
+      "Reading"
+    ],
+    "featured": false,
+    "fullName": "Sherif Isaac",
+    "funFacts": [],
+    "jobTitle": "Enterprise Business Intelligence Head",
+    "location": "",
+    "createdAt": "2026-08-24T08:22:53.390Z",
+    "expertise": [
+      "Cloudera Platform Mastery",
+      "Data Architecture",
+      "Analytics & Business Alignment"
+    ],
+    "extension": "1091",
+    "interests": [],
+    "languages": [
+      "English"
+    ],
+    "subTeamId": "",
+    "updatedAt": "2026-08-24T08:22:53.390Z",
+    "joinedDate": "2017-06-01",
+    "achievements": [],
+    "responsibilities": [
+      "Strategic Roadmap Ownership   Define and drive the modernization strategy, ensuring alignment with enterprise goals and Cloudera’s capabilities.",
+      "Architecture Leadership   Oversee the design and evolution of the lakehouse architecture, balancing scalability, performance, and compliance.",
+      "Team Development   Mentor engineers, foster innovation, and build expertise in Cloudera technologies within the team.",
+      "Stakeholder Engagement   Collaborate with business units, IT, and compliance leaders to align modernization with business priorities."
+    ]
+  },
+  {
+    "id": "emp-pnbd09xpgp",
+    "bio": "Strong background in data engineering, SQL, and network fundamentals. My responsibilities focus on designing, implementing, and managing IT solutions that support banking operations and digital transformation.",
+    "role": "Senior Engineer",
+    "email": "marwa.hussein@cibeg.com",
+    "photo": "",
+    "quote": "",
+    "awards": [
+      {
+        "year": "2026",
+        "title": "Star Award",
+        "issuer": "CIB"
+      }
+    ],
+    "skills": [
+      {
+        "name": "SQL",
+        "level": 90
+      },
+      {
+        "name": "Informatica",
+        "level": 90
+      },
+      {
+        "name": "Erwin",
+        "level": 95
+      },
+      {
+        "name": "Data Architecture",
+        "level": 90
+      }
+    ],
+    "teamId": "team-q034fdpi93",
+    "hobbies": [
+      "Reading",
+      "Travelling"
+    ],
+    "featured": false,
+    "fullName": "Marwa Samir",
+    "funFacts": [],
+    "jobTitle": "Data Engineer",
+    "location": "",
+    "createdAt": "2026-08-24T07:48:38.857Z",
     "expertise": [
       "Data Modeling",
-      "Data Quality",
-      "Automation"
+      "ETL/ELT"
     ],
+    "extension": "0000",
+    "interests": [],
+    "languages": [
+      "English",
+      "Italy"
+    ],
+    "subTeamId": "",
+    "updatedAt": "2026-08-24T07:53:01.882Z",
+    "joinedDate": "2025-04-28",
+    "achievements": [
+      "Query Performance Optimization",
+      "Lineage initiative"
+    ],
+    "responsibilities": [
+      "SQL Development → Writing, testing, and maintaining SQL queries for reporting and analytics.",
+      "Data Management → Ensuring data integrity, consistency, and accessibility across systems.",
+      "ETL Processes → Designing and managing Extract, Transform, Load workflows for financial data."
+    ]
+  },
+  {
+    "id": "emp-akmlvyg4cn",
+    "bio": "Data Engineer at CIB Egypt, specializing in ETL development, data pipelines, and modern data platforms. Has strong expertise in Informatica, Spark, Airflow, and SQL, with a proven track record of optimizing data accuracy and performance in banking and BI environments.",
+    "role": "Senior Engineer",
+    "email": "abdallah.khamis@cibeg.com",
+    "photo": "https://media.licdn.com/dms/image/v2/D4D03AQFQiHFJeddIYA/profile-displayphoto-scale_400_400/B4DZ1LKAATIkAg-/0/1775082410819?e=1788998400&v=beta&t=OppYzU7-bQSJYcUt0aHdShafDWfIJ8nJOpMihD5an2Q",
+    "quote": "",
+    "awards": [
+      {
+        "year": "2025",
+        "title": "Star Award",
+        "issuer": "CIB"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Data Modeling",
+        "level": 90
+      },
+      {
+        "name": "ETL/ELT",
+        "level": 95
+      },
+      {
+        "name": "Informatica PWC",
+        "level": 95
+      },
+      {
+        "name": "Business Analysis",
+        "level": 90
+      },
+      {
+        "name": "Spark",
+        "level": 80
+      },
+      {
+        "name": "Cloudera",
+        "level": 90
+      },
+      {
+        "name": "Cloud Azure, AWS",
+        "level": 70
+      }
+    ],
+    "teamId": "team-q034fdpi93",
+    "hobbies": [
+      "Gym"
+    ],
+    "featured": false,
+    "fullName": "Abdallah Khamis",
+    "funFacts": [],
+    "jobTitle": "Senior Data Engineer",
+    "location": "",
+    "createdAt": "2026-08-24T07:08:55.917Z",
+    "expertise": [
+      "ETL/ELT",
+      "Data Modeling"
+    ],
+    "extension": "0000",
+    "interests": [],
+    "languages": [
+      "English"
+    ],
+    "subTeamId": "sub-4h2kq9m8d1",
+    "updatedAt": "2026-08-24T07:08:55.917Z",
+    "joinedDate": "2025-05-27",
+    "achievements": [
+      "OFSAA Implementation"
+    ],
+    "responsibilities": [
+      "Designs and optimizes ETL/ELT pipelines.",
+      "Implements Data Vault models for banking data systems.",
+      "Enhances reporting automation and system performance"
+    ]
+  },
+  {
+    "id": "emp-txpw4qfhuu",
+    "bio": "Data Engineer, focuses on designing and extending enterprise data models in a modern Data Vault architecture. my responsibilities include building logical and physical models, ensuring scalability, and supporting downstream analytics layers.",
+    "role": "Senior Engineer",
+    "email": "mohamed.elsobky@cibeg.com",
+    "photo": "https://media.licdn.com/dms/image/v2/D4D03AQFE0PmTDB9EJw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1684328965306?e=1788998400&v=beta&t=xwwdtyv2U3_qHUDl1W22nelwwu1xgc9sHzJQ6wpGbjE",
+    "quote": "Will not leave, until achieve",
+    "awards": [
+      {
+        "year": "2026",
+        "title": "Star Award",
+        "issuer": "CIB"
+      },
+      {
+        "year": "Q1 2026",
+        "title": "Best Idea to impact",
+        "issuer": "CIB"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Power BI",
+        "level": 95
+      },
+      {
+        "name": "SQL",
+        "level": 98
+      },
+      {
+        "name": "Informatica PWC",
+        "level": 90
+      },
+      {
+        "name": "Erwin",
+        "level": 95
+      },
+      {
+        "name": "Data Modeling",
+        "level": 98
+      }
+    ],
+    "teamId": "team-q034fdpi93",
+    "hobbies": [
+      "Swimming",
+      "Movies"
+    ],
+    "featured": true,
+    "fullName": "Mohamed Rabea Elsobky",
+    "funFacts": [],
+    "jobTitle": "Data Engineer",
+    "location": "",
+    "createdAt": "2026-08-24T06:55:59.732Z",
+    "expertise": [
+      "Data Engineering",
+      "Business intelligence"
+    ],
+    "extension": "0000",
+    "interests": [],
+    "languages": [
+      "English"
+    ],
+    "subTeamId": "sub-4h2kq9m8d1",
+    "updatedAt": "2026-08-24T06:55:59.732Z",
+    "joinedDate": "2025-07-09",
+    "achievements": [
+      "Query Performance Optimization",
+      "Impact Analysis Automation",
+      "T24 Modeling Automation",
+      "Lineage Initiative"
+    ],
+    "responsibilities": [
+      "Data Vault Modeling   Design and model new attributes, tables, and systems in the Data Vault layer to ensure flexibility and scalability.",
+      "Business Vault : Extend models into Business Vault and Information Mart (I-Mart) layers to support business reporting and analytics.",
+      "Logical & Physical Models   Develop comprehensive logical and physical data models using Erwin Data Modeler."
+    ]
+  },
+  {
+    "id": "emp-ma7bx35j5p",
+    "bio": "a curious and driven Data engineer with a passion for uncovering insights, optimizing workflows, and solving complex challenges with data. I thrive at the intersection of data engineering, analytics, and AI, always looking for ways to make data more accessible, efficient, and impactful.\nwhat i do \nI specialize in data engineer, visualization, with hands-on experience in SQL, Python, kafka, AWS, Power BI, and Apache Airflow. From ETL pipelines to ML models, I love building scalable solutions that drive real business impact.\nhow i think\nI see every problem as a system—break it down, optimize it, and ensure everything is connected and resilient. Whether it’s structuring data workflows, enhancing customer retention with analytics, or fine-tuning chatbots & NLP models, I bring a systematic, data-driven approach to every challenge.\nwhat drives me\nI believe in continuous learning, whether it’s mastering Google Looker Studio for business visuals, understanding telecom SSIS projects, or exploring machine learning for smarter decision-making. I also enjoy teaching & mentoring, helping others make sense of data just as I do.\nyou’ll find me teaching coding & data to kids, experimenting with chatbot development, or enhancing my English & communication skills. I enjoy breaking down complex concepts into simple, engaging insights—because data should tell a story, not just be numbers.",
+    "role": "Engineer",
+    "email": "ziad.alashry@cibeg.com",
+    "photo": "https://media.licdn.com/dms/image/v2/D5603AQEDWX02Sk7VLQ/profile-displayphoto-scale_400_400/B56Z.KUO35KAAg-/0/1784731988139?e=1788998400&v=beta&t=nJwE_GwnVju_CuDgM4G0GtAQBIqCcDfYZIuRMpm8ogM",
+    "quote": "You must always be able to predict what's next and then have the flexibility to evolve.",
+    "awards": [
+      {
+        "year": "2022",
+        "title": "third place machine learning competition",
+        "issuer": "SHAI for AI"
+      }
+    ],
+    "skills": [
+      {
+        "name": "SQL",
+        "level": 95
+      },
+      {
+        "name": "Database Storage Engine",
+        "level": 88
+      },
+      {
+        "name": "SQL optimization",
+        "level": 85
+      },
+      {
+        "name": "Spark ",
+        "level": 95
+      },
+      {
+        "name": "Data Modelling",
+        "level": 95
+      },
+      {
+        "name": "Data Lakehouse Architecture",
+        "level": 95
+      },
+      {
+        "name": "Apache Iceberg",
+        "level": 95
+      }
+    ],
+    "teamId": "team-00f09sblhf",
+    "hobbies": [
+      "Art",
+      "Running",
+      "Snorklling",
+      "tennis"
+    ],
+    "featured": true,
+    "fullName": "ziad alashry",
+    "funFacts": [],
+    "jobTitle": "Data Engineer",
+    "location": "",
+    "createdAt": "2026-08-24T06:22:03.047Z",
+    "expertise": [
+      "Technology Architecture"
+    ],
+    "extension": "1108141",
+    "interests": [],
+    "languages": [
+      "Deutsch",
+      "english"
+    ],
+    "subTeamId": "sub-engvbjyn65",
+    "updatedAt": "2026-08-24T06:34:05.765Z",
+    "joinedDate": "2025-08-28",
+    "achievements": [],
+    "responsibilities": [
+      "Technology Strategy: Define the long-term vision and roadmap for data platforms and tools.",
+      "Platform Evaluation: Assess and recommend data technologies (cloud, lakehouse, streaming, warehouse) that fit organizational needs.",
+      "Architecture Design: Create blueprints for scalable, secure, and high-performing data systems.",
+      "Performance Optimization: Continuously improve system efficiency, cost-effectiveness, and reliability."
+    ]
+  },
+  {
+    "id": "emp-0h9mct7i05",
+    "bio": " technical leader responsible for designing, governing, and evolving the enterprise data ecosystem. They bridge business needs with technical execution, ensuring that data platforms, pipelines, and architectures are scalable, secure, and aligned with organizational strategy.",
+    "role": "Principal Engineer",
+    "email": "ahmed.smoubarak@cibeg.com",
+    "photo": "https://media.licdn.com/dms/image/v2/C4D03AQHkd4wn2YyBQQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1662724388041?e=1788998400&v=beta&t=vkAMIcpf_fAUQPjJYhg_3QyCMlyoJSkspagHErzboeA",
+    "quote": "Great things in business are never done by one person, they are done by a team of people.\"",
+    "awards": [
+      {
+        "year": "2021",
+        "title": "Star Award",
+        "issuer": "CIB"
+      },
+      {
+        "year": "2019",
+        "title": "Certificate of Excellence at Transformation Program",
+        "issuer": "CIB"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Data Architecture",
+        "level": 90
+      },
+      {
+        "name": "Reporting",
+        "level": 95
+      },
+      {
+        "name": "Business Architecture",
+        "level": 97
+      },
+      {
+        "name": "Data Modeling",
+        "level": 95
+      }
+    ],
+    "teamId": "team-00f09sblhf",
+    "hobbies": [
+      "Football"
+    ],
+    "featured": false,
+    "fullName": "Ahmed Samir",
+    "funFacts": [],
+    "jobTitle": "Principal Data Engineer",
+    "location": "",
+    "createdAt": "2026-08-24T06:05:05.771Z",
+    "expertise": [
+      "data architecture",
+      "Lakehouse",
+      "Reporting"
+    ],
+    "extension": "8882",
+    "interests": [
+      "Movies"
+    ],
+    "languages": [
+      "Arabic",
+      "English"
+    ],
+    "subTeamId": "sub-3l50sjpaai",
+    "updatedAt": "2026-08-24T06:08:01.551Z",
+    "joinedDate": "2018-09-01",
+    "achievements": [],
+    "responsibilities": [
+      "Data Architecture Leadership: Define and enforce architectural standards, frameworks, and best practices across data platforms.",
+      "Platform Design: Architect modern, cloud-native, and hybrid data solutions that support analytics, AI/ML, and operational workloads."
+    ]
+  },
+  {
+    "id": "emp-k7wu2cqzts",
+    "bio": "Experienced Software Engineer with a demonstrated history of working in the computer software industry (Data Analysis). Skilled in SQL and Extract, Transform, Load (ETL). Strong engineering professional with a Bachelor’s Degree focused in Computer and Communications Program from Alexandria University. ",
+    "role": "Engineering Manager",
+    "email": "ahmed.ragab@cibeg.com",
+    "photo": "https://media.licdn.com/dms/image/v2/C4E03AQEAQko2hPUXjg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1579915498227?e=1788998400&v=beta&t=iLeDq1isVMbBB2bwOKJ90zAvdgx9e8nHSKd4PuG0c9M",
+    "quote": "Every problem is a gift — without problems we would not grow.",
+    "awards": [],
+    "skills": [],
+    "teamId": "team-q034fdpi93",
+    "hobbies": [],
+    "featured": false,
+    "fullName": "Ahmed Adel",
+    "funFacts": [],
+    "jobTitle": "Data Engineering Manager",
+    "location": "",
+    "createdAt": "2026-08-24T05:52:27.151Z",
+    "expertise": [],
+    "extension": "8023",
+    "interests": [],
+    "languages": [],
+    "subTeamId": "sub-4h2kq9m8d1",
+    "updatedAt": "2026-08-24T05:52:27.151Z",
+    "joinedDate": "2019-05-01",
+    "achievements": [],
+    "responsibilities": []
+  },
+  {
+    "id": "emp-d5jzl0fyny",
+    "bio": "A technology business & data analyst with a passion to tackle complex business problems and find innovative solutions in today's data-driven economy. I’m aiming to utilize my analytical, leadership and communication skills, as well as my knowledge in Information Technology, Business Analysis and Financial Services in a competitive environment, where I can have an active and critical role in the organization’s overall success.\n\n",
+    "role": "Head Manager",
+    "email": "reham.azmy@cibeg.com",
+    "photo": "https://media.licdn.com/dms/image/v2/C4E03AQEVPLNYyGuv6Q/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1599684164597?e=1788998400&v=beta&t=v9jgt3ZLjteRUEYW2FGEDoMWT34SqL0fa7_uWR_Rk10",
+    "quote": "The best way to predict the future is to create it",
+    "awards": [],
+    "skills": [
+      {
+        "name": "Data Engineering Leadership ",
+        "level": 95
+      },
+      {
+        "name": "Stakeholder Management ",
+        "level": 97
+      }
+    ],
+    "teamId": "team-rmevczw80s",
+    "hobbies": [
+      "Reading"
+    ],
+    "featured": false,
+    "fullName": "Riham Abdelaziz",
+    "funFacts": [],
+    "jobTitle": "Enterprise Business Intelligence Head",
+    "location": "",
+    "createdAt": "2026-08-24T05:46:57.503Z",
+    "expertise": [
+      "Lifecycle Management",
+      "Data Engineering"
+    ],
+    "extension": "0201",
+    "interests": [
+      "Movies"
+    ],
+    "languages": [
+      "Arabic",
+      "English"
+    ],
+    "subTeamId": "",
+    "updatedAt": "2026-08-24T05:46:57.503Z",
+    "joinedDate": "2019-10-01",
+    "achievements": [],
+    "responsibilities": [
+      "Strategic Leadership   Define and oversee the financial strategy, ensuring alignment with organizational goals in business banking, retail banking, and inclusion initiatives.",
+      "Stakeholder Collaboration   Partner with business units, IT, and compliance teams to translate requirements into actionable solutions.",
+      "Performance Monitoring   Track KPIs, delivery timelines, and operational efficiency to ensure continuous improvement."
+    ]
+  },
+  {
+    "id": "emp-jio0af8pzp",
+    "bio": "A highly analytical individual with a strong apt for learning, Having a Data science minor which I have utilized at large company in positions that required me to implement projects from A to Z, understanding the business need, building required data models, Extract insights from high volume of data, creating and deploy machine learning models, communicating the results to stakeholders, Offering exceptional technics to extract, clean, analyze and visualize the data using variety of tools and technologies in order to help the top management making dicisions for investigating and solving the problems, increasing sales, maximizing profit.. Etc. ",
+    "role": "Senior Engineer",
+    "email": "abdullah.elzak@cibeg.com",
+    "photo": "https://media.licdn.com/dms/image/v2/D4D03AQHEleNqI8zolw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1687914151886?e=1788998400&v=beta&t=Al42DPEoZY_oznDVWpDjBSkX39r3fC8i46YrPV3-tSM",
+    "quote": "Preparation can only take you so far, After that you have to take a few leaps of faith. ",
+    "awards": [],
     "skills": [
       {
         "name": "Data Modeling",
@@ -34,10 +552,25 @@
         "level": 90
       }
     ],
+    "teamId": "team-00f09sblhf",
     "hobbies": [
       "Sports",
       "swimming"
     ],
+    "featured": true,
+    "fullName": "Abdullah Elsayed",
+    "funFacts": [
+      "when feeling depressed i eat a lot"
+    ],
+    "jobTitle": "Senior Data Engineer",
+    "location": "",
+    "createdAt": "2026-08-19T15:17:25.440Z",
+    "expertise": [
+      "Data Modeling",
+      "Data Quality",
+      "Automation"
+    ],
+    "extension": "3422",
     "interests": [
       "Movies and reading"
     ],
@@ -45,64 +578,54 @@
       "Arabic",
       "English"
     ],
-    "funFacts": [
-      "when feeling depressed i eat a lot"
-    ],
+    "subTeamId": "sub-r1fmp0h3q1",
+    "updatedAt": "2026-08-22T18:56:32.140Z",
+    "joinedDate": "2025-07-09",
     "achievements": [],
-    "awards": [],
-    "featured": true,
-    "id": "emp-jio0af8pzp",
-    "createdAt": "2026-08-19T15:17:25.440Z",
-    "updatedAt": "2026-08-22T18:56:32.140Z"
+    "responsibilities": [
+      "Data governance"
+    ]
   },
   {
-    "fullName": "Diaa ElBagouri",
-    "jobTitle": "Senior Director of EIM ",
-    "role": "Director",
-    "teamId": "team-00f09sblhf",
-    "subTeamId": "",
-    "email": "Diaa.ElBagouri@cibeg.com",
-    "extension": "",
-    "location": "",
-    "joinedDate": "2016-02-01",
-    "photo": "https://media.licdn.com/dms/image/v2/C4E03AQGa-joo5-kOfw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1517756484643?e=1788998400&v=beta&t=LVLMyEJcEau9JENtaeEYaDgf0nFcy6180y7ZubHDEbA",
+    "id": "emp-in8awx37n1",
     "bio": "Worked with different cultures in 11 countries either as a supervisor or a service provider interface; from which are USA (3.5 years), Switzerland (1.5 years), Saudi Arabia (1.5 years) and Australia (1 year)\n- Worked within different lines of business including Industrial (3.5 years), Life Science (1.5 years) and Telecommunication (2.5 years)",
+    "role": "Director",
+    "email": "Diaa.ElBagouri@cibeg.com",
+    "photo": "https://media.licdn.com/dms/image/v2/C4E03AQGa-joo5-kOfw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1517756484643?e=1788998400&v=beta&t=LVLMyEJcEau9JENtaeEYaDgf0nFcy6180y7ZubHDEbA",
     "quote": "",
-    "responsibilities": [],
-    "expertise": [],
+    "awards": [],
     "skills": [],
+    "teamId": "team-00f09sblhf",
     "hobbies": [],
+    "featured": true,
+    "fullName": "Diaa ElBagouri",
+    "funFacts": [],
+    "jobTitle": "Senior Director of EIM ",
+    "location": "",
+    "createdAt": "2026-08-19T13:52:45.850Z",
+    "expertise": [],
+    "extension": "",
     "interests": [],
     "languages": [],
-    "funFacts": [],
+    "subTeamId": "",
+    "updatedAt": "2026-08-22T18:56:45.359Z",
+    "joinedDate": "2016-02-01",
     "achievements": [],
-    "awards": [],
-    "featured": true,
-    "id": "emp-in8awx37n1",
-    "createdAt": "2026-08-19T13:52:45.850Z",
-    "updatedAt": "2026-08-22T18:56:45.359Z"
+    "responsibilities": []
   },
   {
-    "fullName": "Sherif Anwer",
-    "jobTitle": "Data Engineering Manager",
-    "role": "Head Manager",
-    "teamId": "team-q034fdpi93",
-    "subTeamId": "",
-    "email": "Sherif.Anwer@cibeg.com",
-    "extension": "2322",
-    "location": "SV3 - 2nd Floor",
-    "joinedDate": "2015-01-01",
-    "photo": "https://media.licdn.com/dms/image/v2/C4E03AQHsLY50GFswcA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516813577194?e=1788998400&v=beta&t=M8EUa6kDL9voIFeHCP0XxDmSMj-Hd3UqTWf0vmygKs0",
+    "id": "emp-0vpzacilxj",
     "bio": "Developing Datawarehouse and Business Intelligence architecture and. solutions using Teradata, Microsoft and IBM technologies. Areas of expertise include solution Architecture and design, development, dimensional modeling.",
+    "role": "Head Manager",
+    "email": "Sherif.Anwer@cibeg.com",
+    "photo": "https://media.licdn.com/dms/image/v2/C4E03AQHsLY50GFswcA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516813577194?e=1788998400&v=beta&t=M8EUa6kDL9voIFeHCP0XxDmSMj-Hd3UqTWf0vmygKs0",
     "quote": "",
-    "responsibilities": [
-      "Define the technical direction for data engineering and delivery capabilities.",
-      "Translate the organization's data strategy into executable engineering initiatives.",
-      "Own the end-to-end delivery of data engineering initiatives."
-    ],
-    "expertise": [
-      "Batch and real-time data processing",
-      "Enterprise Data Architecture"
+    "awards": [
+      {
+        "year": "2026",
+        "title": "Star Award",
+        "issuer": "CIB"
+      }
     ],
     "skills": [
       {
@@ -110,9 +633,21 @@
         "level": 90
       }
     ],
+    "teamId": "team-q034fdpi93",
     "hobbies": [
       "Football"
     ],
+    "featured": false,
+    "fullName": "Sherif Anwer",
+    "funFacts": [],
+    "jobTitle": "Data Engineering Manager",
+    "location": "SV3 - 2nd Floor",
+    "createdAt": "2026-08-19T13:38:57.047Z",
+    "expertise": [
+      "Batch and real-time data processing",
+      "Enterprise Data Architecture"
+    ],
+    "extension": "2322",
     "interests": [
       "Cloud"
     ],
@@ -120,49 +655,45 @@
       "Arabic",
       "English"
     ],
-    "funFacts": [],
+    "subTeamId": "",
+    "updatedAt": "2026-08-22T18:57:27.464Z",
+    "joinedDate": "2015-01-01",
     "achievements": [],
-    "awards": [
-      {
-        "title": "Star Award",
-        "issuer": "CIB",
-        "year": "2026"
-      }
-    ],
-    "featured": false,
-    "id": "emp-0vpzacilxj",
-    "createdAt": "2026-08-19T13:38:57.047Z",
-    "updatedAt": "2026-08-22T18:57:27.464Z"
+    "responsibilities": [
+      "Define the technical direction for data engineering and delivery capabilities.",
+      "Translate the organization's data strategy into executable engineering initiatives.",
+      "Own the end-to-end delivery of data engineering initiatives."
+    ]
   },
   {
-    "fullName": "Khalil Grais",
-    "jobTitle": "Technology Architecture Manager",
-    "role": "Engineering Manager",
-    "teamId": "team-00f09sblhf",
-    "subTeamId": "sub-engvbjyn65",
-    "email": "Khalil.Grais@cibeg.com",
-    "extension": "8979",
-    "location": "SV3 - 2nd Floor",
-    "joinedDate": "2016-01-01",
-    "photo": "https://media.licdn.com/dms/image/v2/D4D03AQGjPINeUTyZPw/profile-displayphoto-shrink_400_400/B4DZZexDA2G8Ag-/0/1745346639900?e=1788998400&v=beta&t=ssnAQTM2tG35BIFe5e7iWqc2O7-xY6xEuxu8Dd7kKaA",
+    "id": "emp-y2p84owtc4",
     "bio": "lead a team of data engineers who are responsible for designing, developing, and maintaining the data warehouse and ETL processes that support the bank's business intelligence and reporting needs. I have over 13 years of experience in the data domain, working in both the banking and telecom industries.",
+    "role": "Engineering Manager",
+    "email": "Khalil.raafat@cibeg.com",
+    "photo": "https://media.licdn.com/dms/image/v2/D4D03AQGjPINeUTyZPw/profile-displayphoto-shrink_400_400/B4DZZexDA2G8Ag-/0/1745346639900?e=1788998400&v=beta&t=ssnAQTM2tG35BIFe5e7iWqc2O7-xY6xEuxu8Dd7kKaA",
     "quote": "Inspiration is a key",
-    "responsibilities": [
-      "Define the data technology architecture and target-state architecture."
-    ],
-    "expertise": [
-      "Technology Architecture",
-      "Data Engineering"
-    ],
+    "awards": [],
     "skills": [
       {
         "name": "Technology Architecture",
         "level": 98
       }
     ],
+    "teamId": "team-00f09sblhf",
     "hobbies": [
       "Swimming"
     ],
+    "featured": true,
+    "fullName": "Khalil Grais",
+    "funFacts": [],
+    "jobTitle": "Technology Architecture Manager",
+    "location": "SV3 - 2nd Floor",
+    "createdAt": "2026-08-19T13:08:46.508Z",
+    "expertise": [
+      "Technology Architecture",
+      "Data Engineering"
+    ],
+    "extension": "8979",
     "interests": [
       "Movies"
     ],
@@ -170,36 +701,22 @@
       "Arabic",
       "English"
     ],
-    "funFacts": [],
+    "subTeamId": "sub-engvbjyn65",
+    "updatedAt": "2026-08-24T08:04:31.476Z",
+    "joinedDate": "2016-01-01",
     "achievements": [],
-    "awards": [],
-    "featured": true,
-    "id": "emp-y2p84owtc4",
-    "createdAt": "2026-08-19T13:08:46.508Z",
-    "updatedAt": "2026-08-22T18:57:00.598Z"
+    "responsibilities": [
+      "Define the data technology architecture and target-state architecture."
+    ]
   },
   {
-    "fullName": "Shaimaa Elgammal",
-    "jobTitle": "Data Trust & Enablement Manager",
-    "role": "Engineering Manager",
-    "teamId": "team-00f09sblhf",
-    "subTeamId": "sub-r1fmp0h3q1",
-    "email": "Shaimaa.Elgammal@cibeg.com",
-    "extension": "8797",
-    "location": "SV3, 2nd Floor",
-    "joinedDate": "",
-    "photo": "https://media.licdn.com/dms/image/v2/D4D03AQFYxC20lach2w/profile-displayphoto-scale_400_400/B4DZ5JNx16KMAg-/0/1779344810446?e=1788998400&v=beta&t=Lt7OIzQyeJcEzT4GnefjUsiwVuRMD638gUQUahTxIiQ",
+    "id": "emp-0rwtcdyxxv",
     "bio": "As Data Manager at CIB Egypt, I contribute in leading data engineering initiatives, underpinned by expertise in data modeling and data warehouse architecture. My work focuses on strengthening the organization's data infrastructure to support strategic decision-making and operational excellence.  ",
+    "role": "Engineering Manager",
+    "email": "Shaimaa.Elgammal@cibeg.com",
+    "photo": "https://media.licdn.com/dms/image/v2/D4D03AQFYxC20lach2w/profile-displayphoto-scale_400_400/B4DZ5JNx16KMAg-/0/1779344810446?e=1788998400&v=beta&t=Lt7OIzQyeJcEzT4GnefjUsiwVuRMD638gUQUahTxIiQ",
     "quote": "Work smart, not hard",
-    "responsibilities": [
-      "Data Trust",
-      "Enablement"
-    ],
-    "expertise": [
-      "Data Modeling",
-      "Data Governance",
-      "Team Enablement"
-    ],
+    "awards": [],
     "skills": [
       {
         "name": "Data Governance ",
@@ -214,9 +731,22 @@
         "level": 95
       }
     ],
+    "teamId": "team-00f09sblhf",
     "hobbies": [
       "Travelling"
     ],
+    "featured": true,
+    "fullName": "Shaimaa Elgammal",
+    "funFacts": [],
+    "jobTitle": "Data Trust & Enablement Manager",
+    "location": "SV3, 2nd Floor",
+    "createdAt": "2026-08-19T12:42:52.877Z",
+    "expertise": [
+      "Data Modeling",
+      "Data Governance",
+      "Team Enablement"
+    ],
+    "extension": "8797",
     "interests": [
       "Reading"
     ],
@@ -224,33 +754,28 @@
       "Arabic",
       "English"
     ],
-    "funFacts": [],
+    "subTeamId": "sub-r1fmp0h3q1",
+    "updatedAt": "2026-08-22T18:57:11.201Z",
+    "joinedDate": "",
     "achievements": [],
-    "awards": [],
-    "featured": true,
-    "id": "emp-0rwtcdyxxv",
-    "createdAt": "2026-08-19T12:42:52.877Z",
-    "updatedAt": "2026-08-22T18:57:11.201Z"
+    "responsibilities": [
+      "Data Trust",
+      "Enablement"
+    ]
   },
   {
-    "fullName": "Tamer Elhossiny",
-    "jobTitle": "Data Strategy Head",
-    "role": "Head Manager",
-    "teamId": "team-00f09sblhf",
-    "subTeamId": "",
-    "email": "Tamer.Elhossiny@cibeg.com",
-    "extension": "5312",
-    "location": "SV3 - 2nd Floor",
-    "joinedDate": "2016-03-01",
-    "photo": "https://media.licdn.com/dms/image/v2/D4D03AQFBAWqjcM04-A/profile-displayphoto-scale_400_400/B4DZlbQgnOGkAg-/0/1758172679506?e=1788998400&v=beta&t=sylknhd7QdWgEPsYXmJXtuAqwvHRlue2tLBEBHIGdSo",
+    "id": "emp-f5s7nwwauj",
     "bio": "Data & Technology executive with 25+ years of experience in MEA, driving data-centric transformation across diverse industries. Proven ability to develop and execute data strategies that deliver measurable business value, enhance decision-making, and drive competitive advantage. Experienced in leading and inspiring high-performing data teams in achieving organizational goals.",
+    "role": "Head Manager",
+    "email": "Tamer.Elhossiny@cibeg.com",
+    "photo": "https://media.licdn.com/dms/image/v2/D4D03AQFBAWqjcM04-A/profile-displayphoto-scale_400_400/B4DZlbQgnOGkAg-/0/1758172679506?e=1788998400&v=beta&t=sylknhd7QdWgEPsYXmJXtuAqwvHRlue2tLBEBHIGdSo",
     "quote": "Every success story has its melody.",
-    "responsibilities": [
-      "Spearheaded the creation and leadership of a comprehensive Data Engineering department. Championed data Enablement for CIB's digital transformation strategy."
-    ],
-    "expertise": [
-      "Digital Transformation",
-      "Driving Innovation & Digital Modernization"
+    "awards": [
+      {
+        "year": "2025",
+        "title": "Star Award",
+        "issuer": "CIB"
+      }
     ],
     "skills": [
       {
@@ -266,10 +791,24 @@
         "level": 90
       }
     ],
+    "teamId": "team-00f09sblhf",
     "hobbies": [
       "Chess",
       "Football"
     ],
+    "featured": true,
+    "fullName": "Tamer Elhossiny",
+    "funFacts": [
+      "Placeholder"
+    ],
+    "jobTitle": "Data Strategy Head",
+    "location": "SV3 - 2nd Floor",
+    "createdAt": "2026-08-19T12:26:04.423Z",
+    "expertise": [
+      "Digital Transformation",
+      "Driving Innovation & Digital Modernization"
+    ],
+    "extension": "5312",
     "interests": [
       "Data Modernization"
     ],
@@ -277,22 +816,14 @@
       "English",
       "Arabic"
     ],
-    "funFacts": [
-      "Placeholder"
-    ],
+    "subTeamId": "",
+    "updatedAt": "2026-08-22T18:57:49.877Z",
+    "joinedDate": "2016-03-01",
     "achievements": [
       "Top 10 manager at CIB"
     ],
-    "awards": [
-      {
-        "title": "Star Award",
-        "issuer": "CIB",
-        "year": "2025"
-      }
-    ],
-    "featured": true,
-    "id": "emp-f5s7nwwauj",
-    "createdAt": "2026-08-19T12:26:04.423Z",
-    "updatedAt": "2026-08-22T18:57:49.877Z"
+    "responsibilities": [
+      "Spearheaded the creation and leadership of a comprehensive Data Engineering department. Championed data Enablement for CIB's digital transformation strategy."
+    ]
   }
 ]

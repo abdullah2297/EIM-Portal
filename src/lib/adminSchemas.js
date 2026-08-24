@@ -3,15 +3,20 @@ import {
   ACHIEVEMENT_SCOPES,
   ANNOUNCEMENT_CATEGORIES,
   COMPETITION_STATUS,
+  DELIVERY_METHODS,
   GALLERY_CATEGORIES,
+  HOSTING_TYPES,
   INITIATIVE_CATEGORIES,
   INITIATIVE_STATUS,
   RECOGNITION_TYPES,
+  REGISTRATION_STATUS,
   RESOURCES,
   ROLE_BANDS,
   STORY_TYPES,
   SUBMISSION_STATUS,
   SUBMISSION_TYPES,
+  TRAINING_LEVELS,
+  TRAINING_STATUS,
 } from './constants';
 import { ICON_NAMES } from '@/components/ui/Icon';
 
@@ -139,6 +144,152 @@ export const ADMIN_SCHEMAS = {
         ],
       },
       { name: 'featured', label: 'Feature on the home page', type: 'checkbox', section: 'Recognition' },
+    ],
+  },
+
+  [RESOURCES.trainingTypes]: {
+    label: 'Training Type',
+    labelPlural: 'Training Types',
+    icon: 'School',
+    group: 'Learning & Development',
+    columns: [
+      { key: 'name', label: 'Training type', primary: true },
+      { key: 'order', label: 'Order' },
+      { key: 'active', label: 'Active', boolean: true },
+    ],
+    fields: [
+      { name: 'name', label: 'Name', type: 'text', required: true, section: 'Basics' },
+      { name: 'icon', label: 'Icon', type: 'select', options: asOptions(ICON_NAMES), section: 'Basics' },
+      { name: 'order', label: 'Display order', type: 'number', section: 'Basics' },
+      { name: 'description', label: 'Description', type: 'textarea', full: true, section: 'Basics' },
+      { name: 'active', label: 'Active', type: 'checkbox', section: 'Basics' },
+    ],
+  },
+
+  [RESOURCES.trainingCategories]: {
+    label: 'Training Category',
+    labelPlural: 'Training Categories',
+    icon: 'Category',
+    group: 'Learning & Development',
+    columns: [
+      { key: 'name', label: 'Category', primary: true },
+      { key: 'trainingTypeId', label: 'Training type', relation: RESOURCES.trainingTypes, labelField: 'name' },
+      { key: 'order', label: 'Order' },
+      { key: 'active', label: 'Active', boolean: true },
+    ],
+    fields: [
+      { name: 'name', label: 'Name', type: 'text', required: true, section: 'Basics' },
+      { name: 'trainingTypeId', label: 'Training type', type: 'relation', resource: RESOURCES.trainingTypes, labelField: 'name', required: true, section: 'Basics' },
+      { name: 'order', label: 'Display order', type: 'number', section: 'Basics' },
+      { name: 'description', label: 'Description', type: 'textarea', full: true, section: 'Basics' },
+      { name: 'active', label: 'Active', type: 'checkbox', section: 'Basics' },
+    ],
+  },
+
+  [RESOURCES.trainings]: {
+    label: 'Training',
+    labelPlural: 'Trainings',
+    icon: 'MenuBook',
+    group: 'Learning & Development',
+    columns: [
+      { key: 'name', label: 'Training', primary: true },
+      { key: 'categoryId', label: 'Category', relation: RESOURCES.trainingCategories, labelField: 'name' },
+      { key: 'level', label: 'Level' },
+      { key: 'deliveryMethod', label: 'Delivery' },
+      { key: 'date', label: 'Date', date: true },
+      { key: 'status', label: 'Status', badge: true },
+    ],
+    fields: [
+      // Basic information
+      { name: 'name', label: 'Training name', type: 'text', required: true, section: 'Basic Information' },
+      { name: 'shortDescription', label: 'Short description', type: 'textarea', full: true, section: 'Basic Information' },
+      { name: 'fullDescription', label: 'Full description', type: 'textarea', full: true, rows: 8, section: 'Basic Information' },
+      { name: 'categoryId', label: 'Category', type: 'relation', resource: RESOURCES.trainingCategories, labelField: 'name', required: true, section: 'Basic Information' },
+      { name: 'level', label: 'Training level', type: 'select', options: asOptions(TRAINING_LEVELS), section: 'Basic Information' },
+      { name: 'language', label: 'Language', type: 'text', section: 'Basic Information' },
+      { name: 'image', label: 'Training image', type: 'image', full: true, section: 'Basic Information' },
+      { name: 'featured', label: 'Feature this training', type: 'checkbox', section: 'Basic Information' },
+
+      // Learning information
+      { name: 'whatYouWillLearn', label: 'What you will learn', type: 'tags', full: true, section: 'Learning Information' },
+      {
+        name: 'content',
+        label: 'Training content / agenda',
+        type: 'repeater',
+        full: true,
+        section: 'Learning Information',
+        fields: [
+          { name: 'title', label: 'Module', type: 'text' },
+          { name: 'description', label: 'Description', type: 'text' },
+        ],
+      },
+      { name: 'prerequisites', label: 'Prerequisites', type: 'tags', full: true, section: 'Learning Information' },
+      { name: 'targetAudience', label: 'Target audience', type: 'textarea', full: true, section: 'Learning Information' },
+
+      // Instructor
+      { name: 'instructorName', label: 'Instructor name', type: 'text', section: 'Instructor' },
+      { name: 'instructorTitle', label: 'Job title', type: 'text', section: 'Instructor' },
+      { name: 'instructorDepartment', label: 'Department / organisation', type: 'text', section: 'Instructor' },
+      { name: 'instructorBio', label: 'Short bio', type: 'textarea', full: true, section: 'Instructor' },
+      { name: 'instructorImage', label: 'Profile image', type: 'image', full: true, section: 'Instructor' },
+
+      // Schedule
+      { name: 'date', label: 'Training date', type: 'date', section: 'Schedule' },
+      { name: 'startTime', label: 'Start time', type: 'text', hint: 'e.g. 09:00', section: 'Schedule' },
+      { name: 'endTime', label: 'End time', type: 'text', hint: 'e.g. 13:00', section: 'Schedule' },
+      { name: 'duration', label: 'Duration', type: 'text', hint: 'e.g. "4 hours" or "3 days"', section: 'Schedule' },
+
+      // Delivery
+      { name: 'deliveryMethod', label: 'Delivery method', type: 'select', options: asOptions(DELIVERY_METHODS), section: 'Delivery' },
+      { name: 'location', label: 'Location', type: 'text', section: 'Delivery' },
+      { name: 'meetingLink', label: 'Meeting / online link', type: 'text', hint: 'Only shown when delivery is Online or Hybrid.', section: 'Delivery' },
+
+      // Registration
+      { name: 'enableParticipation', label: 'Enable participation', type: 'checkbox', section: 'Registration' },
+      { name: 'enableCapacity', label: 'Limit capacity', type: 'checkbox', section: 'Registration' },
+      { name: 'maxParticipants', label: 'Maximum participants', type: 'number', section: 'Registration' },
+      { name: 'enableWaitlist', label: 'Enable waiting list', type: 'checkbox', section: 'Registration' },
+      { name: 'registrationStartDate', label: 'Registration start date', type: 'date', section: 'Registration' },
+      { name: 'registrationEndDate', label: 'Registration end date', type: 'date', section: 'Registration' },
+
+      // Completion & external hosting
+      { name: 'certificateAvailable', label: 'Certificate available on completion', type: 'checkbox', section: 'Completion & External' },
+      { name: 'hostingType', label: 'Hosting', type: 'select', options: asOptions(HOSTING_TYPES), section: 'Completion & External' },
+      {
+        name: 'externalUrl',
+        label: 'External training URL',
+        type: 'text',
+        hint: 'Only used when hosting is External - shown as an "Access Training" button.',
+        section: 'Completion & External',
+      },
+
+      // Publishing
+      { name: 'status', label: 'Status', type: 'select', options: asOptions(TRAINING_STATUS), required: true, section: 'Publishing' },
+    ],
+  },
+
+  [RESOURCES.trainingRegistrations]: {
+    label: 'Training Registration',
+    labelPlural: 'Training Registrations',
+    icon: 'HowToReg',
+    group: 'Learning & Development',
+    // Searching/filtering by training, category, status, date and exporting
+    // to CSV all live on the richer Participation screen - point admins there
+    // instead of duplicating that UI in this generic table.
+    relatedLink: { label: 'Open Participation Management', href: '/admin/participation', icon: 'HowToReg' },
+    columns: [
+      { key: 'trainingId', label: 'Training', primary: true, relation: RESOURCES.trainings, labelField: 'name' },
+      { key: 'employeeId', label: 'Employee', relation: RESOURCES.employees, labelField: 'fullName' },
+      { key: 'status', label: 'Status', badge: true },
+      { key: 'computerNumber', label: 'Computer #' },
+      { key: 'createdAt', label: 'Registered', date: true },
+    ],
+    fields: [
+      { name: 'trainingId', label: 'Training', type: 'relation', resource: RESOURCES.trainings, labelField: 'name', required: true, section: 'Basics' },
+      { name: 'employeeId', label: 'Employee', type: 'relation', resource: RESOURCES.employees, labelField: 'fullName', required: true, section: 'Basics' },
+      { name: 'status', label: 'Status', type: 'select', options: asOptions(REGISTRATION_STATUS), required: true, section: 'Basics' },
+      { name: 'computerNumber', label: 'Computer number', type: 'text', section: 'Details' },
+      { name: 'phoneNumber', label: 'Phone number', type: 'text', section: 'Details' },
     ],
   },
 
@@ -439,7 +590,7 @@ export const ADMIN_SCHEMAS = {
 };
 
 /** Ordered list used by the sidebar, grouped by area. */
-export const ADMIN_NAV_GROUPS = ['Organisation', 'People', 'Content', 'Engagement'];
+export const ADMIN_NAV_GROUPS = ['Organisation', 'People', 'Learning & Development', 'Content', 'Engagement'];
 
 /** @param {string} resource */
 export function getAdminSchema(resource) {

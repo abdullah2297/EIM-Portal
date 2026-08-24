@@ -56,6 +56,13 @@ export const COLLECTION_FILES = {
   teams: 'teams.json',
   'sub-teams': 'sub-teams.json',
   employees: 'employees.json',
+  'training-types': 'training-types.json',
+  'training-categories': 'training-categories.json',
+  trainings: 'trainings.json',
+  'training-registrations': 'training-registrations.json',
+  // Not registered in RESOURCES/RESOURCE_CONFIG on purpose - GET /api/[resource] is always
+  // public for anything in that config, and this collection holds password hashes.
+  'employee-credentials': 'employee-credentials.json',
   initiatives: 'initiatives.json',
   achievements: 'achievements.json',
   announcements: 'announcements.json',

@@ -43,6 +43,18 @@ export const STATUS_TONE = {
   'In Review': 'warning',
   Actioned: 'success',
   Archived: 'neutral',
+  Draft: 'neutral',
+  Published: 'info',
+  'Registration Open': 'success',
+  'Registration Closed': 'warning',
+  Ongoing: 'success',
+  Registered: 'success',
+  Waitlisted: 'warning',
+  Approved: 'success',
+  Cancelled: 'neutral',
+  Attended: 'success',
+  'No Show': 'danger',
+  'Not Completed': 'danger',
 };
 
 /** @param {{ status: string, pulse?: boolean }} props */

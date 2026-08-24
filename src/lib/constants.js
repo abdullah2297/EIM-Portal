@@ -20,6 +20,8 @@ export const ROUTES = {
   team: (id) => `/teams/${id}`,
   subTeams: '/sub-teams',
   subTeam: (id) => `/sub-teams/${id}`,
+  learning: '/learning',
+  learningItem: (id) => `/learning/${id}`,
   employees: '/employees',
   employee: (id) => `/employees/${id}`,
   initiatives: '/initiatives',
@@ -59,23 +61,24 @@ export const PRIMARY_NAV = [
     ],
   },
   { label: 'Initiatives', href: ROUTES.initiatives, icon: 'Lightbulb' },
+  { label: 'L&D', href: ROUTES.learning, icon: 'School', megaMenu: true },
   {
-    label: 'Achievements',
+    label: 'Success',
     icon: 'EmojiEvents',
     children: [
-      { label: 'Achievements', href: ROUTES.achievements, icon: 'EmojiEvents' },
-      { label: 'Success Stories', href: ROUTES.successStories, icon: 'AutoStories' },
+      { label: 'Success', href: ROUTES.achievements, icon: 'EmojiEvents' },
+      { label: 'Inspiration', href: ROUTES.successStories, icon: 'AutoStories' },
     ],
   },
-  { label: 'Announcements', href: ROUTES.announcements, icon: 'Campaign' },
-  { label: 'Competitions', href: ROUTES.competitions, icon: 'SportsEsports' },
+  { label: 'News', href: ROUTES.announcements, icon: 'Campaign' },
+  { label: 'Compete', href: ROUTES.competitions, icon: 'SportsEsports' },
 ];
 
 /** Secondary navigation shown under the "More" dropdown / drawer group. */
 export const SECONDARY_NAV = [
   { label: 'Gallery', href: ROUTES.gallery, icon: 'PhotoLibrary' },
-  { label: 'Recognition Wall', href: ROUTES.recognition, icon: 'Celebration' },
-  { label: 'Contact / Get Involved', href: ROUTES.contact, icon: 'ContactSupport' },
+  { label: 'Celebrate', href: ROUTES.recognition, icon: 'Celebration' },
+  { label: 'Contact', href: ROUTES.contact, icon: 'ContactSupport' },
 ];
 
 /** Expands any dropdown groups in a nav list into their flat list of links. */
@@ -88,6 +91,10 @@ export const RESOURCES = {
   teams: 'teams',
   subTeams: 'sub-teams',
   employees: 'employees',
+  trainingTypes: 'training-types',
+  trainingCategories: 'training-categories',
+  trainings: 'trainings',
+  trainingRegistrations: 'training-registrations',
   initiatives: 'initiatives',
   achievements: 'achievements',
   announcements: 'announcements',
@@ -145,6 +152,44 @@ export const INITIATIVE_CATEGORIES = [
 ];
 
 export const STORY_TYPES = ['Project', 'Team', 'Employee'];
+
+export const TRAINING_LEVELS = ['Beginner', 'Intermediate', 'Advanced'];
+
+export const DELIVERY_METHODS = ['On-site', 'Online', 'Hybrid'];
+
+/** Lifecycle a training moves through, controlled from the admin panel. */
+export const TRAINING_STATUS = [
+  'Draft',
+  'Published',
+  'Registration Open',
+  'Registration Closed',
+  'Ongoing',
+  'Completed',
+  'Archived',
+];
+
+/** Statuses that are visible on the public catalog - Draft/Archived are admin-only. */
+export const PUBLIC_TRAINING_STATUS = TRAINING_STATUS.filter(
+  (status) => status !== 'Draft' && status !== 'Archived',
+);
+
+/** Where a training is actually hosted - separate from its catalog type/category. */
+export const HOSTING_TYPES = ['Internal', 'External'];
+
+/** Lifecycle of one employee's registration for one training. */
+export const REGISTRATION_STATUS = [
+  'Registered',
+  'Waitlisted',
+  'Approved',
+  'Cancelled',
+  'Attended',
+  'No Show',
+  'Completed',
+  'Not Completed',
+];
+
+/** Registration statuses that count as "holding a seat" for capacity purposes. */
+export const ACTIVE_REGISTRATION_STATUS = ['Registered', 'Approved', 'Attended', 'Completed'];
 
 /** Seniority bands used by the employee role filter and the admin form. */
 export const ROLE_BANDS = [

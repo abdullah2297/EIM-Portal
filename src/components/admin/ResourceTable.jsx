@@ -125,8 +125,18 @@ export function ResourceTable({ resource, schema }) {
         <span className="u-text-sm u-muted">
           {meta ? `${meta.total} record(s)` : 'Loading...'}
         </span>
+        {schema.relatedLink ? (
+          <Button
+            href={schema.relatedLink.href}
+            variant="outline"
+            icon={schema.relatedLink.icon ?? 'OpenInNew'}
+            className="md:ml-auto"
+          >
+            {schema.relatedLink.label}
+          </Button>
+        ) : null}
         {schema.readOnlyCreate ? null : (
-          <Button href={ROUTES.adminResourceNew(resource)} icon="Add" className="md:ml-auto">
+          <Button href={ROUTES.adminResourceNew(resource)} icon="Add" className={schema.relatedLink ? '' : 'md:ml-auto'}>
             New {schema.label.toLowerCase()}
           </Button>
         )}

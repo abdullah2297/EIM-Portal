@@ -72,6 +72,10 @@
 
 .u-full-bleed { width: 100%; }
 
+// Offsets an in-page anchor scroll target so the sticky header doesn't cover
+// its heading - used by the logged-out landing page's navbar shortcuts.
+.anchor-target { scroll-margin-top: var(--header-height); }
+
 // Staggered entrance used on card grids.
 .u-anim-in { animation: fade-up 0.5s var(--ease-smooth) both; }
 

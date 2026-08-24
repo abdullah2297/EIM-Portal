@@ -12,6 +12,10 @@ import { buildQuery } from '@/lib/query';
 export const teamsService = createResourceService(RESOURCES.teams);
 export const subTeamsService = createResourceService(RESOURCES.subTeams);
 export const employeesService = createResourceService(RESOURCES.employees);
+export const trainingTypesService = createResourceService(RESOURCES.trainingTypes);
+export const trainingCategoriesService = createResourceService(RESOURCES.trainingCategories);
+export const trainingsService = createResourceService(RESOURCES.trainings);
+export const trainingRegistrationsService = createResourceService(RESOURCES.trainingRegistrations);
 export const initiativesService = createResourceService(RESOURCES.initiatives);
 export const achievementsService = createResourceService(RESOURCES.achievements);
 export const announcementsService = createResourceService(RESOURCES.announcements);
@@ -26,6 +30,10 @@ export const SERVICE_BY_RESOURCE = {
   [RESOURCES.teams]: teamsService,
   [RESOURCES.subTeams]: subTeamsService,
   [RESOURCES.employees]: employeesService,
+  [RESOURCES.trainingTypes]: trainingTypesService,
+  [RESOURCES.trainingCategories]: trainingCategoriesService,
+  [RESOURCES.trainings]: trainingsService,
+  [RESOURCES.trainingRegistrations]: trainingRegistrationsService,
   [RESOURCES.initiatives]: initiativesService,
   [RESOURCES.achievements]: achievementsService,
   [RESOURCES.announcements]: announcementsService,
@@ -125,6 +133,61 @@ export const authService = {
   },
   async session() {
     const { data } = await http.get('/api/auth/session');
+    return data;
+  },
+};
+
+export const employeeAuthService = {
+  /** @param {{ email: string, password: string }} payload */
+  async login(payload) {
+    const { data } = await http.post('/api/employee-auth/login', payload);
+    return data;
+  },
+  async logout() {
+    const { data } = await http.post('/api/employee-auth/logout');
+    return data;
+  },
+  async session() {
+    const { data } = await http.get('/api/employee-auth/session');
+    return data;
+  },
+};
+
+export const employeeAccountsService = {
+  async list() {
+    const { data } = await http.get('/api/admin/employee-accounts');
+    return data ?? [];
+  },
+  /** @param {{ employeeId: string, password: string, sections: string[] }} payload */
+  async create(payload) {
+    const { data } = await http.post('/api/admin/employee-accounts', { action: 'create', ...payload });
+    return data;
+  },
+  /** @param {string} employeeId @param {string[]} sections */
+  async updatePermissions(employeeId, sections) {
+    const { data } = await http.post('/api/admin/employee-accounts', {
+      action: 'update-permissions',
+      employeeId,
+      sections,
+    });
+    return data;
+  },
+  /** @param {string} employeeId */
+  async reset(employeeId) {
+    const { data } = await http.post('/api/admin/employee-accounts', { action: 'reset', employeeId });
+    return data;
+  },
+};
+
+export const trainingRegistrationService = {
+  /** @param {string} trainingId @param {{ computerNumber: string, phoneNumber: string }} payload */
+  async register(trainingId, payload) {
+    const { data } = await http.post(`/api/trainings/${encodeURIComponent(trainingId)}/register`, payload);
+    return data;
+  },
+  /** @param {string} trainingId */
+  async cancel(trainingId) {
+    const { data } = await http.post(`/api/trainings/${encodeURIComponent(trainingId)}/cancel`);
     return data;
   },
 };

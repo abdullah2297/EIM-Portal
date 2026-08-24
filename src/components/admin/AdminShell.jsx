@@ -31,6 +31,9 @@ export function AdminShell({ children }) {
   const currentTitle = (() => {
     if (pathname === ROUTES.admin) return 'Dashboard';
     if (pathname.startsWith('/admin/department')) return 'Department settings';
+    if (pathname.startsWith('/admin/employee-accounts')) return 'Employee accounts';
+    if (pathname.startsWith('/admin/participation')) return 'Participation';
+    if (pathname.startsWith('/admin/learning-dashboard')) return 'L&D Dashboard';
     const segment = pathname.split('/')[2];
     return ADMIN_SCHEMAS[segment]?.labelPlural ?? 'Admin';
   })();
@@ -89,6 +92,24 @@ export function AdminShell({ children }) {
                     {schema.labelPlural}
                   </Link>
                 ))}
+                {group === 'Learning & Development' ? (
+                  <>
+                    <Link
+                      href="/admin/participation"
+                      className={`admin-sidebar__link ${isActive('/admin/participation') ? 'admin-sidebar__link--active' : ''}`.trim()}
+                    >
+                      <Icon name="HowToReg" />
+                      Participation
+                    </Link>
+                    <Link
+                      href="/admin/learning-dashboard"
+                      className={`admin-sidebar__link ${isActive('/admin/learning-dashboard') ? 'admin-sidebar__link--active' : ''}`.trim()}
+                    >
+                      <Icon name="Insights" />
+                      L&amp;D Dashboard
+                    </Link>
+                  </>
+                ) : null}
               </div>
             );
           })}
@@ -100,6 +121,13 @@ export function AdminShell({ children }) {
           >
             <Icon name="AccountBalance" />
             Department profile
+          </Link>
+          <Link
+            href="/admin/employee-accounts"
+            className={`admin-sidebar__link ${isActive('/admin/employee-accounts') ? 'admin-sidebar__link--active' : ''}`.trim()}
+          >
+            <Icon name="Login" />
+            Employee accounts
           </Link>
           <Link href={ROUTES.home} className="admin-sidebar__link">
             <Icon name="OpenInNew" />

@@ -27,7 +27,8 @@ function resolve(resource) {
 export async function GET(request, { params }) {
   try {
     const { resource, id } = await params;
-    resolve(resource);
+    const config = resolve(resource);
+    if (config.privateRead) await requireAdmin();
     const record = await findById(resource, id);
     if (!record) return fail('Record not found.', { status: 404, code: 'NOT_FOUND' });
     return ok(record);

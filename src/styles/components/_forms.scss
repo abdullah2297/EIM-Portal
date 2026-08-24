@@ -10,6 +10,25 @@
   gap: 1.25rem;
 }
 
+// -- Landing page login section -----------------------------------------------
+.login-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  max-width: 420px;
+  margin-inline: auto;
+  text-align: center;
+
+  .section-head { text-align: center; }
+  .section-head__text { align-items: center; }
+}
+
+.login-section__form {
+  width: 100%;
+  text-align: left;
+}
+
 .form-grid {
   display: grid;
   gap: 1.25rem;

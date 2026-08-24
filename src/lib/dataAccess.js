@@ -1,7 +1,8 @@
 import 'server-only';
 import { listAll, readCollection } from './db';
-import { RESOURCES } from './constants';
+import { ACTIVE_REGISTRATION_STATUS, PUBLIC_TRAINING_STATUS, RESOURCES } from './constants';
 import { promoteFlagged, sortItems } from './query';
+import { getEmployeeSession } from './employeeSession';
 
 /**
  * Server-side read model.
@@ -22,6 +23,9 @@ export function getDepartment() {
 export const getTeams = () => listAll(RESOURCES.teams);
 export const getSubTeams = () => listAll(RESOURCES.subTeams);
 export const getEmployees = () => listAll(RESOURCES.employees);
+export const getTrainingTypes = () => listAll(RESOURCES.trainingTypes);
+export const getTrainingCategories = () => listAll(RESOURCES.trainingCategories);
+export const getTrainings = () => listAll(RESOURCES.trainings);
 export const getInitiatives = () => listAll(RESOURCES.initiatives);
 export const getAchievements = () => listAll(RESOURCES.achievements);
 export const getAnnouncements = () => listAll(RESOURCES.announcements);
@@ -66,6 +70,15 @@ export function resolvePeople(ids, employeesById) {
   return (Array.isArray(ids) ? ids : [])
     .map((id) => toPersonSummary(employeesById[id]))
     .filter(Boolean);
+}
+
+/** The logged-in employee's person summary, or null when signed out. */
+export async function getCurrentEmployee() {
+  const session = await getEmployeeSession();
+  if (!session) return null;
+  const employees = await getEmployees();
+  const employee = employees.find((item) => item.id === session.sub);
+  return employee ? toPersonSummary(employee) : null;
 }
 
 /** Everything the home page renders, gathered in one pass. */
@@ -334,4 +347,114 @@ export async function getAllCompetitionIds() {
 export async function getAllEmployeeIds() {
   const employees = await getEmployees();
   return employees.map((e) => e.id);
+}
+
+const LD_MEGA_MENU_SAMPLE_SIZE = 3;
+
+/** Training types/categories/trainings joined, restricted to publicly-visible statuses. */
+async function getLdCatalogLookups() {
+  const [types, categories, trainings] = await Promise.all([
+    getTrainingTypes(),
+    getTrainingCategories(),
+    getTrainings(),
+  ]);
+  return {
+    types,
+    categories,
+    trainings: trainings.filter((training) => PUBLIC_TRAINING_STATUS.includes(training.status)),
+  };
+}
+
+/** Nav data for the L&D mega-menu: active types -> active categories -> sample courses. */
+export async function getLdNavData() {
+  const { types, categories, trainings } = await getLdCatalogLookups();
+
+  const activeTypes = sortItems(types.filter((type) => type.active !== false), 'order', 'asc');
+  const activeCategories = sortItems(
+    categories.filter((category) => category.active !== false),
+    'order',
+    'asc',
+  );
+
+  return {
+    types: activeTypes.map((type) => ({
+      id: type.id,
+      name: type.name,
+      icon: type.icon,
+      categories: activeCategories
+        .filter((category) => category.trainingTypeId === type.id)
+        .map((category) => ({
+          id: category.id,
+          name: category.name,
+          courses: promoteFlagged(trainings.filter((training) => training.categoryId === category.id))
+            .slice(0, LD_MEGA_MENU_SAMPLE_SIZE)
+            .map((training) => ({ id: training.id, name: training.name })),
+        })),
+    })),
+  };
+}
+
+/** Every publicly-visible training, joined with its category and training type. */
+export async function getTrainingCatalogData() {
+  const { types, categories, trainings } = await getLdCatalogLookups();
+  const typesById = Object.fromEntries(types.map((type) => [type.id, type]));
+  const categoriesById = Object.fromEntries(categories.map((category) => [category.id, category]));
+
+  return sortItems(trainings, 'date', 'desc').map((training) => {
+    const category = categoriesById[training.categoryId] ?? null;
+    const type = category ? typesById[category.trainingTypeId] ?? null : null;
+    return { ...training, category, type };
+  });
+}
+
+/** Full detail model for `/learning/[trainingId]`. */
+export async function getTrainingDetail(trainingId) {
+  const { types, categories, trainings } = await getLdCatalogLookups();
+  const training = trainings.find((item) => item.id === trainingId);
+  if (!training) return null;
+
+  const category = categories.find((item) => item.id === training.categoryId) ?? null;
+  const type = category ? types.find((item) => item.id === category.trainingTypeId) ?? null : null;
+  const related = trainings
+    .filter((item) => item.id !== training.id && item.categoryId === training.categoryId)
+    .slice(0, 3);
+
+  const [registrations, session] = await Promise.all([
+    listAll(RESOURCES.trainingRegistrations),
+    getEmployeeSession(),
+  ]);
+  const forTraining = registrations.filter((item) => item.trainingId === trainingId);
+  const registeredCount = forTraining.filter((item) => ACTIVE_REGISTRATION_STATUS.includes(item.status)).length;
+  const myRegistration = session
+    ? forTraining.find((item) => item.employeeId === session.sub && item.status !== 'Cancelled') ?? null
+    : null;
+
+  return { training, category, type, related, registeredCount, myRegistration };
+}
+
+/** This employee's own registrations, joined with each training, for "My Training". */
+export async function getMyTrainingRegistrations(employeeId) {
+  const [registrations, trainings] = await Promise.all([
+    listAll(RESOURCES.trainingRegistrations),
+    getTrainings(),
+  ]);
+  const trainingsById = Object.fromEntries(trainings.map((item) => [item.id, item]));
+
+  const mine = registrations
+    .filter((item) => item.employeeId === employeeId && item.status !== 'Cancelled')
+    .map((item) => ({ ...item, training: trainingsById[item.trainingId] ?? null }))
+    .filter((item) => item.training);
+
+  return {
+    upcoming: mine.filter((item) => item.training.status !== 'Completed'),
+    completed: mine.filter((item) => item.training.status === 'Completed'),
+  };
+}
+
+/** Ids of every publicly-visible training, used by generateStaticParams-style helpers. */
+export async function getAllTrainingIds() {
+  const trainings = await getTrainings();
+  return trainings
+    .filter((training) => PUBLIC_TRAINING_STATUS.includes(training.status))
+    .map((training) => training.id);
 }

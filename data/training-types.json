@@ -1,0 +1,22 @@
+[
+  {
+    "id": "ttype-vlzxg1jded",
+    "icon": "Psychology",
+    "name": "Soft Skills",
+    "order": 2,
+    "active": true,
+    "createdAt": "2026-08-24T19:33:07.485Z",
+    "updatedAt": "2026-08-24T19:33:07.485Z",
+    "description": "Communication and leadership skills."
+  },
+  {
+    "id": "ttype-vlevlocni0",
+    "icon": "Dns",
+    "name": "Technical Training",
+    "order": 1,
+    "active": true,
+    "createdAt": "2026-08-24T19:33:06.727Z",
+    "updatedAt": "2026-08-24T19:33:06.727Z",
+    "description": "Hands-on technical skills."
+  }
+]

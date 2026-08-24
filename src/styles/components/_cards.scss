@@ -498,6 +498,15 @@
   padding: 1.25rem;
 }
 
+// -- Training card ------------------------------------------------------------
+.training-card {
+  @include card-surface;
+  @include hover-lift;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
 // -- Success story card ------------------------------------------------------
 .story-card {
   @include card-surface;

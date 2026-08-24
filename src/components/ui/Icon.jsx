@@ -85,6 +85,11 @@ import Refresh from '@mui/icons-material/Refresh';
 import Storage from '@mui/icons-material/Storage';
 import UploadFile from '@mui/icons-material/UploadFile';
 import FolderZip from '@mui/icons-material/FolderZip';
+import MenuBook from '@mui/icons-material/MenuBook';
+import Category from '@mui/icons-material/Category';
+import Quiz from '@mui/icons-material/Quiz';
+import VideoCameraFront from '@mui/icons-material/VideoCameraFront';
+import LaptopMac from '@mui/icons-material/LaptopMac';
 
 /**
  * Curated Material Icons registry.
@@ -95,16 +100,16 @@ import FolderZip from '@mui/icons-material/FolderZip';
  */
 const ICONS = {
   AccountBalance, AccountTree, Add, ArrowBack, ArrowForward, AttachFile, AutoStories,
-  Badge, Bolt, BusinessCenter, CalendarMonth, Campaign, Cancel, CardGiftcard, Celebration,
+  Badge, Bolt, BusinessCenter, CalendarMonth, Campaign, Cancel, CardGiftcard, Category, Celebration,
   CheckCircle, ChevronRight, Close, ContactSupport, ContentCopy, DarkMode, Dashboard,
   Delete, Description, Diamond, Dns, Edit, EmojiEvents, Engineering, ErrorOutline, Event,
   ExpandMore, FactCheck, Favorite, FilterList, Flag, FolderZip, Gavel, Groups, Handshake, Home,
-  HowToReg, Hub, Inbox, InfoOutlined, InsertChart, Insights, Interests, Language,
-  Leaderboard, Lightbulb, LightMode, LocationOn, Login, Logout, MailOutline, Menu,
-  MilitaryTech, MoreHoriz, NightsStay, OpenInNew, Person, PhotoLibrary, Psychology,
+  HowToReg, Hub, Inbox, InfoOutlined, InsertChart, Insights, Interests, LaptopMac, Language,
+  Leaderboard, Lightbulb, LightMode, LocationOn, Login, Logout, MailOutline, Menu, MenuBook,
+  MilitaryTech, MoreHoriz, NightsStay, OpenInNew, Person, PhotoLibrary, Psychology, Quiz,
   Publish, Refresh, RocketLaunch, Save, Schedule, School, Search, SearchOff, Settings,
   SportsEsports, SportsSoccer, Star, Storage, SupportAgent, Timeline, TipsAndUpdates,
-  TrendingUp, UploadFile, Verified, VerifiedUser, Visibility, Work, WorkspacePremium,
+  TrendingUp, UploadFile, Verified, VerifiedUser, VideoCameraFront, Visibility, Work, WorkspacePremium,
 };
 
 /**

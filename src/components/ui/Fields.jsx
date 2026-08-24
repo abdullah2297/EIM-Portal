@@ -48,7 +48,7 @@ export function Field({ label, htmlFor, required, hint, error, children, classNa
  * @param {{
  *  label?: string, name: string, value: any, onChange: Function, type?: string,
  *  placeholder?: string, required?: boolean, hint?: string, error?: string,
- *  disabled?: boolean, className?: string, autoComplete?: string,
+ *  disabled?: boolean, className?: string, autoComplete?: string, ariaLabel?: string,
  * }} props
  */
 export function TextInput({
@@ -64,6 +64,7 @@ export function TextInput({
   disabled,
   className,
   autoComplete,
+  ariaLabel,
 }) {
   const id = useId();
   return (
@@ -79,6 +80,7 @@ export function TextInput({
         disabled={disabled}
         autoComplete={autoComplete}
         aria-invalid={Boolean(error)}
+        aria-label={!label ? ariaLabel : undefined}
         required={required}
       />
     </Field>

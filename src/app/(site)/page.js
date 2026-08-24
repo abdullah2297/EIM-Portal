@@ -1,6 +1,7 @@
-import { getHomePageData, getLookups, toPersonSummary } from '@/lib/dataAccess';
+import { getCurrentEmployee, getHomePageData, getLookups, toPersonSummary } from '@/lib/dataAccess';
 import { HeroSection } from '@/components/home/HeroSection';
 import { StatsSection } from '@/components/home/StatsSection';
+import { LandingLoginSection } from '@/components/home/LandingLoginSection';
 import {
   AchievementsSection,
   AnnouncementsSection,
@@ -32,8 +33,30 @@ export const metadata = {
  * service layer instead.
  */
 export default async function HomePage() {
-  const [data, lookups] = await Promise.all([getHomePageData(), getLookups()]);
+  const [data, lookups, me] = await Promise.all([
+    getHomePageData(),
+    getLookups(),
+    getCurrentEmployee(),
+  ]);
   const head = toPersonSummary(lookups.employeesById[data.department?.headId]);
+
+  // Logged-out visitors only get a teaser of the home page - the rest of the
+  // site is gated behind login by middleware, and `/` is the one page that
+  // must stay reachable so it can show this instead of nothing at all.
+  if (!me) {
+    return (
+      <>
+        <HeroSection department={data.department} stats={data.stats} />
+        <div id="department" className="anchor-target">
+          <StatsSection stats={data.stats} />
+        </div>
+        <div id="achievements" className="anchor-target">
+          <AchievementsSection achievements={data.achievements} teamsById={lookups.teamsById} />
+        </div>
+        <LandingLoginSection />
+      </>
+    );
+  }
 
   return (
     <>

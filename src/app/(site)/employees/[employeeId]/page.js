@@ -1,10 +1,10 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { getEmployeeProfile } from '@/lib/dataAccess';
+import { getCurrentEmployee, getEmployeeProfile, getMyTrainingRegistrations } from '@/lib/dataAccess';
 import { PageHeader } from '@/components/layout/PageHeader';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { Avatar } from '@/components/ui/Avatar';
-import { Badge, TagList } from '@/components/ui/Badge';
+import { Badge, StatusBadge, TagList } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
 import { Icon } from '@/components/ui/Icon';
 import { ProgressBar } from '@/components/ui/ProgressBar';
@@ -45,6 +45,12 @@ export default async function EmployeeProfilePage({ params }) {
     recognition,
     competitionsWon,
   } = profile;
+
+  // "My Training" is personal registration history - only shown on your own
+  // profile, never while browsing a colleague's.
+  const me = await getCurrentEmployee();
+  const isOwnProfile = me?.id === employee.id;
+  const myTraining = isOwnProfile ? await getMyTrainingRegistrations(employee.id) : null;
 
   return (
     <>
@@ -269,6 +275,75 @@ export default async function EmployeeProfilePage({ params }) {
                 />
               )}
             </div>
+
+            {/* My Training - only on your own profile ------------------------- */}
+            {isOwnProfile ? (
+              <article className="detail-panel">
+                <h2 className="detail-panel__title">
+                  <Icon name="MenuBook" />
+                  My Training
+                </h2>
+
+                <p className="u-text-sm u-muted">Upcoming</p>
+                {myTraining.upcoming.length ? (
+                  <ul className="icon-list">
+                    {myTraining.upcoming.map((registration) => (
+                      <li className="icon-list__item" key={registration.id}>
+                        <span className="icon-list__bullet">
+                          <Icon name="MenuBook" fontSize="inherit" />
+                        </span>
+                        <span className="u-stack u-stack--sm">
+                          <Link href={ROUTES.learningItem(registration.training.id)}>
+                            {registration.training.name}
+                          </Link>
+                          <span className="u-text-xs u-subtle">
+                            {formatDate(registration.training.date, 'short')}
+                            {registration.training.instructorName ? ` - ${registration.training.instructorName}` : ''}
+                          </span>
+                        </span>
+                        <StatusBadge status={registration.status} />
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p className="u-text-sm u-subtle">No upcoming training yet.</p>
+                )}
+
+                <hr className="u-divider" />
+
+                <p className="u-text-sm u-muted">Completed</p>
+                {myTraining.completed.length ? (
+                  <ul className="icon-list">
+                    {myTraining.completed.map((registration) => (
+                      <li className="icon-list__item" key={registration.id}>
+                        <span className="icon-list__bullet">
+                          <Icon name="CheckCircle" fontSize="inherit" />
+                        </span>
+                        <span className="u-stack u-stack--sm">
+                          <Link href={ROUTES.learningItem(registration.training.id)}>
+                            {registration.training.name}
+                          </Link>
+                          <span className="u-text-xs u-subtle">
+                            {formatDate(registration.training.date, 'short')}
+                            {registration.training.instructorName ? ` - ${registration.training.instructorName}` : ''}
+                          </span>
+                        </span>
+                        {registration.training.certificateAvailable ? (
+                          <Icon name="WorkspacePremium" titleAccess="Certificate available" />
+                        ) : null}
+                        <StatusBadge status={registration.status} />
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p className="u-text-sm u-subtle">No completed training yet.</p>
+                )}
+
+                <Button href={ROUTES.learning} variant="outline" size="sm" iconAfter="ArrowForward">
+                  Browse training
+                </Button>
+              </article>
+            ) : null}
 
             {/* Success stories ------------------------------------------------ */}
             {stories.length ? (

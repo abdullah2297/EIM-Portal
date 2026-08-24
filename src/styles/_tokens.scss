@@ -169,6 +169,23 @@
   --container-max: 1280px;
 
   color-scheme: light;
+
+  // -- Chart marks (dataviz skill's validated reference palette) -------------
+  // Deliberately NOT the brand colours above: navy/burgundy/gold/teal fail the
+  // chart-safety checks (lightness band, chroma floor) when used as marks -
+  // ran `validate_palette.js` and confirmed. These four are categorical only -
+  // never repurpose them as UI chrome, and never add a 5th without re-running
+  // the validator on the new ordering.
+  --viz-series-1: #2a78d6; // blue
+  --viz-series-2: #eb6834; // orange
+  --viz-series-3: #1baf7a; // aqua
+  --viz-series-4: #eda100; // yellow
+  // Reserved status pair for the one binary good/bad comparison (Attended vs
+  // No Show) - never reused as a generic categorical series.
+  --viz-good: #0ca30c;
+  --viz-critical: #d03b3b;
+  --viz-grid: #e1e0d9;
+  --viz-axis: #898781;
 }
 
 // ---------------------------------------------------------------------------
@@ -226,4 +243,15 @@
   --shadow-glow: 0 0 0 4px rgb(var(--rgb-primary) / 0.22);
 
   color-scheme: dark;
+
+  // -- Chart marks (dark steps of the same reference palette) ---------------
+  --viz-series-1: #3987e5;
+  --viz-series-2: #d95926;
+  --viz-series-3: #199e70;
+  --viz-series-4: #c98500;
+  // Status colours are fixed, never themed - same hex in both modes.
+  --viz-good: #0ca30c;
+  --viz-critical: #d03b3b;
+  --viz-grid: #2c2c2a;
+  --viz-axis: #898781;
 }

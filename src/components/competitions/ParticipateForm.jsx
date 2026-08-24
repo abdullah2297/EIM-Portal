@@ -3,65 +3,52 @@
 import { useState } from 'react';
 import { participationService, ApiError } from '@/services';
 import { useToast } from '@/context/ToastContext';
-import { SelectField, TextArea, TextInput } from '@/components/ui/Fields';
+import { TextArea } from '@/components/ui/Fields';
 import { Button } from '@/components/ui/Button';
+import { Avatar } from '@/components/ui/Avatar';
 import { Icon } from '@/components/ui/Icon';
 import { isValid, rules, validate } from '@/lib/validation';
 
 const SCHEMA = {
-  name: [rules.required('Enter your name.')],
-  email: [rules.required('Enter your email address.'), rules.email()],
   message: [rules.maxLength(2000)],
 };
-
-const EMPTY = { employeeId: '', name: '', email: '', message: '' };
 
 /**
  * "Participate Now" registration form for a single competition.
  *
- * Selecting your name from the directory pre-fills the contact details and
- * lets the API add you to the participant list.
+ * The whole competitions section is gated behind the employee login, so
+ * whoever reaches this form is already identified by their session - no more
+ * free-text name/email or a "who are you" picker, just an optional message.
  *
  * @param {{
  *  competitionId: string,
  *  competitionName: string,
  *  closed?: boolean,
- *  employees?: Array<{ id: string, fullName: string, email: string }>,
+ *  me: { fullName: string, jobTitle?: string, photo?: string|null },
  * }} props
  */
-export function ParticipateForm({ competitionId, competitionName, closed = false, employees = [] }) {
-  const [values, setValues] = useState(EMPTY);
-  const [errors, setErrors] = useState({});
+export function ParticipateForm({ competitionId, competitionName, closed = false, me }) {
+  const [message, setMessage] = useState('');
+  const [error, setError] = useState('');
   const [status, setStatus] = useState('idle');
   const { notify } = useToast();
 
-  const setValue = (name, value) => {
-    setValues((current) => {
-      if (name !== 'employeeId') return { ...current, [name]: value };
-      const match = employees.find((employee) => employee.id === value);
-      return match
-        ? { ...current, employeeId: value, name: match.fullName, email: match.email }
-        : { ...current, employeeId: value };
-    });
-    setErrors((current) => ({ ...current, [name]: undefined }));
-  };
-
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const nextErrors = validate(values, SCHEMA);
-    setErrors(nextErrors);
+    const nextErrors = validate({ message }, SCHEMA);
+    setError(nextErrors.message ?? '');
     if (!isValid(nextErrors)) return;
 
     setStatus('submitting');
     try {
-      await participationService.participate({ ...values, competitionId });
+      await participationService.participate({ competitionId, message });
       setStatus('success');
-      setValues(EMPTY);
+      setMessage('');
       notify(`You are registered for ${competitionName}. Good luck!`, 'success');
-    } catch (error) {
+    } catch (submitError) {
       setStatus('error');
-      if (error instanceof ApiError && error.details) setErrors(error.details);
-      notify(error?.message ?? 'We could not register your entry.', 'error');
+      if (submitError instanceof ApiError && submitError.details?.message) setError(submitError.details.message);
+      notify(submitError?.message ?? 'We could not register your entry.', 'error');
     }
   };
 
@@ -86,44 +73,20 @@ export function ParticipateForm({ competitionId, competitionName, closed = false
         </div>
       ) : null}
 
-      <SelectField
-        label="Who are you?"
-        name="employeeId"
-        value={values.employeeId}
-        onChange={setValue}
-        placeholder="Select your name (optional)"
-        hint="Selecting your name adds you to the participant list automatically."
-        options={employees.map((employee) => ({ value: employee.id, label: employee.fullName }))}
-      />
-
-      <div className="form-grid">
-        <TextInput
-          label="Full name"
-          name="name"
-          value={values.name}
-          onChange={setValue}
-          error={errors.name}
-          required
-          autoComplete="name"
-        />
-        <TextInput
-          label="Email"
-          name="email"
-          type="email"
-          value={values.email}
-          onChange={setValue}
-          error={errors.email}
-          required
-          autoComplete="email"
-        />
+      <div className="u-cluster u-cluster--sm">
+        <Avatar name={me.fullName} src={me.photo} size="sm" />
+        <span className="u-stack u-stack--sm">
+          <strong className="u-text-sm">Registering as {me.fullName}</strong>
+          {me.jobTitle ? <span className="u-text-xs u-subtle">{me.jobTitle}</span> : null}
+        </span>
       </div>
 
       <TextArea
         label="Anything the organisers should know?"
         name="message"
-        value={values.message}
-        onChange={setValue}
-        error={errors.message}
+        value={message}
+        onChange={(_, value) => setMessage(value)}
+        error={error}
         rows={4}
         placeholder="Optional - your approach, team members, questions..."
       />

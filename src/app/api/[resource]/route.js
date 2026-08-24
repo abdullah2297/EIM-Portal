@@ -34,6 +34,7 @@ export async function GET(request, { params }) {
   try {
     const { resource } = await params;
     const config = resolve(resource);
+    if (config.privateRead) await requireAdmin();
     const { searchParams } = new URL(request.url);
 
     if (config.singleton) {

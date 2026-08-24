@@ -30,7 +30,10 @@
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  height: var(--header-height);
+  // min-height, not height: the logged-out landing nav can wrap to a second
+  // line on very narrow screens (see `.nav-desktop--landing`), and a fixed
+  // height would clip or overlap it instead of letting the row grow.
+  min-height: var(--header-height);
   min-width: 0;
 
   @include respond-above(sm) { gap: 1rem; }
@@ -123,6 +126,27 @@
   @include respond-above(xl) { display: flex; }
 }
 
+// The logged-out landing page's nav has only 3 short items (2 jump-links + a
+// login button), so unlike the full nav it stays visible at every breakpoint
+// instead of collapsing behind a hamburger - there's nothing else to put in
+// a drawer for it, and wrapping is an acceptable fallback on very narrow
+// screens instead of a second nav pattern just for this case.
+.nav-desktop.nav-desktop--landing {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 0.35rem;
+  margin-inline-start: 0;
+
+  // Icon-only below `sm` so all 3 items reliably fit on one line next to the
+  // brand, search and theme toggle even on the narrowest phones; the wrap
+  // above is just a safety net, not the primary fit strategy.
+  .nav-link__label,
+  .nav-landing-login-btn > span {
+    @include respond-below(sm) { display: none; }
+  }
+}
+
 .nav-link {
   position: relative;
   display: inline-flex;
@@ -175,6 +199,8 @@
 
 .header-actions {
   display: flex;
+  flex-wrap: wrap; // safety net - see .site-header__inner's min-height note
+  justify-content: flex-end;
   align-items: center;
   gap: 0.15rem;
   margin-inline-start: auto;
@@ -183,18 +209,178 @@
   @include respond-above(sm) { gap: 0.35rem; }
 }
 
-// -- Header search -----------------------------------------------------------
-.header-search {
+// -- L&D mega-menu ------------------------------------------------------------
+// No existing dropdown supports nesting (the shared `DropdownMenu` is a flat
+// MUI `Menu`), so this is a hand-built, CSS hover/focus-driven flyout: the
+// panel's visibility is pure `:hover`/`:focus-within` on `.ld-menu`, and only
+// "which type's categories are showing" is JS state (see LdMegaMenu.jsx).
+// Desktop-only - the mobile drawer gets a single flat "L&D" link instead.
+.ld-menu {
   position: relative;
-  display: none;
-  min-width: 0;
+  display: flex;
+  align-items: center;
+}
 
-  @include respond-above(md) {
-    display: block;
-    flex: 1 1 160px;
-    max-width: 210px;
+.ld-menu__trigger {
+  &::after { display: none; }
+}
+
+.ld-menu__caret {
+  transition: transform var(--duration-fast) var(--ease-smooth);
+}
+
+.ld-menu__panel {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: flex;
+  gap: 0;
+  min-width: 520px;
+  margin-top: 0.6rem;
+  padding: 0.5rem;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(6px);
+  transition: opacity var(--duration-fast) var(--ease-smooth),
+    transform var(--duration-fast) var(--ease-smooth), visibility var(--duration-fast);
+  z-index: $z-header + 1;
+}
+
+.ld-menu:hover .ld-menu__panel,
+.ld-menu:focus-within .ld-menu__panel {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.ld-menu:hover .ld-menu__caret,
+.ld-menu:focus-within .ld-menu__caret {
+  transform: rotate(180deg);
+}
+
+.ld-menu__column {
+  display: flex;
+  flex-direction: column;
+  min-width: 220px;
+  padding: 0.4rem;
+
+  & + & {
+    border-left: 1px solid var(--color-border);
   }
-  @include respond-above(2xl) { max-width: 260px; }
+}
+
+.ld-menu__type {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  width: 100%;
+  padding: 0.55rem 0.65rem;
+  border: none;
+  border-radius: var(--radius-md);
+  background: none;
+  color: var(--color-text-muted);
+  font-family: inherit;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  text-align: left;
+  cursor: pointer;
+
+  span { flex: 1; }
+}
+
+.ld-menu__type-caret { color: var(--color-text-subtle); }
+
+.ld-menu__type--active {
+  background-color: rgb(var(--rgb-primary) / 0.08);
+  color: var(--color-primary);
+}
+
+.ld-menu__browse-all {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 0.4rem;
+  padding: 0.55rem 0.65rem;
+  border-top: 1px solid var(--color-border);
+  color: var(--color-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+}
+
+.ld-menu__category {
+  padding: 0.5rem 0.65rem;
+
+  & + & { border-top: 1px solid var(--color-border); }
+}
+
+.ld-menu__category-title {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: var(--color-text);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+}
+
+.ld-menu__courses {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  margin-bottom: 0.4rem;
+
+  a {
+    padding: 0.2rem 0;
+    color: var(--color-text-muted);
+    font-size: var(--font-size-sm);
+
+    &:hover { color: var(--color-primary); }
+  }
+}
+
+.ld-menu__browse {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: var(--color-primary);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+}
+
+.ld-menu__empty {
+  padding: 0.4rem 0.65rem;
+  color: var(--color-text-subtle);
+  font-size: var(--font-size-sm);
+}
+
+// -- Header search -----------------------------------------------------------
+// Collapses to a plain icon button by default (see GlobalSearch's
+// `collapsible` prop) and expands into the input on click, as an overlay
+// anchored to this slot - so it never fights the nav for space and works the
+// same at every breakpoint instead of needing a separate mobile fallback.
+.header-search-slot {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.header-search--expanded {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: min(280px, calc(100vw - 6rem));
+  z-index: 5;
+  // The centering transform lives in the keyframes (not as a separate static
+  // transform) so the entrance animation's own transform doesn't overwrite it.
+  animation: header-search-expand 0.18s var(--ease-smooth) both;
+}
+
+@keyframes header-search-expand {
+  from { opacity: 0; transform: translateY(-50%) scale(0.96); }
+  to { opacity: 1; transform: translateY(-50%) scale(1); }
 }
 
 .header-search__input {
@@ -214,6 +400,32 @@
     outline: none;
     border-color: var(--color-primary);
     box-shadow: var(--shadow-glow);
+  }
+}
+
+// -- Navbar login widget ------------------------------------------------------
+// Only ever rendered for a signed-in employee now (photo + log out, no name
+// text) - the logged-out state has no header widget at all; its login form
+// lives at the bottom of the landing page instead (see `LandingLoginSection.jsx`),
+// and the navbar's "Log in" button (`.nav-desktop--landing`) just jumps there.
+.login-widget-slot {
+  display: flex;
+  align-items: center;
+  flex-shrink: 1;
+  min-width: 0;
+}
+
+.login-widget--signed-in {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 0;
+
+  // The avatar is the first thing to go below `sm` - on the narrowest phones
+  // (~360px) brand + search + avatar + logout + theme + hamburger together
+  // don't fit on one line, so this sheds it, keeping the logout action itself.
+  .avatar {
+    @include respond-below(sm) { display: none; }
   }
 }
 

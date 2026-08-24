@@ -91,6 +91,82 @@
  */
 
 /**
+ * @typedef {Object} TrainingType
+ * @property {string} id
+ * @property {string} name
+ * @property {string} icon
+ * @property {number} order
+ * @property {string} description
+ * @property {boolean} active
+ */
+
+/**
+ * @typedef {Object} TrainingCategory
+ * @property {string} id
+ * @property {string} name
+ * @property {string} trainingTypeId
+ * @property {number} order
+ * @property {string} description
+ * @property {boolean} active
+ */
+
+/**
+ * @typedef {Object} TrainingContentModule
+ * @property {string} title
+ * @property {string} description
+ */
+
+/**
+ * @typedef {Object} Training
+ * @property {string} id
+ * @property {string} name
+ * @property {string} shortDescription
+ * @property {string} fullDescription
+ * @property {string} categoryId
+ * @property {string} level Beginner | Intermediate | Advanced
+ * @property {string} language
+ * @property {string|null} image
+ * @property {boolean} featured
+ * @property {string[]} whatYouWillLearn
+ * @property {TrainingContentModule[]} content
+ * @property {string[]} prerequisites
+ * @property {string} targetAudience
+ * @property {string} instructorName
+ * @property {string} instructorTitle
+ * @property {string} instructorDepartment
+ * @property {string} instructorBio
+ * @property {string|null} instructorImage
+ * @property {string} date
+ * @property {string} startTime
+ * @property {string} endTime
+ * @property {string} duration
+ * @property {string} deliveryMethod On-site | Online | Hybrid
+ * @property {string} location
+ * @property {string} meetingLink
+ * @property {string} status Draft | Published | Registration Open | Registration Closed | Ongoing | Completed | Archived
+ * @property {boolean} enableParticipation
+ * @property {boolean} enableCapacity
+ * @property {number} maxParticipants
+ * @property {boolean} enableWaitlist
+ * @property {string} registrationStartDate
+ * @property {string} registrationEndDate
+ * @property {boolean} certificateAvailable
+ * @property {string} hostingType Internal | External
+ * @property {string} externalUrl
+ */
+
+/**
+ * @typedef {Object} TrainingRegistration
+ * @property {string} id
+ * @property {string} trainingId
+ * @property {string} employeeId
+ * @property {string} status Registered | Waitlisted | Approved | Cancelled | Attended | No Show | Completed | Not Completed
+ * @property {string} computerNumber
+ * @property {string} phoneNumber
+ * @property {string} createdAt
+ */
+
+/**
  * @typedef {Object} Initiative
  * @property {string} id
  * @property {string} title

@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { getCompetitionDetail, getEmployees } from '@/lib/dataAccess';
+import { getCompetitionDetail, getCurrentEmployee, getEmployees } from '@/lib/dataAccess';
 import { PageHeader } from '@/components/layout/PageHeader';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { Badge, StatusBadge } from '@/components/ui/Badge';
@@ -32,7 +32,7 @@ export default async function CompetitionDetailPage({ params }) {
   if (!detail) notFound();
 
   const { competition, participants, winners, pastWinners, related } = detail;
-  const employees = await getEmployees();
+  const [me, employees] = await Promise.all([getCurrentEmployee(), getEmployees()]);
   const isClosed = competition.status === 'Completed';
   const remaining = daysRemaining(competition.endDate);
 
@@ -218,11 +218,7 @@ export default async function CompetitionDetailPage({ params }) {
                 competitionId={competition.id}
                 competitionName={competition.name}
                 closed={isClosed}
-                employees={employees.map((employee) => ({
-                  id: employee.id,
-                  fullName: employee.fullName,
-                  email: employee.email,
-                }))}
+                me={me}
               />
             </article>
 

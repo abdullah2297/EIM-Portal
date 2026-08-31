@@ -260,7 +260,7 @@ export const DATE_FORMAT = {
 export const PLACEHOLDER = {
   text: 'PLACEHOLDER - content to be provided by the department.',
   image: 'PLACEHOLDER IMAGE',
-  contactEmail: 'placeholder.dwh@example.com',
+  contactEmail: 'EIMDataEngineering@cibeg.com',
   phone: '+00 000 000 0000',
-  location: 'PLACEHOLDER - office location',
+  location: 'Smart Village - CIB SV3 - 2nd Floor',
 };

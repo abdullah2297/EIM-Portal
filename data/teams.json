@@ -1,15 +1,62 @@
 [
   {
+    "id": "team-ctjm4lx9h7",
+    "icon": "Engineering",
+    "name": "Data portfolio Management",
+    "order": "7",
+    "leadId": "emp-9cdxy4agox",
+    "mission": "Ensuring that DWH projects are executed on time, within scope, and aligned with organizational strategy. ",
+    "featured": false,
+    "createdAt": "2026-09-06T07:18:23.890Z",
+    "shortName": "Data portfolio ",
+    "updatedAt": "2026-09-06T07:18:23.890Z",
+    "portfolios": [],
+    "description": "The Data Portfolio Management Team is responsible for overseeing the full lifecycle of Data Warehouse projects, from initiation to delivery. Acting as a project management office for enterprise data initiatives, the team ensures that DWH projects are executed on time, within scope, and aligned with organizational strategy. They coordinate stakeholders, manage resources, and enforce governance standards while leveraging tools like Jira and MS Project to track progress and outcomes.",
+    "responsibilities": [
+      "Project Planning: Define scope, timelines, milestones, and deliverables for DWH projects.",
+      "Stakeholder Engagement: Act as the central point of communication between business units, IT, and data engineering teams.",
+      "Progress Tracking: Use Jira and MS Project to monitor tasks, dependencies, and project health.",
+      "Risk & Issue Management: Identify risks early, implement mitigation strategies, and resolve issues proactively.",
+      "Governance & Compliance: Ensure projects adhere to enterprise data governance, security, and compliance standards.",
+      "Delivery Assurance: Guarantee that DWH solutions meet quality, performance, and business requirements."
+    ]
+  },
+  {
+    "id": "team-41xtxryrxm",
+    "icon": "Engineering",
+    "name": "Data Excellence & Quality",
+    "order": "6",
+    "leadId": "emp-9cdxy4agox",
+    "mission": " create a unified function that balances execution excellence with data integrity, enabling the organization to maximize trust in its information assets.",
+    "featured": false,
+    "createdAt": "2026-08-31T06:33:33.905Z",
+    "shortName": "Excellence & Quality",
+    "updatedAt": "2026-08-31T06:55:18.073Z",
+    "portfolios": [
+      "Incentive",
+      "Finance",
+      "IT",
+      "Business Banking"
+    ],
+    "description": "The Data Excellence & Quality Team brings together Project Management and Quality & Excellence to ensure that enterprise data initiatives are delivered effectively and meet the highest standards of accuracy, reliability, and business value. By combining structured project execution with rigorous quality practices, the team drives trusted data outcomes across the organization.",
+    "responsibilities": [
+      "Program Delivery: Execute data initiatives with clear scope, timelines, and stakeholder alignment.",
+      "Data Quality Assurance: Establish and enforce standards for accuracy, completeness, and timeliness.",
+      "Cross-Team Collaboration: Partner with architecture, engineering, and governance teams to deliver holistic data management.",
+      "Governance Compliance: Ensure all projects adhere to EIM policies and frameworks."
+    ]
+  },
+  {
     "id": "team-aqmq9b1mp4",
     "icon": "Engineering",
-    "name": "Data Production",
+    "name": "System & Data Production",
     "order": "5",
     "leadId": "emp-invxjl5t3s",
     "mission": "To design, operate, and optimize enterprise data production workflows that transform raw data into trusted insights, enabling business units to make informed decisions. The team’s mission is to ensure data availability, accuracy, and performance across platforms, while continuously modernizing processes to support evolving business and regulatory requirements.",
-    "featured": false,
+    "featured": true,
     "createdAt": "2026-08-24T08:33:02.546Z",
     "shortName": "Data Production",
-    "updatedAt": "2026-08-24T08:39:32.581Z",
+    "updatedAt": "2026-08-31T06:38:34.229Z",
     "portfolios": [],
     "description": "The Data Production Team is responsible for managing, orchestrating, and delivering enterprise data across critical platforms such as PowerCenter, Teradata, and SAP BO. They ensure that data pipelines, transformations, and reporting solutions are reliable, scalable, and aligned with business and IT needs. Acting as the backbone of operational data delivery, the team guarantees that stakeholders have access to trusted, timely, and actionable information.",
     "responsibilities": [
@@ -70,10 +117,10 @@
     "order": "2",
     "leadId": "emp-0vpzacilxj",
     "mission": "The team owns the delivery lifecycle from requirements gathering and solution design through development, testing, deployment, and operational support, ensuring that data solutions are efficient, scalable, maintainable, and aligned with the organization's data architecture and standards.",
-    "featured": false,
+    "featured": true,
     "createdAt": "2026-08-19T13:30:29.488Z",
     "shortName": "Delivery & Engineering",
-    "updatedAt": "2026-08-23T19:45:51.351Z",
+    "updatedAt": "2026-08-31T06:38:17.408Z",
     "portfolios": [
       "Risk",
       "Finance"

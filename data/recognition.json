@@ -7,21 +7,23 @@
     "message": "Recognised for outstanding delivery, mentoring and calm leadership through a demanding quarter.",
     "quarter": "Q2 2026",
     "featured": true,
-    "toTeamId": null,
-    "toEmployeeId": "emp-007",
-    "fromEmployeeId": "emp-001"
+    "toTeamId": "team-q034fdpi93",
+    "updatedAt": "2026-09-06T09:12:38.055Z",
+    "toEmployeeId": "emp-txpw4qfhuu",
+    "fromEmployeeId": "emp-in8awx37n1"
   },
   {
     "id": "rec-002",
     "date": "2026-07-02",
     "type": "Team of the Quarter",
     "title": "Team of the Quarter - Q2 2026",
-    "message": "For delivering the data quality framework ahead of schedule and lifting scores across every portfolio.",
+    "message": "For delivering the data Modernization framework ahead of schedule and lifting scores across every portfolio.",
     "quarter": "Q2 2026",
     "featured": true,
-    "toTeamId": "team-governance",
+    "toTeamId": "team-00f09sblhf",
+    "updatedAt": "2026-09-06T09:13:53.471Z",
     "toEmployeeId": null,
-    "fromEmployeeId": "emp-001"
+    "fromEmployeeId": "emp-in8awx37n1"
   },
   {
     "id": "rec-003",

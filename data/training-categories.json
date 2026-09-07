@@ -1,38 +1,32 @@
 [
   {
-    "id": "tcat-vwmrzylap8",
-    "name": "Communication",
-    "order": 2,
-    "active": true,
-    "createdAt": "2026-08-24T19:33:21.267Z",
-    "updatedAt": "2026-08-24T19:33:21.267Z",
-    "trainingTypeId": "ttype-vlzxg1jded"
-  },
-  {
     "id": "tcat-vw8qpnov39",
-    "name": "Leadership",
+    "name": "Modeling & Architecture",
     "order": 1,
     "active": true,
     "createdAt": "2026-08-24T19:33:20.762Z",
-    "updatedAt": "2026-08-24T19:33:20.762Z",
+    "updatedAt": "2026-08-25T05:21:50.421Z",
+    "description": "",
     "trainingTypeId": "ttype-vlzxg1jded"
   },
   {
     "id": "tcat-vvriis6sgf",
-    "name": "Software Development",
+    "name": "Governance",
     "order": 2,
     "active": true,
     "createdAt": "2026-08-24T19:33:20.142Z",
-    "updatedAt": "2026-08-24T19:33:20.142Z",
+    "updatedAt": "2026-08-25T05:25:21.103Z",
+    "description": "",
     "trainingTypeId": "ttype-vlevlocni0"
   },
   {
     "id": "tcat-vv0opgvy42",
-    "name": "Data & Analytics",
+    "name": "Architecture",
     "order": 1,
     "active": true,
     "createdAt": "2026-08-24T19:33:19.176Z",
-    "updatedAt": "2026-08-24T19:33:19.176Z",
+    "updatedAt": "2026-08-25T05:32:13.749Z",
+    "description": "",
     "trainingTypeId": "ttype-vlevlocni0"
   }
 ]

@@ -1,62 +1,53 @@
 [
   {
     "id": "ann-001",
-    "date": "2026-08-17",
-    "image": null,
-    "title": "Q3 Department Town Hall",
+    "date": "2026-09-30",
+    "image": "https://www.andamandaphuket.com/sites/andamanda/files/inline-images/A%20microphone%20on%20a%20podium%20in%20front%20of%20an%20audience.jpg",
+    "title": "EIM Town Hall / Q3 - 2026",
     "pinned": true,
     "teamId": "team-bi",
-    "content": "Join the whole department for the quarterly update, roadmap review and recognition awards.\n\nPLACEHOLDER - replace this body text with the full announcement, including any actions colleagues need to take and who to contact with questions.",
+    "content": "Join the whole department for the quarterly update, roadmap review and recognition awards.\n\nI would like to invite everyone to come together so we can collectively reflect on the past quarter. It is important that we take a moment to recognize and celebrate the hard work of our award recipients. Additionally, we will use this time to echo our successes as well as the challenges and pitfalls that we can learn from moving forward.",
     "summary": "Join the whole department for the quarterly update, roadmap review and recognition awards.",
-    "authorId": "emp-001",
+    "authorId": "emp-in8awx37n1",
     "category": "Event",
     "featured": true,
-    "eventDate": "2026-09-02",
-    "attachments": [
-      {
-        "url": "#",
-        "name": "PLACEHOLDER-attachment.pdf",
-        "size": "—"
-      }
-    ],
-    "eventLocation": "PLACEHOLDER - room / link"
+    "eventDate": "2026-09-01",
+    "updatedAt": "2026-08-25T12:26:40.534Z",
+    "attachments": [],
+    "eventLocation": "SV1 - Ground floor - Auditorium"
   },
   {
     "id": "ann-004",
-    "date": "2026-07-22",
-    "image": null,
-    "title": "Welcome to Our New Joiners",
+    "date": "2026-08-22",
+    "image": "https://geekflare.com/wp-content/uploads/2022/01/TOGAF-certification-courses.png",
+    "title": "TOGAF® Foundation program is now open for registration ",
     "pinned": false,
     "teamId": "team-platform",
-    "content": "Five colleagues joined the department this quarter across three teams.\n\nPLACEHOLDER - replace this body text with the full announcement, including any actions colleagues need to take and who to contact with questions.",
-    "summary": "Five colleagues joined the department this quarter across three teams.",
-    "authorId": "emp-033",
-    "category": "Celebration",
-    "featured": false,
-    "eventDate": null,
+    "content": "We are excited to announce that registration is officially open for the TOGAF Enterprise Architecture Program!\n\nTOGAF (The Open Group Architecture Framework) is the industry-standard methodology for designing, implementing, and governing enterprise architecture. This program will equip participants with the skills to align business strategy, data, applications, and technology through a structured and proven approach\n\nRegistration : https://eim-portal.vercel.app/learning/trn-s4za58t0rz",
+    "summary": "TOGAF is the industry-standard Enterprise Architecture framework that provides a structured approach for designing, implementing, and governing enterprise architecture while aligning business, data, applications, and technology.\n\n",
+    "authorId": "emp-0rwtcdyxxv",
+    "category": "Training",
+    "featured": true,
+    "eventDate": "2026-01-10",
+    "updatedAt": "2026-08-25T07:04:17.022Z",
     "attachments": [],
-    "eventLocation": null
+    "eventLocation": "SV3 - 2nd Floor - Meeting Room"
   },
   {
     "id": "ann-005",
-    "date": "2026-06-08",
-    "image": null,
-    "title": "Advanced SQL Training Series",
+    "date": "2026-08-25",
+    "image": "https://cf-images.us-east-1.prod.boltdns.net/v1/static/6082840760001/b3cce230-5995-42cc-a40a-3f5785082bb8/cdc85282-80ca-4281-a075-472aaa360410/1280x720/match/image.jpg",
+    "title": "Cloudera CDP Program ",
     "pinned": false,
     "teamId": "team-engineering",
-    "content": "A six-week internal training series open to every member of the department.\n\nPLACEHOLDER - replace this body text with the full announcement, including any actions colleagues need to take and who to contact with questions.",
-    "summary": "A six-week internal training series open to every member of the department.",
-    "authorId": "emp-025",
+    "content": "A six-days internal training series open to every member of the department.\n\nBy the end of the program, participants will:\n\nMaster CDP Architecture → Understand hybrid deployment models and integration.\n\nBuild ETL Pipelines → Design scalable workflows using Spark, Kafka, and NiFi.\n\nOptimize Warehousing → Run efficient queries and manage workloads with Hive/Impala.\n\nApply Governance → Implement SDX for compliance, lineage, and security.\n\nAdminister Clusters → Monitor, troubleshoot, and scale CDP environments.",
+    "summary": "The Cloudera CDP (Cloudera Data Platform) Training Program is designed to equip data engineers, architects, and administrators with the skills to deploy, manage, and optimize Cloudera’s hybrid data platform. Participants will gain hands-on experience in managing data across cloud and on-premises environments, ensuring scalability, security, and governance.",
+    "authorId": "emp-0rwtcdyxxv",
     "category": "Training",
     "featured": false,
-    "eventDate": "2026-10-28",
-    "attachments": [
-      {
-        "url": "#",
-        "name": "PLACEHOLDER-attachment.pdf",
-        "size": "—"
-      }
-    ],
-    "eventLocation": "PLACEHOLDER - room / link"
+    "eventDate": "2027-01-01",
+    "updatedAt": "2026-08-25T12:21:24.534Z",
+    "attachments": [],
+    "eventLocation": "SV3 - 2nd Floor - Meeting room 2"
   }
 ]

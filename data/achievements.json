@@ -43,214 +43,26 @@
     ]
   },
   {
-    "id": "ach-003",
-    "date": "2025-06-10",
-    "icon": "WorkspacePremium",
-    "level": "Department",
-    "scope": "Department",
-    "title": "Zero Regulatory Findings",
-    "images": [],
-    "issuer": "Data Warehouse Department",
-    "teamIds": [
-      "team-bi"
-    ],
-    "category": "Milestone",
-    "featured": true,
-    "subTeamIds": [],
-    "description": "A full reporting cycle closed with no regulatory findings raised. PLACEHOLDER - add the department's own supporting detail.",
-    "employeeIds": [
-      "emp-016",
-      "emp-011"
-    ]
-  },
-  {
-    "id": "ach-004",
-    "date": "2026-02-19",
-    "icon": "Verified",
-    "level": "Department",
-    "scope": "Department",
-    "title": "99.9% Batch Availability",
-    "images": [],
-    "issuer": "Data Warehouse Department",
-    "teamIds": [
-      "team-platform"
-    ],
-    "category": "Milestone",
-    "featured": false,
-    "subTeamIds": [],
-    "description": "Twelve consecutive months above the batch availability target. PLACEHOLDER - add the department's own supporting detail.",
-    "employeeIds": [
-      "emp-037"
-    ]
-  },
-  {
-    "id": "ach-005",
-    "date": "2025-06-12",
-    "icon": "Star",
-    "level": "Department",
-    "scope": "Department",
-    "title": "Data Catalogue 1000 Assets",
-    "images": [],
-    "issuer": "Data Warehouse Department",
-    "teamIds": [
-      "team-governance"
-    ],
-    "category": "Milestone",
-    "featured": false,
-    "subTeamIds": [],
-    "description": "One thousand critical data assets fully documented and certified. PLACEHOLDER - add the department's own supporting detail.",
-    "employeeIds": [
-      "emp-022",
-      "emp-027",
-      "emp-020"
-    ]
-  },
-  {
-    "id": "ach-006",
-    "date": "2026-08-17",
-    "icon": "Diamond",
-    "level": "Group",
-    "scope": "Team",
-    "title": "Analytics Model of the Year",
-    "images": [],
-    "issuer": "Data Warehouse Department",
-    "teamIds": [
-      "team-analytics"
-    ],
-    "category": "Award",
-    "featured": false,
-    "subTeamIds": [],
-    "description": "Churn early-warning model recognised for measurable business impact. PLACEHOLDER - add the department's own supporting detail.",
-    "employeeIds": [
-      "emp-030"
-    ]
-  },
-  {
-    "id": "ach-007",
-    "date": "2025-06-05",
-    "icon": "EmojiEvents",
-    "level": "External",
-    "scope": "Employee",
-    "title": "Cloud Platform Certification",
-    "images": [],
-    "issuer": "PLACEHOLDER - external body",
-    "teamIds": [
-      "team-platform"
-    ],
-    "category": "Certification",
-    "featured": false,
-    "subTeamIds": [],
-    "description": "Eight engineers certified on the enterprise cloud data platform. PLACEHOLDER - add the department's own supporting detail.",
-    "employeeIds": [
-      "emp-040"
-    ]
-  },
-  {
-    "id": "ach-008",
-    "date": "2026-02-07",
-    "icon": "MilitaryTech",
-    "level": "Department",
-    "scope": "Team",
-    "title": "Team Collaboration Award",
-    "images": [],
-    "issuer": "Data Warehouse Department",
-    "teamIds": [
-      "team-bi"
-    ],
-    "category": "Team Achievement",
-    "featured": false,
-    "subTeamIds": [],
-    "description": "Cross-team delivery of the executive dashboard redesign. PLACEHOLDER - add the department's own supporting detail.",
-    "employeeIds": [
-      "emp-016",
-      "emp-013",
-      "emp-012"
-    ]
-  },
-  {
     "id": "ach-009",
-    "date": "2025-03-13",
+    "date": "2026-03-30",
     "icon": "WorkspacePremium",
     "level": "Department",
     "scope": "Employee",
     "title": "Employee Recognition - Q1",
     "images": [],
-    "issuer": "Data Warehouse Department",
+    "issuer": "EIM Department",
     "teamIds": [
-      "team-engineering"
+      "team-q034fdpi93"
     ],
     "category": "Employee Recognition",
     "featured": false,
-    "subTeamIds": [],
-    "description": "Quarterly recognition for outstanding individual contribution. PLACEHOLDER - add the department's own supporting detail.",
-    "employeeIds": [
-      "emp-004",
-      "emp-003",
-      "emp-005"
-    ]
-  },
-  {
-    "id": "ach-010",
-    "date": "2026-05-06",
-    "icon": "Verified",
-    "level": "Department",
-    "scope": "Employee",
-    "title": "Employee Recognition - Q2",
-    "images": [],
-    "issuer": "Data Warehouse Department",
-    "teamIds": [
-      "team-analytics"
+    "updatedAt": "2026-08-25T07:15:31.813Z",
+    "subTeamIds": [
+      "sub-4h2kq9m8d1"
     ],
-    "category": "Employee Recognition",
-    "featured": false,
-    "subTeamIds": [],
-    "description": "Quarterly recognition for outstanding individual contribution. PLACEHOLDER - add the department's own supporting detail.",
+    "description": "Quarterly recognition for outstanding individual contribution. ",
     "employeeIds": [
-      "emp-033",
-      "emp-028",
-      "emp-034"
-    ]
-  },
-  {
-    "id": "ach-011",
-    "date": "2025-05-28",
-    "icon": "Star",
-    "level": "Department",
-    "scope": "Department",
-    "title": "Service Desk Satisfaction 4.8/5",
-    "images": [],
-    "issuer": "Data Warehouse Department",
-    "teamIds": [
-      "team-platform"
-    ],
-    "category": "Milestone",
-    "featured": false,
-    "subTeamIds": [],
-    "description": "Highest ever internal satisfaction score for data support. PLACEHOLDER - add the department's own supporting detail.",
-    "employeeIds": [
-      "emp-039"
-    ]
-  },
-  {
-    "id": "ach-012",
-    "date": "2026-03-23",
-    "icon": "Diamond",
-    "level": "External",
-    "scope": "Team",
-    "title": "Green Data Initiative",
-    "images": [],
-    "issuer": "PLACEHOLDER - external body",
-    "teamIds": [
-      "team-engineering"
-    ],
-    "category": "Award",
-    "featured": false,
-    "subTeamIds": [],
-    "description": "Recognised for reducing compute footprint across the warehouse. PLACEHOLDER - add the department's own supporting detail.",
-    "employeeIds": [
-      "emp-004",
-      "emp-003",
-      "emp-006"
+      "emp-txpw4qfhuu"
     ]
   }
 ]

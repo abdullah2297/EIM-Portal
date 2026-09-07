@@ -48,7 +48,7 @@
     },
     {
       "title": "One Team",
-      "description": "Five teams, fifteen sub-teams, one shared backlog of outcomes."
+      "description": "7 Teams, 25 Squads, one shared backlog of outcomes."
     },
     {
       "title": "Curiosity",
@@ -75,7 +75,7 @@
   "tagline": "Enterprise Information Management, powered by our people.",
   "overview": "EIM enables organizations to manage structured and unstructured data across business operations, extract valuable business insights and secure that information while meeting compliance requirements, all on a single platform at enterprise level.\n\nThe goal of information management solutions is to improve efficiency, promote transparency and enable business insights by leveraging software solutions and technologies that are designed to help organizations extract value from their information.",
   "shortName": "EIM",
-  "updatedAt": "2026-08-24T05:35:53.040Z",
+  "updatedAt": "2026-09-06T12:04:27.998Z",
   "portalName": "EIM Portal",
   "portfolios": [
     {
@@ -97,31 +97,22 @@
       "name": "Finance & Treasury",
       "teamCount": 2,
       "description": "Finance & Treasury is responsible for managing the organization’s financial resources, liquidity, and capital structure to ensure stability, growth, and compliance. It oversees budgeting, forecasting, investment strategies, and cash flow management, while safeguarding against financial risks."
-    },
-    {
-      "name": "Operations",
-      "teamCount": 3,
-      "description": "PLACEHOLDER - short description of the Operations portfolio and the data products delivered for it."
-    },
-    {
-      "name": "Digital Channels",
-      "teamCount": 4,
-      "description": "PLACEHOLDER - short description of the Digital Channels portfolio and the data products delivered for it."
-    },
-    {
-      "name": "Marketing & Customer Experience",
-      "teamCount": 3,
-      "description": "PLACEHOLDER - short description of the Marketing & Customer Experience portfolio and the data products delivered for it."
     }
   ],
   "leadershipIds": [
+    "emp-f5s7nwwauj",
+    "emp-9cdxy4agox",
+    "emp-xolq4jd4yg",
+    "emp-invxjl5t3s",
     "emp-0vpzacilxj",
-    "emp-f5s7nwwauj"
+    "emp-d5jzl0fyny"
   ],
   "establishedYear": "2012",
   "overviewTeamIds": [
     "team-00f09sblhf",
-    "team-q034fdpi93"
+    "team-q034fdpi93",
+    "team-og68gm0gsf",
+    "team-aqmq9b1mp4"
   ],
   "responsibilities": [
     "Design and operate the enterprise data warehouse and its ingestion pipelines.",
@@ -133,12 +124,14 @@
   ],
   "overviewSubTeamIds": [
     "sub-r1fmp0h3q1",
-    "sub-4h2kq9m8d1"
+    "sub-4h2kq9m8d1",
+    "sub-j0jolrn1s0",
+    "sub-rquzdk0sro"
   ],
   "overviewChampionIds": [
     "emp-jio0af8pzp",
     "emp-f5s7nwwauj",
     "emp-0rwtcdyxxv",
-    "emp-y2p84owtc4"
+    "emp-txpw4qfhuu"
   ]
 }

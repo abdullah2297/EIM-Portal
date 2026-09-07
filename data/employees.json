@@ -1,5 +1,744 @@
 [
   {
+    "id": "emp-08bdguetek",
+    "bio": "Data Modernization Manager responsible for modernizing the enterprise data platform. drive the transition from legacy warehouse systems to a scalable, secure, and intelligent lakehouse architecture. With deep expertise in Cloudera technologies, ensuring that modernization efforts align with business goals, enabling advanced analytics, AI, and real-time decision-making.",
+    "role": "Engineering Manager",
+    "email": "rita.selim@cibeg.com",
+    "photo": "https://media.licdn.com/dms/image/v2/C5103AQG_PHA0LTN25A/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1579944117389?e=1790208000&v=beta&t=dyuQ_0uhg2pvPebQpWKEOo53f2W5ZC25rcnvmh7LUeo",
+    "quote": "",
+    "awards": [],
+    "skills": [
+      {
+        "name": "Cloudera Ecosystem",
+        "level": 98
+      },
+      {
+        "name": "Data Lakehouse Architecture ",
+        "level": 95
+      },
+      {
+        "name": "Cloud & Hybrid Integration ",
+        "level": 97
+      }
+    ],
+    "teamId": "team-og68gm0gsf",
+    "hobbies": [],
+    "featured": false,
+    "fullName": "Rita Selim",
+    "funFacts": [],
+    "jobTitle": "Business Intelligence Manager",
+    "location": "Smart Village Bldg. 3",
+    "createdAt": "2026-09-06T10:52:33.433Z",
+    "expertise": [
+      "Cloudera Platform Mastery",
+      "Data Architecture",
+      "Migration Strategy"
+    ],
+    "extension": "1607",
+    "interests": [
+      "Fashion"
+    ],
+    "languages": [
+      "English"
+    ],
+    "subTeamId": "sub-2jswc96pmn",
+    "updatedAt": "2026-09-06T10:54:52.568Z",
+    "joinedDate": "2018-09-01",
+    "achievements": [],
+    "responsibilities": [
+      "Modernization Strategy: Define and execute the roadmap for migrating from warehouse to lakehouse.",
+      "Migration Oversight: Lead secure, efficient migration of data assets into Cloudera-based lakehouse storage.",
+      "Team Enablement: Mentor engineers, build expertise in Cloudera components, and foster innovation."
+    ]
+  },
+  {
+    "id": "emp-p83me85hmg",
+    "bio": "I lead the Data Engineering team at CIB Bank, driving delivery of secure, scalable, and innovative data solutions that support Business Banking and Financial Inclusion. With a strong background in SAP BusinessObjects and Python data analysis, I combine technical expertise with leadership to modernize workflows, ensure trusted data delivery, and align engineering execution with CIB’s strategic banking objectives.",
+    "role": "Engineering Manager",
+    "email": "reham.aaboelkhair@cibeg.com",
+    "photo": "https://media.licdn.com/dms/image/v2/D4D03AQEUXZEo06qWOg/profile-displayphoto-shrink_400_400/B4DZU5y0MkHIAg-/0/1740431378132?e=1790208000&v=beta&t=18ymiyPfKfGlfT2qVLeAozgNtFitHslvzffg8iwkObg",
+    "quote": "",
+    "awards": [],
+    "skills": [
+      {
+        "name": "SAP BusinessObjects",
+        "level": 95
+      },
+      {
+        "name": "Ad-hoc Reporting ",
+        "level": 98
+      }
+    ],
+    "teamId": "team-rmevczw80s",
+    "hobbies": [],
+    "featured": false,
+    "fullName": "Reham Aboelkhair",
+    "funFacts": [],
+    "jobTitle": "Business Intelligence Manager",
+    "location": "",
+    "createdAt": "2026-09-06T10:43:59.938Z",
+    "expertise": [
+      "Business Intelligence Systems",
+      "Data Engineering",
+      "Leadership & Collaboration"
+    ],
+    "extension": "8781",
+    "interests": [],
+    "languages": [
+      "English"
+    ],
+    "subTeamId": "sub-hqkof6ze3e",
+    "updatedAt": "2026-09-06T10:43:59.938Z",
+    "joinedDate": "2021-01-01",
+    "achievements": [],
+    "responsibilities": [
+      "Team Leadership → Guide and mentor engineers, set priorities, and ensure alignment with CIB’s strategic banking objectives."
+    ]
+  },
+  {
+    "id": "emp-69f0yatt3n",
+    "bio": "leads the Data Engineering function supporting Global Transaction Banking (GTB) and Corporate portfolios. act as the bridge between business stakeholders and engineering delivery, ensuring that portfolio-specific requirements are translated into scalable, compliant, and high-quality data solutions.",
+    "role": "Engineering Manager",
+    "email": "yasmen.elnizamy@cibeg.com",
+    "photo": "https://media.licdn.com/dms/image/v2/C5603AQEylfy7Tx068A/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1518162575851?e=1790208000&v=beta&t=a8zfR3GcjGlE8BEptQbHaYv3ui3VRTNcpkFPwBCXnEc",
+    "quote": "",
+    "awards": [],
+    "skills": [
+      {
+        "name": "Data Engineering Leadership",
+        "level": 95
+      },
+      {
+        "name": "ETL Development",
+        "level": 95
+      }
+    ],
+    "teamId": "team-rmevczw80s",
+    "hobbies": [],
+    "featured": false,
+    "fullName": "Yasmen Elnizamy",
+    "funFacts": [],
+    "jobTitle": "Data Engineering Manager",
+    "location": "Smart Village Bldg. 3",
+    "createdAt": "2026-09-06T10:29:15.180Z",
+    "expertise": [
+      "Data Engineering Leadership",
+      "Enterprise Data Platforms"
+    ],
+    "extension": "1513",
+    "interests": [],
+    "languages": [
+      "English"
+    ],
+    "subTeamId": "sub-08nbcugdx7",
+    "updatedAt": "2026-09-06T10:29:15.180Z",
+    "joinedDate": "2019-05-01",
+    "achievements": [],
+    "responsibilities": [
+      "Portfolio Leadership: Own GTB and Corporate portfolio data engineering roadmap.",
+      "Resource Management: Allocate team capacity across projects and BAU support.",
+      "Quality Assurance: Oversee data quality, reconciliation, and monitoring frameworks."
+    ]
+  },
+  {
+    "id": "emp-rugx8wwter",
+    "bio": "Leads the Data Engineering function supporting the Operations portfolio. act as the bridge between business operations and technical delivery, ensuring that data engineering solutions align with operational priorities. ",
+    "role": "Principal Engineer",
+    "email": "Engy.Fekry@cibeg.com",
+    "photo": "https://media.licdn.com/dms/image/v2/D4D03AQE-_Yt3w-3Buw/profile-displayphoto-shrink_400_400/B4DZYF7n6mGkAg-/0/1743856239547?e=1790208000&v=beta&t=-EnrOwPdNIGZJKwKrG6po_w9Mf3ESNn4FXoRGkp5CNs",
+    "quote": "",
+    "awards": [],
+    "skills": [
+      {
+        "name": "Leadership & People Management  ",
+        "level": 95
+      },
+      {
+        "name": "Operational Systems Integration ",
+        "level": 90
+      }
+    ],
+    "teamId": "team-rmevczw80s",
+    "hobbies": [],
+    "featured": false,
+    "fullName": "Engy Fekry",
+    "funFacts": [],
+    "jobTitle": "Principal Data Engineer",
+    "location": "Smart Village Bldg. 3",
+    "createdAt": "2026-09-06T10:18:02.625Z",
+    "expertise": [
+      "Enterprise Data Platforms",
+      "Performance Optimization"
+    ],
+    "extension": "8180",
+    "interests": [],
+    "languages": [
+      "English"
+    ],
+    "subTeamId": "sub-i2lztz34e9",
+    "updatedAt": "2026-09-06T10:18:02.625Z",
+    "joinedDate": "2018-04-01",
+    "achievements": [],
+    "responsibilities": [
+      "Team Leadership: Manage engineers, assign tasks, mentor talent, and foster continuous learning.",
+      "Delivery Oversight: Ensure pipelines, integrations, and automation meet SLAs and business needs.",
+      "Risk Management: Identify and mitigate risks in data delivery, system dependencies, and operational bottlenecks."
+    ]
+  },
+  {
+    "id": "emp-8qh7h2luzo",
+    "bio": "Over 16 years of experience taking on several roles in the IT Industry started with database administration and technical support  then moved to business analysis, and finally to the domain of Business Intelligence and Data Warehousing in the Commercial International Bank CIB.\nExceptional ability to understand business needs and act as a bridge between the business and their technical counterparts. \nHighly experienced in overseeing technical teams in gathering and analyzing requirements, and able to quickly identify gaps and ensure complete and successful implementation of business data requests.",
+    "role": "Engineering Manager",
+    "email": "ahmed.elmaghraby@cibeg.com",
+    "photo": "https://media.licdn.com/dms/image/v2/C4D03AQGCBOuU77yM2A/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1551206774289?e=1790208000&v=beta&t=q3EJl2wzs3QXYM6TA2_SCGg-63hMmShbCbUbQsJqD4k",
+    "quote": "",
+    "awards": [],
+    "skills": [],
+    "teamId": "team-ctjm4lx9h7",
+    "hobbies": [],
+    "featured": false,
+    "fullName": "Ahmed El-Maghraby",
+    "funFacts": [],
+    "jobTitle": "Data Portfolio Manager",
+    "location": "Smart Village Bldg. 3",
+    "createdAt": "2026-09-06T09:07:11.755Z",
+    "expertise": [
+      "Project Portfolio Management",
+      "Risk & Compliance"
+    ],
+    "extension": "2087",
+    "interests": [],
+    "languages": [
+      "English"
+    ],
+    "subTeamId": "sub-sqfxs3m0ed",
+    "updatedAt": "2026-09-06T09:07:11.755Z",
+    "joinedDate": "2007-08-01",
+    "achievements": [],
+    "responsibilities": [
+      "Leadership: Guide PMs in managing cross-portfolio dependencies.",
+      "Priority Alignment: Ensure that urgent regulatory deadlines do not compromise Finance portfolio delivery, and vice versa.",
+      "Risk Mitigation: Proactively identify risks that span both portfolios and implement mitigation strategies.",
+      "Finance Portfolio → Focused on enterprise financial planning, forecasting, and reporting.",
+      "CBE Portfolio → Focused on regulatory compliance and reporting to the Central Bank of Egypt."
+    ]
+  },
+  {
+    "id": "emp-tgkhbfrx2p",
+    "bio": "Strategic BI & Data Engineering Manager with over 15 years of expertise in architecting Enterprise Data Warehousing (EDW) and Business Intelligence solutions within the banking and financial sectors. Proven track record of leading cross-functional teams to deliver scalable data strategies, regulatory reporting (CBE), and executive-level decision support systems. Expert in transforming complex data into a \"Single Source of Truth,\" currently supporting 6,000+ users across 150+ branches\n",
+    "role": "Engineering Manager",
+    "email": "Khaled.Abdelhamid@cibeg.com",
+    "photo": "https://media.licdn.com/dms/image/v2/D4D03AQEZ8uEDdE1GxA/profile-displayphoto-scale_400_400/B4DZsiUsFeJcAk-/0/1765807413715?e=1790208000&v=beta&t=XJFfQNIBJ6fI01HBpu5nwS85paTLEyUn6CYldRSBlNc",
+    "quote": "",
+    "awards": [],
+    "skills": [
+      {
+        "name": "Leadership & Communication ",
+        "level": 95
+      },
+      {
+        "name": "Data Modeling Tools ",
+        "level": 95
+      }
+    ],
+    "teamId": "team-00f09sblhf",
+    "hobbies": [],
+    "featured": false,
+    "fullName": "Khaled Abdelhamid",
+    "funFacts": [],
+    "jobTitle": "Data Engineering Manager",
+    "location": "Smart Village Bldg. 3",
+    "createdAt": "2026-09-06T08:55:19.073Z",
+    "expertise": [
+      "Data Architecture Design",
+      "Data Warehousing",
+      "Leadership & Communication"
+    ],
+    "extension": "1631",
+    "interests": [],
+    "languages": [
+      "English"
+    ],
+    "subTeamId": "sub-3l50sjpaai",
+    "updatedAt": "2026-09-06T08:55:19.073Z",
+    "joinedDate": "2011-02-01",
+    "achievements": [],
+    "responsibilities": [
+      "Enterprise Data Strategy → Define long-term data architecture aligned with business objectives.",
+      "Data Modeling → Develop conceptual, logical, and physical models for databases, warehouses, and big data platforms.",
+      "Stakeholder Collaboration → Align technical solutions with business needs across IT, engineering, and analytics teams.",
+      "Leadership & Mentoring → Guide engineers, analysts, and architects in adopting standards and best practices."
+    ]
+  },
+  {
+    "id": "emp-yzovuexp82",
+    "bio": "Planning, coordination, and delivery of projects across the IT portfolio (internal systems, infrastructure, enterprise applications) and the Consumer portfolio (customer-facing products, services, and analytics). ",
+    "role": "Engineering Manager",
+    "email": "abeer.gemei@cibeg.com",
+    "photo": "",
+    "quote": "",
+    "awards": [],
+    "skills": [
+      {
+        "name": "Leadership",
+        "level": 95
+      },
+      {
+        "name": "Project Portfolio Management",
+        "level": 95
+      },
+      {
+        "name": "Jira",
+        "level": 99
+      }
+    ],
+    "teamId": "team-ctjm4lx9h7",
+    "hobbies": [],
+    "featured": false,
+    "fullName": "Abeer Gemei",
+    "funFacts": [],
+    "jobTitle": "Data Portfolio Manager",
+    "location": "Smart Village Bldg. 3",
+    "createdAt": "2026-09-06T08:03:37.903Z",
+    "expertise": [
+      "Tool-Driven Execution",
+      "IT Portfolio Delivery"
+    ],
+    "extension": "8789",
+    "interests": [],
+    "languages": [
+      "English"
+    ],
+    "subTeamId": "sub-j0jolrn1s0",
+    "updatedAt": "2026-09-06T08:03:37.903Z",
+    "joinedDate": "",
+    "achievements": [],
+    "responsibilities": [
+      "Project Planning: Define scope, timelines, milestones, and deliverables for IT and Consumer projects.",
+      "IT Portfolio Delivery: Manage projects related to infrastructure, enterprise applications, and IT services.",
+      "Consumer Portfolio Delivery: Oversee projects that enhance customer-facing products, analytics, and reporting.",
+      "Tool-Driven Execution: Leverage Jira and MS Project for transparency and accountability."
+    ]
+  },
+  {
+    "id": "emp-m2yc41kjyk",
+    "bio": "PM overseeing incentive program projects and operational efficiency initiatives. Aligns Finance, and Operations stakeholders to deliver strategic outcomes.\n",
+    "role": "Engineering Manager",
+    "email": "Deyaa.ElMorsy@cibeg.com",
+    "photo": "",
+    "quote": "",
+    "awards": [],
+    "skills": [
+      {
+        "name": "Jira",
+        "level": 99
+      },
+      {
+        "name": "MS Project ",
+        "level": 95
+      },
+      {
+        "name": "Risk Management ",
+        "level": 93
+      }
+    ],
+    "teamId": "team-ctjm4lx9h7",
+    "hobbies": [],
+    "featured": false,
+    "fullName": "Deyaa El Morsy",
+    "funFacts": [],
+    "jobTitle": "Data Portfolio Manager",
+    "location": "Smart Village Bldg. 3",
+    "createdAt": "2026-09-06T07:53:35.604Z",
+    "expertise": [
+      "Project Portfolio Management"
+    ],
+    "extension": "1161",
+    "interests": [],
+    "languages": [
+      "English"
+    ],
+    "subTeamId": "sub-0e3ex2apmt",
+    "updatedAt": "2026-09-06T07:53:35.604Z",
+    "joinedDate": "2012-01-01",
+    "achievements": [],
+    "responsibilities": [
+      "Leadership: Guide project managers and coordinators in delivering complex initiatives.",
+      "Performance Monitoring: Track KPIs such as delivery timelines, budget adherence, and project quality.",
+      "Operational Process Management"
+    ]
+  },
+  {
+    "id": "emp-nogz05zpfm",
+    "bio": "Team Leadership: Lead analysts and engineers in preparing and delivering CBE reports.",
+    "role": "Engineering Manager",
+    "email": "mayada.elmaghraby@cibeg.com",
+    "photo": "",
+    "quote": "",
+    "awards": [],
+    "skills": [
+      {
+        "name": "Informatica PowerCenter ",
+        "level": 95
+      },
+      {
+        "name": "SQL & Data Warehousing",
+        "level": 90
+      },
+      {
+        "name": "Regulatory Reporting Standards ",
+        "level": 95
+      },
+      {
+        "name": "Leadership & Communication",
+        "level": 98
+      }
+    ],
+    "teamId": "team-rmevczw80s",
+    "hobbies": [],
+    "featured": false,
+    "fullName": "Mayada elmaghraby",
+    "funFacts": [],
+    "jobTitle": "Business Intelligence Manager",
+    "location": "Smart Village Bldg. 3",
+    "createdAt": "2026-09-06T06:02:51.683Z",
+    "expertise": [
+      "Financial Systems",
+      "Regulatory Frameworks"
+    ],
+    "extension": "",
+    "interests": [],
+    "languages": [
+      "English"
+    ],
+    "subTeamId": "sub-bhcx4trt35",
+    "updatedAt": "2026-09-06T06:02:51.683Z",
+    "joinedDate": "",
+    "achievements": [],
+    "responsibilities": [
+      "Team Leadership: Lead analysts and engineers in preparing and delivering CBE reports.",
+      "Risk Management: Identify and mitigate risks in reporting accuracy and timeliness.",
+      "Strategic Oversight: Define the roadmap for regulatory reporting and compliance."
+    ]
+  },
+  {
+    "id": "emp-26d2mqh1gr",
+    "bio": "Experienced Analyst with a demonstrated history of working in the telecommunications and banking industries. Skilled in many programming and data fields. Strong engineering professional with a Bachelor's degree focused in Information System from Cairo University. ",
+    "role": "Engineering Manager",
+    "email": "ahmed.alibrahim@cibeg.com",
+    "photo": "https://media.licdn.com/dms/image/v2/C4E03AQFRzq7-AP57Lg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1603364857428?e=1790208000&v=beta&t=o7gt-hYc0BFU2jptwQTsjF4zxkk5VQqON82A0xmu0xo",
+    "quote": "",
+    "awards": [],
+    "skills": [
+      {
+        "name": "Informatica PowerCenter",
+        "level": 80
+      },
+      {
+        "name": "SQL & Data Warehousing",
+        "level": 98
+      },
+      {
+        "name": "Leadership & Communication",
+        "level": 95
+      }
+    ],
+    "teamId": "team-q034fdpi93",
+    "hobbies": [
+      "Gym"
+    ],
+    "featured": false,
+    "fullName": "Ahmed Alaa",
+    "funFacts": [],
+    "jobTitle": "Data Engineering Manager",
+    "location": "sv3",
+    "createdAt": "2026-09-06T05:46:08.438Z",
+    "expertise": [
+      "ETL Architecture",
+      "Financial Systems",
+      "Enterprise Data Management"
+    ],
+    "extension": "1379",
+    "interests": [],
+    "languages": [
+      "English"
+    ],
+    "subTeamId": "sub-rquzdk0sro",
+    "updatedAt": "2026-09-06T05:46:08.438Z",
+    "joinedDate": "",
+    "achievements": [],
+    "responsibilities": [
+      "Team Leadership: Guide engineers and analysts in ETL, reporting, and data provisioning activities.",
+      "Project Delivery: Oversee execution of ETL workflows, reporting solutions, and data provisioning projects within timelines and budgets.",
+      "Strategic Oversight: Define vision and roadmap for data delivery supporting EPM and Finance portfolios.",
+      "Continuous Improvement: Drive process optimization, automation, and adoption of best practices in Informatica and reporting platforms."
+    ]
+  },
+  {
+    "id": "emp-9cdxy4agox",
+    "bio": "Experienced Quality Assurance Head, responsible for both the quality control department and the data excellence department.\nDemonstrated history of working in the computer software industry. Skilled in managing the testing and the process for Data warehousing and Business Intelligence projects with extensive experience in SQL, Requirements Analysis, Software Quality, Test Cases, and KPI Dashboards. Strong business development professional with a Bachelor's degree focused in Electrical, Electronics and Communications Engineering from Ain Shams University.",
+    "role": "Head Manager",
+    "email": "samar.elkatsha@cibeg.com",
+    "photo": "https://media.licdn.com/dms/image/v2/C4D03AQEyeyMWrli4Lg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1548317604027?e=1789603200&v=beta&t=Z37munlArwH2bRBrm8Zy3mf5i7dhCcXcvNJAHzZHVvU",
+    "quote": "",
+    "awards": [],
+    "skills": [],
+    "teamId": "team-41xtxryrxm",
+    "hobbies": [],
+    "featured": false,
+    "fullName": "Samar Elkatsha",
+    "funFacts": [],
+    "jobTitle": "Data Excellence & Quality Head",
+    "location": "SV3 - 2nd Floor",
+    "createdAt": "2026-08-31T06:37:40.725Z",
+    "expertise": [],
+    "extension": "8397",
+    "interests": [],
+    "languages": [
+      "English"
+    ],
+    "subTeamId": "",
+    "updatedAt": "2026-09-06T11:45:29.445Z",
+    "joinedDate": "2019-04-01",
+    "achievements": [],
+    "responsibilities": []
+  },
+  {
+    "id": "emp-fao79kk2cw",
+    "bio": "Highly-motivated, value-oriented, competitive, Business Intelligence Expert with 14years experience in Telecom , Banking & Aviation Data warehousing and Business Intelligence, designing and delivering Models and solutions that have empowered business insights, improved customer value and exceeded revenue objectives.",
+    "role": "Engineering Manager",
+    "email": "Mohamed.Yamani@cibeg.com",
+    "photo": "https://media.licdn.com/dms/image/v2/C4E03AQH6krufjA5hBA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1566152840714?e=1789603200&v=beta&t=16DJ5KzG0g11mxtnv0OkZW1tbC5HwZXBSThltsD6x8w",
+    "quote": "",
+    "awards": [],
+    "skills": [
+      {
+        "name": "AI & Data Science ",
+        "level": 95
+      }
+    ],
+    "teamId": "team-00f09sblhf",
+    "hobbies": [],
+    "featured": false,
+    "fullName": "Mohamed Yamani",
+    "funFacts": [],
+    "jobTitle": "Data Engineering Manager",
+    "location": "SV3",
+    "createdAt": "2026-08-30T11:34:34.183Z",
+    "expertise": [
+      "AI Strategy Development → Crafting long‑term AI adoption roadmaps.",
+      "Budget Optimization → Balancing innovation with financial discipline."
+    ],
+    "extension": "2549",
+    "interests": [],
+    "languages": [
+      "English"
+    ],
+    "subTeamId": "sub-7ap4dkij56",
+    "updatedAt": "2026-08-30T11:34:34.183Z",
+    "joinedDate": "2016-02-01",
+    "achievements": [],
+    "responsibilities": [
+      "AI Program Oversight -->  Supervise integration of AI models, tools, and automation into DWH workflows.",
+      "Budget Management -->  Allocate and monitor budgets for AI initiatives, ensuring ROI and cost efficiency.",
+      "Strategic Leadership -->  Define vision and roadmap for AI adoption while ensuring financial sustainability."
+    ]
+  },
+  {
+    "id": "emp-p3bkqcjuhw",
+    "bio": "highly competent software engineer with 15 + years of experience Technical and deep Business expertise in Core Banking projects and payment services. I have worked on numerous projects from concept to completion. A specialist in C#, Sybase, Gupta, and SQLServer, Oracle I take pride in regularly refresh my skills to ensure I keep up with ongoing developments. Around my years of experience I developed my programming, design, risk assessment and mitigation and problem solving and on spot decisions while working with live products",
+    "role": "Engineering Manager",
+    "email": "nehal.eltamamy@cibeg.com",
+    "photo": "https://media.licdn.com/dms/image/v2/D4D03AQEkzTdBX8oWww/profile-displayphoto-scale_400_400/B4DZmrG.kZJAAg-/0/1759512358650?e=1789603200&v=beta&t=3sSIKFbn73jt2xtdtwG-l-Ihkyt7r3FlzfRerG7m8mM",
+    "quote": "",
+    "awards": [],
+    "skills": [],
+    "teamId": "team-rmevczw80s",
+    "hobbies": [],
+    "featured": false,
+    "fullName": "Nehal Eltamamy",
+    "funFacts": [],
+    "jobTitle": "Data Engineering Manager",
+    "location": "SV3",
+    "createdAt": "2026-08-30T11:14:11.600Z",
+    "expertise": [],
+    "extension": "0202",
+    "interests": [],
+    "languages": [
+      "English"
+    ],
+    "subTeamId": "sub-ibk5kh3y8v",
+    "updatedAt": "2026-08-30T11:14:11.600Z",
+    "joinedDate": "2021-02-01",
+    "achievements": [],
+    "responsibilities": []
+  },
+  {
+    "id": "emp-s2e9zw1wxa",
+    "bio": "leads the team that provides operational assistance, troubleshooting, and user support for enterprise data platforms and IT systems. Ensuring that incidents are resolved quickly, users receive responsive help, and systems remain reliable, secure, and compliant.",
+    "role": "Head Manager",
+    "email": "Ramy.NHelmy@cibeg.com",
+    "photo": "https://media.licdn.com/dms/image/v2/C4D03AQHx3QROibMvFw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1517276635104?e=1789603200&v=beta&t=oR2BFv-h-H2hV1l_3UuNqQu9dmb7rmNDJzgM8_-WD3M",
+    "quote": "",
+    "awards": [],
+    "skills": [
+      {
+        "name": "System Administration",
+        "level": 98
+      },
+      {
+        "name": "Monitoring & Observability",
+        "level": 98
+      },
+      {
+        "name": "Automation & Scripting",
+        "level": 95
+      }
+    ],
+    "teamId": "team-aqmq9b1mp4",
+    "hobbies": [
+      "Football"
+    ],
+    "featured": false,
+    "fullName": "Ramy Abdelwahed",
+    "funFacts": [],
+    "jobTitle": "Business Intelligence Manager",
+    "location": "SV3",
+    "createdAt": "2026-08-26T06:29:53.313Z",
+    "expertise": [
+      "Incident Response",
+      "Access Control",
+      "Leadership"
+    ],
+    "extension": "2198",
+    "interests": [],
+    "languages": [
+      "English"
+    ],
+    "subTeamId": "sub-kbniau258w",
+    "updatedAt": "2026-08-26T06:29:53.313Z",
+    "joinedDate": "2019-02-01",
+    "achievements": [],
+    "responsibilities": [
+      "Incident Management → Oversee ticket handling, escalation processes, and root-cause analysis.",
+      "System Monitoring → Supervise dashboards, alerts, and proactive health checks.",
+      "Collaboration → Coordinate with system admins, data engineers, and governance teams.",
+      "User Support Oversight → Ensure timely responses to user queries and access requests."
+    ]
+  },
+  {
+    "id": "emp-er8g849tra",
+    "bio": "Accountable for the strategic oversight, operational reliability, and security of enterprise data platforms and infrastructure. ensuring systems are provisioned, maintained, and optimized to support business continuity, while leading a team of administrators and engineers.",
+    "role": "Head Manager",
+    "email": "mohamed.atmohamed@cibeg.com",
+    "photo": "https://media.licdn.com/dms/image/v2/D5603AQGAEzoCNkrZNA/profile-displayphoto-shrink_400_400/B56ZQtpYdPHoAg-/0/1735932612046?e=1789603200&v=beta&t=iqVBhOEFmVN6hYc6poSkb0Hm434R5pquf8N138UgLZk",
+    "quote": "",
+    "awards": [],
+    "skills": [
+      {
+        "name": "System Administration",
+        "level": 98
+      },
+      {
+        "name": "Database Management",
+        "level": 95
+      },
+      {
+        "name": "Security & Compliance",
+        "level": 90
+      }
+    ],
+    "teamId": "team-aqmq9b1mp4",
+    "hobbies": [
+      "Football"
+    ],
+    "featured": false,
+    "fullName": "Mohamed Atya",
+    "funFacts": [],
+    "jobTitle": "Business Intelligence Manager",
+    "location": "SV3",
+    "createdAt": "2026-08-26T06:19:32.320Z",
+    "expertise": [
+      "System Administration",
+      "Database Management",
+      "Security & Compliance"
+    ],
+    "extension": "01064",
+    "interests": [],
+    "languages": [
+      "English"
+    ],
+    "subTeamId": "sub-294w87m9al",
+    "updatedAt": "2026-08-26T06:19:32.320Z",
+    "joinedDate": "2018-11-01",
+    "achievements": [],
+    "responsibilities": [
+      "Database Administration → Supervise DBAs, enforce optimization, and manage backups/recovery.",
+      "Incident Management → Lead troubleshooting, escalation handling, and disaster recovery.",
+      "Infrastructure Oversight → Ensure servers, clusters, and cloud resources are provisioned and maintained.",
+      "Capacity Planning → Forecast growth and scale infrastructure accordingly.",
+      "Stakeholder Collaboration → Align with engineering, governance, and business teams."
+    ]
+  },
+  {
+    "id": "emp-trs2q1gstq",
+    "bio": "Experienced system operations/ support Manager with a demonstrated history of working in the telecom and Banking industry. Skilled basically in Oracle and Teradata Databases and UNIX administration.\n\n",
+    "role": "Head Manager",
+    "email": "ahmed.moelshazly@cibeg.com",
+    "photo": "https://media.licdn.com/dms/image/v2/D4D03AQGbh0_xvxVqGw/profile-displayphoto-scale_400_400/B4DZv2eRMHKAAg-/0/1769366689757?e=1789603200&v=beta&t=DBBZ4IYUbIXP1p-dn2GmVbctvfC5pXnaKTAMkTnTsf8",
+    "quote": "If you can’t measure it, you can’t improve it.",
+    "awards": [],
+    "skills": [
+      {
+        "name": "ETL & Pipeline Management",
+        "level": 95
+      },
+      {
+        "name": "Leadership ",
+        "level": 100
+      },
+      {
+        "name": "Monitoring & Observability",
+        "level": 98
+      },
+      {
+        "name": "Database Optimization ",
+        "level": 94
+      }
+    ],
+    "teamId": "team-aqmq9b1mp4",
+    "hobbies": [
+      "Football"
+    ],
+    "featured": false,
+    "fullName": "Ahmed Elshazly",
+    "funFacts": [],
+    "jobTitle": "Business Intelligence Manager",
+    "location": "SV3 - 2nd Floor",
+    "createdAt": "2026-08-26T06:03:13.250Z",
+    "expertise": [
+      "ETL & Workflow Management",
+      "Data Quality Assurance",
+      "Incident & Risk Management"
+    ],
+    "extension": "0000",
+    "interests": [],
+    "languages": [
+      "English"
+    ],
+    "subTeamId": "sub-exnf1jx2zh",
+    "updatedAt": "2026-08-26T06:03:13.250Z",
+    "joinedDate": "2025-06-01",
+    "achievements": [],
+    "responsibilities": [
+      "Team Leadership   Manage data engineers, analysts, and operators; provide mentorship, training, and career development.",
+      "Performance Management   Drive performance tuning initiatives, optimize resource allocation, and monitor SLAs.",
+      "Incident & Risk Management   Lead root-cause analysis, escalation handling, and risk mitigation strategies.",
+      "Stakeholder Communication   Translate technical issues into business language for executives and partners.",
+      "Compliance & Security   Ensure adherence to governance, privacy, and regulatory frameworks."
+    ]
+  },
+  {
     "id": "emp-invxjl5t3s",
     "bio": "e Data Production Team Manager is both a strategic leader and technical authority, ensuring that enterprise data pipelines and reporting solutions are trusted, performant, and aligned with business priorities.",
     "role": "Head Manager",
@@ -13,7 +752,7 @@
     "featured": false,
     "fullName": "Ayman Cherif",
     "funFacts": [],
-    "jobTitle": "Enterprise Business Intelligence Head",
+    "jobTitle": "Business Intelligence Head",
     "location": "",
     "createdAt": "2026-08-24T08:39:12.237Z",
     "expertise": [
@@ -27,7 +766,7 @@
       "English"
     ],
     "subTeamId": "",
-    "updatedAt": "2026-08-24T08:39:12.237Z",
+    "updatedAt": "2026-09-06T11:55:53.309Z",
     "joinedDate": "2015-04-01",
     "achievements": [],
     "responsibilities": [
@@ -66,7 +805,7 @@
     "featured": false,
     "fullName": "Sherif Isaac",
     "funFacts": [],
-    "jobTitle": "Enterprise Business Intelligence Head",
+    "jobTitle": "Business Intelligence Head",
     "location": "",
     "createdAt": "2026-08-24T08:22:53.390Z",
     "expertise": [
@@ -80,7 +819,7 @@
       "English"
     ],
     "subTeamId": "",
-    "updatedAt": "2026-08-24T08:22:53.390Z",
+    "updatedAt": "2026-09-06T11:55:34.607Z",
     "joinedDate": "2017-06-01",
     "achievements": [],
     "responsibilities": [
@@ -278,9 +1017,9 @@
       "Movies"
     ],
     "featured": true,
-    "fullName": "Mohamed Rabea Elsobky",
+    "fullName": "Mohamed Rabea",
     "funFacts": [],
-    "jobTitle": "Data Engineer",
+    "jobTitle": "Senior Data Engineer",
     "location": "",
     "createdAt": "2026-08-24T06:55:59.732Z",
     "expertise": [
@@ -293,7 +1032,7 @@
       "English"
     ],
     "subTeamId": "sub-4h2kq9m8d1",
-    "updatedAt": "2026-08-24T06:55:59.732Z",
+    "updatedAt": "2026-09-06T09:23:06.529Z",
     "joinedDate": "2025-07-09",
     "achievements": [
       "Query Performance Optimization",
@@ -505,7 +1244,7 @@
     "featured": false,
     "fullName": "Riham Abdelaziz",
     "funFacts": [],
-    "jobTitle": "Enterprise Business Intelligence Head",
+    "jobTitle": "Business Intelligence Head",
     "location": "",
     "createdAt": "2026-08-24T05:46:57.503Z",
     "expertise": [
@@ -521,7 +1260,7 @@
       "English"
     ],
     "subTeamId": "",
-    "updatedAt": "2026-08-24T05:46:57.503Z",
+    "updatedAt": "2026-09-06T11:56:16.610Z",
     "joinedDate": "2019-10-01",
     "achievements": [],
     "responsibilities": [
@@ -533,7 +1272,7 @@
   {
     "id": "emp-jio0af8pzp",
     "bio": "A highly analytical individual with a strong apt for learning, Having a Data science minor which I have utilized at large company in positions that required me to implement projects from A to Z, understanding the business need, building required data models, Extract insights from high volume of data, creating and deploy machine learning models, communicating the results to stakeholders, Offering exceptional technics to extract, clean, analyze and visualize the data using variety of tools and technologies in order to help the top management making dicisions for investigating and solving the problems, increasing sales, maximizing profit.. Etc. ",
-    "role": "Senior Engineer",
+    "role": "Principal Engineer",
     "email": "abdullah.elzak@cibeg.com",
     "photo": "https://media.licdn.com/dms/image/v2/D4D03AQHEleNqI8zolw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1687914151886?e=1788998400&v=beta&t=Al42DPEoZY_oznDVWpDjBSkX39r3fC8i46YrPV3-tSM",
     "quote": "Preparation can only take you so far, After that you have to take a few leaps of faith. ",
@@ -579,7 +1318,7 @@
       "English"
     ],
     "subTeamId": "sub-r1fmp0h3q1",
-    "updatedAt": "2026-08-22T18:56:32.140Z",
+    "updatedAt": "2026-09-06T07:54:51.733Z",
     "joinedDate": "2025-07-09",
     "achievements": [],
     "responsibilities": [
@@ -597,10 +1336,10 @@
     "skills": [],
     "teamId": "team-00f09sblhf",
     "hobbies": [],
-    "featured": true,
+    "featured": false,
     "fullName": "Diaa ElBagouri",
     "funFacts": [],
-    "jobTitle": "Senior Director of EIM ",
+    "jobTitle": "EIM Head",
     "location": "",
     "createdAt": "2026-08-19T13:52:45.850Z",
     "expertise": [],
@@ -608,7 +1347,7 @@
     "interests": [],
     "languages": [],
     "subTeamId": "",
-    "updatedAt": "2026-08-22T18:56:45.359Z",
+    "updatedAt": "2026-09-06T12:06:12.605Z",
     "joinedDate": "2016-02-01",
     "achievements": [],
     "responsibilities": []
@@ -640,7 +1379,7 @@
     "featured": false,
     "fullName": "Sherif Anwer",
     "funFacts": [],
-    "jobTitle": "Data Engineering Manager",
+    "jobTitle": "Data Engineering Head",
     "location": "SV3 - 2nd Floor",
     "createdAt": "2026-08-19T13:38:57.047Z",
     "expertise": [
@@ -656,7 +1395,7 @@
       "English"
     ],
     "subTeamId": "",
-    "updatedAt": "2026-08-22T18:57:27.464Z",
+    "updatedAt": "2026-09-06T11:54:49.646Z",
     "joinedDate": "2015-01-01",
     "achievements": [],
     "responsibilities": [

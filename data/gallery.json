@@ -1,242 +1,60 @@
 [
   {
-    "id": "gal-001",
-    "date": "2025-10-05",
-    "event": "Department Away Day",
-    "image": null,
-    "title": "Department Away Day - photo 1",
-    "teamId": "team-governance",
-    "caption": "PLACEHOLDER - upload the real photo and caption through the admin panel.",
-    "category": "Team Activities"
+    "id": "gal-g6zy92przr",
+    "date": "",
+    "event": "Town Hall Q2 - 2026",
+    "image": "https://zwho5ilhzixnerqw.public.blob.vercel-storage.com/IMG-20260728-WA0024-TlGU5sgj40hodyR9xlJMnhKTrTWPdF.jpg",
+    "title": "Best Team Player Q2 - 2026",
+    "teamId": "",
+    "caption": "",
+    "category": "Awards",
+    "createdAt": "2026-08-26T08:12:37.870Z",
+    "updatedAt": "2026-08-26T08:12:37.870Z"
   },
   {
-    "id": "gal-002",
-    "date": "2025-11-26",
-    "event": "Department Away Day",
-    "image": null,
-    "title": "Department Away Day - photo 2",
-    "teamId": "team-engineering",
-    "caption": "PLACEHOLDER - upload the real photo and caption through the admin panel.",
-    "category": "Team Activities"
+    "id": "gal-ephxjn4ylx",
+    "date": "2026-07-30",
+    "event": "Town Hall Q2-2026",
+    "image": "https://zwho5ilhzixnerqw.public.blob.vercel-storage.com/IMG-20260728-WA0023-RKBECGx6qzQcKQ6WSD5gUkq3c1N1XM.jpg",
+    "title": "Best Idea to Impact Q2 - 2026",
+    "teamId": "team-00f09sblhf",
+    "caption": "",
+    "category": "Awards",
+    "createdAt": "2026-08-26T08:11:28.533Z",
+    "updatedAt": "2026-08-26T08:13:53.090Z"
   },
   {
-    "id": "gal-003",
-    "date": "2025-12-25",
-    "event": "Department Away Day",
-    "image": null,
-    "title": "Department Away Day - photo 3",
-    "teamId": "team-engineering",
-    "caption": "PLACEHOLDER - upload the real photo and caption through the admin panel.",
-    "category": "Team Activities"
-  },
-  {
-    "id": "gal-004",
-    "date": "2026-07-17",
-    "event": "Annual Awards Night",
-    "image": null,
-    "title": "Annual Awards Night - photo 1",
-    "teamId": null,
-    "caption": "PLACEHOLDER - upload the real photo and caption through the admin panel.",
-    "category": "Awards"
-  },
-  {
-    "id": "gal-005",
-    "date": "2026-10-18",
-    "event": "Annual Awards Night",
-    "image": null,
-    "title": "Annual Awards Night - photo 2",
-    "teamId": null,
-    "caption": "PLACEHOLDER - upload the real photo and caption through the admin panel.",
-    "category": "Awards"
-  },
-  {
-    "id": "gal-006",
-    "date": "2026-10-12",
-    "event": "Annual Awards Night",
-    "image": null,
-    "title": "Annual Awards Night - photo 3",
-    "teamId": null,
-    "caption": "PLACEHOLDER - upload the real photo and caption through the admin panel.",
-    "category": "Awards"
+    "id": "gal-51mthl6fvl",
+    "date": "2026-07-30",
+    "event": "Best Idea to impact",
+    "image": "https://zwho5ilhzixnerqw.public.blob.vercel-storage.com/IMG-20260728-WA0025-vG7jgfp8xEcwvlCGPDj3nvP9EgZj0l.jpg",
+    "title": "Best Idea to impact - Q2 - 2026",
+    "teamId": "team-og68gm0gsf",
+    "caption": "",
+    "category": "Awards",
+    "createdAt": "2026-08-26T08:03:57.701Z",
+    "updatedAt": "2026-08-26T08:14:02.504Z"
   },
   {
     "id": "gal-007",
-    "date": "2025-01-10",
-    "event": "Innovation Day",
-    "image": null,
-    "title": "Innovation Day - photo 1",
+    "date": "2026-08-23",
+    "event": "Birth Day",
+    "image": "https://zwho5ilhzixnerqw.public.blob.vercel-storage.com/IMG-20260824-WA0006-HPJWLHdGMBLoFEX0Ylhe8R78wx0S7P.jpg",
+    "title": "Shaimaa Elgammal Birth Day",
     "teamId": "team-engineering",
-    "caption": "PLACEHOLDER - upload the real photo and caption through the admin panel.",
-    "category": "Events"
-  },
-  {
-    "id": "gal-008",
-    "date": "2025-09-07",
-    "event": "Innovation Day",
-    "image": null,
-    "title": "Innovation Day - photo 2",
-    "teamId": "team-governance",
-    "caption": "PLACEHOLDER - upload the real photo and caption through the admin panel.",
-    "category": "Events"
-  },
-  {
-    "id": "gal-009",
-    "date": "2025-01-26",
-    "event": "Innovation Day",
-    "image": null,
-    "title": "Innovation Day - photo 3",
-    "teamId": "team-platform",
-    "caption": "PLACEHOLDER - upload the real photo and caption through the admin panel.",
-    "category": "Events"
+    "caption": "Shaimaa Elgammal Birth Day",
+    "category": "Celebrations",
+    "updatedAt": "2026-08-26T08:08:08.309Z"
   },
   {
     "id": "gal-010",
-    "date": "2026-10-06",
+    "date": "2026-02-25",
     "event": "Ramadan Iftar",
-    "image": null,
-    "title": "Ramadan Iftar - photo 1",
+    "image": "https://zwho5ilhzixnerqw.public.blob.vercel-storage.com/Iftar-cjxIaeQtqThNDsmvsRfA0s78LjVu2x.jpg",
+    "title": "Ramadan Iftar",
     "teamId": null,
-    "caption": "PLACEHOLDER - upload the real photo and caption through the admin panel.",
-    "category": "Celebrations"
-  },
-  {
-    "id": "gal-011",
-    "date": "2026-12-20",
-    "event": "Ramadan Iftar",
-    "image": null,
-    "title": "Ramadan Iftar - photo 2",
-    "teamId": null,
-    "caption": "PLACEHOLDER - upload the real photo and caption through the admin panel.",
-    "category": "Celebrations"
-  },
-  {
-    "id": "gal-012",
-    "date": "2026-04-10",
-    "event": "Ramadan Iftar",
-    "image": null,
-    "title": "Ramadan Iftar - photo 3",
-    "teamId": null,
-    "caption": "PLACEHOLDER - upload the real photo and caption through the admin panel.",
-    "category": "Celebrations"
-  },
-  {
-    "id": "gal-013",
-    "date": "2025-06-12",
-    "event": "Hack the Batch",
-    "image": null,
-    "title": "Hack the Batch - photo 1",
-    "teamId": "team-governance",
-    "caption": "PLACEHOLDER - upload the real photo and caption through the admin panel.",
-    "category": "Competitions"
-  },
-  {
-    "id": "gal-014",
-    "date": "2025-11-02",
-    "event": "Hack the Batch",
-    "image": null,
-    "title": "Hack the Batch - photo 2",
-    "teamId": "team-bi",
-    "caption": "PLACEHOLDER - upload the real photo and caption through the admin panel.",
-    "category": "Competitions"
-  },
-  {
-    "id": "gal-015",
-    "date": "2025-01-04",
-    "event": "Hack the Batch",
-    "image": null,
-    "title": "Hack the Batch - photo 3",
-    "teamId": "team-platform",
-    "caption": "PLACEHOLDER - upload the real photo and caption through the admin panel.",
-    "category": "Competitions"
-  },
-  {
-    "id": "gal-016",
-    "date": "2026-07-05",
-    "event": "New Joiner Welcome",
-    "image": null,
-    "title": "New Joiner Welcome - photo 1",
-    "teamId": null,
-    "caption": "PLACEHOLDER - upload the real photo and caption through the admin panel.",
-    "category": "Celebrations"
-  },
-  {
-    "id": "gal-017",
-    "date": "2026-10-16",
-    "event": "New Joiner Welcome",
-    "image": null,
-    "title": "New Joiner Welcome - photo 2",
-    "teamId": null,
-    "caption": "PLACEHOLDER - upload the real photo and caption through the admin panel.",
-    "category": "Celebrations"
-  },
-  {
-    "id": "gal-018",
-    "date": "2026-09-28",
-    "event": "New Joiner Welcome",
-    "image": null,
-    "title": "New Joiner Welcome - photo 3",
-    "teamId": null,
-    "caption": "PLACEHOLDER - upload the real photo and caption through the admin panel.",
-    "category": "Celebrations"
-  },
-  {
-    "id": "gal-019",
-    "date": "2025-06-24",
-    "event": "Town Hall",
-    "image": null,
-    "title": "Town Hall - photo 1",
-    "teamId": "team-governance",
-    "caption": "PLACEHOLDER - upload the real photo and caption through the admin panel.",
-    "category": "Events"
-  },
-  {
-    "id": "gal-020",
-    "date": "2025-07-12",
-    "event": "Town Hall",
-    "image": null,
-    "title": "Town Hall - photo 2",
-    "teamId": "team-analytics",
-    "caption": "PLACEHOLDER - upload the real photo and caption through the admin panel.",
-    "category": "Events"
-  },
-  {
-    "id": "gal-021",
-    "date": "2025-10-11",
-    "event": "Town Hall",
-    "image": null,
-    "title": "Town Hall - photo 3",
-    "teamId": "team-platform",
-    "caption": "PLACEHOLDER - upload the real photo and caption through the admin panel.",
-    "category": "Events"
-  },
-  {
-    "id": "gal-022",
-    "date": "2026-12-25",
-    "event": "Volunteering Day",
-    "image": null,
-    "title": "Volunteering Day - photo 1",
-    "teamId": null,
-    "caption": "PLACEHOLDER - upload the real photo and caption through the admin panel.",
-    "category": "Team Activities"
-  },
-  {
-    "id": "gal-023",
-    "date": "2026-05-18",
-    "event": "Volunteering Day",
-    "image": null,
-    "title": "Volunteering Day - photo 2",
-    "teamId": null,
-    "caption": "PLACEHOLDER - upload the real photo and caption through the admin panel.",
-    "category": "Team Activities"
-  },
-  {
-    "id": "gal-024",
-    "date": "2026-03-21",
-    "event": "Volunteering Day",
-    "image": null,
-    "title": "Volunteering Day - photo 3",
-    "teamId": null,
-    "caption": "PLACEHOLDER - upload the real photo and caption through the admin panel.",
-    "category": "Team Activities"
+    "caption": "Ramadan Iftar",
+    "category": "Celebrations",
+    "updatedAt": "2026-08-26T08:19:42.692Z"
   }
 ]

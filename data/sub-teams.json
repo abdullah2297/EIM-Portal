@@ -1,12 +1,335 @@
 [
   {
+    "id": "sub-2jswc96pmn",
+    "name": "Modernization",
+    "leadId": "emp-08bdguetek",
+    "teamId": "team-og68gm0gsf",
+    "featured": false,
+    "createdAt": "2026-09-06T10:54:21.632Z",
+    "updatedAt": "2026-09-06T10:54:21.632Z",
+    "focusAreas": [
+      "Lakehouse",
+      "CDP"
+    ],
+    "portfolios": [],
+    "description": "Design, implement, and optimize scalable, cloud-native solutions that unify structured and unstructured data, enabling advanced analytics, AI, and real-time decision-making. With specialized expertise in the Cloudera platform, they ensure that modernization efforts are both technically robust and business-aligned.",
+    "responsibilities": [
+      "Architecture Modernization: Redesign legacy warehouse structures into lakehouse-native models, leveraging Cloudera Data Platform (CDP) capabilities.",
+      "Pipeline Engineering: Build ingestion, transformation, and streaming pipelines using Spark, Kafka, and Cloudera Flow Management."
+    ]
+  },
+  {
+    "id": "sub-hqkof6ze3e",
+    "name": "Delivery (BB - Financial inclusion) ",
+    "leadId": "emp-p83me85hmg",
+    "teamId": "team-rmevczw80s",
+    "featured": false,
+    "createdAt": "2026-09-06T10:38:10.632Z",
+    "updatedAt": "2026-09-06T10:44:27.377Z",
+    "focusAreas": [
+      "Financial Inclusion Impact",
+      "Business Banking Enablement"
+    ],
+    "portfolios": [
+      "Business Banking",
+      "Financial inclusion"
+    ],
+    "description": "The Delivery Team (Business Banking – Financial Inclusion) ensures that data solutions, platforms, and products are successfully implemented to support business banking operations and financial inclusion initiatives. The team bridges business requirements with technical execution, guaranteeing that solutions are delivered on time, compliant, and aligned with strategic goals.",
+    "responsibilities": [
+      "Solution Implementation → Execute data pipelines, models, and platforms designed for business banking and inclusion.",
+      "Business Banking Enablement → Deliver solutions that support SME accounts, lending, treasury, and digital platforms."
+    ]
+  },
+  {
+    "id": "sub-08nbcugdx7",
+    "name": "Delivery (GTB - Corporate) ",
+    "leadId": "emp-69f0yatt3n",
+    "teamId": "team-rmevczw80s",
+    "featured": false,
+    "createdAt": "2026-09-06T10:24:34.247Z",
+    "updatedAt": "2026-09-06T10:29:50.028Z",
+    "focusAreas": [
+      "Portfolio Support",
+      "Data Pipeline Engineering"
+    ],
+    "portfolios": [
+      "GTB",
+      "Corporate",
+      "Operation"
+    ],
+    "description": "The Data Engineering Team (GTB & Corporate) is responsible for designing, building, and maintaining enterprise-grade data solutions that serve the needs of Global Transaction Banking (GTB) and Corporate portfolios. The team ensures secure, scalable, and reliable data delivery by transforming business and technical requirements into pipelines, models, and platforms that enable reporting, analytics, and decision-making across financial and corporate domains.",
+    "responsibilities": [
+      "ETL Development: Design and maintain Informatica-based ETL processes and Spark jobs.",
+      "Integration: Connect enterprise applications and reporting platforms with core data systems."
+    ]
+  },
+  {
+    "id": "sub-i2lztz34e9",
+    "name": "Delivery (Operation) ",
+    "leadId": "emp-rugx8wwter",
+    "teamId": "team-rmevczw80s",
+    "featured": false,
+    "createdAt": "2026-09-06T10:10:26.615Z",
+    "updatedAt": "2026-09-06T10:18:29.397Z",
+    "focusAreas": [
+      "Operational Efficiency"
+    ],
+    "portfolios": [
+      "Operation"
+    ],
+    "description": "The Data Engineering Team (Operations Portfolio) is dedicated to designing, building, and maintaining data solutions that directly enable operational efficiency and decision-making. They act as the backbone for operational systems by ensuring data pipelines, integrations, and platforms deliver accurate, timely, and trusted information to support day-to-day business processes and long-term strategic goals.",
+    "responsibilities": [
+      "Pipeline Development: Build and maintain ETL/ELT pipelines to integrate data from diverse operational systems.",
+      "System Integration: Connect ERP, CRM, and other operational platforms with enterprise data systems.",
+      "Performance Optimization: Tune workflows, queries, and pipelines to meet operational SLAs and reduce latency.",
+      "Operational Data Provisioning: Deliver curated datasets, reports, and dashboards that support core operational functions."
+    ]
+  },
+  {
+    "id": "sub-0e3ex2apmt",
+    "name": "Data Portfolio (Incentive - Operations)",
+    "leadId": "emp-m2yc41kjyk",
+    "teamId": "team-ctjm4lx9h7",
+    "featured": false,
+    "createdAt": "2026-09-06T07:36:43.610Z",
+    "updatedAt": "2026-09-06T07:53:53.559Z",
+    "focusAreas": [
+      "Incentive Program Delivery",
+      "Operational Efficiency",
+      "Cross-Portfolio Coordination"
+    ],
+    "portfolios": [
+      "Incentive",
+      "Operation"
+    ],
+    "description": "The Data Portfolio (Incentive – Operations) Team functions as a Project Management Office (PMO) overseeing initiatives that connect incentive programs with operational efficiency. They ensure that incentive-related data projects (e.g., employee rewards, performance bonuses, customer incentive schemes) and operational data initiatives (e.g., process optimization, reporting, compliance) are delivered end-to-end. Their role is to coordinate stakeholders, manage timelines, and guarantee alignment between incentive strategies and operational execution.",
+    "responsibilities": [
+      "Project Planning: Define scope, milestones, and deliverables for incentive and operations projects.",
+      "Portfolio Oversight: Manage multiple initiatives across incentive programs and operational improvements.",
+      "Progress Tracking: Use Jira and MS Project to monitor project health, risks, and delivery status.",
+      "Risk & Issue Management: Identify risks early, implement mitigation strategies, and resolve issues proactively."
+    ]
+  },
+  {
+    "id": "sub-sqfxs3m0ed",
+    "name": "Data Portfolio (CBE - Finance - Risk)",
+    "leadId": "emp-8qh7h2luzo",
+    "teamId": "team-ctjm4lx9h7",
+    "featured": false,
+    "createdAt": "2026-09-06T07:30:46.365Z",
+    "updatedAt": "2026-09-06T09:07:26.633Z",
+    "focusAreas": [
+      "Regulatory Compliance",
+      "Financial Data Reliability:",
+      "Cross Portfolio Coordination"
+    ],
+    "portfolios": [
+      "CBE",
+      "Finance",
+      "Risk"
+    ],
+    "description": "The Data Portfolio (CBE – Finance) Team acts as a Project Management Office (PMO) for regulatory and financial data initiatives. They oversee end-to-end delivery of projects that ensure compliance with CBE reporting requirements while also supporting Finance portfolio needs such as planning, forecasting, and enterprise reporting. Their role is to coordinate stakeholders, manage timelines, and guarantee that both regulatory and financial projects are executed with discipline, transparency, and alignment to organizational strategy.",
+    "responsibilities": [
+      "Project Planning: Define scope, milestones, and deliverables for CBE and Finance projects.",
+      "Portfolio Oversight: Manage multiple initiatives across regulatory and financial domains.",
+      "Stakeholder Engagement: Act as the central communication hub between Finance, Compliance, Risk, and IT teams.",
+      "Progress Tracking: Use Jira and MS Project to monitor project health, risks, and delivery status.",
+      "Delivery Assurance: Guarantee that projects meet quality, compliance, and stakeholder expectations."
+    ]
+  },
+  {
+    "id": "sub-j0jolrn1s0",
+    "name": "Data Portfolio (IT & Consumer)",
+    "leadId": "emp-yzovuexp82",
+    "teamId": "team-ctjm4lx9h7",
+    "featured": false,
+    "createdAt": "2026-09-06T07:23:12.900Z",
+    "updatedAt": "2026-09-06T08:03:56.731Z",
+    "focusAreas": [
+      "IT Portfolio Delivery",
+      "Consumer Portfolio Delivery",
+      "Tool-Driven Execution",
+      "Risk Control"
+    ],
+    "portfolios": [
+      "IT",
+      "Consumer"
+    ],
+    "description": "The IT & Consumer Delivery Sub-Team is responsible for managing data provisioning, reporting, and integration projects that serve both the IT portfolio (internal systems, infrastructure, and enterprise applications) and the Consumer portfolio (customer-facing products, services, and analytics). This team ensures that both operational IT needs and consumer insights are supported by reliable, timely, and compliant data solutions.",
+    "responsibilities": [
+      "Project Planning: Define scope, timelines, milestones, and deliverables for IT and Consumer projects.",
+      "Stakeholder Engagement: Act as the central communication hub between business units, IT teams, and consumer product owners.",
+      "Progress Tracking: Use Jira and MS Project to monitor project health, risks, and delivery status.",
+      "Risk & Issue Management: Identify risks early, implement mitigation strategies, and resolve issues proactively.",
+      "Delivery Assurance: Guarantee that IT and Consumer projects meet quality, performance, and stakeholder expectations."
+    ]
+  },
+  {
+    "id": "sub-bhcx4trt35",
+    "name": "Delivery (CBE) ",
+    "leadId": "emp-nogz05zpfm",
+    "teamId": "team-rmevczw80s",
+    "featured": false,
+    "createdAt": "2026-09-06T05:53:22.593Z",
+    "updatedAt": "2026-09-06T06:05:58.875Z",
+    "focusAreas": [
+      "Regulatory Compliance",
+      "Audit Readiness",
+      "Reporting"
+    ],
+    "portfolios": [
+      "CBE"
+    ],
+    "description": "The CBE Delivery Team is responsible for ensuring accurate, timely, and compliant reporting to the Central Bank of Egypt. The team acts as the bridge between enterprise financial systems and regulatory authorities, transforming internal financial data into standardized reports that meet CBE requirements. Their work safeguards compliance, supports transparency, and strengthens the organization’s relationship with regulators.",
+    "responsibilities": [
+      "Regulatory Reporting: Prepare and deliver mandated reports to the CBE in the required formats and timelines.",
+      "ETL & Transformation: Use Informatica and other ETL tools to transform raw financial data into structured, compliant reporting datasets.",
+      "Validation & Reconciliation: Ensure accuracy by reconciling reported figures with source systems and applying validation checks.",
+      "Automation: Streamline reporting workflows to reduce manual effort and improve reliability."
+    ]
+  },
+  {
+    "id": "sub-rquzdk0sro",
+    "name": "Delivery (EPM & Finance) ",
+    "leadId": "emp-26d2mqh1gr",
+    "teamId": "team-q034fdpi93",
+    "featured": false,
+    "createdAt": "2026-09-06T05:38:01.787Z",
+    "updatedAt": "2026-09-06T05:46:31.835Z",
+    "focusAreas": [
+      "Financial Data Reliability",
+      "ETL Excellence",
+      "Reporting Innovation"
+    ],
+    "portfolios": [
+      "EPM",
+      "Finance"
+    ],
+    "description": "The Delivery Team for EPM & Finance is dedicated to enabling financial planning, performance management, and enterprise reporting through robust data solutions. The team ensures that business stakeholders have timely, accurate, and trusted data for decision-making, compliance, and operational efficiency. Acting as the backbone of Finance IT, they transform raw data into actionable insights by managing end-to-end provisioning, ETL, and reporting processes.",
+    "responsibilities": [
+      "Data Provisioning: Supply curated, secure, and consistent datasets to EPM and Finance platforms for planning, forecasting, and reporting.",
+      "ETL Development: Design, build, and optimize ETL workflows using Informatica and related tools to integrate data from multiple sources.",
+      "Reporting Enablement: Deliver standardized and ad-hoc reporting solutions that support financial analysis, compliance, and executive dashboards.",
+      "System Integration: Connect ERP, EPM, and Finance applications with enterprise data platforms to ensure seamless flow of information."
+    ]
+  },
+  {
+    "id": "sub-7ap4dkij56",
+    "name": "AI Enablement & Budgeting  ",
+    "leadId": "emp-fao79kk2cw",
+    "teamId": "team-00f09sblhf",
+    "featured": false,
+    "createdAt": "2026-08-30T11:28:20.968Z",
+    "updatedAt": "2026-08-30T11:34:51.465Z",
+    "focusAreas": [
+      "AI",
+      "Budgeting"
+    ],
+    "portfolios": [],
+    "description": "The AI Enablement & Budgeting Team drives the adoption of artificial intelligence across the data warehouse ecosystem while ensuring financial efficiency and sustainability",
+    "responsibilities": [
+      "Drive integration of AI/ML models into DWH workflows.",
+      "Plan and allocate budgets for EIM initiatives."
+    ]
+  },
+  {
+    "id": "sub-ibk5kh3y8v",
+    "name": "Incentive ",
+    "leadId": "emp-p3bkqcjuhw",
+    "teamId": "team-rmevczw80s",
+    "featured": false,
+    "createdAt": "2026-08-30T11:08:55.685Z",
+    "updatedAt": "2026-08-30T11:14:28.214Z",
+    "focusAreas": [],
+    "portfolios": [],
+    "description": "The Incentive Program Team is responsible for designing, managing, and delivering data solutions that power customer rewards, loyalty initiatives, and performance-based incentive structures. Operating within the Data Warehouse, they ensure that incentive-related data is accurate, accessible, and actionable for analytics, reporting, and decision-making.",
+    "responsibilities": [
+      "Data Integration → Collect and consolidate incentive program data from multiple source systems into the warehouse."
+    ]
+  },
+  {
+    "id": "sub-kbniau258w",
+    "name": "Data & System Support",
+    "leadId": "emp-s2e9zw1wxa",
+    "teamId": "team-aqmq9b1mp4",
+    "featured": false,
+    "createdAt": "2026-08-26T06:23:52.062Z",
+    "updatedAt": "2026-08-26T06:30:15.955Z",
+    "focusAreas": [
+      "Incident Response",
+      "System Monitoring"
+    ],
+    "portfolios": [],
+    "description": "The Data & System Support Team provides operational assistance, troubleshooting, and user support for data platforms, applications, and infrastructure. Acting as the first line of defense for incidents, ensuring that both technical teams and business users can rely on stable, secure, and efficient systems.",
+    "responsibilities": [
+      "Incident Response → Handle tickets, troubleshoot issues, and escalate when necessary.",
+      "System Monitoring → Track health, performance, and availability of platforms.",
+      "Data Access Management → Provision accounts, enforce role-based access, and manage permissions.",
+      "Collaboration → Work with system admins, data engineers, and governance teams to resolve cross-functional problems."
+    ]
+  },
+  {
+    "id": "sub-294w87m9al",
+    "name": "System Administration ",
+    "leadId": "emp-er8g849tra",
+    "teamId": "team-aqmq9b1mp4",
+    "featured": false,
+    "createdAt": "2026-08-26T06:09:48.992Z",
+    "updatedAt": "2026-08-26T06:19:49.958Z",
+    "focusAreas": [
+      "User & Access Management",
+      "Database Administration",
+      "Backup & Recovery"
+    ],
+    "portfolios": [
+      "Data Delivery",
+      "Engineering Teams"
+    ],
+    "description": "Providing end-to-end administration of data systems and infrastructure, including databases, servers, clusters, and cloud environments. Their role is to guarantee that data platforms remain secure, performant, and compliant, enabling smooth data production and consumption across the organization.",
+    "responsibilities": [
+      "System Provisioning → Install, configure, and maintain servers, clusters, and cloud resources.",
+      "Database Administration → Manage relational and NoSQL databases, optimize queries, and enforce indexing strategies.",
+      "User & Access Management → Control authentication, authorization, and role-based access.",
+      "Monitoring & Maintenance → Track system health, resource utilization, and performance metrics.",
+      "Troubleshooting → Diagnose and resolve system, network, and storage issues.",
+      "Backup & Recovery → Implement disaster recovery plans, snapshots, and failover strategies."
+    ]
+  },
+  {
+    "id": "sub-exnf1jx2zh",
+    "name": "Data Ops ",
+    "leadId": "emp-trs2q1gstq",
+    "teamId": "team-aqmq9b1mp4",
+    "featured": true,
+    "createdAt": "2026-08-26T05:51:41.019Z",
+    "updatedAt": "2026-08-26T06:03:42.844Z",
+    "focusAreas": [
+      "Data Validation",
+      "Job Scheduling & Monitoring:",
+      "Performance Tuning"
+    ],
+    "portfolios": [
+      "Data Delivery",
+      "IT",
+      "Incentive"
+    ],
+    "description": "The Data Operation Team is responsible for the day-to-day execution, monitoring, and control of production data workflows. They ensure that ETL jobs, data pipelines, reporting systems, and warehouse processes run smoothly, reliably, and in compliance with business and IT standards. Acting as the operational backbone of data production, the team safeguards data availability, accuracy, and timeliness across platforms.",
+    "responsibilities": [
+      "Job Scheduling & Monitoring: Manage and oversee ETL workflows, batch jobs, and real-time pipelines.",
+      "Incident Management: Detect, troubleshoot, and resolve data operation failures to minimize downtime.",
+      "Data Validation: Perform reconciliation and quality checks to ensure accuracy of delivered data.",
+      "Automation: Implement scripts and frameworks to reduce manual intervention.",
+      "Collaboration: Work closely with engineering, governance, and business teams to align operations with organizational goals."
+    ]
+  },
+  {
     "id": "sub-3l50sjpaai",
     "name": "Data Architecture ",
-    "leadId": "emp-0h9mct7i05",
+    "leadId": "emp-tgkhbfrx2p",
     "teamId": "team-00f09sblhf",
     "featured": false,
     "createdAt": "2026-08-24T06:07:30.756Z",
-    "updatedAt": "2026-08-24T06:07:30.756Z",
+    "updatedAt": "2026-09-06T08:55:39.660Z",
     "focusAreas": [
       "Modern Data Architecture"
     ],
@@ -41,9 +364,9 @@
     "name": "Data Trust & Enablment",
     "leadId": "emp-0rwtcdyxxv",
     "teamId": "team-00f09sblhf",
-    "featured": false,
+    "featured": true,
     "createdAt": "2026-08-19T12:35:18.658Z",
-    "updatedAt": "2026-08-23T20:19:12.977Z",
+    "updatedAt": "2026-08-30T11:36:18.302Z",
     "focusAreas": [
       "Data Governance",
       "Enablement"

@@ -1,22 +1,32 @@
 [
   {
+    "id": "ttype-mqotczapfe",
+    "icon": "Campaign",
+    "name": "Online Training",
+    "order": "3",
+    "active": true,
+    "createdAt": "2026-08-25T05:14:05.597Z",
+    "updatedAt": "2026-08-25T05:14:05.597Z",
+    "description": "Virtual courses, e-learning modules, or webinars accessible remotely."
+  },
+  {
     "id": "ttype-vlzxg1jded",
     "icon": "Psychology",
-    "name": "Soft Skills",
+    "name": "Internal Training",
     "order": 2,
     "active": true,
     "createdAt": "2026-08-24T19:33:07.485Z",
-    "updatedAt": "2026-08-24T19:33:07.485Z",
-    "description": "Communication and leadership skills."
+    "updatedAt": "2026-08-25T05:12:16.943Z",
+    "description": "Sessions conducted by your own employees or subject matter experts."
   },
   {
     "id": "ttype-vlevlocni0",
     "icon": "Dns",
-    "name": "Technical Training",
+    "name": "External Training",
     "order": 1,
     "active": true,
     "createdAt": "2026-08-24T19:33:06.727Z",
-    "updatedAt": "2026-08-24T19:33:06.727Z",
-    "description": "Hands-on technical skills."
+    "updatedAt": "2026-08-25T05:12:36.934Z",
+    "description": "Programs delivered by outside companies or hired instructors."
   }
 ]

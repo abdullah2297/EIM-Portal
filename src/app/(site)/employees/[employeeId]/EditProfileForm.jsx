@@ -9,21 +9,27 @@ import { Button } from '@/components/ui/Button';
 import { Repeater } from '@/components/admin/Repeater';
 import { ImageField } from '@/components/admin/ImageField';
 import { FileUploadField } from '@/components/admin/FileUploadField';
-import { PROJECT_STATUS } from '@/lib/constants';
+import { RelationMultiSelect } from '@/components/admin/RelationFields';
+import { PROJECT_STATUS, RESOURCES } from '@/lib/constants';
 
 const asOptions = (values) => values.map((value) => ({ value, label: value }));
 
 /**
- * Self-service profile editor - the fields an employee is allowed to change
- * about themselves (everything else - job title, team, role, email, featured
- * flag, login - stays admin-only). Posts straight to `/api/employees/me`,
- * which enforces the exact same allowlist server-side, so this form is a
+ * Self-service profile editor - everything an employee is allowed to change
+ * about themselves. Deliberately excludes org-structure/identity fields
+ * (full name, role, team, sub-team, email, featured flag, computer number)
+ * and anything training/registration-related, which isn't part of the
+ * employee record at all. Posts straight to `/api/employees/me`, which
+ * enforces the exact same allowlist server-side - this form is a
  * convenience, not the actual security boundary.
  *
  * @param {{ employee: import('@/lib/types').Employee, onSaved: () => void, onCancel: () => void }} props
  */
 export function EditProfileForm({ employee, onSaved, onCancel }) {
   const [values, setValues] = useState({
+    jobTitle: employee.jobTitle ?? '',
+    extension: employee.extension ?? '',
+    location: employee.location ?? '',
     photo: employee.photo ?? '',
     bio: employee.bio ?? '',
     quote: employee.quote ?? '',
@@ -32,6 +38,11 @@ export function EditProfileForm({ employee, onSaved, onCancel }) {
     hobbies: employee.hobbies ?? [],
     interests: employee.interests ?? [],
     funFacts: employee.funFacts ?? [],
+    languages: employee.languages ?? [],
+    responsibilities: employee.responsibilities ?? [],
+    achievements: employee.achievements ?? [],
+    awards: employee.awards ?? [],
+    initiativeIds: employee.initiativeIds ?? [],
     projects: employee.projects ?? [],
     educationUniversity: employee.educationUniversity ?? '',
     educationMajor: employee.educationMajor ?? '',
@@ -68,6 +79,15 @@ export function EditProfileForm({ employee, onSaved, onCancel }) {
   return (
     <form className="admin-form" onSubmit={handleSubmit} noValidate>
       <section className="admin-form__section">
+        <h2 className="admin-form__section-title">Basics</h2>
+        <div className="form-grid">
+          <TextInput label="Job title" name="jobTitle" value={values.jobTitle} onChange={setValue} />
+          <TextInput label="Extension" name="extension" value={values.extension} onChange={setValue} />
+          <TextInput label="Location" name="location" value={values.location} onChange={setValue} />
+        </div>
+      </section>
+
+      <section className="admin-form__section">
         <h2 className="admin-form__section-title">About me</h2>
         <div className="form-grid">
           <div className="form-grid__full">
@@ -97,6 +117,14 @@ export function EditProfileForm({ employee, onSaved, onCancel }) {
           <TagInput label="Hobbies" name="hobbies" value={values.hobbies} onChange={setValue} className="form-grid__full" />
           <TagInput label="Interests" name="interests" value={values.interests} onChange={setValue} className="form-grid__full" />
           <TagInput label="Fun facts" name="funFacts" value={values.funFacts} onChange={setValue} className="form-grid__full" />
+          <TagInput label="Languages" name="languages" value={values.languages} onChange={setValue} className="form-grid__full" />
+        </div>
+      </section>
+
+      <section className="admin-form__section">
+        <h2 className="admin-form__section-title">Role & responsibilities</h2>
+        <div className="form-grid">
+          <TagInput label="Responsibilities" name="responsibilities" value={values.responsibilities} onChange={setValue} className="form-grid__full" />
         </div>
       </section>
 
@@ -117,6 +145,36 @@ export function EditProfileForm({ employee, onSaved, onCancel }) {
                 { name: 'startDate', label: 'Start date', type: 'date' },
                 { name: 'endDate', label: 'End date', type: 'date' },
               ]}
+            />
+          </div>
+        </div>
+      </section>
+
+      <section className="admin-form__section">
+        <h2 className="admin-form__section-title">Achievements & recognition</h2>
+        <div className="form-grid">
+          <TagInput label="Achievements" name="achievements" value={values.achievements} onChange={setValue} className="form-grid__full" />
+          <div className="form-grid__full">
+            <Repeater
+              label="Awards & prizes"
+              name="awards"
+              value={values.awards}
+              onChange={setValue}
+              fields={[
+                { name: 'title', label: 'Award', type: 'text' },
+                { name: 'issuer', label: 'Issuer', type: 'text' },
+                { name: 'year', label: 'Year', type: 'text' },
+              ]}
+            />
+          </div>
+          <div className="form-grid__full">
+            <RelationMultiSelect
+              label="Initiatives contributed to"
+              name="initiativeIds"
+              value={values.initiativeIds}
+              onChange={setValue}
+              resource={RESOURCES.initiatives}
+              labelField="name"
             />
           </div>
         </div>

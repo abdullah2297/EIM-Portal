@@ -8,22 +8,36 @@ import { fail, handleError, ok } from '@/lib/apiResponse';
  *
  * Lets the logged-in employee update their own profile - identity comes from
  * the session (`session.sub`), never a client-supplied id. Only the fields in
- * `EDITABLE_FIELDS` are ever written; anything else in the request body
- * (jobTitle, role, team/sub-team, email, computerNumber, featured, ...) is
- * silently dropped so an employee can never touch it through this route.
+ * `EDITABLE_FIELDS` are ever written; everything else is silently dropped.
+ *
+ * Deliberately locked out (org-structure/identity, not "profile content"):
+ * `fullName`, `role`, `teamId`, `subTeamId`, `email`, `featured`,
+ * `computerNumber` - self-assigning a seniority band, team, or featured
+ * status would corrupt org-chart/manager resolution and directory identity
+ * elsewhere on the site. Training/registration data isn't part of the
+ * employee record at all, so there's nothing to exclude for it here.
  */
 
 export const dynamic = 'force-dynamic';
 
 const EDITABLE_FIELDS = [
+  'jobTitle',
+  'extension',
+  'location',
+  'joinedDate',
   'photo',
   'bio',
   'quote',
+  'responsibilities',
   'expertise',
   'skills',
   'hobbies',
   'interests',
+  'achievements',
+  'awards',
+  'initiativeIds',
   'funFacts',
+  'languages',
   'projects',
   'educationUniversity',
   'educationMajor',
@@ -31,7 +45,6 @@ const EDITABLE_FIELDS = [
   'totalExperienceYears',
   'mobileNumber',
   'resume',
-  'joinedDate',
 ];
 
 export async function POST(request) {

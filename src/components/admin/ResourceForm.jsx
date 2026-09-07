@@ -95,8 +95,9 @@ export function ResourceForm({ resource, schema, initialValues, recordId = null 
 
   /** Renders one field according to its descriptor. */
   const renderField = (field) => {
+    // `key` is never part of `shared` - React requires it as a literal JSX
+    // attribute at each call site below, not a value arriving through spread.
     const shared = {
-      key: field.name,
       label: field.label,
       name: field.name,
       value: values[field.name],
@@ -109,13 +110,20 @@ export function ResourceForm({ resource, schema, initialValues, recordId = null 
 
     switch (field.type) {
       case 'textarea':
-        return <TextArea {...shared} rows={field.rows ?? 4} />;
+        return <TextArea key={field.name} {...shared} rows={field.rows ?? 4} />;
       case 'select':
-        return <SelectField {...shared} options={field.options ?? []} placeholder="Select an option" />;
+        return (
+          <SelectField
+            key={field.name}
+            {...shared}
+            options={field.options ?? []}
+            placeholder="Select an option"
+          />
+        );
       case 'number':
-        return <TextInput {...shared} type="number" />;
+        return <TextInput key={field.name} {...shared} type="number" />;
       case 'date':
-        return <TextInput {...shared} type="date" />;
+        return <TextInput key={field.name} {...shared} type="date" />;
       case 'checkbox':
         return (
           <div className={field.full ? 'form-grid__full' : ''} key={field.name}>
@@ -129,10 +137,11 @@ export function ResourceForm({ resource, schema, initialValues, recordId = null 
           </div>
         );
       case 'tags':
-        return <TagInput {...shared} />;
+        return <TagInput key={field.name} {...shared} />;
       case 'relation':
         return (
           <RelationSelect
+            key={field.name}
             {...shared}
             resource={field.resource}
             labelField={field.labelField ?? 'name'}
@@ -177,6 +186,8 @@ export function ResourceForm({ resource, schema, initialValues, recordId = null 
               accept={field.accept}
               error={errors[field.name]}
               hint={field.hint}
+              icon={field.icon}
+              uploadLabel={field.uploadLabel}
             />
           </div>
         );
@@ -207,7 +218,7 @@ export function ResourceForm({ resource, schema, initialValues, recordId = null 
           </div>
         );
       default:
-        return <TextInput {...shared} type={field.inputType ?? 'text'} />;
+        return <TextInput key={field.name} {...shared} type={field.inputType ?? 'text'} />;
     }
   };
 

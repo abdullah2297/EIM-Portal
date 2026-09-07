@@ -18,9 +18,22 @@ import { formatBytes } from '@/lib/format';
  *  label: string, name: string,
  *  value: { name: string, url: string, size: string } | null,
  *  onChange: Function, accept?: string, hint?: string, error?: string,
+ *  icon?: string, uploadLabel?: string,
+ *  uploadFn?: (file: File) => Promise<{ name: string, url: string, size: string }>,
  * }} props
  */
-export function FileUploadField({ label, name, value, onChange, accept = '.zip', hint, error }) {
+export function FileUploadField({
+  label,
+  name,
+  value,
+  onChange,
+  accept = '.zip',
+  hint,
+  error,
+  icon = 'FolderZip',
+  uploadLabel = 'Upload zip file',
+  uploadFn = (file) => uploadsService.upload(file),
+}) {
   const id = useId();
   const inputRef = useRef(null);
   const [uploading, setUploading] = useState(false);
@@ -34,7 +47,7 @@ export function FileUploadField({ label, name, value, onChange, accept = '.zip',
     setUploading(true);
     setUploadError('');
     try {
-      const attachment = await uploadsService.upload(file);
+      const attachment = await uploadFn(file);
       onChange(name, attachment);
     } catch (uploadFailure) {
       setUploadError(uploadFailure?.message ?? 'The file could not be uploaded.');
@@ -47,7 +60,7 @@ export function FileUploadField({ label, name, value, onChange, accept = '.zip',
     <Field label={label} htmlFor={id} error={error || uploadError || undefined} hint={hint}>
       {value ? (
         <div className="u-cluster u-cluster--sm">
-          <Icon name="FolderZip" fontSize="inherit" />
+          <Icon name={icon} fontSize="inherit" />
           <a href={`${value.url}?name=${encodeURIComponent(value.name)}`} className="u-text-sm">
             {value.name}
           </a>
@@ -65,7 +78,7 @@ export function FileUploadField({ label, name, value, onChange, accept = '.zip',
           loading={uploading}
           onClick={() => inputRef.current?.click()}
         >
-          {uploading ? 'Uploading...' : 'Upload zip file'}
+          {uploading ? 'Uploading...' : uploadLabel}
         </Button>
       )}
       <input

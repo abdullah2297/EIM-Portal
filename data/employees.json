@@ -909,6 +909,7 @@
         "issuer": "CIB"
       }
     ],
+    "resume": null,
     "skills": [
       {
         "name": "Data Modeling",
@@ -948,6 +949,7 @@
     "funFacts": [],
     "jobTitle": "Senior Data Engineer",
     "location": "",
+    "projects": [],
     "createdAt": "2026-08-24T07:08:55.917Z",
     "expertise": [
       "ETL/ELT",
@@ -959,16 +961,22 @@
       "English"
     ],
     "subTeamId": "sub-4h2kq9m8d1",
-    "updatedAt": "2026-08-24T07:08:55.917Z",
+    "updatedAt": "2026-09-07T07:59:23.324Z",
     "joinedDate": "2025-05-27",
     "achievements": [
       "OFSAA Implementation"
     ],
+    "mobileNumber": "",
+    "computerNumber": "",
+    "educationMajor": "",
     "responsibilities": [
       "Designs and optimizes ETL/ELT pipelines.",
       "Implements Data Vault models for banking data systems.",
       "Enhances reporting automation and system performance"
-    ]
+    ],
+    "educationUniversity": "",
+    "totalExperienceYears": null,
+    "educationGraduationYear": ""
   },
   {
     "id": "emp-txpw4qfhuu",
@@ -1276,7 +1284,18 @@
     "email": "abdullah.elzak@cibeg.com",
     "photo": "https://media.licdn.com/dms/image/v2/D4D03AQHEleNqI8zolw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1687914151886?e=1788998400&v=beta&t=Al42DPEoZY_oznDVWpDjBSkX39r3fC8i46YrPV3-tSM",
     "quote": "Preparation can only take you so far, After that you have to take a few leaps of faith. ",
-    "awards": [],
+    "awards": [
+      {
+        "year": "2026",
+        "title": "Star Award",
+        "issuer": "CIB"
+      }
+    ],
+    "resume": {
+      "url": "https://zwho5ilhzixnerqw.public.blob.vercel-storage.com/upl-7s31yr1que-XIuUMQKzUuO8Q0YhpcxkCCGuxWnidV.pdf",
+      "name": "Esraa Elshibly .pdf.pdf",
+      "size": "280417"
+    },
     "skills": [
       {
         "name": "Data Modeling",
@@ -1293,7 +1312,6 @@
     ],
     "teamId": "team-00f09sblhf",
     "hobbies": [
-      "Sports",
       "swimming"
     ],
     "featured": true,
@@ -1302,7 +1320,33 @@
       "when feeling depressed i eat a lot"
     ],
     "jobTitle": "Senior Data Engineer",
-    "location": "",
+    "location": "SV3",
+    "projects": [
+      {
+        "link": "https://eim-portal.vercel.app/",
+        "name": "EIM Portal",
+        "status": "On Progress",
+        "endDate": "2026-09-06",
+        "startDate": "2026-08-01",
+        "description": "EIM - Internal Portal The home of the Enterprise Information Management"
+      },
+      {
+        "link": "",
+        "name": "EDC",
+        "status": "Done",
+        "endDate": "2026-08-05",
+        "startDate": "2026-07-01",
+        "description": "EDC Framework"
+      },
+      {
+        "link": "",
+        "name": "Test",
+        "status": "On Hold",
+        "endDate": "2026-06-02",
+        "startDate": "2026-06-01",
+        "description": "asdasadsa"
+      }
+    ],
     "createdAt": "2026-08-19T15:17:25.440Z",
     "expertise": [
       "Data Modeling",
@@ -1318,12 +1362,18 @@
       "English"
     ],
     "subTeamId": "sub-r1fmp0h3q1",
-    "updatedAt": "2026-09-06T07:54:51.733Z",
+    "updatedAt": "2026-09-07T07:47:14.431Z",
     "joinedDate": "2025-07-09",
     "achievements": [],
+    "mobileNumber": "01552325613",
+    "computerNumber": "42144",
+    "educationMajor": "CS",
     "responsibilities": [
       "Data governance"
-    ]
+    ],
+    "educationUniversity": "Azhar university ",
+    "totalExperienceYears": 7,
+    "educationGraduationYear": "2019"
   },
   {
     "id": "emp-in8awx37n1",

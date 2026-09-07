@@ -55,6 +55,9 @@ export const STATUS_TONE = {
   Attended: 'success',
   'No Show': 'danger',
   'Not Completed': 'danger',
+  'Not Started': 'neutral',
+  'On Progress': 'info',
+  Done: 'success',
 };
 
 /** @param {{ status: string, pulse?: boolean }} props */

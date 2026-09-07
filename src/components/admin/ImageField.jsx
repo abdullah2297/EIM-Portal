@@ -13,9 +13,10 @@ import { Button } from '@/components/ui/Button';
  * @param {{
  *  label: string, name: string, value: string, onChange: Function,
  *  hint?: string, error?: string,
+ *  uploadFn?: (file: File) => Promise<{ url: string }>,
  * }} props
  */
-export function ImageField({ label, name, value, onChange, hint, error }) {
+export function ImageField({ label, name, value, onChange, hint, error, uploadFn = (file) => uploadsService.upload(file) }) {
   const id = useId();
   const inputRef = useRef(null);
   const [uploading, setUploading] = useState(false);
@@ -29,7 +30,7 @@ export function ImageField({ label, name, value, onChange, hint, error }) {
     setUploading(true);
     setUploadError('');
     try {
-      const uploaded = await uploadsService.upload(file);
+      const uploaded = await uploadFn(file);
       onChange(name, uploaded.url);
     } catch (uploadFailure) {
       setUploadError(uploadFailure?.message ?? 'The image could not be uploaded.');

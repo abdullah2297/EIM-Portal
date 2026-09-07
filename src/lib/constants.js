@@ -155,6 +155,9 @@ export const STORY_TYPES = ['Project', 'Team', 'Employee'];
 
 export const TRAINING_LEVELS = ['Beginner', 'Intermediate', 'Advanced'];
 
+/** Lifecycle of one entry in an employee's "Projects" list. */
+export const PROJECT_STATUS = ['Not Started', 'On Progress', 'On Hold', 'Done'];
+
 export const DELIVERY_METHODS = ['On-site', 'Online', 'Hybrid'];
 
 /** Lifecycle a training moves through, controlled from the admin panel. */

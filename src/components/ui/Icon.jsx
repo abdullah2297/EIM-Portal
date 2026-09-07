@@ -68,6 +68,7 @@ import Verified from '@mui/icons-material/Verified';
 import VerifiedUser from '@mui/icons-material/VerifiedUser';
 import Visibility from '@mui/icons-material/Visibility';
 import Work from '@mui/icons-material/Work';
+import WorkHistory from '@mui/icons-material/WorkHistory';
 import WorkspacePremium from '@mui/icons-material/WorkspacePremium';
 import LightMode from '@mui/icons-material/LightMode';
 import DarkMode from '@mui/icons-material/DarkMode';
@@ -109,7 +110,7 @@ const ICONS = {
   MilitaryTech, MoreHoriz, NightsStay, OpenInNew, Person, PhotoLibrary, Psychology, Quiz,
   Publish, Refresh, RocketLaunch, Save, Schedule, School, Search, SearchOff, Settings,
   SportsEsports, SportsSoccer, Star, Storage, SupportAgent, Timeline, TipsAndUpdates,
-  TrendingUp, UploadFile, Verified, VerifiedUser, VideoCameraFront, Visibility, Work, WorkspacePremium,
+  TrendingUp, UploadFile, Verified, VerifiedUser, VideoCameraFront, Visibility, Work, WorkHistory, WorkspacePremium,
 };
 
 /**

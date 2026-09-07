@@ -1,19 +1,19 @@
 'use client';
 
-import { Field, TextInput } from '@/components/ui/Fields';
+import { Field, SelectField, TextInput } from '@/components/ui/Fields';
 import { Button, IconButton } from '@/components/ui/Button';
 
 /**
  * Editor for a list of objects (impact metrics, prizes, skills, awards,
- * attachments, leaderboard rows...). The row shape comes from the schema, so
- * one component covers every repeating structure in the data model.
+ * attachments, leaderboard rows, projects...). The row shape comes from the
+ * schema, so one component covers every repeating structure in the data model.
  *
  * @param {{
  *  label: string,
  *  name: string,
  *  value?: Array<Record<string, any>>,
  *  onChange: (name: string, value: any[]) => void,
- *  fields: Array<{ name: string, label: string, type?: string }>,
+ *  fields: Array<{ name: string, label: string, type?: string, options?: {value,label}[] }>,
  *  hint?: string,
  * }} props
  */
@@ -32,6 +32,34 @@ export function Repeater({ label, name, value = [], onChange, fields = [], hint 
 
   const removeRow = (index) => onChange(name, rows.filter((_, i) => i !== index));
 
+  /** Renders one row's field as a date picker, dropdown, number, or plain text. */
+  const renderRowField = (field, index, row) => {
+    // `key` is intentionally not part of `shared` - React requires it as a
+    // literal JSX attribute at each call site below, not a spread value.
+    const shared = {
+      label: field.label,
+      name: `${name}.${index}.${field.name}`,
+      value: row?.[field.name] ?? '',
+      onChange: (_fieldName, fieldValue) =>
+        updateRow(index, field.name, field.type === 'number' ? Number(fieldValue) : fieldValue),
+    };
+
+    if (field.type === 'select') {
+      return (
+        <SelectField
+          key={field.name}
+          {...shared}
+          options={field.options ?? []}
+          placeholder="Select an option"
+        />
+      );
+    }
+    if (field.type === 'date') {
+      return <TextInput key={field.name} {...shared} type="date" />;
+    }
+    return <TextInput key={field.name} {...shared} type={field.type === 'number' ? 'number' : 'text'} />;
+  };
+
   return (
     <Field label={label} hint={hint}>
       <div className="u-stack u-stack--sm">
@@ -40,18 +68,7 @@ export function Repeater({ label, name, value = [], onChange, fields = [], hint 
           <div className="card card--flat" key={index}>
             <div className="card__body">
               <div className="form-grid">
-                {fields.map((field) => (
-                  <TextInput
-                    key={field.name}
-                    label={field.label}
-                    name={`${name}.${index}.${field.name}`}
-                    type={field.type === 'number' ? 'number' : 'text'}
-                    value={row?.[field.name] ?? ''}
-                    onChange={(_fieldName, fieldValue) =>
-                      updateRow(index, field.name, field.type === 'number' ? Number(fieldValue) : fieldValue)
-                    }
-                  />
-                ))}
+                {fields.map((field) => renderRowField(field, index, row))}
               </div>
               <div className="admin-table__actions">
                 <IconButton icon="Delete" label={`Remove item ${index + 1}`} onClick={() => removeRow(index)} />

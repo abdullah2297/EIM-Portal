@@ -109,6 +109,10 @@ export async function readCollection(collection) {
     return typeof data === 'string' ? JSON.parse(data) : data;
   } catch (error) {
     if (error instanceof DbError) throw error;
+    // The original driver error (e.g. a transient Neon connection blip) is
+    // otherwise lost the moment it's wrapped - log it so a one-off failure
+    // is still diagnosable after the fact instead of just "READ_FAILED".
+    console.error(`[db] readCollection("${collection}") failed:`, error);
     throw new DbError(`Could not read "${collection}".`, 'READ_FAILED', 500);
   }
 }
@@ -130,6 +134,7 @@ export async function writeCollection(collection, payload) {
     `;
   } catch (error) {
     if (error instanceof DbError) throw error;
+    console.error(`[db] writeCollection("${collection}") failed:`, error);
     throw new DbError(`Could not save "${collection}".`, 'WRITE_FAILED', 500);
   }
   return payload;

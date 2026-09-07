@@ -11,8 +11,37 @@ import { ProgressBar } from '@/components/ui/ProgressBar';
 import { EmptyState } from '@/components/ui/StateViews';
 import { InitiativeCard } from '@/components/cards/InitiativeCard';
 import { AchievementCard } from '@/components/cards/AchievementCard';
+import { Timeline } from '@/components/ui/Timeline';
+import { ProfileEditGate } from './ProfileEditGate';
 import { ROUTES } from '@/lib/constants';
 import { formatDate } from '@/lib/format';
+
+/** "Mar 2024 - Jun 2024", "Mar 2024 - Present", or just an end date alone. */
+function formatProjectDateRange(project) {
+  if (!project.startDate && !project.endDate) return '';
+  const start = project.startDate ? formatDate(project.startDate, 'monthYear') : '';
+  const end = project.endDate ? formatDate(project.endDate, 'monthYear') : 'Present';
+  return start ? `${start} - ${end}` : end;
+}
+
+/** Groups projects by their start year (most recent year first, undated last). */
+function groupProjectsByYear(projects) {
+  const withYear = (projects ?? []).map((project) => ({
+    ...project,
+    year: project.startDate ? new Date(project.startDate).getFullYear() : null,
+  }));
+  const years = [...new Set(withYear.map((project) => project.year))].sort((a, b) => {
+    if (a === null) return 1;
+    if (b === null) return -1;
+    return b - a;
+  });
+  return years.map((year) => ({
+    year,
+    projects: withYear
+      .filter((project) => project.year === year)
+      .sort((a, b) => new Date(b.startDate ?? 0) - new Date(a.startDate ?? 0)),
+  }));
+}
 
 /** @param {{ params: Promise<{ employeeId: string }> }} props */
 export async function generateMetadata({ params }) {
@@ -111,6 +140,7 @@ export default async function EmployeeProfilePage({ params }) {
         </div>
       </section>
 
+      <ProfileEditGate employee={employee} canEdit={isOwnProfile}>
       <section className="section section--tight">
         <div className="container-page grid-sidebar grid-sidebar--right">
           <div className="u-stack u-stack--lg">
@@ -276,6 +306,43 @@ export default async function EmployeeProfilePage({ params }) {
               )}
             </div>
 
+            {/* Projects timeline, grouped by year ----------------------------- */}
+            {employee.projects?.length ? (
+              <article className="detail-panel">
+                <h2 className="detail-panel__title">
+                  <Icon name="Timeline" />
+                  Projects
+                </h2>
+                <div className="u-stack u-stack--lg">
+                  {groupProjectsByYear(employee.projects).map(({ year, projects }) => (
+                    <div className="u-stack u-stack--sm" key={year ?? 'undated'}>
+                      <p className="u-text-sm">
+                        <strong>{year ?? 'Undated'}</strong>
+                      </p>
+                      <Timeline
+                        items={projects.map((project, index) => ({
+                          id: `${year ?? 'undated'}-${project.name || index}`,
+                          dateLabel: formatProjectDateRange(project),
+                          title: project.name,
+                          description: project.description,
+                          meta: (
+                            <div className="u-cluster u-cluster--sm">
+                              {project.status ? <StatusBadge status={project.status} /> : null}
+                              {project.link ? (
+                                <a href={project.link} target="_blank" rel="noreferrer noopener" className="u-text-sm">
+                                  View project <Icon name="OpenInNew" fontSize="inherit" />
+                                </a>
+                              ) : null}
+                            </div>
+                          ),
+                        }))}
+                      />
+                    </div>
+                  ))}
+                </div>
+              </article>
+            ) : null}
+
             {/* My Training - only on your own profile ------------------------- */}
             {isOwnProfile ? (
               <article className="detail-panel">
@@ -424,6 +491,64 @@ export default async function EmployeeProfilePage({ params }) {
               </dl>
             </article>
 
+            {/* Career - experience, education, resume ------------------------- */}
+            {employee.totalExperienceYears ||
+            employee.mobileNumber ||
+            employee.computerNumber ||
+            employee.educationUniversity ||
+            employee.resume ? (
+              <article className="detail-panel">
+                <h2 className="detail-panel__title">
+                  <Icon name="WorkHistory" />
+                  Career
+                </h2>
+                <dl className="detail-list">
+                  {employee.totalExperienceYears ? (
+                    <div className="detail-list__row">
+                      <dt>Experience</dt>
+                      <dd>{employee.totalExperienceYears} year(s)</dd>
+                    </div>
+                  ) : null}
+                  {employee.mobileNumber ? (
+                    <div className="detail-list__row">
+                      <dt>Mobile</dt>
+                      <dd>{employee.mobileNumber}</dd>
+                    </div>
+                  ) : null}
+                  {employee.computerNumber ? (
+                    <div className="detail-list__row">
+                      <dt>Computer number</dt>
+                      <dd>{employee.computerNumber}</dd>
+                    </div>
+                  ) : null}
+                  {employee.educationUniversity ? (
+                    <div className="detail-list__row">
+                      <dt>University</dt>
+                      <dd>{employee.educationUniversity}</dd>
+                    </div>
+                  ) : null}
+                  {employee.educationMajor ? (
+                    <div className="detail-list__row">
+                      <dt>Major</dt>
+                      <dd>{employee.educationMajor}</dd>
+                    </div>
+                  ) : null}
+                  {employee.educationGraduationYear ? (
+                    <div className="detail-list__row">
+                      <dt>Graduated</dt>
+                      <dd>{employee.educationGraduationYear}</dd>
+                    </div>
+                  ) : null}
+                </dl>
+                {employee.resume ? (
+                  <a href={employee.resume.url} target="_blank" rel="noreferrer noopener" className="btn btn--outline btn--sm">
+                    <Icon name="Description" fontSize="inherit" />
+                    View resume
+                  </a>
+                ) : null}
+              </article>
+            ) : null}
+
             {/* 11. Fun facts -------------------------------------------------- */}
             <article className="detail-panel">
               <h2 className="detail-panel__title">
@@ -483,6 +608,7 @@ export default async function EmployeeProfilePage({ params }) {
           </aside>
         </div>
       </section>
+      </ProfileEditGate>
     </>
   );
 }

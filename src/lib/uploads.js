@@ -48,6 +48,15 @@ export const UPLOAD_KINDS = {
     },
     disposition: 'inline',
   },
+  // PDF-only (e.g. an employee's resume) - opens in the browser's own PDF
+  // viewer rather than forcing a download, same treatment as images.
+  document: {
+    extensions: ['.pdf'],
+    mimeTypes: ['application/pdf', 'application/octet-stream'],
+    maxSize: 10 * 1024 * 1024, // 10 MB
+    contentTypes: { '.pdf': 'application/pdf' },
+    disposition: 'inline',
+  },
 };
 
 /** @param {string} extension e.g. `.png` (lower-cased) */

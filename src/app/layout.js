@@ -33,7 +33,7 @@ const THEME_BOOTSTRAP = `(function(){try{var k='${STORAGE_KEYS.theme}';var s=loc
  */
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning data-scroll-behavior="smooth">
       <head>
         <script dangerouslySetInnerHTML={{ __html: THEME_BOOTSTRAP }} />
         <link rel="preconnect" href="https://fonts.googleapis.com" />

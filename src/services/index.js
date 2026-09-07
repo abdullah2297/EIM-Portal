@@ -192,4 +192,24 @@ export const trainingRegistrationService = {
   },
 };
 
+export const employeeProfileService = {
+  /** @param {Record<string, any>} payload only the self-editable fields are ever applied */
+  async update(payload) {
+    const { data } = await http.post('/api/employees/me', payload);
+    return data;
+  },
+  /**
+   * @param {File} file
+   * @param {'image'|'document'} kind
+   * @returns {Promise<{ name: string, url: string, size: string }>}
+   */
+  async upload(file, kind) {
+    const formData = new FormData();
+    formData.append('file', file);
+    formData.append('kind', kind);
+    const { data } = await http.postForm('/api/employees/me/upload', formData);
+    return data;
+  },
+};
+
 export { ApiError } from './httpClient';

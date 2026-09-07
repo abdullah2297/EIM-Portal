@@ -88,6 +88,32 @@
  * @property {string[]} funFacts
  * @property {string[]} languages
  * @property {boolean} featured
+ * @property {ProjectEntry[]} projects
+ * @property {string} educationUniversity
+ * @property {string} educationMajor
+ * @property {string} educationGraduationYear
+ * @property {number} totalExperienceYears
+ * @property {string} mobileNumber
+ * @property {string} computerNumber A persistent profile field - unrelated to the
+ *  per-registration computer number collected on `TrainingRegistration`.
+ * @property {Attachment|null} resume
+ */
+
+/**
+ * @typedef {Object} ProjectEntry
+ * @property {string} name
+ * @property {string} description
+ * @property {string} link
+ * @property {string} status Not Started | On Progress | On Hold | Done
+ * @property {string} startDate ISO date
+ * @property {string} endDate ISO date - empty/absent means still ongoing
+ */
+
+/**
+ * @typedef {Object} Attachment
+ * @property {string} name
+ * @property {string} url
+ * @property {string} size
  */
 
 /**

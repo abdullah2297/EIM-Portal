@@ -2,7 +2,8 @@ import { notFound } from 'next/navigation';
 import { getAdminSchema } from '@/lib/adminSchemas';
 import { ResourceTable } from '@/components/admin/ResourceTable';
 import { Button } from '@/components/ui/Button';
-import { ROUTES } from '@/lib/constants';
+import { EmployeeExportPanel } from '@/app/admin/employees/EmployeeExportPanel';
+import { ROUTES, RESOURCES } from '@/lib/constants';
 
 /** @param {{ params: Promise<{ resource: string }> }} props */
 export async function generateMetadata({ params }) {
@@ -28,11 +29,14 @@ export default async function AdminResourcePage({ params }) {
               : `Create, edit and delete ${schema.labelPlural.toLowerCase()} shown on the portal.`}
           </p>
         </div>
-        {schema.readOnlyCreate ? null : (
-          <Button href={ROUTES.adminResourceNew(resource)} icon="Add">
-            New {schema.label.toLowerCase()}
-          </Button>
-        )}
+        <div className="u-cluster u-cluster--sm">
+          {resource === RESOURCES.employees ? <EmployeeExportPanel /> : null}
+          {schema.readOnlyCreate ? null : (
+            <Button href={ROUTES.adminResourceNew(resource)} icon="Add">
+              New {schema.label.toLowerCase()}
+            </Button>
+          )}
+        </div>
       </div>
 
       <ResourceTable resource={resource} schema={schema} />

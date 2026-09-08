@@ -212,4 +212,15 @@ export const employeeProfileService = {
   },
 };
 
+export const abbreviationsService = {
+  /**
+   * @param {string} input comma-separated words/phrases
+   * @returns {Promise<{ results: { query: string, result: string, matched: boolean }[] }>}
+   */
+  async lookup(input) {
+    const { data } = await http.post('/api/abbreviations/lookup', { input });
+    return data;
+  },
+};
+
 export { ApiError } from './httpClient';

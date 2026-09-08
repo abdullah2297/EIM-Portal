@@ -34,6 +34,7 @@ export const ROUTES = {
   recognition: '/recognition',
   search: '/search',
   contact: '/contact',
+  abbreviations: '/abbreviations',
   admin: '/admin',
   adminLogin: '/admin/login',
   adminResource: (resource) => `/admin/${resource}`,

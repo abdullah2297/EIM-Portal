@@ -40,6 +40,7 @@ export function Footer({ logo }) {
                   {item.label}
                 </Link>
               ))}
+              <Link href={ROUTES.abbreviations}>Abbreviations Lookup</Link>
             </div>
           </div>
 

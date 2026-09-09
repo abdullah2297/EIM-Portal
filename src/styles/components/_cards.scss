@@ -177,6 +177,12 @@
   position: relative;
 }
 
+.employee-card--exec {
+  box-shadow: 0 0 0 2px var(--color-gold);
+
+  .employee-card__banner { background-image: var(--gradient-gold); }
+}
+
 .employee-card__avatar-wrap {
   margin-top: -42px;
   display: flex;

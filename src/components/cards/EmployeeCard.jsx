@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { Avatar } from '@/components/ui/Avatar';
 import { Badge, TagList } from '@/components/ui/Badge';
 import { Icon } from '@/components/ui/Icon';
-import { ROUTES } from '@/lib/constants';
+import { EXECUTIVE_ROLES, ROUTES } from '@/lib/constants';
 
 /**
  * Directory card for one colleague.
@@ -15,12 +15,14 @@ import { ROUTES } from '@/lib/constants';
  * }} props
  */
 export function EmployeeCard({ employee, teamName, subTeamName, className = '' }) {
+  const isExecutive = EXECUTIVE_ROLES.includes(employee.role);
+
   return (
-    <article className={`employee-card ${className}`.trim()}>
+    <article className={`employee-card ${isExecutive ? 'employee-card--exec' : ''} ${className}`.trim()}>
       <Link href={ROUTES.employee(employee.id)} className="employee-card__banner" aria-hidden="true" tabIndex={-1} />
 
       <div className="employee-card__avatar-wrap">
-        <Avatar name={employee.fullName} src={employee.photo} size="lg" ring />
+        <Avatar name={employee.fullName} src={employee.photo} size="lg" ring={!isExecutive} ringGold={isExecutive} />
       </div>
 
       <div className="employee-card__body">
@@ -32,6 +34,12 @@ export function EmployeeCard({ employee, teamName, subTeamName, className = '' }
           {teamName ?? 'PLACEHOLDER - team'}
           {subTeamName ? ` - ${subTeamName}` : ''}
         </p>
+
+        {isExecutive ? (
+          <Badge tone="gold" icon="WorkspacePremium">
+            C-Level - {employee.role}
+          </Badge>
+        ) : null}
 
         {employee.featured ? (
           <Badge tone="gold" icon="Star">

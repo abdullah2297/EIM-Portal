@@ -78,6 +78,27 @@ export default async function DepartmentPage() {
               Leadership
             </h3>
 
+            {executives.length ? (
+              <>
+                <div className="u-stack u-stack--sm">
+                  {executives.map((executive) => (
+                    <Link key={executive.id} href={ROUTES.employee(executive.id)} className="u-cluster">
+                      <Avatar name={executive.fullName} src={executive.photo} size="md" ringGold />
+                      <span className="u-stack u-stack--sm">
+                        <strong>{executive.fullName}</strong>
+                        <span className="u-text-xs u-subtle">{executive.jobTitle}</span>
+                      </span>
+                      <Badge tone="gold" icon="WorkspacePremium">
+                        {executive.role}
+                      </Badge>
+                    </Link>
+                  ))}
+                </div>
+
+                <hr className="u-divider" />
+              </>
+            ) : null}
+
             {head ? (
               <Link href={ROUTES.employee(head.id)} className="u-cluster">
                 <Avatar name={head.fullName} src={head.photo} size="md" ring />

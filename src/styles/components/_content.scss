@@ -124,10 +124,26 @@
 .org-node--exec {
   background-image: var(--gradient-gold);
   border-color: transparent;
+  box-shadow: 0 0 0 3px rgb(var(--rgb-gold) / 0.25);
   color: #fff;
+  gap: 0.4rem;
 
   strong { color: #fff; }
   span { color: rgb(255 255 255 / 0.75); }
+}
+
+.org-node__exec-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  padding: 0.1rem 0.5rem;
+  border-radius: var(--radius-pill);
+  background-color: rgb(255 255 255 / 0.2);
+  font-size: 0.65rem;
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #fff;
 }
 
 .org-branch--exec {

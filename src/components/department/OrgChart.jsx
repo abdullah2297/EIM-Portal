@@ -1,26 +1,39 @@
+import { Fragment } from 'react';
 import Link from 'next/link';
-import { ROUTES } from '@/lib/constants';
+import { Avatar } from '@/components/ui/Avatar';
+import { Icon } from '@/components/ui/Icon';
+import { ROUTES, EXECUTIVE_TIERS } from '@/lib/constants';
 
 /**
- * Read-only organisation chart: company executives (CIO/CFO/CDO, not tied to
- * one team) -> department head -> five main teams -> their sub-teams.
- * Scrolls horizontally on small screens rather than squashing the nodes.
+ * Read-only organisation chart: the C-level reporting chain (CEO -> CFO ->
+ * CIO/CDO, per `EXECUTIVE_TIERS` - not tied to one team) -> our department's
+ * head -> five main teams -> their sub-teams. Scrolls horizontally on small
+ * screens rather than squashing the nodes.
  *
  * @param {{
  *  departmentName: string,
  *  head?: { id: string, fullName: string, jobTitle: string } | null,
- *  executives?: Array<{ id: string, fullName: string, jobTitle: string, role: string }>,
+ *  executives?: Array<{ id: string, fullName: string, jobTitle: string, role: string, photo?: string|null }>,
  *  teams: Array<{ id: string, name: string, shortName: string, lead?: any, memberCount?: number, subTeams: any[] }>,
  * }} props
  */
 export function OrgChart({ departmentName, head, executives = [], teams = [] }) {
+  const tiers = EXECUTIVE_TIERS.map((roles) => executives.filter((executive) => roles.includes(executive.role))).filter(
+    (tier) => tier.length,
+  );
+
   return (
     <div className="org-chart">
-      {executives.length ? (
-        <>
+      {tiers.map((tier) => (
+        <Fragment key={tier.map((executive) => executive.id).join('-')}>
           <div className="org-branch org-branch--exec">
-            {executives.map((executive) => (
+            {tier.map((executive) => (
               <Link key={executive.id} href={ROUTES.employee(executive.id)} className="org-node org-node--exec">
+                <span className="org-node__exec-tag">
+                  <Icon name="WorkspacePremium" fontSize="inherit" />
+                  C-Level
+                </span>
+                <Avatar name={executive.fullName} src={executive.photo} size="md" ringGold />
                 <strong>{executive.role}</strong>
                 <span>{executive.fullName}</span>
               </Link>
@@ -28,8 +41,8 @@ export function OrgChart({ departmentName, head, executives = [], teams = [] }) 
           </div>
 
           <span className="org-connector" aria-hidden="true" />
-        </>
-      ) : null}
+        </Fragment>
+      ))}
 
       <div className="org-node org-node--root">
         <strong>{departmentName}</strong>

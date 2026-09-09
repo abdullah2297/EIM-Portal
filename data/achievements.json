@@ -3,22 +3,23 @@
     "id": "ach-001",
     "date": "2025-04-16",
     "icon": "EmojiEvents",
-    "level": "Group",
+    "level": "Department",
     "scope": "Team",
     "title": "Group Data Excellence Award",
     "images": [],
-    "issuer": "Data Warehouse Department",
+    "issuer": "EIM Department",
     "teamIds": [
-      "team-governance"
+      "team-00f09sblhf"
     ],
     "category": "Award",
     "featured": true,
-    "subTeamIds": [],
-    "description": "Recognised group-wide for the enterprise data quality framework. PLACEHOLDER - add the department's own supporting detail.",
+    "updatedAt": "2026-09-09T11:32:08.557Z",
+    "subTeamIds": [
+      "sub-7ap4dkij56"
+    ],
+    "description": "Recognised group-wide for the enterprise data quality framework. ",
     "employeeIds": [
-      "emp-023",
-      "emp-024",
-      "emp-020"
+      "emp-fao79kk2cw"
     ]
   },
   {
@@ -31,15 +32,18 @@
     "images": [],
     "issuer": "Data Warehouse Department",
     "teamIds": [
-      "team-engineering"
+      "team-q034fdpi93"
     ],
     "category": "Award",
     "featured": true,
-    "subTeamIds": [],
-    "description": "Voted best internal innovation of the year by the technology community. PLACEHOLDER - add the department's own supporting detail.",
+    "updatedAt": "2026-09-09T11:32:40.512Z",
+    "subTeamIds": [
+      "sub-4h2kq9m8d1"
+    ],
+    "description": "Voted best internal innovation of the year by the technology community. ",
     "employeeIds": [
-      "emp-004",
-      "emp-005"
+      "emp-akmlvyg4cn",
+      "emp-txpw4qfhuu"
     ]
   },
   {

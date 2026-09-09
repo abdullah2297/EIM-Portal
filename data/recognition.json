@@ -1,5 +1,19 @@
 [
   {
+    "id": "rec-lz49r3c0dv",
+    "date": "2026-03-30",
+    "type": "Award",
+    "title": "Best Idea Q1 - 2026",
+    "message": "Best Idea ",
+    "quarter": "Q2",
+    "featured": false,
+    "toTeamId": "team-q034fdpi93",
+    "createdAt": "2026-09-09T11:28:28.425Z",
+    "updatedAt": "2026-09-09T11:28:28.425Z",
+    "toEmployeeId": "emp-txpw4qfhuu",
+    "fromEmployeeId": "emp-in8awx37n1"
+  },
+  {
     "id": "rec-001",
     "date": "2026-07-02",
     "type": "Employee of the Quarter",
@@ -34,80 +48,9 @@
     "quarter": "Q2 2026",
     "featured": false,
     "toTeamId": null,
-    "toEmployeeId": "emp-039",
-    "fromEmployeeId": "emp-036"
-  },
-  {
-    "id": "rec-004",
-    "date": "2026-07-02",
-    "type": "Appreciation",
-    "title": "Thank you",
-    "message": "Took the time to walk three colleagues through the new model - patience that made the whole team faster.",
-    "quarter": "Q2 2026",
-    "featured": false,
-    "toTeamId": null,
-    "toEmployeeId": "emp-022",
-    "fromEmployeeId": "emp-034"
-  },
-  {
-    "id": "rec-005",
-    "date": "2026-04-28",
-    "type": "Appreciation",
-    "title": "Thank you",
-    "message": "Turned a vague request into a dashboard the business now uses every single morning.",
-    "quarter": "Q2 2026",
-    "featured": false,
-    "toTeamId": null,
-    "toEmployeeId": "emp-038",
-    "fromEmployeeId": "emp-036"
-  },
-  {
-    "id": "rec-006",
-    "date": "2026-05-11",
-    "type": "Appreciation",
-    "title": "Thank you",
-    "message": "Spotted a data quality issue nobody had noticed and fixed it before it reached a report.",
-    "quarter": "Q2 2026",
-    "featured": false,
-    "toTeamId": null,
-    "toEmployeeId": "emp-004",
-    "fromEmployeeId": "emp-015"
-  },
-  {
-    "id": "rec-007",
-    "date": "2026-06-16",
-    "type": "Appreciation",
-    "title": "Thank you",
-    "message": "Volunteered to document the hardest part of the pipeline so the next person would not struggle.",
-    "quarter": "Q2 2026",
-    "featured": false,
-    "toTeamId": null,
-    "toEmployeeId": "emp-001",
-    "fromEmployeeId": "emp-032"
-  },
-  {
-    "id": "rec-008",
-    "date": "2026-08-27",
-    "type": "Appreciation",
-    "title": "Thank you",
-    "message": "Made the new joiners feel at home from day one.",
-    "quarter": "Q2 2026",
-    "featured": false,
-    "toTeamId": null,
-    "toEmployeeId": "emp-036",
-    "fromEmployeeId": "emp-009"
-  },
-  {
-    "id": "rec-009",
-    "date": "2026-07-20",
-    "type": "Appreciation",
-    "title": "Thank you",
-    "message": "Rebuilt a report in two days that had been stuck for two months.",
-    "quarter": "Q2 2026",
-    "featured": false,
-    "toTeamId": null,
-    "toEmployeeId": "emp-034",
-    "fromEmployeeId": "emp-025"
+    "updatedAt": "2026-09-09T11:20:03.904Z",
+    "toEmployeeId": "emp-akmlvyg4cn",
+    "fromEmployeeId": "emp-k7wu2cqzts"
   },
   {
     "id": "rec-010",
@@ -118,43 +61,8 @@
     "quarter": "Q2 2026",
     "featured": false,
     "toTeamId": null,
-    "toEmployeeId": "emp-002",
-    "fromEmployeeId": "emp-039"
-  },
-  {
-    "id": "rec-101",
-    "date": "2026-04-02",
-    "type": "Employee of the Quarter",
-    "title": "Employee of the Quarter - Q1 2026",
-    "message": "PLACEHOLDER - citation for this quarter.",
-    "quarter": "Q1 2026",
-    "featured": false,
-    "toTeamId": null,
-    "toEmployeeId": "emp-006",
-    "fromEmployeeId": "emp-001"
-  },
-  {
-    "id": "rec-102",
-    "date": "2025-07-02",
-    "type": "Employee of the Quarter",
-    "title": "Employee of the Quarter - Q4 2025",
-    "message": "PLACEHOLDER - citation for this quarter.",
-    "quarter": "Q4 2025",
-    "featured": false,
-    "toTeamId": null,
-    "toEmployeeId": "emp-013",
-    "fromEmployeeId": "emp-001"
-  },
-  {
-    "id": "rec-103",
-    "date": "2025-04-02",
-    "type": "Employee of the Quarter",
-    "title": "Employee of the Quarter - Q3 2025",
-    "message": "PLACEHOLDER - citation for this quarter.",
-    "quarter": "Q3 2025",
-    "featured": false,
-    "toTeamId": null,
-    "toEmployeeId": "emp-021",
-    "fromEmployeeId": "emp-001"
+    "updatedAt": "2026-09-09T11:21:52.898Z",
+    "toEmployeeId": "emp-2ysee38dg2",
+    "fromEmployeeId": "emp-trs2q1gstq"
   }
 ]

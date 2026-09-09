@@ -1,5 +1,110 @@
 [
   {
+    "id": "emp-2ysee38dg2",
+    "bio": "..",
+    "role": "Engineer",
+    "email": "mohamed.hmourad@cibeg.com",
+    "photo": "",
+    "quote": "",
+    "awards": [],
+    "resume": null,
+    "skills": [],
+    "teamId": "team-aqmq9b1mp4",
+    "hobbies": [],
+    "featured": false,
+    "fullName": "Mohamed Mourad ",
+    "funFacts": [],
+    "jobTitle": "Business intelligence Engineer",
+    "location": "",
+    "projects": [],
+    "createdAt": "2026-09-09T09:49:42.686Z",
+    "expertise": [],
+    "extension": "",
+    "interests": [],
+    "languages": [],
+    "subTeamId": "sub-exnf1jx2zh",
+    "updatedAt": "2026-09-09T09:49:42.686Z",
+    "joinedDate": "",
+    "achievements": [],
+    "mobileNumber": "",
+    "computerNumber": "",
+    "educationMajor": "",
+    "responsibilities": [],
+    "educationUniversity": "",
+    "totalExperienceYears": "",
+    "educationGraduationYear": ""
+  },
+  {
+    "id": "emp-963jca1gs7",
+    "bio": "..",
+    "role": "Principal Engineer",
+    "email": "menatallah.tmahmoud@cibeg.com",
+    "photo": "",
+    "quote": "",
+    "awards": [],
+    "resume": null,
+    "skills": [],
+    "teamId": "team-00f09sblhf",
+    "hobbies": [],
+    "featured": false,
+    "fullName": "Menna Tarek",
+    "funFacts": [],
+    "jobTitle": "Principal Data Engineer",
+    "location": "",
+    "projects": [],
+    "createdAt": "2026-09-07T11:43:10.111Z",
+    "expertise": [],
+    "extension": "",
+    "interests": [],
+    "languages": [],
+    "subTeamId": "sub-r1fmp0h3q1",
+    "updatedAt": "2026-09-07T11:55:02.078Z",
+    "joinedDate": "",
+    "achievements": [],
+    "mobileNumber": "",
+    "computerNumber": "",
+    "educationMajor": "",
+    "responsibilities": [],
+    "educationUniversity": "",
+    "totalExperienceYears": "",
+    "educationGraduationYear": ""
+  },
+  {
+    "id": "emp-67f16w9hvh",
+    "bio": "..",
+    "role": "Engineering Manager",
+    "email": "sarah.hassan@cibeg.com",
+    "photo": "https://media.licdn.com/dms/image/v2/D4D03AQGjFi03TTSisA/profile-displayphoto-scale_400_400/B4DZf4nAenGQAg-/0/1752222667026?e=1790208000&v=beta&t=4_j8gSMm66nmw-XTYDV9G6v_2I6g7wLyRLzKPWlRgWU",
+    "quote": "",
+    "awards": [],
+    "resume": null,
+    "skills": [],
+    "teamId": "team-41xtxryrxm",
+    "hobbies": [],
+    "featured": false,
+    "fullName": "Sara Hassan",
+    "funFacts": [],
+    "jobTitle": "Data Excellence Manager",
+    "location": "SV3",
+    "projects": [],
+    "createdAt": "2026-09-07T11:40:51.853Z",
+    "expertise": [],
+    "extension": "",
+    "interests": [],
+    "languages": [],
+    "subTeamId": "",
+    "updatedAt": "2026-09-08T09:18:32.279Z",
+    "joinedDate": "",
+    "achievements": [],
+    "mobileNumber": "",
+    "computerNumber": "",
+    "educationMajor": "",
+    "responsibilities": [],
+    "educationUniversity": "",
+    "totalExperienceYears": "",
+    "educationGraduationYear": ""
+  },
+  {
     "id": "emp-wjnt2381ph",
     "bio": "..",
     "role": "Principal Engineer",
@@ -42,7 +147,11 @@
     "photo": "https://media.licdn.com/dms/image/v2/D4D03AQF50NaeqLg7Ww/profile-displayphoto-scale_400_400/B4DZpyeGsIKUAg-/0/1762857088048?e=1790208000&v=beta&t=zI4-SF0-D0GAlcd4qm4Qma55WyseUdICHOWlsTySqPQ",
     "quote": "",
     "awards": [],
-    "resume": null,
+    "resume": {
+      "url": "https://zwho5ilhzixnerqw.public.blob.vercel-storage.com/upl-vber1kelrl-tJN5UmA0QeLYmoTJ8U9UNJopd0jR5V.pdf",
+      "name": "Ahmed_Elnaggar_Data Engineer.pdf",
+      "size": "81288"
+    },
     "skills": [],
     "teamId": "team-q034fdpi93",
     "hobbies": [],
@@ -58,10 +167,11 @@
     "interests": [],
     "languages": [],
     "subTeamId": "sub-4h2kq9m8d1",
-    "updatedAt": "2026-09-07T09:51:41.679Z",
+    "updatedAt": "2026-09-07T11:32:32.326Z",
     "joinedDate": "2024-07-01",
     "achievements": [],
     "mobileNumber": "01011809541",
+    "initiativeIds": [],
     "computerNumber": "",
     "educationMajor": "computer science",
     "responsibilities": [],
@@ -758,6 +868,7 @@
     "photo": "https://media.licdn.com/dms/image/v2/D4D03AQGbh0_xvxVqGw/profile-displayphoto-scale_400_400/B4DZv2eRMHKAAg-/0/1769366689757?e=1789603200&v=beta&t=DBBZ4IYUbIXP1p-dn2GmVbctvfC5pXnaKTAMkTnTsf8",
     "quote": "If you can’t measure it, you can’t improve it.",
     "awards": [],
+    "resume": null,
     "skills": [
       {
         "name": "ETL & Pipeline Management",
@@ -778,13 +889,15 @@
     ],
     "teamId": "team-aqmq9b1mp4",
     "hobbies": [
-      "Football"
+      "Football",
+      "Reading"
     ],
     "featured": false,
     "fullName": "Ahmed Elshazly",
     "funFacts": [],
     "jobTitle": "Business Intelligence Manager",
     "location": "SV3 - 2nd Floor",
+    "projects": [],
     "createdAt": "2026-08-26T06:03:13.250Z",
     "expertise": [
       "ETL & Workflow Management",
@@ -792,21 +905,32 @@
       "Incident & Risk Management"
     ],
     "extension": "0000",
-    "interests": [],
+    "interests": [
+      "Cinema",
+      "Perfumes"
+    ],
     "languages": [
-      "English"
+      "English",
+      "French",
+      "German"
     ],
     "subTeamId": "sub-exnf1jx2zh",
-    "updatedAt": "2026-08-26T06:03:13.250Z",
-    "joinedDate": "2025-06-01",
+    "updatedAt": "2026-09-09T10:01:51.058Z",
+    "joinedDate": "2025-06-15",
     "achievements": [],
+    "mobileNumber": "01227706170",
+    "initiativeIds": [],
+    "educationMajor": "Economics",
     "responsibilities": [
       "Team Leadership   Manage data engineers, analysts, and operators; provide mentorship, training, and career development.",
       "Performance Management   Drive performance tuning initiatives, optimize resource allocation, and monitor SLAs.",
       "Incident & Risk Management   Lead root-cause analysis, escalation handling, and risk mitigation strategies.",
       "Stakeholder Communication   Translate technical issues into business language for executives and partners.",
       "Compliance & Security   Ensure adherence to governance, privacy, and regulatory frameworks."
-    ]
+    ],
+    "educationUniversity": "Cairo",
+    "totalExperienceYears": 20,
+    "educationGraduationYear": "2002"
   },
   {
     "id": "emp-invxjl5t3s",
@@ -1361,11 +1485,7 @@
         "issuer": "CIB"
       }
     ],
-    "resume": {
-      "url": "https://zwho5ilhzixnerqw.public.blob.vercel-storage.com/upl-7s31yr1que-XIuUMQKzUuO8Q0YhpcxkCCGuxWnidV.pdf",
-      "name": "Esraa Elshibly .pdf.pdf",
-      "size": "280417"
-    },
+    "resume": null,
     "skills": [
       {
         "name": "Data Modeling",
@@ -1432,17 +1552,18 @@
       "English"
     ],
     "subTeamId": "sub-r1fmp0h3q1",
-    "updatedAt": "2026-09-07T07:47:14.431Z",
+    "updatedAt": "2026-09-07T10:22:49.166Z",
     "joinedDate": "2025-07-09",
     "achievements": [],
     "mobileNumber": "01552325613",
+    "initiativeIds": [],
     "computerNumber": "42144",
     "educationMajor": "CS",
     "responsibilities": [
       "Data governance"
     ],
     "educationUniversity": "Azhar university ",
-    "totalExperienceYears": 7,
+    "totalExperienceYears": 6,
     "educationGraduationYear": "2019"
   },
   {
@@ -1627,7 +1748,7 @@
     "bio": "Data & Technology executive with 25+ years of experience in MEA, driving data-centric transformation across diverse industries. Proven ability to develop and execute data strategies that deliver measurable business value, enhance decision-making, and drive competitive advantage. Experienced in leading and inspiring high-performing data teams in achieving organizational goals.",
     "role": "Head Manager",
     "email": "Tamer.Elhossiny@cibeg.com",
-    "photo": "https://media.licdn.com/dms/image/v2/D4D03AQFBAWqjcM04-A/profile-displayphoto-scale_400_400/B4DZlbQgnOGkAg-/0/1758172679506?e=1788998400&v=beta&t=sylknhd7QdWgEPsYXmJXtuAqwvHRlue2tLBEBHIGdSo",
+    "photo": "https://media.licdn.com/dms/image/v2/D4E03AQHgNb9Qq45efw/profile-displayphoto-scale_400_400/B4EaB6SIlkHkAg-/0/1788757969970?e=1790208000&v=beta&t=_WU7jUxZL-Na6XfWB1GeF6-kjJi9qrE_EM9X_Vnt5FI",
     "quote": "Every success story has its melody.",
     "awards": [
       {
@@ -1636,6 +1757,7 @@
         "issuer": "CIB"
       }
     ],
+    "resume": null,
     "skills": [
       {
         "name": "Data Management",
@@ -1662,6 +1784,7 @@
     ],
     "jobTitle": "Data Strategy Head",
     "location": "SV3 - 2nd Floor",
+    "projects": [],
     "createdAt": "2026-08-19T12:26:04.423Z",
     "expertise": [
       "Digital Transformation",
@@ -1676,13 +1799,19 @@
       "Arabic"
     ],
     "subTeamId": "",
-    "updatedAt": "2026-08-22T18:57:49.877Z",
+    "updatedAt": "2026-09-08T09:17:02.445Z",
     "joinedDate": "2016-03-01",
     "achievements": [
       "Top 10 manager at CIB"
     ],
+    "mobileNumber": "",
+    "computerNumber": "",
+    "educationMajor": "",
     "responsibilities": [
       "Spearheaded the creation and leadership of a comprehensive Data Engineering department. Championed data Enablement for CIB's digital transformation strategy."
-    ]
+    ],
+    "educationUniversity": "",
+    "totalExperienceYears": "",
+    "educationGraduationYear": ""
   }
 ]

@@ -2,19 +2,35 @@ import Link from 'next/link';
 import { ROUTES } from '@/lib/constants';
 
 /**
- * Read-only organisation chart: department head -> five main teams ->
- * their sub-teams. Scrolls horizontally on small screens rather than
- * squashing the nodes.
+ * Read-only organisation chart: company executives (CIO/CFO/CDO, not tied to
+ * one team) -> department head -> five main teams -> their sub-teams.
+ * Scrolls horizontally on small screens rather than squashing the nodes.
  *
  * @param {{
  *  departmentName: string,
  *  head?: { id: string, fullName: string, jobTitle: string } | null,
+ *  executives?: Array<{ id: string, fullName: string, jobTitle: string, role: string }>,
  *  teams: Array<{ id: string, name: string, shortName: string, lead?: any, memberCount?: number, subTeams: any[] }>,
  * }} props
  */
-export function OrgChart({ departmentName, head, teams = [] }) {
+export function OrgChart({ departmentName, head, executives = [], teams = [] }) {
   return (
     <div className="org-chart">
+      {executives.length ? (
+        <>
+          <div className="org-branch org-branch--exec">
+            {executives.map((executive) => (
+              <Link key={executive.id} href={ROUTES.employee(executive.id)} className="org-node org-node--exec">
+                <strong>{executive.role}</strong>
+                <span>{executive.fullName}</span>
+              </Link>
+            ))}
+          </div>
+
+          <span className="org-connector" aria-hidden="true" />
+        </>
+      ) : null}
+
       <div className="org-node org-node--root">
         <strong>{departmentName}</strong>
         <span>{head ? `${head.fullName} - ${head.jobTitle}` : 'PLACEHOLDER - department head'}</span>

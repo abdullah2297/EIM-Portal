@@ -1,6 +1,6 @@
 import 'server-only';
 import { listAll, readCollection } from './db';
-import { ACTIVE_REGISTRATION_STATUS, PUBLIC_TRAINING_STATUS, RESOURCES } from './constants';
+import { ACTIVE_REGISTRATION_STATUS, EXECUTIVE_ROLES, PUBLIC_TRAINING_STATUS, RESOURCES } from './constants';
 import { promoteFlagged, sortItems } from './query';
 import { getEmployeeSession } from './employeeSession';
 
@@ -59,10 +59,19 @@ export function toPersonSummary(employee) {
     id: employee.id,
     fullName: employee.fullName,
     jobTitle: employee.jobTitle,
+    role: employee.role,
     teamId: employee.teamId,
     subTeamId: employee.subTeamId,
     photo: employee.photo ?? null,
   };
+}
+
+/** C-level executives (CIO/CFO/CDO) - not tied to one team, shown as their own tier in the org chart. */
+export function getExecutives(employees) {
+  return employees
+    .filter((employee) => EXECUTIVE_ROLES.includes(employee.role))
+    .sort((a, b) => EXECUTIVE_ROLES.indexOf(a.role) - EXECUTIVE_ROLES.indexOf(b.role))
+    .map(toPersonSummary);
 }
 
 /** Resolves an array of employee ids into person summaries, dropping unknowns. */
@@ -185,6 +194,7 @@ export async function getDepartmentPageData() {
     },
     head: toPersonSummary(employeesById[department?.headId]),
     leadership: resolvePeople(department?.leadershipIds, employeesById),
+    executives: getExecutives(employees),
     champions: employees
       .filter((employee) => employee.featured)
       .slice(0, 4)

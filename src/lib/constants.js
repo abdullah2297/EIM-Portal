@@ -195,8 +195,12 @@ export const REGISTRATION_STATUS = [
 /** Registration statuses that count as "holding a seat" for capacity purposes. */
 export const ACTIVE_REGISTRATION_STATUS = ['Registered', 'Approved', 'Attended', 'Completed'];
 
+/** C-level executive roles - not tied to a specific team, shown as their own tier above the department in the org chart. */
+export const EXECUTIVE_ROLES = ['CIO', 'CFO', 'CDO'];
+
 /** Seniority bands used by the employee role filter and the admin form. */
 export const ROLE_BANDS = [
+  ...EXECUTIVE_ROLES,
   'Director',
   'Head Manager',
   'Engineering Manager',

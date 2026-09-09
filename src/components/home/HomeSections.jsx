@@ -20,8 +20,8 @@ import { ROUTES } from '@/lib/constants';
  * each is a thin, data-driven composition of the shared card components.
  */
 
-/** @param {{ departmentName: string, head?: any, teams: any[] }} props */
-export function OrgChartSection({ departmentName, head, teams }) {
+/** @param {{ departmentName: string, head?: any, executives?: any[], teams: any[] }} props */
+export function OrgChartSection({ departmentName, head, executives, teams }) {
   return (
     <section className="section">
       <div className="container-page">
@@ -33,7 +33,7 @@ export function OrgChartSection({ departmentName, head, teams }) {
           action={<Button href={ROUTES.department} variant="outline" iconAfter="ArrowForward">Department page</Button>}
         />
         <div className="card">
-          <OrgChart departmentName={departmentName} head={head} teams={teams} />
+          <OrgChart departmentName={departmentName} head={head} executives={executives} teams={teams} />
         </div>
       </div>
     </section>

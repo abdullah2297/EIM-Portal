@@ -105,7 +105,7 @@ export const ADMIN_SCHEMAS = {
       { name: 'fullName', label: 'Full name', type: 'text', required: true, section: 'Basics' },
       { name: 'jobTitle', label: 'Job title', type: 'text', required: true, section: 'Basics' },
       { name: 'role', label: 'Seniority band', type: 'select', options: asOptions(ROLE_BANDS), required: true, section: 'Basics' },
-      { name: 'teamId', label: 'Team', type: 'relation', resource: RESOURCES.teams, labelField: 'name', required: true, section: 'Basics' },
+      { name: 'teamId', label: 'Team', type: 'relation', resource: RESOURCES.teams, labelField: 'name', hint: 'Leave empty for executive roles (CIO, CFO, CDO, Director) that are not tied to one team.', section: 'Basics' },
       { name: 'subTeamId', label: 'Sub-team', type: 'relation', resource: RESOURCES.subTeams, labelField: 'name', section: 'Basics' },
       { name: 'email', label: 'Email', type: 'text', inputType: 'email', section: 'Contact' },
       { name: 'extension', label: 'Extension', type: 'text', section: 'Contact' },

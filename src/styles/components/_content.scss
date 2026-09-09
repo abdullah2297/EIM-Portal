@@ -121,6 +121,21 @@
   span { color: rgb(255 255 255 / 0.75); }
 }
 
+.org-node--exec {
+  background-image: var(--gradient-gold);
+  border-color: transparent;
+  color: #fff;
+
+  strong { color: #fff; }
+  span { color: rgb(255 255 255 / 0.75); }
+}
+
+.org-branch--exec {
+  display: flex;
+  gap: 1.25rem;
+  padding-bottom: 0.5rem;
+}
+
 .org-connector {
   width: 2px;
   height: 28px;

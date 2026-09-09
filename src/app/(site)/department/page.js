@@ -25,7 +25,7 @@ export const metadata = {
 
 /** `/department` - overview, mission, structure, portfolios, teams, sub-teams. */
 export default async function DepartmentPage() {
-  const { department, stats, head, leadership, teams, champions } = await getDepartmentPageData();
+  const { department, stats, head, leadership, executives, teams, champions } = await getDepartmentPageData();
   const allSubTeams = teams.flatMap((team) => team.subTeams.map((sub) => ({ ...sub, team })));
 
   return (
@@ -201,7 +201,7 @@ export default async function DepartmentPage() {
             subtitle="Scroll sideways on smaller screens to see every branch. Select any node to open its team."
           />
           <div className="card">
-            <OrgChart departmentName={department?.shortName ?? 'DWH'} head={head} teams={teams} />
+            <OrgChart departmentName={department?.shortName ?? 'DWH'} head={head} executives={executives} teams={teams} />
           </div>
         </div>
       </section>

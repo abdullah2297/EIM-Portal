@@ -1,4 +1,4 @@
-import { getCurrentEmployee, getHomePageData, getLookups, toPersonSummary } from '@/lib/dataAccess';
+import { getCurrentEmployee, getExecutives, getHomePageData, getLookups, toPersonSummary } from '@/lib/dataAccess';
 import { HeroSection } from '@/components/home/HeroSection';
 import { StatsSection } from '@/components/home/StatsSection';
 import { LandingLoginSection } from '@/components/home/LandingLoginSection';
@@ -39,6 +39,7 @@ export default async function HomePage() {
     getCurrentEmployee(),
   ]);
   const head = toPersonSummary(lookups.employeesById[data.department?.headId]);
+  const executives = getExecutives(lookups.employees);
 
   // Logged-out visitors only get a teaser of the home page - the rest of the
   // site is gated behind login by middleware, and `/` is the one page that
@@ -65,6 +66,7 @@ export default async function HomePage() {
       <OrgChartSection
         departmentName={data.department?.shortName ?? 'DWH'}
         head={head}
+        executives={executives}
         teams={data.teams}
       />
       <TeamsSection teams={data.teams} />

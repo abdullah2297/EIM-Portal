@@ -13,7 +13,7 @@ import { InitiativeCard } from '@/components/cards/InitiativeCard';
 import { AchievementCard } from '@/components/cards/AchievementCard';
 import { Timeline } from '@/components/ui/Timeline';
 import { ProfileEditGate } from './ProfileEditGate';
-import { ROUTES } from '@/lib/constants';
+import { EXECUTIVE_ROLES, ROUTES } from '@/lib/constants';
 import { formatDate } from '@/lib/format';
 
 /** "Mar 2024 - Jun 2024", "Mar 2024 - Present", or just an end date alone. */
@@ -79,6 +79,7 @@ export default async function EmployeeProfilePage({ params }) {
   // profile, never while browsing a colleague's.
   const me = await getCurrentEmployee();
   const isOwnProfile = me?.id === employee.id;
+  const isExecutive = EXECUTIVE_ROLES.includes(employee.role);
   const myTraining = isOwnProfile ? await getMyTrainingRegistrations(employee.id) : null;
 
   return (
@@ -118,14 +119,23 @@ export default async function EmployeeProfilePage({ params }) {
               {employee.quote ? <p className="hero__lead">"{employee.quote}"</p> : null}
 
               <div className="u-cluster">
-                <span className="badge badge--on-dark">
-                  <Icon name="Groups" fontSize="inherit" />
-                  {team?.name ?? 'PLACEHOLDER - team'}
-                </span>
-                <span className="badge badge--on-dark">
-                  <Icon name="Hub" fontSize="inherit" />
-                  {subTeam?.name ?? 'PLACEHOLDER - sub-team'}
-                </span>
+                {isExecutive ? (
+                  <span className="badge badge--on-dark">
+                    <Icon name="WorkspacePremium" fontSize="inherit" />
+                    Executive Leadership
+                  </span>
+                ) : (
+                  <>
+                    <span className="badge badge--on-dark">
+                      <Icon name="Groups" fontSize="inherit" />
+                      {team?.name ?? 'PLACEHOLDER - team'}
+                    </span>
+                    <span className="badge badge--on-dark">
+                      <Icon name="Hub" fontSize="inherit" />
+                      {subTeam?.name ?? 'PLACEHOLDER - sub-team'}
+                    </span>
+                  </>
+                )}
                 <span className="badge badge--on-dark">
                   <Icon name="MailOutline" fontSize="inherit" />
                   {employee.email}
@@ -439,43 +449,54 @@ export default async function EmployeeProfilePage({ params }) {
             <article className="detail-panel">
               <h2 className="detail-panel__title">
                 <Icon name="AccountTree" />
-                Team & sub-team
+                {isExecutive ? 'Reporting line' : 'Team & sub-team'}
               </h2>
               <dl className="detail-list">
-                <div className="detail-list__row">
-                  <dt>Team</dt>
-                  <dd>
-                    {team ? (
-                      <Link href={ROUTES.team(team.id)}>{team.name}</Link>
-                    ) : (
-                      'PLACEHOLDER'
-                    )}
-                  </dd>
-                </div>
-                <div className="detail-list__row">
-                  <dt>Sub-team</dt>
-                  <dd>
-                    {subTeam ? (
-                      <Link href={ROUTES.subTeam(subTeam.id)}>{subTeam.name}</Link>
-                    ) : (
-                      'PLACEHOLDER'
-                    )}
-                  </dd>
-                </div>
-                <div className="detail-list__row">
-                  <dt>Manager</dt>
-                  <dd>{manager ? <Link href={ROUTES.employee(manager.id)}>{manager.fullName}</Link> : 'PLACEHOLDER'}</dd>
-                </div>
-                <div className="detail-list__row">
-                  <dt>Sub-team lead</dt>
-                  <dd>
-                    {subTeamLead ? (
-                      <Link href={ROUTES.employee(subTeamLead.id)}>{subTeamLead.fullName}</Link>
-                    ) : (
-                      'PLACEHOLDER'
-                    )}
-                  </dd>
-                </div>
+                {isExecutive ? (
+                  <div className="detail-list__row">
+                    <dt>Reports to</dt>
+                    <dd>
+                      {manager ? <Link href={ROUTES.employee(manager.id)}>{manager.fullName}</Link> : 'Board of Directors'}
+                    </dd>
+                  </div>
+                ) : (
+                  <>
+                    <div className="detail-list__row">
+                      <dt>Team</dt>
+                      <dd>
+                        {team ? (
+                          <Link href={ROUTES.team(team.id)}>{team.name}</Link>
+                        ) : (
+                          'PLACEHOLDER'
+                        )}
+                      </dd>
+                    </div>
+                    <div className="detail-list__row">
+                      <dt>Sub-team</dt>
+                      <dd>
+                        {subTeam ? (
+                          <Link href={ROUTES.subTeam(subTeam.id)}>{subTeam.name}</Link>
+                        ) : (
+                          'PLACEHOLDER'
+                        )}
+                      </dd>
+                    </div>
+                    <div className="detail-list__row">
+                      <dt>Manager</dt>
+                      <dd>{manager ? <Link href={ROUTES.employee(manager.id)}>{manager.fullName}</Link> : 'PLACEHOLDER'}</dd>
+                    </div>
+                    <div className="detail-list__row">
+                      <dt>Sub-team lead</dt>
+                      <dd>
+                        {subTeamLead ? (
+                          <Link href={ROUTES.employee(subTeamLead.id)}>{subTeamLead.fullName}</Link>
+                        ) : (
+                          'PLACEHOLDER'
+                        )}
+                      </dd>
+                    </div>
+                  </>
+                )}
                 <div className="detail-list__row">
                   <dt>Extension</dt>
                   <dd>{employee.extension}</dd>

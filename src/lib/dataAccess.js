@@ -1,6 +1,6 @@
 import 'server-only';
 import { listAll, readCollection } from './db';
-import { ACTIVE_REGISTRATION_STATUS, EXECUTIVE_ROLES, PUBLIC_TRAINING_STATUS, RESOURCES } from './constants';
+import { ACTIVE_REGISTRATION_STATUS, EXECUTIVE_ROLES, EXECUTIVE_TIERS, PUBLIC_TRAINING_STATUS, RESOURCES } from './constants';
 import { promoteFlagged, sortItems } from './query';
 import { getEmployeeSession } from './employeeSession';
 
@@ -72,6 +72,18 @@ export function getExecutives(employees) {
     .filter((employee) => EXECUTIVE_ROLES.includes(employee.role))
     .sort((a, b) => EXECUTIVE_ROLES.indexOf(a.role) - EXECUTIVE_ROLES.indexOf(b.role))
     .map(toPersonSummary);
+}
+
+/**
+ * Who a C-level executive reports to, per `EXECUTIVE_TIERS` - the CEO has
+ * none (top of the chain); everyone else resolves to whoever holds the role
+ * in the tier directly above them.
+ */
+export function getExecutiveManager(employee, employees) {
+  const tierIndex = EXECUTIVE_TIERS.findIndex((roles) => roles.includes(employee.role));
+  if (tierIndex <= 0) return null;
+  const managerRoles = EXECUTIVE_TIERS[tierIndex - 1];
+  return toPersonSummary(employees.find((candidate) => managerRoles.includes(candidate.role)));
 }
 
 /** Resolves an array of employee ids into person summaries, dropping unknowns. */
@@ -232,16 +244,17 @@ export async function getEmployeeProfile(employeeId) {
 
   const team = teamsById[employee.teamId] ?? null;
   const subTeam = subTeamsById[employee.subTeamId] ?? null;
+  const isExecutive = EXECUTIVE_ROLES.includes(employee.role);
 
   return {
     employee,
     team,
     subTeam,
-    manager: toPersonSummary(employeesById[team?.leadId]),
+    manager: isExecutive ? getExecutiveManager(employee, employees) : toPersonSummary(employeesById[team?.leadId]),
     subTeamLead: toPersonSummary(employeesById[subTeam?.leadId]),
-    colleagues: employees
-      .filter((e) => e.subTeamId === employee.subTeamId && e.id !== employee.id)
-      .map(toPersonSummary),
+    colleagues: employee.subTeamId
+      ? employees.filter((e) => e.subTeamId === employee.subTeamId && e.id !== employee.id).map(toPersonSummary)
+      : [],
     initiatives: initiatives.filter((i) => (i.contributorIds ?? []).includes(employee.id)),
     achievements: achievements.filter((a) => (a.employeeIds ?? []).includes(employee.id)),
     stories: successStories.filter((s) => (s.contributorIds ?? []).includes(employee.id)),

@@ -31,8 +31,7 @@ export function EmployeeCard({ employee, teamName, subTeamName, className = '' }
         </h3>
         <p className="employee-card__role">{employee.jobTitle}</p>
         <p className="employee-card__team">
-          {teamName ?? 'PLACEHOLDER - team'}
-          {subTeamName ? ` - ${subTeamName}` : ''}
+          {isExecutive ? 'Executive Leadership' : `${teamName ?? 'PLACEHOLDER - team'}${subTeamName ? ` - ${subTeamName}` : ''}`}
         </p>
 
         {isExecutive ? (

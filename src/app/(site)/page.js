@@ -71,7 +71,7 @@ export default async function HomePage() {
       />
       <TeamsSection teams={data.teams} />
       <FeaturedEmployeesSection employees={data.featuredEmployees} />
-      <AnnouncementsSection announcements={data.announcements} />
+      <AnnouncementsSection announcements={data.announcements} teamsById={lookups.teamsById} />
       <AchievementsSection achievements={data.achievements} teamsById={lookups.teamsById} />
       <InitiativesSection initiatives={data.initiatives} />
       <SuccessStoriesSection stories={data.successStories} />

@@ -17,7 +17,22 @@ export function AnnouncementCard({ announcement, author, onOpen }) {
   const interactive = typeof onOpen === 'function';
 
   return (
-    <article className="announcement-card">
+    <article
+      className={`announcement-card ${interactive ? 'announcement-card--interactive' : ''}`.trim()}
+      onClick={interactive ? () => onOpen(announcement) : undefined}
+      role={interactive ? 'button' : undefined}
+      tabIndex={interactive ? 0 : undefined}
+      onKeyDown={
+        interactive
+          ? (event) => {
+              if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                onOpen(announcement);
+              }
+            }
+          : undefined
+      }
+    >
       <span className="announcement-card__date" aria-hidden="true">
         <strong>{day}</strong>
         <span>{month}</span>
@@ -33,15 +48,7 @@ export function AnnouncementCard({ announcement, author, onOpen }) {
           ) : null}
         </div>
 
-        <h3 className="card__title">
-          {interactive ? (
-            <button type="button" className="text-left hover:text-primary" onClick={() => onOpen(announcement)}>
-              {announcement.title}
-            </button>
-          ) : (
-            announcement.title
-          )}
-        </h3>
+        <h3 className="card__title">{announcement.title}</h3>
 
         <p className="card__text">{announcement.summary}</p>
 

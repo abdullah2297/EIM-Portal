@@ -5,12 +5,13 @@ import { SectionHeading } from '@/components/ui/SectionHeading';
 import { StatTile } from '@/components/ui/StatTile';
 import { Icon } from '@/components/ui/Icon';
 import { Avatar } from '@/components/ui/Avatar';
-import { Badge, TagList } from '@/components/ui/Badge';
+import { TagList } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
 import { OrgChart } from '@/components/department/OrgChart';
 import { TeamCard } from '@/components/cards/TeamCard';
 import { SubTeamCard } from '@/components/cards/SubTeamCard';
 import { EmployeeCard } from '@/components/cards/EmployeeCard';
+import { PortfoliosGrid } from './PortfoliosGrid';
 import { ROUTES } from '@/lib/constants';
 
 // Content is read from the JSON data store on every request so edits made in
@@ -292,17 +293,7 @@ export default async function DepartmentPage() {
             title="Main portfolios"
             subtitle="The business areas our data products support."
           />
-          <div className="grid-auto grid-auto--4">
-            {(department?.portfolios ?? []).map((portfolio, index) => (
-              <article className={`card u-anim-in u-delay-${index + 1}`} key={portfolio.name}>
-                <div className="card__body">
-                  <Badge tone="accent">{portfolio.teamCount} team(s)</Badge>
-                  <h3 className="card__title">{portfolio.name}</h3>
-                  <p className="card__text">{portfolio.description}</p>
-                </div>
-              </article>
-            ))}
-          </div>
+          <PortfoliosGrid portfolios={department?.portfolios ?? []} />
         </div>
       </section>
     </>

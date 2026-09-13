@@ -17,6 +17,16 @@
   cursor: pointer;
 }
 
+// A `<button class="card">` (opens a modal, rather than navigating via
+// `<Link>`) needs the usual button defaults reset to look like every other
+// card.
+button.card {
+  width: 100%;
+  text-align: left;
+  padding: 0;
+  appearance: none;
+}
+
 // Covers the whole card as its main click target, letting a specific nested
 // element (e.g. a lead's link to their own profile) sit above it and stay
 // independently clickable, rather than nesting a second <a> inside the card's
@@ -385,6 +395,8 @@
   align-items: flex-start;
 }
 
+.announcement-card--interactive { cursor: pointer; }
+
 .announcement-card__date {
   display: flex;
   flex-direction: column;
@@ -434,6 +446,8 @@
     rgb(var(--rgb-surface) / 0) 55%
   );
 }
+
+.achievement-card--interactive { cursor: pointer; }
 
 .achievement-card__badge {
   display: inline-flex;
@@ -521,6 +535,8 @@
   flex-direction: column;
   overflow: hidden;
 }
+
+.story-card--interactive { cursor: pointer; }
 
 .story-card--featured {
   @include respond-above(lg) {

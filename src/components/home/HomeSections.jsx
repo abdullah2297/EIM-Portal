@@ -1,9 +1,13 @@
+'use client';
+
+import { useState } from 'react';
 import Link from 'next/link';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { Button } from '@/components/ui/Button';
 import { Icon } from '@/components/ui/Icon';
 import { Avatar } from '@/components/ui/Avatar';
-import { Badge } from '@/components/ui/Badge';
+import { Badge, StatusBadge } from '@/components/ui/Badge';
+import { Modal } from '@/components/ui/Overlays';
 import { TeamCard } from '@/components/cards/TeamCard';
 import { EmployeeCard } from '@/components/cards/EmployeeCard';
 import { AnnouncementCard } from '@/components/cards/AnnouncementCard';
@@ -14,6 +18,7 @@ import { CompetitionCard } from '@/components/cards/CompetitionCard';
 import { EmptyState } from '@/components/ui/StateViews';
 import { OrgChart } from '@/components/department/OrgChart';
 import { ROUTES } from '@/lib/constants';
+import { formatBytes, formatDate } from '@/lib/format';
 
 /**
  * The remaining home page sections. They are grouped in one module because
@@ -98,8 +103,10 @@ export function FeaturedEmployeesSection({ employees }) {
   );
 }
 
-/** @param {{ announcements: any[] }} props */
-export function AnnouncementsSection({ announcements }) {
+/** @param {{ announcements: any[], teamsById?: Record<string, any> }} props */
+export function AnnouncementsSection({ announcements, teamsById = {} }) {
+  const [openItem, setOpenItem] = useState(null);
+
   return (
     <section className="section">
       <div className="container-page">
@@ -115,7 +122,7 @@ export function AnnouncementsSection({ announcements }) {
           <div className="grid-auto grid-auto--2">
             {announcements.map((announcement, index) => (
               <div key={announcement.id} className={`u-anim-in u-delay-${index + 1}`}>
-                <AnnouncementCard announcement={announcement} author={announcement.author} />
+                <AnnouncementCard announcement={announcement} author={announcement.author} onOpen={setOpenItem} />
               </div>
             ))}
           </div>
@@ -123,12 +130,66 @@ export function AnnouncementsSection({ announcements }) {
           <EmptyState icon="Campaign" title="No announcements yet" message="Publish the first update from the admin panel." />
         )}
       </div>
+
+      <Modal
+        open={Boolean(openItem)}
+        onClose={() => setOpenItem(null)}
+        title={openItem?.title ?? ''}
+        maxWidth="md"
+        actions={<Button variant="outline" onClick={() => setOpenItem(null)}>Close</Button>}
+      >
+        {openItem ? (
+          <div className="u-stack">
+            <div className="u-cluster u-cluster--sm">
+              <Badge tone="primary">{openItem.category}</Badge>
+              <span className="u-text-xs u-subtle">{formatDate(openItem.date)}</span>
+              {teamsById[openItem.teamId] ? <Badge tone="neutral">{teamsById[openItem.teamId].shortName}</Badge> : null}
+            </div>
+
+            {openItem.author ? (
+              <div className="u-cluster u-cluster--sm">
+                <Avatar name={openItem.author.fullName} src={openItem.author.photo} size="sm" />
+                <span className="u-text-sm">
+                  {openItem.author.fullName} - {openItem.author.jobTitle}
+                </span>
+              </div>
+            ) : null}
+
+            <div className="prose prose--wide">
+              {String(openItem.content ?? openItem.summary ?? '')
+                .split('\n\n')
+                .map((paragraph) => (
+                  <p key={paragraph.slice(0, 24)}>{paragraph}</p>
+                ))}
+            </div>
+
+            {openItem.attachments?.length ? (
+              <>
+                <h4>Attachments</h4>
+                <ul className="icon-list">
+                  {openItem.attachments.map((file) => (
+                    <li className="icon-list__item" key={file.name}>
+                      <span className="icon-list__bullet">
+                        <Icon name="AttachFile" fontSize="inherit" />
+                      </span>
+                      {file.name} <span className="u-subtle">({file.size})</span>
+                    </li>
+                  ))}
+                </ul>
+              </>
+            ) : null}
+          </div>
+        ) : null}
+      </Modal>
     </section>
   );
 }
 
 /** @param {{ achievements: any[], teamsById: Record<string, any> }} props */
 export function AchievementsSection({ achievements, teamsById }) {
+  const [openItem, setOpenItem] = useState(null);
+  const teamsOf = (achievement) => (achievement?.teamIds ?? []).map((id) => teamsById[id]).filter(Boolean);
+
   return (
     <section className="section section--fade">
       <div className="container-page">
@@ -146,10 +207,8 @@ export function AchievementsSection({ achievements, teamsById }) {
               <div key={achievement.id} className={`u-anim-in u-delay-${index + 1}`}>
                 <AchievementCard
                   achievement={achievement}
-                  teamName={(achievement.teamIds ?? [])
-                    .map((id) => teamsById[id]?.shortName)
-                    .filter(Boolean)
-                    .join(', ')}
+                  teamName={teamsOf(achievement).map((team) => team.shortName).join(', ')}
+                  onOpen={setOpenItem}
                 />
               </div>
             ))}
@@ -158,12 +217,64 @@ export function AchievementsSection({ achievements, teamsById }) {
           <EmptyState icon="EmojiEvents" title="No achievements recorded" message="Record the first achievement from the admin panel." />
         )}
       </div>
+
+      <Modal open={Boolean(openItem)} onClose={() => setOpenItem(null)} title={openItem?.title ?? ''} maxWidth="md">
+        {openItem ? (
+          <div className="u-stack">
+            <div className="u-cluster u-cluster--sm">
+              <Badge tone="gold">{openItem.category}</Badge>
+              {openItem.scope ? <Badge tone="neutral">{openItem.scope}</Badge> : null}
+              {openItem.level ? (
+                <Badge tone="primary" icon="Verified">
+                  {openItem.level}
+                </Badge>
+              ) : null}
+            </div>
+
+            {openItem.images?.length ? (
+              <div className="grid-auto">
+                {openItem.images.map((src) => (
+                  <img key={src} src={src} alt="" className="achievement-gallery__img" />
+                ))}
+              </div>
+            ) : null}
+
+            <p>{openItem.description}</p>
+
+            <dl className="detail-list">
+              <div className="detail-list__row">
+                <dt>Date</dt>
+                <dd>{formatDate(openItem.date, 'long')}</dd>
+              </div>
+              <div className="detail-list__row">
+                <dt>Issued by</dt>
+                <dd>{openItem.issuer}</dd>
+              </div>
+            </dl>
+
+            {teamsOf(openItem).length ? (
+              <>
+                <h4>Teams</h4>
+                <div className="u-cluster u-cluster--sm">
+                  {teamsOf(openItem).map((team) => (
+                    <Badge key={team.id} tone="primary" icon="Groups">
+                      {team.name}
+                    </Badge>
+                  ))}
+                </div>
+              </>
+            ) : null}
+          </div>
+        ) : null}
+      </Modal>
     </section>
   );
 }
 
 /** @param {{ initiatives: any[] }} props */
 export function InitiativesSection({ initiatives }) {
+  const [openItem, setOpenItem] = useState(null);
+
   return (
     <section className="section">
       <div className="container-page">
@@ -182,6 +293,7 @@ export function InitiativesSection({ initiatives }) {
                 <InitiativeCard
                   initiative={initiative}
                   teamName={initiative.teams?.map((team) => team.name).join(', ')}
+                  onOpen={setOpenItem}
                 />
               </div>
             ))}
@@ -190,6 +302,75 @@ export function InitiativesSection({ initiatives }) {
           <EmptyState icon="Lightbulb" title="No initiatives yet" message="Add the first initiative from the admin panel." />
         )}
       </div>
+
+      <Modal
+        open={Boolean(openItem)}
+        onClose={() => setOpenItem(null)}
+        title={openItem?.title ?? ''}
+        maxWidth="md"
+        actions={<Button variant="outline" onClick={() => setOpenItem(null)}>Close</Button>}
+      >
+        {openItem ? (
+          <div className="u-stack">
+            <div className="u-cluster u-cluster--sm">
+              <Badge tone="accent">{openItem.category}</Badge>
+              <StatusBadge status={openItem.status} />
+              {(openItem.teams ?? []).map((team) => (
+                <Badge key={team.id} tone="primary" icon="Groups">
+                  {team.name}
+                </Badge>
+              ))}
+            </div>
+
+            <dl className="detail-list">
+              {openItem.objective ? (
+                <div className="detail-list__row">
+                  <dt>Objective</dt>
+                  <dd>{openItem.objective}</dd>
+                </div>
+              ) : null}
+              <div className="detail-list__row">
+                <dt>Timeline</dt>
+                <dd>
+                  {formatDate(openItem.startDate, 'short')} - {formatDate(openItem.endDate, 'short')}
+                </dd>
+              </div>
+            </dl>
+
+            <div className="prose prose--wide">
+              {String(openItem.description ?? openItem.summary ?? '')
+                .split('\n\n')
+                .map((paragraph) => (
+                  <p key={paragraph.slice(0, 24)}>{paragraph}</p>
+                ))}
+            </div>
+
+            {openItem.attachment ? (
+              <a
+                className="btn btn--outline btn--sm"
+                href={`${openItem.attachment.url}?name=${encodeURIComponent(openItem.attachment.name)}`}
+              >
+                <Icon name="FolderZip" fontSize="inherit" />
+                Download detailed brief ({formatBytes(openItem.attachment.size)})
+              </a>
+            ) : null}
+
+            {openItem.impact?.length ? (
+              <>
+                <h4>Impact</h4>
+                <div className="impact-strip">
+                  {openItem.impact.map((metric) => (
+                    <div className="impact-strip__item" key={metric.label}>
+                      <strong>{metric.value}</strong>
+                      <span>{metric.label}</span>
+                    </div>
+                  ))}
+                </div>
+              </>
+            ) : null}
+          </div>
+        ) : null}
+      </Modal>
     </section>
   );
 }
@@ -197,6 +378,7 @@ export function InitiativesSection({ initiatives }) {
 /** @param {{ stories: any[] }} props */
 export function SuccessStoriesSection({ stories }) {
   const [featured, ...rest] = stories;
+  const [openItem, setOpenItem] = useState(null);
 
   return (
     <section className="section section--muted">
@@ -211,7 +393,13 @@ export function SuccessStoriesSection({ stories }) {
 
         {featured ? (
           <div className="u-stack u-stack--lg">
-            <SuccessStoryCard story={featured} teamName={featured.team?.name} contributors={featured.contributors} featured />
+            <SuccessStoryCard
+              story={featured}
+              teamName={featured.team?.name}
+              contributors={featured.contributors}
+              featured
+              onOpen={setOpenItem}
+            />
             {rest.length ? (
               <div className="grid-auto grid-auto--2">
                 {rest.map((story) => (
@@ -220,6 +408,7 @@ export function SuccessStoriesSection({ stories }) {
                     story={story}
                     teamName={story.team?.name}
                     contributors={story.contributors}
+                    onOpen={setOpenItem}
                   />
                 ))}
               </div>
@@ -229,6 +418,100 @@ export function SuccessStoriesSection({ stories }) {
           <EmptyState icon="AutoStories" title="No stories yet" message="Share the first success story from the admin panel." />
         )}
       </div>
+
+      <Modal
+        open={Boolean(openItem)}
+        onClose={() => setOpenItem(null)}
+        title={openItem?.title ?? ''}
+        maxWidth="md"
+        actions={<Button variant="outline" onClick={() => setOpenItem(null)}>Close</Button>}
+      >
+        {openItem ? (
+          <div className="u-stack">
+            <div className="u-cluster u-cluster--sm">
+              <Badge tone="secondary">{openItem.type} story</Badge>
+              {openItem.team?.name ? <Badge tone="primary">{openItem.team.name}</Badge> : null}
+              <span className="u-text-xs u-subtle">{formatDate(openItem.date)}</span>
+            </div>
+
+            <p className="quote-block">{openItem.summary}</p>
+
+            <div className="u-stack">
+              {openItem.challenge ? (
+                <article className="detail-panel">
+                  <h4 className="detail-panel__title">
+                    <Icon name="ErrorOutline" />
+                    The challenge
+                  </h4>
+                  <p className="u-text-sm u-muted">{openItem.challenge}</p>
+                </article>
+              ) : null}
+              {openItem.solution ? (
+                <article className="detail-panel">
+                  <h4 className="detail-panel__title">
+                    <Icon name="TipsAndUpdates" />
+                    The solution
+                  </h4>
+                  <p className="u-text-sm u-muted">{openItem.solution}</p>
+                </article>
+              ) : null}
+              {openItem.result ? (
+                <article className="detail-panel">
+                  <h4 className="detail-panel__title">
+                    <Icon name="TrendingUp" />
+                    The result
+                  </h4>
+                  <p className="u-text-sm u-muted">{openItem.result}</p>
+                </article>
+              ) : null}
+            </div>
+
+            {openItem.impact?.length ? (
+              <>
+                <h4>Impact</h4>
+                <div className="impact-strip">
+                  {openItem.impact.map((metric) => (
+                    <div className="impact-strip__item" key={metric.label}>
+                      <strong>{metric.value}</strong>
+                      <span>{metric.label}</span>
+                    </div>
+                  ))}
+                </div>
+              </>
+            ) : null}
+
+            {openItem.keyAchievements?.length ? (
+              <>
+                <h4>Key achievements</h4>
+                <ul className="icon-list">
+                  {openItem.keyAchievements.map((item) => (
+                    <li className="icon-list__item" key={item}>
+                      <span className="icon-list__bullet">
+                        <Icon name="CheckCircle" fontSize="inherit" />
+                      </span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </>
+            ) : null}
+
+            {openItem.contributors?.length ? (
+              <>
+                <h4>Contributors</h4>
+                <div className="u-cluster">
+                  {openItem.contributors.map((person) => (
+                    <Link key={person.id} href={ROUTES.employee(person.id)} className="u-cluster u-cluster--sm">
+                      <Avatar name={person.fullName} src={person.photo} size="sm" />
+                      <span className="u-text-sm">{person.fullName}</span>
+                    </Link>
+                  ))}
+                </div>
+              </>
+            ) : null}
+          </div>
+        ) : null}
+      </Modal>
     </section>
   );
 }

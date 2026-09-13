@@ -18,7 +18,22 @@ export function InitiativeCard({ initiative, teamName, contributors = [], onOpen
   const interactive = typeof onOpen === 'function';
 
   return (
-    <article className={`card ${interactive ? 'card--interactive' : ''}`.trim()}>
+    <article
+      className={`card ${interactive ? 'card--interactive' : ''}`.trim()}
+      onClick={interactive ? () => onOpen(initiative) : undefined}
+      role={interactive ? 'button' : undefined}
+      tabIndex={interactive ? 0 : undefined}
+      onKeyDown={
+        interactive
+          ? (event) => {
+              if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                onOpen(initiative);
+              }
+            }
+          : undefined
+      }
+    >
       <div className="card__media">
         <MediaPlaceholder src={initiative.image} alt={initiative.title} icon="Lightbulb" />
       </div>
@@ -50,10 +65,10 @@ export function InitiativeCard({ initiative, teamName, contributors = [], onOpen
       <div className="card__footer">
         <AvatarStack people={contributors} max={4} />
         {interactive ? (
-          <button type="button" className="btn btn--ghost btn--sm" onClick={() => onOpen(initiative)}>
+          <span className="btn btn--ghost btn--sm" aria-hidden="true">
             View details
             <Icon name="ChevronRight" fontSize="inherit" />
-          </button>
+          </span>
         ) : null}
       </div>
     </article>

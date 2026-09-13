@@ -17,7 +17,22 @@ export function AchievementCard({ achievement, teamName, people = [], onOpen }) 
   const interactive = typeof onOpen === 'function';
 
   return (
-    <article className="achievement-card">
+    <article
+      className={`achievement-card ${interactive ? 'achievement-card--interactive' : ''}`.trim()}
+      onClick={interactive ? () => onOpen(achievement) : undefined}
+      role={interactive ? 'button' : undefined}
+      tabIndex={interactive ? 0 : undefined}
+      onKeyDown={
+        interactive
+          ? (event) => {
+              if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                onOpen(achievement);
+              }
+            }
+          : undefined
+      }
+    >
       <span className="achievement-card__badge">
         <Icon name={achievement.icon} fontSize="large" />
       </span>
@@ -46,10 +61,10 @@ export function AchievementCard({ achievement, teamName, people = [], onOpen }) 
       {people.length ? <AvatarStack people={people} max={4} /> : null}
 
       {interactive ? (
-        <button type="button" className="btn btn--ghost btn--sm" onClick={() => onOpen(achievement)}>
+        <span className="btn btn--ghost btn--sm" aria-hidden="true">
           View details
           <Icon name="ChevronRight" fontSize="inherit" />
-        </button>
+        </span>
       ) : null}
     </article>
   );

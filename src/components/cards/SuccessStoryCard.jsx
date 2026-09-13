@@ -19,7 +19,22 @@ export function SuccessStoryCard({ story, teamName, contributors = [], featured 
   const interactive = typeof onOpen === 'function';
 
   return (
-    <article className={`story-card ${featured ? 'story-card--featured' : ''}`.trim()}>
+    <article
+      className={`story-card ${featured ? 'story-card--featured' : ''} ${interactive ? 'story-card--interactive' : ''}`.trim()}
+      onClick={interactive ? () => onOpen(story) : undefined}
+      role={interactive ? 'button' : undefined}
+      tabIndex={interactive ? 0 : undefined}
+      onKeyDown={
+        interactive
+          ? (event) => {
+              if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                onOpen(story);
+              }
+            }
+          : undefined
+      }
+    >
       <div className="card__media">
         <MediaPlaceholder src={story.coverImage} alt={story.title} icon="AutoStories" variant="brand" />
       </div>
@@ -59,10 +74,10 @@ export function SuccessStoryCard({ story, teamName, contributors = [], featured 
         <div className="u-cluster justify-between mt-auto pt-2">
           <AvatarStack people={contributors} max={4} />
           {interactive ? (
-            <button type="button" className="btn btn--ghost btn--sm" onClick={() => onOpen(story)}>
+            <span className="btn btn--ghost btn--sm" aria-hidden="true">
               Read the story
               <Icon name="ChevronRight" fontSize="inherit" />
-            </button>
+            </span>
           ) : null}
         </div>
       </div>

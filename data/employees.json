@@ -4,7 +4,7 @@
     "bio": " a",
     "role": "CEO",
     "email": "",
-    "photo": "",
+    "photo": "https://zwho5ilhzixnerqw.public.blob.vercel-storage.com/upl-e88fenr0ap-s0VQErlF0YPkvXMpwBAmgNERBvqvcN.jpg",
     "quote": "",
     "awards": [],
     "resume": null,
@@ -14,7 +14,7 @@
     "featured": false,
     "fullName": "Hisham Ezz Elarab",
     "funFacts": [],
-    "jobTitle": "CEO",
+    "jobTitle": "CEO CIB Egypt",
     "location": "",
     "projects": [],
     "createdAt": "2026-09-13T05:30:39.332Z",
@@ -23,7 +23,7 @@
     "interests": [],
     "languages": [],
     "subTeamId": "",
-    "updatedAt": "2026-09-13T05:30:39.332Z",
+    "updatedAt": "2026-09-13T05:54:25.664Z",
     "joinedDate": "",
     "achievements": [],
     "mobileNumber": "",
@@ -39,7 +39,7 @@
     "bio": "s",
     "role": "CDO",
     "email": "",
-    "photo": "https://media.licdn.com/dms/image/v2/D4D03AQHRDSY2beigpA/profile-displayphoto-scale_400_400/B4DZ5wyWwUG4Ag-/0/1780008711602?e=1790812800&v=beta&t=u4RP4wTzNHUq-WT55mluOn89BtVRJLtl9VBrx3w0lh0",
+    "photo": "https://zwho5ilhzixnerqw.public.blob.vercel-storage.com/upl-u121rmlvxe-58Trm1XBrPoGyOp0OdaJt1qgDHccl7.jpg",
     "quote": "",
     "awards": [],
     "resume": null,
@@ -49,7 +49,7 @@
     "featured": false,
     "fullName": "Kamran Bader",
     "funFacts": [],
-    "jobTitle": "CDO",
+    "jobTitle": "Chief Data, Analytics & AI Officer",
     "location": "",
     "projects": [],
     "createdAt": "2026-09-09T12:01:50.259Z",
@@ -58,7 +58,7 @@
     "interests": [],
     "languages": [],
     "subTeamId": "",
-    "updatedAt": "2026-09-09T12:50:33.466Z",
+    "updatedAt": "2026-09-13T06:05:31.839Z",
     "joinedDate": "",
     "achievements": [],
     "mobileNumber": "",
@@ -74,7 +74,7 @@
     "bio": "a",
     "role": "CIO",
     "email": "",
-    "photo": "https://media.licdn.com/dms/image/v2/D4D03AQEKppTfq046nQ/profile-displayphoto-scale_400_400/B4DZrcaX7cGkAg-/0/1764634495032?e=1790812800&v=beta&t=5fc5m3ZSJTATMrPSfrCiM_lUBtwuh00qPUEywUSjALw",
+    "photo": "https://zwho5ilhzixnerqw.public.blob.vercel-storage.com/upl-rp08v5nk73-fgbEhKDHjq3RLp9HiXJHaXh55Rvrz7.jpg",
     "quote": "",
     "awards": [],
     "resume": null,
@@ -84,7 +84,7 @@
     "featured": false,
     "fullName": "Anter Kandeel",
     "funFacts": [],
-    "jobTitle": "CIO",
+    "jobTitle": "Chief Information Officer",
     "location": "",
     "projects": [],
     "createdAt": "2026-09-09T12:00:56.625Z",
@@ -93,7 +93,7 @@
     "interests": [],
     "languages": [],
     "subTeamId": "",
-    "updatedAt": "2026-09-09T12:50:05.624Z",
+    "updatedAt": "2026-09-13T06:03:43.080Z",
     "joinedDate": "",
     "achievements": [],
     "mobileNumber": "",
@@ -109,7 +109,7 @@
     "bio": "/",
     "role": "CFO",
     "email": "",
-    "photo": "https://media.licdn.com/dms/image/v2/D4D03AQHvwnDlrJBkzg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1708978874883?e=1790812800&v=beta&t=Hsw5HLz0-kiN5VfZUVJ_V04K33P5CUT-8C3UbjLhEeE",
+    "photo": "https://zwho5ilhzixnerqw.public.blob.vercel-storage.com/upl-qlzmv9cqy5-RrUPjjXLs6tH8XzhAKGxN7b9MK33FM.jpg",
     "quote": "",
     "awards": [],
     "resume": null,
@@ -128,7 +128,7 @@
     "interests": [],
     "languages": [],
     "subTeamId": "",
-    "updatedAt": "2026-09-09T12:48:13.864Z",
+    "updatedAt": "2026-09-13T06:02:52.533Z",
     "joinedDate": "",
     "achievements": [],
     "mobileNumber": "",
@@ -214,7 +214,7 @@
     "bio": "..",
     "role": "Engineering Manager",
     "email": "sarah.hassan@cibeg.com",
-    "photo": "https://media.licdn.com/dms/image/v2/D4D03AQGjFi03TTSisA/profile-displayphoto-scale_400_400/B4DZf4nAenGQAg-/0/1752222667026?e=1790208000&v=beta&t=4_j8gSMm66nmw-XTYDV9G6v_2I6g7wLyRLzKPWlRgWU",
+    "photo": "https://zwho5ilhzixnerqw.public.blob.vercel-storage.com/upl-o8ccal5c91-FKAaT0UIC11wnHPENdaKlIuvVKOxCJ.jpg",
     "quote": "",
     "awards": [],
     "resume": null,
@@ -233,7 +233,7 @@
     "interests": [],
     "languages": [],
     "subTeamId": "",
-    "updatedAt": "2026-09-08T09:18:32.279Z",
+    "updatedAt": "2026-09-13T06:01:01.476Z",
     "joinedDate": "",
     "achievements": [],
     "mobileNumber": "",
@@ -1077,9 +1077,10 @@
     "bio": "e Data Production Team Manager is both a strategic leader and technical authority, ensuring that enterprise data pipelines and reporting solutions are trusted, performant, and aligned with business priorities.",
     "role": "Head Manager",
     "email": "Ayman.Sherif@cibeg.com",
-    "photo": "https://media.licdn.com/dms/image/v2/C4D03AQETUa6FgxTTGQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516974040743?e=1788998400&v=beta&t=bcwle4GdQ_j3L5FjvPDBZZnhwlc6EhKwYokE7I9ZeFE",
+    "photo": "https://zwho5ilhzixnerqw.public.blob.vercel-storage.com/upl-hzntrs8j5v-WgaULGKWhw0LEH8ji14FkJoIPS9GBc.jpg",
     "quote": "",
     "awards": [],
+    "resume": null,
     "skills": [],
     "teamId": "team-aqmq9b1mp4",
     "hobbies": [],
@@ -1088,6 +1089,7 @@
     "funFacts": [],
     "jobTitle": "Business Intelligence Head",
     "location": "",
+    "projects": [],
     "createdAt": "2026-08-24T08:39:12.237Z",
     "expertise": [
       "Data Warehousing",
@@ -1100,24 +1102,31 @@
       "English"
     ],
     "subTeamId": "",
-    "updatedAt": "2026-09-06T11:55:53.309Z",
+    "updatedAt": "2026-09-13T05:56:10.685Z",
     "joinedDate": "2015-04-01",
     "achievements": [],
+    "mobileNumber": "",
+    "computerNumber": "",
+    "educationMajor": "",
     "responsibilities": [
       "Data Warehousing → Expertise in Teradata performance tuning, partitioning, and workload management.",
       "Leadership & Mentoring → Experience in building and guiding technical teams toward operational excellence.",
       "Stakeholder Collaboration   Partner with business units, IT, and governance teams to deliver trusted data for decision-making.",
       "Strategic Oversight   Define and oversee the data production strategy, ensuring alignment with enterprise data architecture and business needs"
-    ]
+    ],
+    "educationUniversity": "",
+    "totalExperienceYears": "",
+    "educationGraduationYear": ""
   },
   {
     "id": "emp-xolq4jd4yg",
     "bio": "Big Data Architect with extensive experience in designing strategies and methods for developed data based modules and verifying functional requirements of applications using different technologies for Enterprises and Functional entities. Areas of expertise include planning, architecting and designing for the developed modules, implementing proof-of-concepts and the complex parts of the proposed solution, determining security and performance requirements of systems and finding solutions for the key design issues. I hold a B.Sc. in Computer Science from Ain-Shams University, 2003.",
     "role": "Head Manager",
     "email": "Sherif.Isaac@cibeg.com",
-    "photo": "https://media.licdn.com/dms/image/v2/C4E03AQEMCMDS2KS4Bg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1516901979892?e=1788998400&v=beta&t=MYwpfdftg6JEQLSIOKjlnamtMgAon5mzVPUV1WIR4kw",
+    "photo": "https://zwho5ilhzixnerqw.public.blob.vercel-storage.com/upl-moze4hts78-WKZF0M1y9XIiAqhaPI98IHfe9uuqCo.jpg",
     "quote": "",
     "awards": [],
+    "resume": null,
     "skills": [
       {
         "name": "Cloudera",
@@ -1141,6 +1150,7 @@
     "funFacts": [],
     "jobTitle": "Business Intelligence Head",
     "location": "",
+    "projects": [],
     "createdAt": "2026-08-24T08:22:53.390Z",
     "expertise": [
       "Cloudera Platform Mastery",
@@ -1153,15 +1163,21 @@
       "English"
     ],
     "subTeamId": "",
-    "updatedAt": "2026-09-06T11:55:34.607Z",
+    "updatedAt": "2026-09-13T05:59:50.092Z",
     "joinedDate": "2017-06-01",
     "achievements": [],
+    "mobileNumber": "",
+    "computerNumber": "",
+    "educationMajor": "",
     "responsibilities": [
       "Strategic Roadmap Ownership   Define and drive the modernization strategy, ensuring alignment with enterprise goals and Cloudera’s capabilities.",
       "Architecture Leadership   Oversee the design and evolution of the lakehouse architecture, balancing scalability, performance, and compliance.",
       "Team Development   Mentor engineers, foster innovation, and build expertise in Cloudera technologies within the team.",
       "Stakeholder Engagement   Collaborate with business units, IT, and compliance leaders to align modernization with business priorities."
-    ]
+    ],
+    "educationUniversity": "",
+    "totalExperienceYears": "",
+    "educationGraduationYear": ""
   },
   {
     "id": "emp-pnbd09xpgp",
@@ -1317,7 +1333,7 @@
     "bio": "Data Engineer, focuses on designing and extending enterprise data models in a modern Data Vault architecture. my responsibilities include building logical and physical models, ensuring scalability, and supporting downstream analytics layers.",
     "role": "Senior Engineer",
     "email": "mohamed.elsobky@cibeg.com",
-    "photo": "https://media.licdn.com/dms/image/v2/D4D03AQFE0PmTDB9EJw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1684328965306?e=1788998400&v=beta&t=xwwdtyv2U3_qHUDl1W22nelwwu1xgc9sHzJQ6wpGbjE",
+    "photo": "https://zwho5ilhzixnerqw.public.blob.vercel-storage.com/upl-jtzulx319m-UiSluvEJ8daxXsQPRLEDKfulPFEmxo.jpg",
     "quote": "Will not leave, until achieve",
     "awards": [
       {
@@ -1331,6 +1347,7 @@
         "issuer": "CIB"
       }
     ],
+    "resume": null,
     "skills": [
       {
         "name": "Power BI",
@@ -1363,6 +1380,7 @@
     "funFacts": [],
     "jobTitle": "Senior Data Engineer",
     "location": "",
+    "projects": [],
     "createdAt": "2026-08-24T06:55:59.732Z",
     "expertise": [
       "Data Engineering",
@@ -1374,7 +1392,7 @@
       "English"
     ],
     "subTeamId": "sub-4h2kq9m8d1",
-    "updatedAt": "2026-09-06T09:23:06.529Z",
+    "updatedAt": "2026-09-13T05:57:37.089Z",
     "joinedDate": "2025-07-09",
     "achievements": [
       "Query Performance Optimization",
@@ -1382,18 +1400,24 @@
       "T24 Modeling Automation",
       "Lineage Initiative"
     ],
+    "mobileNumber": "",
+    "computerNumber": "",
+    "educationMajor": "",
     "responsibilities": [
       "Data Vault Modeling   Design and model new attributes, tables, and systems in the Data Vault layer to ensure flexibility and scalability.",
       "Business Vault : Extend models into Business Vault and Information Mart (I-Mart) layers to support business reporting and analytics.",
       "Logical & Physical Models   Develop comprehensive logical and physical data models using Erwin Data Modeler."
-    ]
+    ],
+    "educationUniversity": "",
+    "totalExperienceYears": "",
+    "educationGraduationYear": ""
   },
   {
     "id": "emp-ma7bx35j5p",
     "bio": "a curious and driven Data engineer with a passion for uncovering insights, optimizing workflows, and solving complex challenges with data. I thrive at the intersection of data engineering, analytics, and AI, always looking for ways to make data more accessible, efficient, and impactful.\nwhat i do \nI specialize in data engineer, visualization, with hands-on experience in SQL, Python, kafka, AWS, Power BI, and Apache Airflow. From ETL pipelines to ML models, I love building scalable solutions that drive real business impact.\nhow i think\nI see every problem as a system—break it down, optimize it, and ensure everything is connected and resilient. Whether it’s structuring data workflows, enhancing customer retention with analytics, or fine-tuning chatbots & NLP models, I bring a systematic, data-driven approach to every challenge.\nwhat drives me\nI believe in continuous learning, whether it’s mastering Google Looker Studio for business visuals, understanding telecom SSIS projects, or exploring machine learning for smarter decision-making. I also enjoy teaching & mentoring, helping others make sense of data just as I do.\nyou’ll find me teaching coding & data to kids, experimenting with chatbot development, or enhancing my English & communication skills. I enjoy breaking down complex concepts into simple, engaging insights—because data should tell a story, not just be numbers.",
     "role": "Engineer",
     "email": "ziad.alashry@cibeg.com",
-    "photo": "https://media.licdn.com/dms/image/v2/D5603AQEDWX02Sk7VLQ/profile-displayphoto-scale_400_400/B56Z.KUO35KAAg-/0/1784731988139?e=1788998400&v=beta&t=nJwE_GwnVju_CuDgM4G0GtAQBIqCcDfYZIuRMpm8ogM",
+    "photo": "https://zwho5ilhzixnerqw.public.blob.vercel-storage.com/upl-nsj00vnr1r-DKwzaYhsHijNBpE8nId1cUZjuEMNpm.jpg",
     "quote": "You must always be able to predict what's next and then have the flexibility to evolve.",
     "awards": [
       {
@@ -1402,6 +1426,7 @@
         "issuer": "SHAI for AI"
       }
     ],
+    "resume": null,
     "skills": [
       {
         "name": "SQL",
@@ -1444,6 +1469,7 @@
     "funFacts": [],
     "jobTitle": "Data Engineer",
     "location": "",
+    "projects": [],
     "createdAt": "2026-08-24T06:22:03.047Z",
     "expertise": [
       "Technology Architecture"
@@ -1455,22 +1481,28 @@
       "english"
     ],
     "subTeamId": "sub-engvbjyn65",
-    "updatedAt": "2026-08-24T06:34:05.765Z",
+    "updatedAt": "2026-09-13T06:00:42.802Z",
     "joinedDate": "2025-08-28",
     "achievements": [],
+    "mobileNumber": "",
+    "computerNumber": "",
+    "educationMajor": "",
     "responsibilities": [
       "Technology Strategy: Define the long-term vision and roadmap for data platforms and tools.",
       "Platform Evaluation: Assess and recommend data technologies (cloud, lakehouse, streaming, warehouse) that fit organizational needs.",
       "Architecture Design: Create blueprints for scalable, secure, and high-performing data systems.",
       "Performance Optimization: Continuously improve system efficiency, cost-effectiveness, and reliability."
-    ]
+    ],
+    "educationUniversity": "",
+    "totalExperienceYears": "",
+    "educationGraduationYear": ""
   },
   {
     "id": "emp-0h9mct7i05",
     "bio": " technical leader responsible for designing, governing, and evolving the enterprise data ecosystem. They bridge business needs with technical execution, ensuring that data platforms, pipelines, and architectures are scalable, secure, and aligned with organizational strategy.",
     "role": "Principal Engineer",
     "email": "ahmed.smoubarak@cibeg.com",
-    "photo": "https://media.licdn.com/dms/image/v2/C4D03AQHkd4wn2YyBQQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1662724388041?e=1788998400&v=beta&t=vkAMIcpf_fAUQPjJYhg_3QyCMlyoJSkspagHErzboeA",
+    "photo": "https://zwho5ilhzixnerqw.public.blob.vercel-storage.com/upl-h4pb1eff3x-NsmaKRyiumxFH65ipi4LYofqb33ncy.jpg",
     "quote": "Great things in business are never done by one person, they are done by a team of people.\"",
     "awards": [
       {
@@ -1484,6 +1516,7 @@
         "issuer": "CIB"
       }
     ],
+    "resume": null,
     "skills": [
       {
         "name": "Data Architecture",
@@ -1511,6 +1544,7 @@
     "funFacts": [],
     "jobTitle": "Principal Data Engineer",
     "location": "",
+    "projects": [],
     "createdAt": "2026-08-24T06:05:05.771Z",
     "expertise": [
       "data architecture",
@@ -1526,22 +1560,29 @@
       "English"
     ],
     "subTeamId": "sub-3l50sjpaai",
-    "updatedAt": "2026-08-24T06:08:01.551Z",
+    "updatedAt": "2026-09-13T05:55:32.226Z",
     "joinedDate": "2018-09-01",
     "achievements": [],
+    "mobileNumber": "",
+    "computerNumber": "",
+    "educationMajor": "",
     "responsibilities": [
       "Data Architecture Leadership: Define and enforce architectural standards, frameworks, and best practices across data platforms.",
       "Platform Design: Architect modern, cloud-native, and hybrid data solutions that support analytics, AI/ML, and operational workloads."
-    ]
+    ],
+    "educationUniversity": "",
+    "totalExperienceYears": "",
+    "educationGraduationYear": ""
   },
   {
     "id": "emp-k7wu2cqzts",
     "bio": "Experienced Software Engineer with a demonstrated history of working in the computer software industry (Data Analysis). Skilled in SQL and Extract, Transform, Load (ETL). Strong engineering professional with a Bachelor’s Degree focused in Computer and Communications Program from Alexandria University. ",
     "role": "Engineering Manager",
     "email": "ahmed.ragab@cibeg.com",
-    "photo": "https://media.licdn.com/dms/image/v2/C4E03AQEAQko2hPUXjg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1579915498227?e=1788998400&v=beta&t=iLeDq1isVMbBB2bwOKJ90zAvdgx9e8nHSKd4PuG0c9M",
+    "photo": "https://zwho5ilhzixnerqw.public.blob.vercel-storage.com/upl-gh2reeeiu3-98g4qasRqncJwVVcrglNVwPcNX45Fp.jpg",
     "quote": "Every problem is a gift — without problems we would not grow.",
     "awards": [],
+    "resume": null,
     "skills": [],
     "teamId": "team-q034fdpi93",
     "hobbies": [],
@@ -1550,25 +1591,33 @@
     "funFacts": [],
     "jobTitle": "Data Engineering Manager",
     "location": "",
+    "projects": [],
     "createdAt": "2026-08-24T05:52:27.151Z",
     "expertise": [],
     "extension": "8023",
     "interests": [],
     "languages": [],
     "subTeamId": "sub-4h2kq9m8d1",
-    "updatedAt": "2026-08-24T05:52:27.151Z",
+    "updatedAt": "2026-09-13T05:54:59.725Z",
     "joinedDate": "2019-05-01",
     "achievements": [],
-    "responsibilities": []
+    "mobileNumber": "",
+    "computerNumber": "",
+    "educationMajor": "",
+    "responsibilities": [],
+    "educationUniversity": "",
+    "totalExperienceYears": "",
+    "educationGraduationYear": ""
   },
   {
     "id": "emp-d5jzl0fyny",
     "bio": "A technology business & data analyst with a passion to tackle complex business problems and find innovative solutions in today's data-driven economy. I’m aiming to utilize my analytical, leadership and communication skills, as well as my knowledge in Information Technology, Business Analysis and Financial Services in a competitive environment, where I can have an active and critical role in the organization’s overall success.\n\n",
     "role": "Head Manager",
     "email": "reham.azmy@cibeg.com",
-    "photo": "https://media.licdn.com/dms/image/v2/C4E03AQEVPLNYyGuv6Q/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1599684164597?e=1788998400&v=beta&t=v9jgt3ZLjteRUEYW2FGEDoMWT34SqL0fa7_uWR_Rk10",
+    "photo": "https://zwho5ilhzixnerqw.public.blob.vercel-storage.com/upl-lctvrh74n3-24sEtduIS5ODvy5Nj4NBOiDQrcnzfK.jpg",
     "quote": "The best way to predict the future is to create it",
     "awards": [],
+    "resume": null,
     "skills": [
       {
         "name": "Data Engineering Leadership ",
@@ -1588,6 +1637,7 @@
     "funFacts": [],
     "jobTitle": "Business Intelligence Head",
     "location": "",
+    "projects": [],
     "createdAt": "2026-08-24T05:46:57.503Z",
     "expertise": [
       "Lifecycle Management",
@@ -1602,14 +1652,20 @@
       "English"
     ],
     "subTeamId": "",
-    "updatedAt": "2026-09-06T11:56:16.610Z",
+    "updatedAt": "2026-09-13T05:58:47.670Z",
     "joinedDate": "2019-10-01",
     "achievements": [],
+    "mobileNumber": "",
+    "computerNumber": "",
+    "educationMajor": "",
     "responsibilities": [
       "Strategic Leadership   Define and oversee the financial strategy, ensuring alignment with organizational goals in business banking, retail banking, and inclusion initiatives.",
       "Stakeholder Collaboration   Partner with business units, IT, and compliance teams to translate requirements into actionable solutions.",
       "Performance Monitoring   Track KPIs, delivery timelines, and operational efficiency to ensure continuous improvement."
-    ]
+    ],
+    "educationUniversity": "",
+    "totalExperienceYears": "",
+    "educationGraduationYear": ""
   },
   {
     "id": "emp-jio0af8pzp",
@@ -1711,7 +1767,7 @@
     "bio": "Worked with different cultures in 11 countries either as a supervisor or a service provider interface; from which are USA (3.5 years), Switzerland (1.5 years), Saudi Arabia (1.5 years) and Australia (1 year)\n- Worked within different lines of business including Industrial (3.5 years), Life Science (1.5 years) and Telecommunication (2.5 years)",
     "role": "Director",
     "email": "Diaa.ElBagouri@cibeg.com",
-    "photo": "https://media.licdn.com/dms/image/v2/C4E03AQGa-joo5-kOfw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1517756484643?e=1788998400&v=beta&t=LVLMyEJcEau9JENtaeEYaDgf0nFcy6180y7ZubHDEbA",
+    "photo": "https://zwho5ilhzixnerqw.public.blob.vercel-storage.com/upl-d5bh58kcyv-wG00I12ggX4DLyqk7iQpV9QNgjVKjN.jpg",
     "quote": "",
     "awards": [],
     "resume": null,
@@ -1730,7 +1786,7 @@
     "interests": [],
     "languages": [],
     "subTeamId": "",
-    "updatedAt": "2026-09-09T11:57:36.831Z",
+    "updatedAt": "2026-09-13T05:52:24.623Z",
     "joinedDate": "2016-02-01",
     "achievements": [],
     "mobileNumber": "",
@@ -1746,7 +1802,7 @@
     "bio": "Developing Datawarehouse and Business Intelligence architecture and. solutions using Teradata, Microsoft and IBM technologies. Areas of expertise include solution Architecture and design, development, dimensional modeling.",
     "role": "Head Manager",
     "email": "Sherif.Anwer@cibeg.com",
-    "photo": "https://media.licdn.com/dms/image/v2/C4E03AQHsLY50GFswcA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516813577194?e=1788998400&v=beta&t=M8EUa6kDL9voIFeHCP0XxDmSMj-Hd3UqTWf0vmygKs0",
+    "photo": "https://zwho5ilhzixnerqw.public.blob.vercel-storage.com/upl-md4mji8nu9-QzvLY1tYPLSR3vF4wqI8NhIBIWB1wq.jpg",
     "quote": "",
     "awards": [
       {
@@ -1755,6 +1811,7 @@
         "issuer": "CIB"
       }
     ],
+    "resume": null,
     "skills": [
       {
         "name": "CI/CD and DevOps practices",
@@ -1770,6 +1827,7 @@
     "funFacts": [],
     "jobTitle": "Data Engineering Head",
     "location": "SV3 - 2nd Floor",
+    "projects": [],
     "createdAt": "2026-08-19T13:38:57.047Z",
     "expertise": [
       "Batch and real-time data processing",
@@ -1784,23 +1842,30 @@
       "English"
     ],
     "subTeamId": "",
-    "updatedAt": "2026-09-06T11:54:49.646Z",
+    "updatedAt": "2026-09-13T05:59:34.760Z",
     "joinedDate": "2015-01-01",
     "achievements": [],
+    "mobileNumber": "",
+    "computerNumber": "",
+    "educationMajor": "",
     "responsibilities": [
       "Define the technical direction for data engineering and delivery capabilities.",
       "Translate the organization's data strategy into executable engineering initiatives.",
       "Own the end-to-end delivery of data engineering initiatives."
-    ]
+    ],
+    "educationUniversity": "",
+    "totalExperienceYears": "",
+    "educationGraduationYear": ""
   },
   {
     "id": "emp-y2p84owtc4",
     "bio": "lead a team of data engineers who are responsible for designing, developing, and maintaining the data warehouse and ETL processes that support the bank's business intelligence and reporting needs. I have over 13 years of experience in the data domain, working in both the banking and telecom industries.",
     "role": "Engineering Manager",
     "email": "Khalil.raafat@cibeg.com",
-    "photo": "https://media.licdn.com/dms/image/v2/D4D03AQGjPINeUTyZPw/profile-displayphoto-shrink_400_400/B4DZZexDA2G8Ag-/0/1745346639900?e=1788998400&v=beta&t=ssnAQTM2tG35BIFe5e7iWqc2O7-xY6xEuxu8Dd7kKaA",
+    "photo": "https://zwho5ilhzixnerqw.public.blob.vercel-storage.com/upl-irmymzmj84-NkYHATBy9hS1iE2and601gRzFZyMpU.jpg",
     "quote": "Inspiration is a key",
     "awards": [],
+    "resume": null,
     "skills": [
       {
         "name": "Technology Architecture",
@@ -1816,6 +1881,7 @@
     "funFacts": [],
     "jobTitle": "Technology Architecture Manager",
     "location": "SV3 - 2nd Floor",
+    "projects": [],
     "createdAt": "2026-08-19T13:08:46.508Z",
     "expertise": [
       "Technology Architecture",
@@ -1830,21 +1896,28 @@
       "English"
     ],
     "subTeamId": "sub-engvbjyn65",
-    "updatedAt": "2026-08-24T08:04:31.476Z",
+    "updatedAt": "2026-09-13T05:56:47.214Z",
     "joinedDate": "2016-01-01",
     "achievements": [],
+    "mobileNumber": "",
+    "computerNumber": "",
+    "educationMajor": "",
     "responsibilities": [
       "Define the data technology architecture and target-state architecture."
-    ]
+    ],
+    "educationUniversity": "",
+    "totalExperienceYears": "",
+    "educationGraduationYear": ""
   },
   {
     "id": "emp-0rwtcdyxxv",
     "bio": "As Data Manager at CIB Egypt, I contribute in leading data engineering initiatives, underpinned by expertise in data modeling and data warehouse architecture. My work focuses on strengthening the organization's data infrastructure to support strategic decision-making and operational excellence.  ",
     "role": "Engineering Manager",
     "email": "Shaimaa.Elgammal@cibeg.com",
-    "photo": "https://media.licdn.com/dms/image/v2/D4D03AQFYxC20lach2w/profile-displayphoto-scale_400_400/B4DZ5JNx16KMAg-/0/1779344810446?e=1788998400&v=beta&t=Lt7OIzQyeJcEzT4GnefjUsiwVuRMD638gUQUahTxIiQ",
+    "photo": "https://zwho5ilhzixnerqw.public.blob.vercel-storage.com/upl-l011yulhkq-TlYxm4HfwUvwjln557kBleoxUr4UV3.jpg",
     "quote": "Work smart, not hard",
     "awards": [],
+    "resume": null,
     "skills": [
       {
         "name": "Data Governance ",
@@ -1868,6 +1941,7 @@
     "funFacts": [],
     "jobTitle": "Data Trust & Enablement Manager",
     "location": "SV3, 2nd Floor",
+    "projects": [],
     "createdAt": "2026-08-19T12:42:52.877Z",
     "expertise": [
       "Data Modeling",
@@ -1883,13 +1957,19 @@
       "English"
     ],
     "subTeamId": "sub-r1fmp0h3q1",
-    "updatedAt": "2026-08-22T18:57:11.201Z",
+    "updatedAt": "2026-09-13T05:58:31.286Z",
     "joinedDate": "",
     "achievements": [],
+    "mobileNumber": "",
+    "computerNumber": "",
+    "educationMajor": "",
     "responsibilities": [
       "Data Trust",
       "Enablement"
-    ]
+    ],
+    "educationUniversity": "",
+    "totalExperienceYears": "",
+    "educationGraduationYear": ""
   },
   {
     "id": "emp-f5s7nwwauj",

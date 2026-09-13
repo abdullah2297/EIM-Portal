@@ -111,7 +111,7 @@ export const ADMIN_SCHEMAS = {
       { name: 'extension', label: 'Extension', type: 'text', section: 'Contact' },
       { name: 'location', label: 'Location', type: 'text', section: 'Contact' },
       { name: 'joinedDate', label: 'Joined date', type: 'date', section: 'Contact' },
-      { name: 'photo', label: 'Photo URL', type: 'text', hint: 'Leave empty to show the initials avatar placeholder.', section: 'Contact' },
+      { name: 'photo', label: 'Photo', type: 'image', full: true, hint: 'Upload a photo or paste an image URL. Leave empty to show the initials avatar placeholder.', section: 'Contact' },
       { name: 'mobileNumber', label: 'Mobile number', type: 'text', section: 'Career' },
       { name: 'computerNumber', label: 'Computer number', type: 'text', section: 'Career' },
       { name: 'totalExperienceYears', label: 'Total experience (years)', type: 'number', section: 'Career' },

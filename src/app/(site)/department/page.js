@@ -82,15 +82,12 @@ export default async function DepartmentPage() {
               <>
                 <div className="u-stack u-stack--sm">
                   {executives.map((executive) => (
-                    <Link key={executive.id} href={ROUTES.employee(executive.id)} className="u-cluster">
-                      <Avatar name={executive.fullName} src={executive.photo} size="md" ringGold />
+                    <Link key={executive.id} href={ROUTES.employee(executive.id)} className="u-cluster u-cluster--sm">
+                      <Avatar name={executive.fullName} src={executive.photo} size="sm" ringGold />
                       <span className="u-stack u-stack--sm">
-                        <strong>{executive.fullName}</strong>
+                        <strong className="u-text-sm">{executive.fullName}</strong>
                         <span className="u-text-xs u-subtle">{executive.jobTitle}</span>
                       </span>
-                      <Badge tone="gold" icon="WorkspacePremium">
-                        {executive.role}
-                      </Badge>
                     </Link>
                   ))}
                 </div>
@@ -100,10 +97,10 @@ export default async function DepartmentPage() {
             ) : null}
 
             {head ? (
-              <Link href={ROUTES.employee(head.id)} className="u-cluster">
-                <Avatar name={head.fullName} src={head.photo} size="md" ring />
+              <Link href={ROUTES.employee(head.id)} className="u-cluster u-cluster--sm">
+                <Avatar name={head.fullName} src={head.photo} size="sm" ring />
                 <span className="u-stack u-stack--sm">
-                  <strong>{head.fullName}</strong>
+                  <strong className="u-text-sm">{head.fullName}</strong>
                   <span className="u-text-xs u-subtle">{head.jobTitle}</span>
                 </span>
               </Link>

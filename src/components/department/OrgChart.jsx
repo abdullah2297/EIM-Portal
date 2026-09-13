@@ -1,7 +1,5 @@
 import { Fragment } from 'react';
 import Link from 'next/link';
-import { Avatar } from '@/components/ui/Avatar';
-import { Icon } from '@/components/ui/Icon';
 import { ROUTES, EXECUTIVE_TIERS } from '@/lib/constants';
 
 /**
@@ -29,11 +27,6 @@ export function OrgChart({ departmentName, head, executives = [], teams = [] }) 
           <div className="org-branch org-branch--exec">
             {tier.map((executive) => (
               <Link key={executive.id} href={ROUTES.employee(executive.id)} className="org-node org-node--exec">
-                <span className="org-node__exec-tag">
-                  <Icon name="WorkspacePremium" fontSize="inherit" />
-                  C-Level
-                </span>
-                <Avatar name={executive.fullName} src={executive.photo} size="md" ringGold />
                 <strong>{executive.role}</strong>
                 <span>{executive.fullName}</span>
               </Link>
